@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{959E1DBF-B0AE-4AA3-9821-83B4DCD33187}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FoxSec.DomainModel</RootNamespace>
+    <AssemblyName>FoxSec.DomainModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsPlatformPath />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsPlatformPath />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.WebApi.Versioning, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Versioning.3.0.0\lib\net45\Microsoft.AspNet.WebApi.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefaultDomainObjectFactory.cs" />
+    <Compile Include="DomainObjects\Building.cs" />
+    <Compile Include="DomainObjects\BuvniecibasLietasArray.cs" />
+    <Compile Include="DomainObjects\CompanyManager.cs" />
+    <Compile Include="DomainObjects\ControllerUpdate.cs" />
+    <Compile Include="DomainObjects\FSINISetting.cs" />
+    <Compile Include="DomainObjects\FSSubLocation.cs" />
+    <Compile Include="DomainObjects\HolidayBuildng.cs" />
+    <Compile Include="DomainObjects\SqlToLocation.cs" />
+    <Compile Include="DomainObjects\TAMove.cs" />
+    <Compile Include="DomainObjects\TAReport.cs" />
+    <Compile Include="DomainObjects\UserBuilding.cs" />
+    <Compile Include="DomainObjects\RoleBuilding.cs" />
+    <Compile Include="DomainObjects\RoleType.cs" />
+    <Compile Include="DomainObjects\LofFilter.cs" />
+    <Compile Include="DomainObjects\Log.cs" />
+    <Compile Include="DomainObjects\LogType.cs" />
+    <Compile Include="DomainObjects\UserAccessUnitType.cs" />
+    <Compile Include="DomainObjects\Company.cs" />
+    <Compile Include="DomainObjects\BuildingObject.cs" />
+    <Compile Include="DomainObjects\BuildingObjectType.cs" />
+    <Compile Include="DomainObjects\Classificator.cs" />
+    <Compile Include="DomainObjects\ClassificatorValue.cs" />
+    <Compile Include="DomainObjects\RoleFormsAccess.cs" />
+    <Compile Include="DomainObjects\MenuSet.cs" />
+    <Compile Include="DomainObjects\UserDepartment.cs" />
+    <Compile Include="DomainObjects\CompanyBuildingObject.cs" />
+    <Compile Include="DomainObjects\Country.cs" />
+    <Compile Include="DomainObjects\Department.cs" />
+    <Compile Include="DomainObjects\Entity.cs" />
+    <Compile Include="DomainObjects\EntityName.cs" />
+    <Compile Include="DomainObjects\Holiday.cs" />
+    <Compile Include="DomainObjects\Location.cs" />
+    <Compile Include="DomainObjects\PermissionSet.cs" />
+    <Compile Include="DomainObjects\Role.cs" />
+    <Compile Include="DomainObjects\Title.cs" />
+    <Compile Include="DomainObjects\User.cs" />
+    <Compile Include="DomainObjects\UserIdWorkingHours.cs" />
+    <Compile Include="DomainObjects\UserPermissionGroup.cs" />
+    <Compile Include="DomainObjects\UserPermissionGroupTimeZone.cs" />
+    <Compile Include="DomainObjects\UsersAccessUnit.cs" />
+    <Compile Include="DomainObjects\UserRole.cs" />
+    <Compile Include="DomainObjects\UserTimeZone.cs" />
+    <Compile Include="DomainObjects\UserTimeZoneProperty.cs" />
+    <Compile Include="DomainObjects\CameraPermissions.cs" />
+    <Compile Include="DomainObjects\VedludbModel.cs" />
+    <Compile Include="DomainObjects\VedludbPostModel.cs" />
+    <Compile Include="DomainObjects\VideoAccess.cs" />
+    <Compile Include="DomainObjects\Visitor.cs" />
+    <Compile Include="IDomainObjectFactory.cs" />
+    <Compile Include="DomainObjects\LookupEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FoxSec.Common\FoxSec.Common.csproj">
+      <Project>{7C7C16AD-576F-4FC1-91A0-6FEA228116C3}</Project>
+      <Name>FoxSec.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

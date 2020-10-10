@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" CodeBehind="Site.Master.cs" Inherits="FoxSec.Web.Views.Shared.Site" AutoEventWireup="True" %>
+<%@ Import Namespace="DevExtreme.AspNet.Mvc"%>
+<%@ Import Namespace="System.Web.Optimization" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <meta http-equiv='cache-control' content='no-cache' />
+    <meta http-equiv='pragma' content='no-cache' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FoxSec" />
+    <link rel="Shortcut Icon" href="../../img/favicon.ico" />
+    <link href="../../css/default.css" rel="stylesheet" />
+    <!-- roheline punane foxsec asjad helmes spets -->
+    <link href="../../css/jquery.treeview.css" rel="stylesheet" />
+    <link href="../../Scripts/jquery-ui-1_11_3.custom/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../../Scripts/jquery-ui-1_11_3.custom/jquery-ui.theme.min.css" rel="stylesheet" />
+    <link href="../../Scripts/jquery-ui-1_11_3.custom/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="../../Scripts/jquery-ui-timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <link rel="Stylesheet" href="../../Content/css/select2.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"/>
+    <link rel="Stylesheet" href="../../css/dx.common.css" />
+    <link rel="Stylesheet" href="../../css/dx.dark.css" />
+    <style type="text/css">
+        div {
+            font-family: 'Trebuchet MS', Verdana, Arial, sans-serif;
+            font-size: 13px;
+            color: #494949;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+    <%--<link href="<%= Url.Content("~/CSS/Site.css") %>" rel="stylesheet" type="text/css" />--%>
+    <%--<link href="../../css/Site.css" rel="stylesheet" /> devexpressi oma --%>
+
+
+    <!--    <script type="text/javascript" src="../../Scripts/jquery-ui-1_11_3.custom/external/jquery/jquery.js"></script>  Uploadimageready  -->
+    <%--  <script type="text/javascript" src="../../Scripts/jquery-2.1.3.js"></script>--%>
+    <script type="text/javascript" src="../../Scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../../css/select2.min.js"></script>
+    <% Html.DevExpress().RenderStyleSheets(Page,
+              new StyleSheet { ExtensionSuite = ExtensionSuite.GridView },
+              //new StyleSheet { ExtensionSuite = ExtensionSuite.PivotGrid },
+              // new StyleSheet { ExtensionSuite = ExtensionSuite.HtmlEditor },
+              // new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
+              // new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+              //new StyleSheet { ExtensionSuite = ExtensionSuite.Chart },
+              //  new StyleSheet { ExtensionSuite = ExtensionSuite.Report },
+              new StyleSheet { ExtensionSuite = ExtensionSuite.Scheduler }
+          // new StyleSheet { ExtensionSuite = ExtensionSuite.TreeList },
+          // new StyleSheet { ExtensionSuite = ExtensionSuite.Spreadsheet },
+          //new StyleSheet { ExtensionSuite = ExtensionSuite.SpellChecker }
+          ); %>
+
+
+    <% Html.DevExpress().RenderScripts(Page,
+              new Script { ExtensionSuite = ExtensionSuite.GridView },
+           new Script { ExtensionSuite = ExtensionSuite.PivotGrid },
+              //new Script { ExtensionSuite = ExtensionSuite.HtmlEditor },
+              //new Script { ExtensionSuite = ExtensionSuite.Editors },
+              //new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+              //new Script { ExtensionSuite = ExtensionSuite.Chart },
+              //    new Script { ExtensionSuite = ExtensionSuite.Report },
+              new Script { ExtensionSuite = ExtensionSuite.Scheduler }
+          //new Script { ExtensionSuite = ExtensionSuite.TreeList },
+          //new Script { ExtensionSuite = ExtensionSuite.Spreadsheet },
+          //new Script { ExtensionSuite = ExtensionSuite.SpellChecker }
+          ); %>
+
+
+    <script type="text/javascript" src="../../Scripts/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery.filestyle1.js"></script>
+    <!--isiku pildi laadimisel error uute skriptidega ei sobi mujal ei kasutata -->
+    <script type="text/javascript" src="../../css/jquery.treeview.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-ui-1.11.3.min.js"></script>
+    <!--   <script type="text/javascript" src="../../Scripts/jquery-ui-1_11_3.custom/jquery-ui.js"></script> -->
+    <script type="text/javascript" src="../../Scripts/generator.js"></script>
+    <!--helmes spets dialog punane ja roheline   -->
+    <script type="text/javascript" src="../../Scripts/jquery-ui-timepicker/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery.corner.js"></script>
+    <!-- peab lõpus olema mõjub datetime picker võimalik muu probleem ka veel -->
+    <script type="text/javascript" src="../../Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../Scripts/dx.all.js"></script>
+    <script src="../../Scripts/dx.aspnet.mvc.js"></script>
+    <script src="../../Scripts/dx.aspnet.data.js"></script>
+
+</head>
+
+<body style="background-color: white">
+    <form runat="server">
+        <div id="top-dialog" class="ui-state-error ui-corner-all" style="position: absolute; display: none; width: 1px; padding: 5px 10px; font-size: 20px; text-align: center; z-index: 1010;"></div>
+        <div id="modal-dialog" style="display: none; width: 1px;"></div>
+        <div id="modal-dialogLiveVideo" class="myvideo" style="display: none; width: 1px;"></div>
+
+        <div id="modal-dialog-2" style="display: none; width: 1px;"></div>
+        <div id="user-modal-dialog" style="display: none; width: 1px;"></div>
+        <div id="delete-modal-dialog" style="display: none; width: 1px;"></div>
+        <div id="user-logon-modal-dialog" style="display: none; width: 1px;"></div>
+
+        <table style="margin: 0; width: 100%; padding: 0; border-spacing: 0; border: none;">
+            <tr>
+                <td style="width: 100%; padding: 15px 50px;">
+                    <table style="margin: 0; width: 100%; padding: 0; border-spacing: 0; border: none;">
+                        <tr>
+                            <td style="width: 20%;"><span style="cursor: pointer;">
+                                <img src='../../img/foxsec_240.png' /></span></td>
+                            <td style="width: 10%;"><span style="cursor: pointer;" align="center"><a href="../../Manual/foxsec_web_manual_version.pdf" target="_blank">
+                                <img src="../../img/help.png" style="width: 40px; height: 40px" /></a></span></td>
+                            <td style="width: 10%;"><span style="cursor: pointer;" align="center">
+                                <%-- <asp:HyperLink NavigateUrl="D:\FoxsecWork1\FoxSec\FoxSec.Web\foxsecsslcert.pfx">Download Cert</asp:HyperLink>--%>
+                                <%-- <asp:LinkButton ID="LinkButton1" runat="server" OnClick="lnkhyperlink_Click">Download Cert</asp:LinkButton>--%>
+                                <a id="downloadfile" runat="server" onclick="downloadfile()">Download Cert</a>
+                            </span></td>
+                            <td style="width: 60%; text-align: right; font-size: 13px; font-weight: bold;">
+                                <% Html.RenderAction("LanguageBar", "Language"); %>
+                                <% Html.RenderPartial("LogOnControl", Model.User != null ? string.Format("{0} {1} ({2})", Model.User.FirstName, Model.User.LastName, Model.User.RoleName) : string.Empty); %>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width: 100%; height: auto; padding: 0 20px; vertical-align: top;">
+                    <div id="content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div style="visibility:hidden">
+            <asp:TextBox runat="server" ID="txtlink" ClientID="txtlink"></asp:TextBox>
+        </div>
+    </form>
+
+    <script type="text/javascript" lang="javascript">
+
+        $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+            _title: function (title) {
+                if (!this.options.title) {
+                    title.html("&#160;");
+                } else {
+                    title.html(this.options.title);
+                }
+            }
+        }));
+
+        //$(function () { $(this).bind("contextmenu", function (e) { e.preventDefault(); }); });
+
+        $(document).ready(function () {
+
+            $.ajaxSetup({ cache: false });
+            $(".tipsy_ns").attr("class", function () {
+                $(this).tipsy({ gravity: $.fn.tipsy.autoNS, html: true });
+            });
+        });
+
+        function SubmitSystemSearch() {
+            var criteria = $('#systemSearchField').attr('value');
+            alert(criteria);
+            $("div#modal-dialog").dialog({
+                open: function () {
+                    $("div#modal-dialog").html("");
+                    $.get('/GlobalSearch/Index', { searchCriteria: criteria }, function (html) {
+                        $("div#modal-dialog").html(html);
+                    });
+                    $("input:button").button();
+                },
+                resizable: false,
+                width: 800,
+                height: 685,
+                modal: true,
+                title: "SearchResults",
+                buttons: {
+                '<%=ViewResources.SharedStrings.BtnClose %>': function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            return false;
+        }
+        function downloadfile() {           
+            var recipient = $("#<%=txtlink.ClientID%>").val();
+            var srr = recipient.split("\\");            
+            var fname = "../../" + srr[srr.length-1];
+            window.location.href =fname;
+        }
+
+    </script>
+
+</body>
+</html>

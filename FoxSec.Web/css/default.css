@@ -1,0 +1,564 @@
+body
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    background-color: #F4F4F4;
+}
+
+hr
+{
+    border: 0;
+    height: 1px;
+    color: #BBBBBB;
+    background-color: #BBBBBB;
+}
+
+h3
+{
+    color: #494949;
+}
+
+table
+{
+    table-layout: fixed;
+    margin: 0 auto;
+    text-align: left;
+}
+
+table.tablesorter tbody td
+{
+    background-color: #CCC;
+}
+table.tablesorter tbody tr.odd td
+{
+    background-color: #F4F4F4;
+}
+.footer
+{
+    position: inherit !important;
+    margin: 15px 0 0;
+}
+
+th
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #494949;
+    text-decoration: none;
+    padding: 0;
+    vertical-align: middle;
+    text-align: left;
+}
+
+td
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    padding: 0;
+    vertical-align: middle;
+}
+
+label
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #494949;
+    text-decoration: none;
+    padding: 0;
+    vertical-align: middle;
+}
+
+legend
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    padding: 4px;
+    border: 1px solid #CCC;
+}
+
+fieldset
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    padding: 5px;
+    border: 1px solid #CCC;
+}
+
+p
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+form
+{
+    margin: 0;
+}
+
+select
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    padding: 1px;
+    vertical-align: middle;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    margin: 0 2px;
+}
+
+select optgroup
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    margin: 2px;
+    border-top: 1px solid #494949;
+}
+
+select option
+{
+    padding: 1px 4px 1px 6px;
+    font-size: 13px;
+}
+
+input[type="text"]
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    padding: 2px 4px;
+    vertical-align: middle;
+    margin: 2px;
+    background: white url('../img/input.gif') repeat-x;
+    width: 90%;
+}
+
+input.disabled
+{
+    border: 1px solid #EEE;
+    background: #EEE !important;
+}
+
+input[type="password"]
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    padding: 2px 4px;
+    vertical-align: middle;
+    margin: 2px;
+    background: white url('../img/input.gif') repeat-x;
+    width: 90%;
+}
+
+input[type="button"]
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+}
+
+textarea
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    padding: 2px 4px;
+    background-color: #E3E4E8;
+    vertical-align: top;
+    background: white url('data:image/gif;base64,R0lGODlhAQAUAPYAAPz9+/f5+fDx7/37/e7t7+/x7/Ty9O/x8fHx8ff19/n3+fX39+3v7fj6+vn4+vr4+u7s7Pb39e3v7+7v7fz8/Pn6+Pv9++zu7u3s7u/t7/j59+7u7vj6+O/v7/Dw8PDv8fHv8fz7/f37+/r4+Pf59/f19fL09Pv9/fv8+vr8/O/t7fP08vb19/n39/3//fj3+fr6+uzu7Pz6+v79//Py9PHv7+3u7Pf39/n5+e3t7fT09Pv7+/7+/vX19fLy8v39/f///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAAD/ACwAAAAAAQAUAAAHFoAQDAc+Oj0sGjg7FD88QEBAQEBAQIEAOw==') /*../../img/input.gif*/ repeat-x;
+    margin: 2px;
+    width: 90%;
+    height: 80px;
+    overflow-x: hidden;
+}
+
+input[type="checkbox"]
+{
+    background: transparent;
+    border: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+a
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+a:hover
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 13px;
+    color: #494949;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+img
+{
+    background-color: transparent;
+    border: none;
+    vertical-align: middle;
+}
+
+br
+{
+    clear: left;
+}
+
+td.title
+{
+    font-family: 'Trebuchet MS' , Verdana, Arial, sans-serif;
+    font-size: 14px;
+    color: #494949;
+    text-decoration: none;
+    padding: 0 0 15px 15px;
+    font-weight: bold;
+}
+
+.Align_left
+{
+    float: left;
+}
+
+.Align_right
+{
+    float: right;
+}
+
+.Trans
+{
+    filter: alpha(opacity=25);
+    -moz-opacity: .25;
+    opacity: .25;
+    cursor: default;
+}
+
+/* Corners */
+div#AreaPeopleTree
+{
+    background-color: #CCC;
+    width: auto;
+    height: auto;
+}
+
+div#AreaCompanyTree
+{
+    background-color: #CCC;
+    width: auto;
+    height: auto;
+}
+
+div#AreaAddNewCard
+{
+    background-color: #CCC;
+    width: auto;
+    height: auto;
+}
+
+div#AreaPermissionTree
+{
+    background-color: #CCC;
+    width: auto;
+    height: auto;
+}
+
+div#AreaBuildingTree
+{
+    background-color: #CCC;
+    width: auto;
+    height: auto;
+}
+
+div#AreaUserPermissionTree
+{
+    background-color: #CCC;
+    width: auto;
+    height: auto;
+}
+
+/* Global span style icon options */
+span.icon
+{
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 5px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+/* Icons */
+span.icon_logout {
+    background: url('../../img/icons.png') no-repeat 0 -192px;
+    width: 24px;
+    height: 24px;
+}
+
+span.icon_green_go
+{
+    background: url('../../img/icons.png') no-repeat 0 -216px;
+    width: 24px;
+    height: 24px;
+}
+
+span.icon_find
+{
+    background: url('../../img/icons.png') no-repeat 0 -240px;
+    width: 24px;
+    height: 24px;
+}
+
+span.loader
+{
+    background: url('../../img/bloader.gif') no-repeat 0 0;
+    width: 32px;
+    height: 32px;
+}
+
+/* Flags */
+span.flag_et
+{
+    background: url('../../img/flags.png') no-repeat 0 0;
+    width: 24px;
+    height: 24px;
+}
+
+span.flag_en
+{
+    background: url('../../img/flags.png') no-repeat 0 -24px;
+    width: 24px;
+    height: 24px;
+}
+
+span.flag_ru
+{
+    background: url('../../img/flags.png') no-repeat 0 -48px;
+    width: 24px;
+    height: 24px;
+}
+
+span.flag_lt
+{
+    background: url('../../img/flags.png') no-repeat 0 -72px;
+    width: 24px;
+    height: 24px;
+}
+
+span.flag_lv
+{
+    background: url('../../img/flags.png') no-repeat 0 -96px;
+    width: 24px;
+    height: 24px;
+  
+}
+
+span.flag_sv
+{
+     background: url('../../img/flags.png') no-repeat 0 -144px;
+    width: 24px;
+    height: 24px;
+
+}
+
+span.flag_fi
+{
+       background: url('../../img/flags.png') no-repeat 0 -120px;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 25px;
+}
+
+/* Customized UI */
+.ui-autocomplete
+{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.ui-datepicker-title
+{
+    color: #F4F4F4;
+}
+
+.ui-icon-custom
+{
+    display: inline-block;
+    [if IE] float: left;
+    width: 15px;
+    height: 16px;
+    margin: 0 2px 0 0;
+    cursor: pointer;
+}
+
+/* Tipsy */
+.tipsy
+{
+    padding: 5px;
+    font-size: 10px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    background-repeat: no-repeat;
+    background-image: url('data:image/gif;base64,R0lGODlh9QH1AYABAAAAAP///yH5BAEAAAEALAAAAAD1AfUBAAL/jI+py+0Po5y02ovzBbr7D4biSJbmiabqGgIuC8fyTNf2jeeey+v+DwwKh8SihYc0KpfMpvMJDSCn0ar1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8aN/xw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz+OPLny5cybO38OPbr06dSrW7+OPbv27dy7e/8OPrz48eTLmz+PPr369ezbu38PP778+fTr27+PP7/+/fz7+///D2CAinHAH4EJvFCggQb0kKCBSTTIARUQRsjgfg9KgaCFGS6oYH4bHtAhfiEKSGKJJp6IYooqrshiiy6+CGOMMs5IY4023ohjjjruyGOPPv4IZJBCDklkkUYeiWSSSi7JZJNOPglllFJOSWWVVl6JZZZabslll15+CWaYYo5JZplmnolmmmquyWabbr4JZ5xyzklnnXbeiWeeeu7JZ59+/glooIIOSmihhh6KaKKKLspoo44+Cmmkkk5KaaWWXopppppuymmnnn4Kaqiijkpqqaaeimqqqq7KaquuvgprrLLOSmuttt6Ka6667sprr77+Cmywwg5LbLHGHotssso6Lstss84+C2200k5LbbXWXottttpuy2233n4Lbrjijktuueaei2666q7Lrn9TXDjhhxOSWKGAIxZUAAA7') /*../../img/tipsy.gif*/;
+}
+.tipsy-inner
+{
+    padding: 5px 8px 4px 8px;
+    background-color: black;
+    color: white;
+    max-width: 200px;
+    text-align: center;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.tipsy-north
+{
+    background-position: top center;
+}
+.tipsy-south
+{
+    background-position: bottom center;
+}
+.tipsy-east
+{
+    background-position: right center;
+}
+.tipsy-west
+{
+    background-position: left center;
+}
+
+/* Pagination */
+div.pager
+{
+    margin: 15px 0;
+    width: 100%;
+}
+div.pager ul
+{
+    list-style: none;
+}
+div.pager ul, div.pager ul li
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+div.pager ul li
+{
+    margin-right: 1px;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+div.pager ul li a, div.pager ul li span, div.pager ul li strong
+{
+    float: left;
+    padding: 2px 6px;
+    border: 1px solid #fff;
+    line-height: normal;
+    text-decoration: none;
+}
+div.pager ul li span, div.pager ul li strong
+{
+    cursor: default;
+}
+div.pager ul li a
+{
+    border-color: #e0e0e0;
+    background: #fff;
+}
+div.pager ul li a:hover
+{
+    border-color: #333;
+    background-color: #333;
+    color: #fff;
+    border-style: inset;
+}
+div.pager ul li span
+{
+    color: #a0a0a0 !important;
+    border-color: #e0e0e0;
+}
+div.pager div
+{
+    display: inline;
+    float: right;
+    margin: .05em 0 0 0 !important;
+}
+div.pager div span
+{
+    margin: 0 .2em;
+    color: #c0c0c0;
+}
+
+/* ScrollBar */
+#scrollbar1 { width: 520px; clear: both; margin: 20px 0 10px; }
+#scrollbar1 .viewport { width: 500px; height: 200px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { background-color: #003D5D; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#scrollbar1 .track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#scrollbar1 .disable{ display: none; }
+
+/*Validation*/
+span.error, em.error{
+background-image:none;
+clear:left;
+color:#BB0000 !important;
+display:block;
+font-style:normal;
+font-weight:bold !important;
+line-height:1.2em;
+padding:0 0.1em 0.3em 0.2em;
+}
+
+.input-validation-error{
+      border: solid 1px #cc0000!important;
+}
+/* Interaction Cues vana ui compatible ilma ,et rikuks standard lib
+----------------------------------*/
+.ui-state-data-saved-def1{background-color:forestgreen; color:white; overflow:visible}
+.ui-state-error-def1{background-color:crimson; color:white;overflow:visible}
+
+.dxeButtonEditClearButton_Metropolis img 
+{
+    display:none;
+}
+.dxpgMainTable_Metropolis
+{
+   text-align: right ;
+}

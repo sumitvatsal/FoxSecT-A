@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Log]
+    ADD CONSTRAINT [FK_Log_LogTypes] FOREIGN KEY ([LogTypeId]) REFERENCES [dbo].[LogTypes] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;
+

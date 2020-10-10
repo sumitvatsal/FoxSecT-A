@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visitser
+  http://go.microsoft.com/fwlink/?LinkId=152368
+  -->
+<configuration>
+  <configSections>
+    <!--<sectionGroup name="devExpress">
+      <section name="themes" type="DevExpress.Web.ThemesConfigurationSection, DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="compression" type="DevExpress.Web.CompressionConfigurationSection, DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="settings" type="DevExpress.Web.SettingsConfigurationSection, DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="errors" type="DevExpress.Web.ErrorsConfigurationSection, DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+    </sectionGroup>-->
+    <sectionGroup name="devExpress">
+      <section name="themes" type="DevExpress.Web.ThemesConfigurationSection, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="compression" type="DevExpress.Web.CompressionConfigurationSection, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="settings" type="DevExpress.Web.SettingsConfigurationSection, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+      <section name="errors" type="DevExpress.Web.ErrorsConfigurationSection, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false" />
+    </sectionGroup>
+    <section name="loggingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="true" />
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration" requirePermission="false" />
+    <section name="Languages" type="FoxSec.Core.Infrastructure.Configuration.LanguageConfigSection, FoxSec.Core" />
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+  </configSections>
+  <connectionStrings>
+    <!--<add connectionString="metadata=res://*/FoxSecModel.csdl|res://*/FoxSecModel.ssdl|res://*/FoxSecModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=195.222.11.22;Initial Catalog=FoxSecDBTA;integrated security=False;User ID=FOXSEC_USER;Password=FOXSEC_321;MultipleActiveResultSets=True&quot;" name="FoxSecDBEntities" providerName="System.Data.EntityClient" />-->
+     <add connectionString="metadata=res://*/FoxSecModel.csdl|res://*/FoxSecModel.ssdl|res://*/FoxSecModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=DESKTOP-1EQ3M4P\FOXSECSQLSERVER;Initial Catalog=FoxSecDB;integrated security=SSPI;MultipleActiveResultSets=True&quot;" name="FoxSecDBEntities" providerName="System.Data.EntityClient" />
+    <!--<add connectionString="Data Source=195.222.11.22;Initial Catalog=FoxSecDBTA;integrated security=False;User ID=FOXSEC_USER;Password=FOXSEC_321;MultipleActiveResultSets=True" name="FoxSecDBContext" providerName="System.Data.SqlClient" />-->
+     <add connectionString="Data Source=DESKTOP-1EQ3M4P\FOXSECSQLSERVER;Initial Catalog=FoxSecDB;integrated security=SSPI;MultipleActiveResultSets=True" name="FoxSecDBContext" providerName="System.Data.SqlClient" />
+    
+
+    <!--<add connectionString="metadata=res://*/FoxSecModel.csdl|res://*/FoxSecModel.ssdl|res://*/FoxSecModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=195.222.11.22;Initial Catalog=4TurnStyle;integrated security=False;User ID=FOXSEC_USER;Password=FOXSEC_321;MultipleActiveResultSets=True&quot;" name="FoxSecDBEntities" providerName="System.Data.EntityClient" />
+    <add connectionString="Data Source=195.222.11.22;Initial Catalog=4TurnStyle;integrated security=False;User ID=FOXSEC_USER;Password=FOXSEC_321;MultipleActiveResultSets=True" name="FoxSecDBContext" providerName="System.Data.SqlClient" />-->
+
+    <!--<add connectionstring="metadata=res://*/foxsecmodel.csdl|res://*/foxsecmodel.ssdl|res://*/foxsecmodel.msl;provider=system.data.sqlclient;provider connection string=&quot;data source=desktop-1eq3m4p\sqlexpress1;initial catalog=foxsecdb;integrated security=false;user id=test;password=test;multipleactiveresultsets=true&quot;" name="foxsecdbentities" providername="system.data.entityclient" />
+    <add connectionstring="data source=desktop-1eq3m4p\sqlexpress1;initial catalog=foxsecdb;integrated security=false;user id=test;password=test;multipleactiveresultsets=true" name="foxsecdbcontext" providername="system.data.sqlclient" />-->
+
+    <!--<add connectionString="metadata=res://*/FoxSecModel.csdl|res://*/FoxSecModel.ssdl|res://*/FoxSecModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=DESKTOP-1EQ3M4P\SQLEXPRESS;Initial Catalog=FoxSecDBTA;integrated security=False;User ID=sa;Password=FOXSEC_321;MultipleActiveResultSets=True&quot;" name="FoxSecDBEntities" providerName="System.Data.EntityClient" />
+    <add connectionString="Data Source=DESKTOP-1EQ3M4P\SQLEXPRESS;Initial Catalog=FoxSecDBTA;integrated security=False;User ID=sa;Password=FOXSEC_321;MultipleActiveResultSets=True" name="FoxSecDBContext" providerName="System.Data.SqlClient" />-->
+
+    <!--<add name="FoxSecDBEntities" connectionString="metadata=res://*/FoxSecModel.csdl|res://*/FoxSecModel.ssdl|res://*/FoxSecModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=DESKTOP-1EQ3M4P\FOXSECSQLSERVER;Initial Catalog=FoxSecDB;Integrated Security=false;Persist Security Info=True;User ID=SA;Password=Fo7xs9e15;MultipleActiveResultSets=True;Connection Timeout=3600&quot;"
+         providerName="System.Data.EntityClient" />
+    <add name="FoxSecDBContext" connectionString="Data Source=DESKTOP-1EQ3M4P\FOXSECSQLSERVER;Initial Catalog=FoxSecDB;User ID=SA;Password=Fo7xs9e15;Integrated Security=false;Persist Security Info=True;MultipleActiveResultSets=True;Connection Timeout=3600"
+      providerName="System.Data.SqlClient" />-->
+
+    <!--<add connectionString="metadata=res://*/FoxSecModel.csdl|res://*/FoxSecModel.ssdl|res://*/FoxSecModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=DESKTOP-1EQ3M4P\SQLEXPRESS;Initial Catalog=4TurnStyle;integrated security=False;User ID=sa;Password=12345;MultipleActiveResultSets=True&quot;" name="FoxSecDBEntities" providerName="System.Data.EntityClient" />
+    <add connectionString="Data Source=DESKTOP-1EQ3M4P\SQLEXPRESS;Initial Catalog=4TurnStyle;integrated security=False;User ID=sa;Password=12345;MultipleActiveResultSets=True" name="FoxSecDBContext" providerName="System.Data.SqlClient" />-->
+
+    <!--<add connectionString="metadata=res://*/FoxSecModel.csdl|res://*/FoxSecModel.ssdl|res://*/FoxSecModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=DESKTOP-1EQ3M4P\SQLEXPRESS1;Initial Catalog=FoxSecDB;integrated security=False;User ID=sa;Password=FOXSEC_321;MultipleActiveResultSets=True&quot;" name="FoxSecDBEntities" providerName="System.Data.EntityClient" />
+    <add connectionString="Data Source=DESKTOP-1EQ3M4P\SQLEXPRESS1;Initial Catalog=FoxSecDB;integrated security=False;User ID=sa;Password=FOXSEC_321;MultipleActiveResultSets=True" name="FoxSecDBContext" providerName="System.Data.SqlClient" />-->
+  </connectionStrings>
+  <appSettings>
+    <add key="dependencyResolverTypeName" value="FoxSec.Infrastructure.EntLib.Unity.UnityDependencyResolver, FoxSec.Infrastructure.EntLib" />
+    <add key="connectionString" value="name=FoxSecDBEntities" />
+    <add key="defaultContainerName" value="FoxSecDBEntities" />
+    <add key="domainName" value="http://foxsec.hgrupp.ee" />
+    <add key="vs:EnableBrowserLink" value="true" />
+  </appSettings>
+  <unity configSource="unity.config" />
+  <loggingConfiguration configSource="logging.config" />
+  <Languages configSource="languages.config" />
+  <log4net>
+    <appender name="log4netTest" type="log4net.Appender.SmtpAppender">
+      <!--<threshold value="ALL"/>-->
+      <to value="Enter Your Mail" />
+      <from value="test@foxsec.ee" />
+      <subject value="FoxSec Mail" />
+      <smtpHost value="mail.helmes.ee" />
+      <bufferSize value="512" />
+      <lossy value="false" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%newline%date - [%-5level]: %message%newline%newline%newline" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="INFO" />
+        <param name="LevelMax" value="FATAL" />
+      </filter>
+    </appender>
+    <appender name="LogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="log.txt" />
+      <param name="AppendToFile" value="true" />
+      <rollingStyle value="Size" />
+      <maxSizeRollBackups value="10" />
+      <maximumFileSize value="10MB" />
+      <staticLogFileName value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%-5p%d{yyyy-MM-dd hh:mm:ss} – %m%n" />
+      </layout>
+    </appender>
+    <root>
+      <appender-ref ref="log4netTest" />
+      <appender-ref ref="LogFileAppender" />
+    </root>
+  </log4net>
+
+  <system.net>
+    <defaultProxy enabled="true" useDefaultCredentials="true">
+    </defaultProxy>
+  </system.net>
+
+  <!--
+  <system.net>
+    <mailSettings>
+      <smtp from="test@foxsec.ee">
+        <network host="mail.helmes.ee" port="512" />
+      </smtp>
+    </mailSettings>
+     <defaultProxy>
+         <proxy bypassonlocal="False" usesystemdefault="True" />
+    </defaultProxy>   
+  </system.net>
+  -->
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.5.1" />
+      </system.Web>
+  -->
+  <system.web>
+    <httpRuntime maxQueryStringLength="999999" maxRequestLength="50000000" requestValidationMode="4.0" executionTimeout="180" targetFramework="4.5.2" />
+    <compilation debug="true" targetFramework="4.5.2">
+      <assemblies>
+        <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <add assembly="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+
+        <add assembly="DevExpress.Data.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxHtmlEditor.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxSpellChecker.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxTreeList.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxThemes.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Utils.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Office.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <!--<add assembly="DevExpress.RichEdit.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.SpellChecker.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Charts.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraCharts.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraGauges.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraGauges.v15.2.Presets, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxGauges.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraCharts.v15.2.Web, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />-->
+        <add assembly="DevExpress.Printing.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraReports.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraReports.v15.2.Web, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraPivotGrid.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.PivotGrid.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxScheduler.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Spreadsheet.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxSpreadsheet.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Xpo.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.DataAccess.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Dashboard.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Dashboard.v15.2.Web, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Dashboard.v15.2.Web.Mvc5, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.Mvc5.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="DevExpress.Web.ASPxRichEdit.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+        <add assembly="System.Data.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+    </compilation>
+    <authentication mode="Forms">
+      <forms loginUrl="~/Account/LogOn" slidingExpiration="true" timeout="20" />
+    </authentication>
+    <customErrors mode="RemoteOnly" defaultRedirect="Content/GenericError.htm">
+      <error statusCode="500" redirect="Content/InternalError.htm" />
+    </customErrors>
+    <pages controlRenderingCompatibilityVersion="4.0" validateRequest="true" clientIDMode="AutoID">
+      <namespaces>
+        <add namespace="System.Web.Mvc" />
+        <add namespace="System.Web.Mvc.Ajax" />
+        <add namespace="System.Web.Mvc.Html" />
+        <add namespace="System.Web.Routing" />
+        <add namespace="DevExpress.Utils" />
+        <add namespace="DevExpress.Web" />
+        <add namespace="DevExpress.Web.ASPxHtmlEditor" />
+        <add namespace="DevExpress.Web.ASPxSpellChecker" />
+        <add namespace="DevExpress.Web.ASPxThemes" />
+        <add namespace="DevExpress.Web.ASPxTreeList" />
+        <add namespace="DevExpress.XtraCharts" />
+        <add namespace="DevExpress.XtraCharts.Web" />
+        <add namespace="DevExpress.XtraReports" />
+        <add namespace="DevExpress.XtraReports.UI" />
+        <add namespace="DevExpress.XtraReports.Web" />
+        <add namespace="DevExpress.XtraReports.Web.DocumentViewer" />
+        <add namespace="DevExpress.XtraPivotGrid" />
+        <add namespace="DevExpress.Data.PivotGrid" />
+        <add namespace="DevExpress.Web.ASPxPivotGrid" />
+        <add namespace="DevExpress.Web.Mvc" />
+        <add namespace="DevExpress.Web.Mvc.UI" />
+        <add namespace="DevExpress.XtraScheduler" />
+        <add namespace="DevExpress.XtraScheduler.Native" />
+        <add namespace="DevExpress.Web.ASPxScheduler" />
+        <add namespace="DevExpress.DashboardWeb.Mvc" />
+        <add namespace="DevExpress.Web.ASPxSpreadsheet" />
+        <add namespace="DevExpress.XtraRichEdit" />
+        <add namespace="DevExpress.Web.ASPxRichEdit" />
+        <add namespace="System.Web.UI" />
+      </namespaces>
+    </pages>
+    <httpHandlers>
+      <add type="DevExpress.Web.ASPxUploadProgressHttpHandler, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="ASPxUploadProgressHandlerPage.ashx" validate="false" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="DX.ashx" validate="false" />
+    </httpHandlers>
+    <httpModules>
+      <add name="UnityPerWebRequestLifetimeModule" type="FoxSec.Infrastructure.EntLib.Unity.UnityPerWebRequestLifetimeModule, FoxSec.Infrastructure.EntLib" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule" />
+    </httpModules>
+    <profile defaultProvider="DefaultProfileProvider">
+      <providers>
+        <add name="DefaultProfileProvider" type="System.Web.Providers.DefaultProfileProvider, System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" connectionStringName="DefaultConnection" applicationName="/" />
+      </providers>
+    </profile>
+    <membership defaultProvider="DefaultMembershipProvider">
+      <providers>
+        <add name="DefaultMembershipProvider" type="System.Web.Providers.DefaultMembershipProvider, System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" connectionStringName="DefaultConnection" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" requiresUniqueEmail="false" FInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="/" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="DefaultRoleProvider">
+      <providers>
+        <add name="DefaultRoleProvider" type="System.Web.Providers.DefaultRoleProvider, System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" connectionStringName="DefaultConnection" applicationName="/" />
+      </providers>
+    </roleManager>
+    <!--
+            If you are deploying to a cloud environment that has multiple web server instances,
+            you should change session state mode from "InProc" to "Custom". In addition,
+            change the connection string named "DefaultConnection" to connect to an instance
+            of SQL Server (including SQL Azure and SQL  Compact) instead of to SQL Server Express.
+      -->
+    <sessionState mode="InProc" customProvider="DefaultSessionProvider" timeout="20">
+      <providers>
+        <add name="DefaultSessionProvider" type="System.Web.Providers.DefaultSessionStateProvider, System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" connectionStringName="DefaultConnection" />
+      </providers>
+    </sessionState>
+    <globalization culture="" uiCulture="" />
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <!--<modules runAllManagedModulesForAllRequests="true">
+      <add name="UnityPerWebRequestLifetimeModule" type="FoxSec.Infrastructure.EntLib.Unity.UnityPerWebRequestLifetimeModule, FoxSec.Infrastructure.EntLib" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule" />
+    </modules>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+      <add type="DevExpress.Web.ASPxUploadProgressHttpHandler, DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="ASPxUploadProgressHandlerPage.ashx" name="ASPxUploadProgressHandler" preCondition="integratedMode" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="DX.ashx" name="ASPxHttpHandlerModule" preCondition="integratedMode" />
+    </handlers>-->
+    <modules runAllManagedModulesForAllRequests="true">
+      <add name="UnityPerWebRequestLifetimeModule" type="FoxSec.Infrastructure.EntLib.Unity.UnityPerWebRequestLifetimeModule, FoxSec.Infrastructure.EntLib" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule" />
+      <remove name="Session" />
+      <add name="Session" type="System.Web.SessionState.SessionStateModule" />
+    </modules>
+    <handlers>
+      <clear />
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+      <add type="DevExpress.Web.ASPxUploadProgressHttpHandler, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="ASPxUploadProgressHandlerPage.ashx" name="ASPxUploadProgressHandler" preCondition="integratedMode" />
+      <add type="DevExpress.Web.ASPxHttpHandlerModule, DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" verb="GET,POST" path="DX.ashx" name="ASPxHttpHandlerModule" preCondition="integratedMode" />
+      <add name="StaticFile" path="*" verb="*" modules="StaticFileModule,DefaultDocumentModule,DirectoryListingModule" resourceType="Either" requireAccess="Read" />
+    </handlers>
+    <security>
+      <requestFiltering>
+        <requestLimits maxAllowedContentLength="50000000" maxQueryString="50000000" maxUrl="50000000" />
+      </requestFiltering>
+    </security>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.0.0" newVersion="4.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Razor" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages.Razor" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <devExpress>
+    <themes enableThemesAssembly="true" styleSheetTheme="" theme="Metropolis" customThemeAssemblies="" />
+    <compression enableHtmlCompression="false" enableCallbackCompression="true" enableResourceCompression="true" enableResourceMerging="true" />
+    <settings doctypeMode="Html5" rightToLeft="false" embedRequiredClientLibraries="true" ieCompatibilityVersion="edge" />
+    <errors callbackErrorRedirectUrl="" />
+  </devExpress>
+</configuration>

@@ -1,0 +1,2694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutPageContentPlaceholder" xml:space="preserve">
+    <value>Ievietojiet saturu ðeit.</value>
+  </data>
+  <data name="AboutPageTitle" xml:space="preserve">
+    <value>Par mums</value>
+  </data>
+  <data name="AboutTabName" xml:space="preserve">
+    <value>Par</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>TERIS tîmekïa lietojumprogramma</value>
+  </data>
+  <data name="HomeTabName" xml:space="preserve">
+    <value>Mâjas</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Izlogoties</value>
+  </data>
+  <data name="WelcomeScreenMessage" xml:space="preserve">
+    <value>Laipni lûdzam TERIS!</value>
+  </data>
+  <data name="RoleManagementTabName" xml:space="preserve">
+    <value>Role pârvaldîba</value>
+  </data>
+  <data name="UserManagementTabName" xml:space="preserve">
+    <value>Lietotâju pârvaldîba</value>
+  </data>
+  <data name="AdminTabName" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AuditLogTabName" xml:space="preserve">
+    <value>Audita þurnâls</value>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Dzçst</value>
+  </data>
+  <data name="BtnDeleteFilter" xml:space="preserve">
+    <value>Dzçst filtru</value>
+  </data>
+  <data name="BtnEdit" xml:space="preserve">
+    <value>Rediìçt</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Saglabât </value>
+  </data>
+  <data name="BtnSaveFilter" xml:space="preserve">
+    <value>Saglabât filter</value>
+  </data>
+  <data name="ReportToCompany" xml:space="preserve">
+    <value>Ziòot uzòçmumam</value>
+  </data>
+  <data name="BtnNo" xml:space="preserve">
+    <value>Nç</value>
+  </data>
+  <data name="BtnYes" xml:space="preserve">
+    <value>Jâ</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Apstiprinât</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Kïûda!</value>
+  </data>
+  <data name="TitleManagementTabName" xml:space="preserve">
+    <value>Virsraksti</value>
+  </data>
+  <data name="CompaniesManagementTabName" xml:space="preserve">
+    <value>Kompânijas</value>
+  </data>
+  <data name="DepartmentsManagementTabName" xml:space="preserve">
+    <value>Departamenti</value>
+  </data>
+  <data name="HolidaysManagementTabName" xml:space="preserve">
+    <value>Brîvdienas</value>
+  </data>
+  <data name="CardsManagementTabName" xml:space="preserve">
+    <value>Karðu veidi</value>
+  </data>
+  <data name="TimeZoneTabName" xml:space="preserve">
+    <value>Laika zonas</value>
+  </data>
+  <data name="PermissionTabName" xml:space="preserve">
+    <value>Laika zonas</value>
+  </data>
+  <data name="BuildingsTabName" xml:space="preserve">
+    <value>Çkas</value>
+  </data>
+  <data name="FieldLengthErrorComment" xml:space="preserve">
+    <value>Komentâra lauka garums nedrîkst pârsniegt 250 simbolu</value>
+  </data>
+  <data name="FieldLengthError250" xml:space="preserve">
+    <value>Komentâra lauka garums nedrîkst pârsniegt 250 simbolu</value>
+  </data>
+  <data name="FieldLengthError50" xml:space="preserve">
+    <value>Lauka garums nedrîkst pârsniegt 50 simbolus!</value>
+  </data>
+  <data name="FieldsRequiredValidationMessage" xml:space="preserve">
+    <value>Ðis lauks ir obligâts!</value>
+  </data>
+  <data name="DataSavingMessage" xml:space="preserve">
+    <value>Notiek datu saglabâðana ... </value>
+  </data>
+  <data name="NumericValidationMessage" xml:space="preserve">
+    <value>Ðim laukam jâbût skait</value>
+  </data>
+  <data name="FieldLengthErrorPersonalCode" xml:space="preserve">
+    <value>Laukâ nedrîkst bût vairâk par 20 simboliem!</value>
+  </data>
+  <data name="DefaultDropDownValue" xml:space="preserve">
+    <value>- atlasît -</value>
+  </data>
+  <data name="AdministrationTabName" xml:space="preserve">
+    <value>Administrâcija</value>
+  </data>
+  <data name="BtnAddNewCard" xml:space="preserve">
+    <value>Administrâcija</value>
+  </data>
+  <data name="BtnAddNewDepartments" xml:space="preserve">
+    <value>Pievienojiet jauno departamentu</value>
+  </data>
+  <data name="BtnBack" xml:space="preserve">
+    <value>Atapakï</value>
+  </data>
+  <data name="BtnClose" xml:space="preserve">
+    <value>Aizveriet</value>
+  </data>
+  <data name="BtnDeactivate" xml:space="preserve">
+    <value>Aizveriet</value>
+  </data>
+  <data name="BtnGeneratePassword" xml:space="preserve">
+    <value>Ìenerçt paroli</value>
+  </data>
+  <data name="BuildingsActiveCommentsCount" xml:space="preserve">
+    <value>Aktîvo komentâru skaits ir</value>
+  </data>
+  <data name="BuildingsCommentedBuildings" xml:space="preserve">
+    <value>komentçja çkas</value>
+  </data>
+  <data name="BuildingsLegend" xml:space="preserve">
+    <value>Leìenda</value>
+  </data>
+  <data name="CardsCardCode" xml:space="preserve">
+    <value>Kartes kods</value>
+  </data>
+  <data name="CardsCardType" xml:space="preserve">
+    <value>Kartes tips</value>
+  </data>
+  <data name="CardsTabName" xml:space="preserve">
+    <value>Kartes</value>
+  </data>
+  <data name="CommomStatus" xml:space="preserve">
+    <value>Statuss</value>
+  </data>
+  <data name="CommonBuilding" xml:space="preserve">
+    <value>Çka</value>
+  </data>
+  <data name="CommonFloor" xml:space="preserve">
+    <value>Stâvs</value>
+  </data>
+  <data name="CommonId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="CommonIsAllowed" xml:space="preserve">
+    <value>Ir atïauts</value>
+  </data>
+  <data name="CommonValidationPeriod" xml:space="preserve">
+    <value>Validâcijas periods</value>
+  </data>
+  <data name="ContactTabName" xml:space="preserve">
+    <value>kontakts</value>
+  </data>
+  <data name="DefaultDropDownValueShort" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="DepartmentsManager" xml:space="preserve">
+    <value>Departamentu vadîtâjs</value>
+  </data>
+  <data name="DepartmentsMessageAddUserDepartment" xml:space="preserve">
+    <value>Pievienot lietotâju nodaïu ..</value>
+  </data>
+  <data name="DialogTitleNewUser" xml:space="preserve">
+    <value>Jauns lietotâjs</value>
+  </data>
+  <data name="DialogTitleUserDepartments" xml:space="preserve">
+    <value>Lietotâju nodaïas</value>
+  </data>
+  <data name="FilterActive" xml:space="preserve">
+    <value>Aktîvs</value>
+  </data>
+  <data name="FilterDeactivated" xml:space="preserve">
+    <value>Deaktivizçts</value>
+  </data>
+  <data name="FilterShowAll" xml:space="preserve">
+    <value>Parâdît visu</value>
+  </data>
+  <data name="LogTabName" xml:space="preserve">
+    <value>Þurnâls</value>
+  </data>
+  <data name="MyAccountTabName" xml:space="preserve">
+    <value>Mans Konts</value>
+  </data>
+  <data name="OtherTabName" xml:space="preserve">
+    <value>Cits</value>
+  </data>
+  <data name="PersonalDataTabName" xml:space="preserve">
+    <value>Personas dati</value>
+  </data>
+  <data name="PersonalTabName" xml:space="preserve">
+    <value>Personas</value>
+  </data>
+  <data name="UserRightsTabName" xml:space="preserve">
+    <value>Lietotâju tiesîbas</value>
+  </data>
+  <data name="VisitorRightsTabName" xml:space="preserve">
+    <value>Apmeklçtâju tiesîbas</value>
+  </data>
+  <data name="UserRolesTabName" xml:space="preserve">
+    <value>Lietotâju lomas</value>
+  </data>
+  <data name="UsersActivateUser" xml:space="preserve">
+    <value>Aktivizçt lietotâju</value>
+  </data>
+  <data name="UsersAddNewUser" xml:space="preserve">
+    <value>Pievienojiet jaunu lietotâju</value>
+  </data>
+  <data name="UsersBirthday" xml:space="preserve">
+    <value>Dzimðanas diena</value>
+  </data>
+  <data name="UsersCardCode" xml:space="preserve">
+    <value>Kartes kods</value>
+  </data>
+  <data name="UsersCardNo" xml:space="preserve">
+    <value>Kartes kods</value>
+  </data>
+  <data name="UsersCoffeCups" xml:space="preserve">
+    <value>Kafijas tases</value>
+  </data>
+  <data name="UsersCompany" xml:space="preserve">
+    <value>Uzòçmums</value>
+  </data>
+  <data name="UsersContractNr" xml:space="preserve">
+    <value>Lîgums Nr</value>
+  </data>
+  <data name="UsersDeactivateUser" xml:space="preserve">
+    <value>Deaktivizçt lietotâju</value>
+  </data>
+  <data name="UsersDeleteUser" xml:space="preserve">
+    <value>Dzçst lietotâju</value>
+  </data>
+  <data name="UsersDepartment" xml:space="preserve">
+    <value>nodaïa</value>
+  </data>
+  <data name="UsersDepartments" xml:space="preserve">
+    <value>nodaïa</value>
+  </data>
+  <data name="UsersEmail" xml:space="preserve">
+    <value>E-pasts</value>
+  </data>
+  <data name="UsersESeriviceAllowed" xml:space="preserve">
+    <value>E-pakalpojums atïauts</value>
+  </data>
+  <data name="UsersExtPersonalCode" xml:space="preserve">
+    <value>Ext. Personas kods</value>
+  </data>
+  <data name="UsersFirstName" xml:space="preserve">
+    <value>Vârds</value>
+  </data>
+  <data name="UsersLanguage" xml:space="preserve">
+    <value>Valoda </value>
+  </data>
+  <data name="UsersLastName" xml:space="preserve">
+    <value>Uzvârds</value>
+  </data>
+  <data name="UsersMessageLoginIsInUse" xml:space="preserve">
+    <value>Lietotâjvârds tiek izmantots - lûdzu, izmçìiniet citus!</value>
+  </data>
+  <data name="VisitorMessageQRCodenotsent" xml:space="preserve">
+    <value>QR kods nav nosûtîts! Lûdzu, pamçìiniet vçlreiz vçlâk.</value>
+  </data>
+  <data name="VisitorMessageQRCodesent" xml:space="preserve">
+    <value>QR kods veiksmîgi nosûtîts.</value>
+  </data>
+  <data name="UsersValidator" xml:space="preserve">
+    <value>Veidlapai ir viena vai vairâkas nepareizas vçrtîbas!</value>
+  </data>
+  <data name="UsersMessageUserCreated" xml:space="preserve">
+    <value>Lietotâjs ir izveidots</value>
+  </data>
+  <data name="UsersMoveUser" xml:space="preserve">
+    <value>Pârvietot lietotâju</value>
+  </data>
+  <data name="UsersName" xml:space="preserve">
+    <value>Vârds</value>
+  </data>
+  <data name="JoinPermission" xml:space="preserve">
+    <value>Pievienojieties atïaujai</value>
+  </data>
+  <data name="CardBack" xml:space="preserve">
+    <value>karti atpakaï</value>
+  </data>
+  <data name="SendQRCode" xml:space="preserve">
+    <value>Nosûtît QR kodu</value>
+  </data>
+  <data name="PrintVisitorCard" xml:space="preserve">
+    <value>Drukât apmeklçtâja karti</value>
+  </data>
+  <data name="RoleType" xml:space="preserve">
+    <value>Lomas tips</value>
+  </data>
+  <data name="UsersPassword" xml:space="preserve">
+    <value>Parole</value>
+  </data>
+  <data name="UsersPermisionCallQuests" xml:space="preserve">
+    <value>Atïaujas zvana viesi</value>
+  </data>
+  <data name="UsersPermitOfWork" xml:space="preserve">
+    <value>Darba atïauja (beigas)</value>
+  </data>
+  <data name="UsersPersonalCode" xml:space="preserve">
+    <value>Personas kods</value>
+  </data>
+  <data name="UsersPhone" xml:space="preserve">
+    <value>Tâlrunis (-i)</value>
+  </data>
+  <data name="UsersRegistered" xml:space="preserve">
+    <value>Reìistrçts </value>
+  </data>
+  <data name="UsersResidence" xml:space="preserve">
+    <value>uzturçðanâs</value>
+  </data>
+  <data name="UsersRole" xml:space="preserve">
+    <value>Loma</value>
+  </data>
+  <data name="UsersRoleTitle" xml:space="preserve">
+    <value>Lomas nosaukums</value>
+  </data>
+  <data name="UsersSearchPeople" xml:space="preserve">
+    <value>Meklçt cilvçku!</value>
+  </data>
+  <data name="UsersSerial" xml:space="preserve">
+    <value>SER + DK</value>
+  </data>
+  <data name="UsersTableNr" xml:space="preserve">
+    <value>Tabula nr</value>
+  </data>
+  <data name="UsersTabName" xml:space="preserve">
+    <value>Lietotâji</value>
+  </data>
+  <data name="UsersTitle" xml:space="preserve">
+    <value>Nosaukums</value>
+  </data>
+  <data name="UsersUploadFoto" xml:space="preserve">
+    <value>Augðupielâdçt foto</value>
+  </data>
+  <data name="UsersUserCards" xml:space="preserve">
+    <value>Lietotâju kartes</value>
+  </data>
+  <data name="VisitorCards" xml:space="preserve">
+    <value>Apmeklçtâju kartes</value>
+  </data>
+  <data name="UsersUserId" xml:space="preserve">
+    <value>Lietotâja ID</value>
+  </data>
+  <data name="UsersUserName" xml:space="preserve">
+    <value>Lietotâja vârd</value>
+  </data>
+  <data name="UsersValidation" xml:space="preserve">
+    <value>Validâcija</value>
+  </data>
+  <data name="UsersDeactivationDate" xml:space="preserve">
+    <value>Deaktivizâcijas datums</value>
+  </data>
+  <data name="UsersWorkTime" xml:space="preserve">
+    <value>Darba laiks</value>
+  </data>
+  <data name="WorkTabName" xml:space="preserve">
+    <value>Darba</value>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>Pievienot</value>
+  </data>
+  <data name="CardsMessageAddNewCardToUser" xml:space="preserve">
+    <value>Lietotâjam tiek pievienota jauna karte ...</value>
+  </data>
+  <data name="CardsMessageCardNotFree" xml:space="preserve">
+    <value>Karte nav brîvajâs kartçs! Lûdzu, vispirms pievienojiet bezmaksas kartçm!</value>
+  </data>
+  <data name="CardsSerDk" xml:space="preserve">
+    <value>SER+DK</value>
+  </data>
+  <data name="DialogTitleNewUserCard" xml:space="preserve">
+    <value>Jauna lietotâja karte</value>
+  </data>
+  <data name="BtnAddNewRole" xml:space="preserve">
+    <value>Pievienojiet jaunu lomu</value>
+  </data>
+  <data name="BtnOk" xml:space="preserve">
+    <value>Pievienojiet jaunu lomu</value>
+  </data>
+  <data name="CommonApply&#xD;&#xA;        " xml:space="preserve">
+    <value>Piemçrot izmaiòas</value>
+  </data>
+  <data name="CommonDefault" xml:space="preserve">
+    <value>Noklusçjums</value>
+  </data>
+  <data name="CommonDescription" xml:space="preserve">
+    <value>Apraksts</value>
+  </data>
+  <data name="CommonStartTime" xml:space="preserve">
+    <value>Sâkuma laiks</value>
+  </data>
+  <data name="CommonTimeZoneName" xml:space="preserve">
+    <value>Laika joslas nosaukums</value>
+  </data>
+  <data name="UsersCurUserPermGroupName" xml:space="preserve">
+    <value>Paðreizçjais lietotâja atïauju grupas nosaukums</value>
+  </data>
+  <data name="JoinedUserName" xml:space="preserve">
+    <value>Pievienojâs lietotâja vârds</value>
+  </data>
+  <data name="UsersMessageAddUserPermGroup" xml:space="preserve">
+    <value>Notiek lietotâju atïauju grupas pievienoðana ...</value>
+  </data>
+  <data name="UsersMessageChangeUserPermGroup" xml:space="preserve">
+    <value>Notiek lietotâju atïauju grupas mainîðana ... </value>
+  </data>
+  <data name="UsersMessageCreateUserPermGroup" xml:space="preserve">
+    <value>Notiek lietotâju atïauju grupas izveidoðana ...</value>
+  </data>
+  <data name="UsersMessageSaveUserPermGroup" xml:space="preserve">
+    <value>Notiek lietotâju atïauju grupas saglabâðana ...</value>
+  </data>
+  <data name="AccountEnterPasswordPrompt" xml:space="preserve">
+    <value>Lûdzu, ievadiet savu lietotâjvârdu un paroli.</value>
+  </data>
+  <data name="AccountIncorrectPasword" xml:space="preserve">
+    <value>Norâdîtais lietotâja vârds vai parole nav pareiza.</value>
+  </data>
+  <data name="AccountInformation" xml:space="preserve">
+    <value>Konta informâcija</value>
+  </data>
+  <data name="AccountLoginFailedMessage" xml:space="preserve">
+    <value>Pieteikðanâs nebija veiksmîga. Lûdzu, izlabojiet kïûdas un mçìiniet vçlreiz.</value>
+  </data>
+  <data name="AccountLogOn" xml:space="preserve">
+    <value>Ielogoties</value>
+  </data>
+  <data name="AccountLogOnWelcome" xml:space="preserve">
+    <value>Laipni lûdzam</value>
+  </data>
+  <data name="AccountPassword" xml:space="preserve">
+    <value>Parole</value>
+  </data>
+  <data name="AccountRememberMe" xml:space="preserve">
+    <value>Atceries mani?</value>
+  </data>
+  <data name="AccountUserName" xml:space="preserve">
+    <value>Lietotâjvârds</value>
+  </data>
+  <data name="BtnActivate" xml:space="preserve">
+    <value>Aktivizçt </value>
+  </data>
+  <data name="BtnAddNewCompany" xml:space="preserve">
+    <value>Pievienojiet jaunu uzòçmumu</value>
+  </data>
+  <data name="BtnAddNewTitle" xml:space="preserve">
+    <value>Pievienojiet jaunu virsrakstu</value>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>Atcelt</value>
+  </data>
+  <data name="BtnCreateNew" xml:space="preserve">
+    <value>Izveidot jaunu</value>
+  </data>
+  <data name="BtnDeleteGroup" xml:space="preserve">
+    <value>Dzçst grupu</value>
+  </data>
+  <data name="BtnMove" xml:space="preserve">
+    <value>Kustçties</value>
+  </data>
+  <data name="BtnNewDefaultTZ" xml:space="preserve">
+    <value>Jauns noklusçjuma TZ</value>
+  </data>
+  <data name="BtnSaveChanges" xml:space="preserve">
+    <value>Saglabât izmaiòas</value>
+  </data>
+  <data name="CardsActivateCardBtn" xml:space="preserve">
+    <value>Aktivizçt karti</value>
+  </data>
+  <data name="CardsActivating" xml:space="preserve">
+    <value>Aktivizçjoðâs kartes</value>
+  </data>
+  <data name="CardsAddCardToNewUser" xml:space="preserve">
+    <value>Pievienojiet karti jaunam lietotâjam</value>
+  </data>
+  <data name="CardsBackToFree" xml:space="preserve">
+    <value>Atpakaï pie tukðâm kartçm?</value>
+  </data>
+  <data name="CardsBtnAddToFreeCards" xml:space="preserve">
+    <value>Pievienojiet tukðâs kartçs</value>
+  </data>
+  <data name="CardsBtnAddToNewUser" xml:space="preserve">
+    <value>Pievienot jaunam lietotâjam</value>
+  </data>
+  <data name="CardsCardFoundWithAnotherStatus" xml:space="preserve">
+    <value>Karte ir atrasta datu bâzç, taèu tâ nav piemçrota atlasîtajiem kritçrijiem</value>
+  </data>
+  <data name="CardsCardNotFoundErrorMesage" xml:space="preserve">
+    <value>Karte nav atrasta! Sazinieties ar çkas administratoru.</value>
+  </data>
+  <data name="CardsCardNotFoundTitle" xml:space="preserve">
+    <value>Karte nav atrasts sistçmâ!</value>
+  </data>
+  <data name="CardsCardNotFree" xml:space="preserve">
+    <value>Karte nav tukða</value>
+  </data>
+  <data name="CardsCardStatus" xml:space="preserve">
+    <value>Kartes statuss</value>
+  </data>
+  <data name="CardsCardReason" xml:space="preserve">
+    <value>Iemesls</value>
+  </data>
+  <data name="CardsClearSerDk" xml:space="preserve">
+    <value>Notîrît SER + DK</value>
+  </data>
+  <data name="CardsCode" xml:space="preserve">
+    <value>Kods </value>
+  </data>
+  <data name="CardsDeactivateCardBtn" xml:space="preserve">
+    <value>Deaktivizçt karti </value>
+  </data>
+  <data name="CardsDeactivating" xml:space="preserve">
+    <value>Deaktivizçjoðâs kartes </value>
+  </data>
+  <data name="CardsDeleteCardBtn" xml:space="preserve">
+    <value>Dzçst karti </value>
+  </data>
+  <data name="CardsDeletingCards" xml:space="preserve">
+    <value>Karðu dzçðana </value>
+  </data>
+  <data name="CardsEditCard" xml:space="preserve">
+    <value>Rediìçt karti </value>
+  </data>
+  <data name="CardsMoveCardBtn" xml:space="preserve">
+    <value>Pârvietot karti </value>
+  </data>
+  <data name="CardsMoving" xml:space="preserve">
+    <value>Pârcelðanâs kartes </value>
+  </data>
+  <data name="CardsNewUserCreating" xml:space="preserve">
+    <value>Notiek jauna lietotâja izveidoðana ... </value>
+  </data>
+  <data name="CardsSearch" xml:space="preserve">
+    <value>Meklçt karti! </value>
+  </data>
+  <data name="CardsSelectCompany" xml:space="preserve">
+    <value>Izvçlieties uzòçmumu </value>
+  </data>
+  <data name="CardTypesAddNew" xml:space="preserve">
+    <value>Pievienojiet jaunu kartes veidu </value>
+  </data>
+  <data name="CardTypeSaving" xml:space="preserve">
+    <value>Saglabât kartes tipu </value>
+  </data>
+  <data name="ClassifiersAddNew" xml:space="preserve">
+    <value>Pievienojiet jaunu iestatîjumu </value>
+  </data>
+  <data name="ClassifiersAddNewClassifierValue" xml:space="preserve">
+    <value>Pievienojiet jaunu iestatîjuma vçrtîbu </value>
+  </data>
+  <data name="ClassifiersBackToClassificatorValues" xml:space="preserve">
+    <value>Atpakaï pie iestatîjumu vçrtîbâm </value>
+  </data>
+  <data name="ClassifiersBackToClassifier" xml:space="preserve">
+    <value>Atpakaï pie iestatîjumiem </value>
+  </data>
+  <data name="ClassifiersBackToList" xml:space="preserve">
+    <value>Atpakaï iestatîjumu sarakstâ </value>
+  </data>
+  <data name="ClassifiersClassificatorValueDeleting" xml:space="preserve">
+    <value>Notiek iestatîjuma vçrtîbas dzçðana  </value>
+  </data>
+  <data name="ClassifiersClassifierValues" xml:space="preserve">
+    <value>Iestatîðanas vçrtîbas </value>
+  </data>
+  <data name="ClassifiersDelClassErrorMessage" xml:space="preserve">
+    <value>Nevar izdzçst iestatîjumus ar vçrtîbâm. Vispirms izdzçsiet visas vçrtîbas. </value>
+  </data>
+  <data name="ClassifiersDeleting" xml:space="preserve">
+    <value>Notiek iestatîjuma dzçðana  </value>
+  </data>
+  <data name="ClassifiersManagementTabName" xml:space="preserve">
+    <value>Iestatîjumi </value>
+  </data>
+  <data name="ClassifiersSaving" xml:space="preserve">
+    <value>Iestatîðanas saglabâðana </value>
+  </data>
+  <data name="ClassifiersSavingClassificatorValue" xml:space="preserve">
+    <value>Notiek vçrtîbas saglabâðanas iestatîðana ...</value>
+  </data>
+  <data name="CommonComment" xml:space="preserve">
+    <value>Komentârs</value>
+  </data>
+  <data name="CommonComments" xml:space="preserve">
+    <value>Komentâri </value>
+  </data>
+  <data name="CommonConfirmMessage" xml:space="preserve">
+    <value>Vai tu esi pârliecinâts?</value>
+  </data>
+  <data name="CommonDate" xml:space="preserve">
+    <value>Datums </value>
+  </data>
+  <data name="CommonDeleting" xml:space="preserve">
+    <value>Dzçðana </value>
+  </data>
+  <data name="CommonDontShowDialog" xml:space="preserve">
+    <value>Nerâdît ðo dialogu </value>
+  </data>
+  <data name="CommonFridayShort" xml:space="preserve">
+    <value>Fr</value>
+  </data>
+  <data name="CommonFrom" xml:space="preserve">
+    <value>No </value>
+  </data>
+  <data name="CommonMondayShort" xml:space="preserve">
+    <value>Mo</value>
+  </data>
+  <data name="CommonNumber" xml:space="preserve">
+    <value>Skaits </value>
+  </data>
+  <data name="CommonReason" xml:space="preserve">
+    <value>Iemesls </value>
+  </data>
+  <data name="CommonSaturdayShort" xml:space="preserve">
+    <value>Sa</value>
+  </data>
+  <data name="CommonSaving" xml:space="preserve">
+    <value>Saglabât  </value>
+  </data>
+  <data name="CommonSearch" xml:space="preserve">
+    <value>Meklçt </value>
+  </data>
+  <data name="CommonSelectAll" xml:space="preserve">
+    <value>Izvçlçties visus! </value>
+  </data>
+  <data name="CommonSundayShort" xml:space="preserve">
+    <value>Su</value>
+  </data>
+  <data name="CommonThursdayShort" xml:space="preserve">
+    <value>Th</value>
+  </data>
+  <data name="CommonTo" xml:space="preserve">
+    <value>Uz </value>
+  </data>
+  <data name="CommonTuesdayShort" xml:space="preserve">
+    <value>Tu</value>
+  </data>
+  <data name="CommonUpdate" xml:space="preserve">
+    <value>Atjauninât </value>
+  </data>
+  <data name="CommonValue" xml:space="preserve">
+    <value>Vçrtîba </value>
+  </data>
+  <data name="CommonWednesdayShort" xml:space="preserve">
+    <value>We</value>
+  </data>
+  <data name="CompaniesActivatingMessage" xml:space="preserve">
+    <value>Notiek uzòçmuma aktivizçðana ...</value>
+  </data>
+  <data name="CompaniesActivatingTitle" xml:space="preserve">
+    <value>Uzòçmumu aktivizçðana </value>
+  </data>
+  <data name="CompaniesAdditionalInfo" xml:space="preserve">
+    <value>Papildus informâcija </value>
+  </data>
+  <data name="CompaniesAddPartner" xml:space="preserve">
+    <value>Pievienots partneris ... </value>
+  </data>
+  <data name="CompaniesBtnActivateCompany" xml:space="preserve">
+    <value>Aktivizçt uzòçmumu</value>
+  </data>
+  <data name="CompaniesBtnDeactivateCompany" xml:space="preserve">
+    <value>Deaktivizçt uzòçmumu</value>
+  </data>
+  <data name="CompaniesBtnDeleteCompany" xml:space="preserve">
+    <value>Dzçst uzòçmumu </value>
+  </data>
+  <data name="CompaniesCanUseOwnCards" xml:space="preserve">
+    <value>Var izmantot savas kartes </value>
+  </data>
+  <data name="CompaniesCompanyStatus" xml:space="preserve">
+    <value>Uzòçmuma statuss </value>
+  </data>
+  <data name="CompaniesCompanyTitle" xml:space="preserve">
+    <value>Uzòçmuma nosaukums </value>
+  </data>
+  <data name="CompaniesDeactivateConfirmation" xml:space="preserve">
+    <value>Visas uzòçmuma lietotâju tiesîbas tiks noòemtas! Vai tu esi pârliecinâts? </value>
+  </data>
+  <data name="CompaniesDeactivatingCompaniesMessage" xml:space="preserve">
+    <value>Uzòçmumu deaktivizçðana ... </value>
+  </data>
+  <data name="CompaniesDeactivatingTitle" xml:space="preserve">
+    <value>Uzòçmumu deaktivizçðana </value>
+  </data>
+  <data name="CompaniesDeletingMessage" xml:space="preserve">
+    <value>Uzòçmumu dzçðana ... </value>
+  </data>
+  <data name="CompaniesDeletingPartnerMessage" xml:space="preserve">
+    <value>Dzçð partneri </value>
+  </data>
+  <data name="CompaniesDeletingTitle" xml:space="preserve">
+    <value>Uzòçmumu dzçðana </value>
+  </data>
+  <data name="CompaniesNoBuildingSelectedMessage" xml:space="preserve">
+    <value>Jâizvçlas vismaz viens çkas un grîdas pâris! </value>
+  </data>
+  <data name="CompaniesSavingCompanyInfo" xml:space="preserve">
+    <value>Notiek uzòçmuma informâcijas saglabâðana ... </value>
+  </data>
+  <data name="CompaniesSearch" xml:space="preserve">
+    <value>Meklçt uzòçmumu! </value>
+  </data>
+  <data name="DepartmentsBtnAddNew" xml:space="preserve">
+    <value>Pievienojiet jaunu nodaïu </value>
+  </data>
+  <data name="DepartmentsBtnDelete" xml:space="preserve">
+    <value>Dzçst nodaïu </value>
+  </data>
+  <data name="DepartmentsDeletingMessage" xml:space="preserve">
+    <value>Notiek nodaïas dzçðana ... </value>
+  </data>
+  <data name="DepartmentsDepartmentManagers" xml:space="preserve">
+    <value>Nodaïu vadîtâji </value>
+  </data>
+  <data name="DepartmentsSavingMessage" xml:space="preserve">
+    <value>Nodaïas saglabâðana  </value>
+  </data>
+  <data name="DepartmentsUserDepartmentDeletingMessage" xml:space="preserve">
+    <value>Lietotâju nodaïa tiek dzçsta ...</value>
+  </data>
+  <data name="HolidaysBtnAddNew" xml:space="preserve">
+    <value>Pievienot jaunu brîvdienu </value>
+  </data>
+  <data name="HolidaysDeletingMessage" xml:space="preserve">
+    <value>Brîvdienu dzçðana  </value>
+  </data>
+  <data name="HolidaysHolidayDate" xml:space="preserve">
+    <value>brîvdienas datums </value>
+  </data>
+  <data name="HolidaysHolidaySaving" xml:space="preserve">
+    <value>Saglabât brîvdienas </value>
+  </data>
+  <data name="HolidaysHolidayTitle" xml:space="preserve">
+    <value>Brîvdienas nosaukums </value>
+  </data>
+  <data name="HolidaysMovingHoliday" xml:space="preserve">
+    <value>Pârvietojas brîvdienas </value>
+  </data>
+  <data name="LogsActivity" xml:space="preserve">
+    <value>Darbîba </value>
+  </data>
+  <data name="LogsFilter" xml:space="preserve">
+    <value>Filtrçt </value>
+  </data>
+  <data name="LogsFullShortAction" xml:space="preserve">
+    <value>Parâda pilnu / îsu þurnâla darbîbu </value>
+  </data>
+  <data name="LogsNode" xml:space="preserve">
+    <value>Mezgls </value>
+  </data>
+  <data name="LogsSearchLog" xml:space="preserve">
+    <value>Meklçðanas þurnâls! </value>
+  </data>
+  <data name="LogsShowDefault" xml:space="preserve">
+    <value>Râdît noklusçjuma þurnâlu </value>
+  </data>
+  <data name="LogsShowFull" xml:space="preserve">
+    <value>Râdît PILNU þurnâlu </value>
+  </data>
+  <data name="LogsUser" xml:space="preserve">
+    <value>Lietotâjs </value>
+  </data>
+  <data name="PermissionsChangingDefaultTimeZone" xml:space="preserve">
+    <value>Notiek noklusçjuma laika joslas maiòa ...</value>
+  </data>
+  <data name="PermissionsCopyDataFrom" xml:space="preserve">
+    <value>Kopçt datus no </value>
+  </data>
+  <data name="PermissionsNameExistsError" xml:space="preserve">
+    <value>Vârds jau pastâv, lûdzu, norâdiet citu vârdu! </value>
+  </data>
+  <data name="PermissionsNewPermissionGroupCreatingMessage" xml:space="preserve">
+    <value>Notiek jaunas atïauju grupas izveidoðana ... </value>
+  </data>
+  <data name="PermissionsNoBuildingObjectsTimeZonesSelected" xml:space="preserve">
+    <value>Lûdzu, atlasiet Bûvobjekti un noklusçjuma laika josla! </value>
+  </data>
+  <data name="PermissionsNoGroupSelected" xml:space="preserve">
+    <value>Nav atlasîta neviena grupa..</value>
+  </data>
+  <data name="PermissionsNoNameError" xml:space="preserve">
+    <value>Lûdzu, norâdiet vârdu ...</value>
+  </data>
+  <data name="PermissionsPermGroupInUse" xml:space="preserve">
+    <value>lietotâjs (-i) izmanto to! Noteikti pirms izmaiòâm! </value>
+  </data>
+  <data name="PermissionsPermissionGroupDeletingMessage" xml:space="preserve">
+    <value>Notiek atïauju grupas dzçðana ...</value>
+  </data>
+  <data name="PermissionsPermissionGroupNoSelected" xml:space="preserve">
+    <value>Lûdzu, atlasiet atïauju grupu! </value>
+  </data>
+  <data name="RolesCreateRoleErrorMessage" xml:space="preserve">
+    <value>Kïûda, veidojot lomu! </value>
+  </data>
+  <data name="RolesDeleteRoleErrorMessage" xml:space="preserve">
+    <value>Dzçðot lomu, radâs kïûda. </value>
+  </data>
+  <data name="RolesEditRoleErrorMessage" xml:space="preserve">
+    <value>Kïûda, rediìçjot lomu! </value>
+  </data>
+  <data name="RolesFoxsecAccess" xml:space="preserve">
+    <value>Piekïuve Foxsec </value>
+  </data>
+  <data name="RolesMenuAccess" xml:space="preserve">
+    <value>Piekïuve izvçlnei </value>
+  </data>
+  <data name="RolesMenuTitle" xml:space="preserve">
+    <value>Izvçlnes nosaukums </value>
+  </data>
+  <data name="RolesRoleAlreadyExists" xml:space="preserve">
+    <value>Loma ar ðâdu vârdu jau pastâv! </value>
+  </data>
+  <data name="RolesServiceTitle" xml:space="preserve">
+    <value>Pakalpojuma nosaukums </value>
+  </data>
+  <data name="TimeZinesDeleteTitle" xml:space="preserve">
+    <value>Dzçst laika joslu </value>
+  </data>
+  <data name="TimeZonesAddNewTimeZone" xml:space="preserve">
+    <value>Pievienojiet jaunu laika joslu </value>
+  </data>
+  <data name="TimeZonesChangeNameTitle" xml:space="preserve">
+    <value>Mainît laika joslas nosaukumu </value>
+  </data>
+  <data name="TimeZonesEditMessage" xml:space="preserve">
+    <value>Rediìçt laika joslu ... </value>
+  </data>
+  <data name="TimeZonesNewTimeZone" xml:space="preserve">
+    <value>Jauna laika josla </value>
+  </data>
+  <data name="TimeZonesNoCheckedError" xml:space="preserve">
+    <value>Jâpârbauda vismaz viena diena grupâ !</value>
+  </data>
+  <data name="TimeZonesRemovingMessage" xml:space="preserve">
+    <value>Notiek laika joslas noòemðana ... </value>
+  </data>
+  <data name="TimeZonesSavingNewMessage" xml:space="preserve">
+    <value>Notiek jaunas laika joslas saglabâðana ...</value>
+  </data>
+  <data name="TimeZonesSearch" xml:space="preserve">
+    <value>Meklçðanas laika josla! </value>
+  </data>
+  <data name="TitlesCompany" xml:space="preserve">
+    <value>Uzòçmuma nosaukums </value>
+  </data>
+  <data name="TitlesDeletingMessage" xml:space="preserve">
+    <value>Notiek nosaukuma dzçðana  </value>
+  </data>
+  <data name="TitlesName" xml:space="preserve">
+    <value>Virsraksta nosaukums </value>
+  </data>
+  <data name="UsersActivatingUsersMessage" xml:space="preserve">
+    <value>Lietotâju aktivizçðana ... </value>
+  </data>
+  <data name="UsersBtnGeneratePin" xml:space="preserve">
+    <value>Ìenerçt PIN </value>
+  </data>
+  <data name="UsersDeactivatingUsersMessage" xml:space="preserve">
+    <value>Lietotâju deaktivizçðana ... </value>
+  </data>
+  <data name="UsersDeletingUsersMessage" xml:space="preserve">
+    <value>Notiek lietotâju dzçðana ... </value>
+  </data>
+  <data name="UsersUserStatus" xml:space="preserve">
+    <value>Lietotâja statuss </value>
+  </data>
+  <data name="AcceptAllAlarmsAllBuildings" xml:space="preserve">
+    <value>Pieòemiet visas trauksmes un visas çkas </value>
+  </data>
+  <data name="AcceptAllAlarmsOwnBuilding" xml:space="preserve">
+    <value>Pieòemiet visas trauksmes signâlus savâ çkâ </value>
+  </data>
+  <data name="AcceptOwnAlarms" xml:space="preserve">
+    <value>Pieòemiet savus trauksmes signâlus </value>
+  </data>
+  <data name="CommonAll" xml:space="preserve">
+    <value>Visi </value>
+  </data>
+  <data name="CommonPerPage" xml:space="preserve">
+    <value>vienâ lappusç </value>
+  </data>
+  <data name="FullArmingAllBuildings" xml:space="preserve">
+    <value>Pilnîga visu çku apbruòoðana </value>
+  </data>
+  <data name="FullArmingOwnBuilding" xml:space="preserve">
+    <value>Pilna apbruòoðana </value>
+  </data>
+  <data name="FullDisarmingAllBuldings" xml:space="preserve">
+    <value>Pilnîga visu çku atbruòoðana </value>
+  </data>
+  <data name="FullDisarmingOwnBuilding" xml:space="preserve">
+    <value>Pilnîga savas çkas atbruòoðana </value>
+  </data>
+  <data name="GuardMinmalAllBuildings" xml:space="preserve">
+    <value>Sargâjiet minimâli visas çkas </value>
+  </data>
+  <data name="GuardMinmalOwnBuilding" xml:space="preserve">
+    <value>Sargs minimâla sava çka </value>
+  </data>
+  <data name="InstallerAllBuildings" xml:space="preserve">
+    <value>Instalçjiet visas çkas </value>
+  </data>
+  <data name="InstallerOwnBuilding" xml:space="preserve">
+    <value>Instalçtâja paða çka </value>
+  </data>
+  <data name="UnlockKeypadsAllBuildings" xml:space="preserve">
+    <value>Atbloíçjiet visu çku tastatûru </value>
+  </data>
+  <data name="UnlockKeypadsOwnBuilding" xml:space="preserve">
+    <value>Atbloíçjiet paðu tastatûru </value>
+  </data>
+  <data name="ViewAdministrationMenu" xml:space="preserve">
+    <value>Administrâcijas izvçlne </value>
+  </data>
+  <data name="ViewBuildingsMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Çku izvçlne </value>
+  </data>
+  <data name="ViewCardsMenu" xml:space="preserve">
+    <value>kartes izvçlne </value>
+  </data>
+  <data name="ViewCardTypeMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Karðu veidu izvçlne </value>
+  </data>
+  <data name="ViewClassifierMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Iestatîjumu izvçlne </value>
+  </data>
+  <data name="ViewCompanyMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; uzòçmumu izvelne </value>
+  </data>
+  <data name="ViewDepartmentMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Nodaïas izvelne </value>
+  </data>
+  <data name="ViewHolidayMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Brîvdienu izvelne </value>
+  </data>
+  <data name="ViewLogMenu" xml:space="preserve">
+    <value>Þurnâla izvçlne </value>
+  </data>
+  <data name="ViewMyLiveVideo" xml:space="preserve">
+    <value>Tieðraides video </value>
+  </data>
+  <data name="ViewMyAccountMenu" xml:space="preserve">
+    <value>My konta izvçlne </value>
+  </data>
+  <data name="ViewMyCompanyMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Mana uzòçmuma izvçlne </value>
+  </data>
+  <data name="ViewPeopleMenu" xml:space="preserve">
+    <value>Lietotâju izvçlne </value>
+  </data>
+  <data name="ViewPermissionMenu" xml:space="preserve">
+    <value>Atïauju izvçlne </value>
+  </data>
+  <data name="ViewRoleManadgmentMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Lomu pârvaldîbas izvçlne </value>
+  </data>
+  <data name="ViewTimeZoneMenu" xml:space="preserve">
+    <value>Laika joslu izvçlne </value>
+  </data>
+  <data name="ViewTitleMenu" xml:space="preserve">
+    <value>Administrâcija -&gt; Nosaukumu izvçlne </value>
+  </data>
+  <data name="BtnExport" xml:space="preserve">
+    <value>Eksportçt </value>
+  </data>
+  <data name="CardsFreeCards" xml:space="preserve">
+    <value>Brîvas kartes </value>
+  </data>
+  <data name="CommonAllow" xml:space="preserve">
+    <value>Atïauj </value>
+  </data>
+  <data name="CommonNoRecordsFound" xml:space="preserve">
+    <value>Ieraksti nav atrasti </value>
+  </data>
+  <data name="CommonRecordsFound" xml:space="preserve">
+    <value>atrasti ieraksti </value>
+  </data>
+  <data name="PermissionGropupsAddNew" xml:space="preserve">
+    <value>Pievienojiet jaunu atïauju grupu </value>
+  </data>
+  <data name="PermissionsSelectPermissionGroupOption" xml:space="preserve">
+    <value>- Atlasiet atïauju grupu - </value>
+  </data>
+  <data name="CardsActivatingMessage" xml:space="preserve">
+    <value>Notiek karðu aktivizçðana ...</value>
+  </data>
+  <data name="CardsDeactivatingMessage" xml:space="preserve">
+    <value>Deaktivizçt kartes ... </value>
+  </data>
+  <data name="CommonNoReasonSelectedMessage" xml:space="preserve">
+    <value>Jâizvçlas iemesls! </value>
+  </data>
+  <data name="DeleteVisitor" xml:space="preserve">
+    <value>Vai tu esi pârliecinâts? Jûs vçlaties izdzçst ðo apmeklçtâju. </value>
+  </data>
+  <data name="UsersCardsDeactivating" xml:space="preserve">
+    <value>Kartes tiek deaktivizçtas </value>
+  </data>
+  <data name="UsersActivatingUsersTitle" xml:space="preserve">
+    <value>Lietotâju aktivizçðana </value>
+  </data>
+  <data name="UsersDeactivatingUsersTitle" xml:space="preserve">
+    <value>Lietotâju deaktivizçðana </value>
+  </data>
+  <data name="FilterActiveShort" xml:space="preserve">
+    <value>A </value>
+  </data>
+  <data name="FilterDeactivatedShort" xml:space="preserve">
+    <value>D </value>
+  </data>
+  <data name="FilterFreeShort" xml:space="preserve">
+    <value>F </value>
+  </data>
+  <data name="UsersIncorrectPinErrorMessage" xml:space="preserve">
+    <value>PIN ir jâbût èetrciparu skaitlim vai tukðam. Atstarpes nav atïautas! </value>
+  </data>
+  <data name="CommonDataSavedMessage" xml:space="preserve">
+    <value>Saglabâts </value>
+  </data>
+  <data name="UsersPasswordErrorMessage" xml:space="preserve">
+    <value>Parolç jâbût vismaz 6 simboliem ar mazajiem un lielajiem burtiem un vienu ciparu! </value>
+  </data>
+  <data name="UsersDirectManager" xml:space="preserve">
+    <value>Tieðais vadîtâjs </value>
+  </data>
+  <data name="PermissionDefaultDisarmingShort" xml:space="preserve">
+    <value>DD</value>
+  </data>
+  <data name="PermissionsArmingShort" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="PermissionsDefaultArmingShort" xml:space="preserve">
+    <value>DA</value>
+  </data>
+  <data name="PermissionsDisarmingShort" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="PermissionGetDefaultTimeZone" xml:space="preserve">
+    <value>Iegûstiet noklusçjuma laika joslu paðreizçjai atïauju grupai </value>
+  </data>
+  <data name="CompaniesEqualBildingsErrorMessage" xml:space="preserve">
+    <value>Jûs nevarat atlasît divas vai vairâkas vienâdas çkas! </value>
+  </data>
+  <data name="RolesAlreadyExists" xml:space="preserve">
+    <value>Loma ar tâdu paðu nosaukumu jau pastâv! </value>
+  </data>
+  <data name="RolesRoleType" xml:space="preserve">
+    <value>Lomas veids </value>
+  </data>
+  <data name="RolesDeletingMessage" xml:space="preserve">
+    <value>Dzçst lomu </value>
+  </data>
+  <data name="RolesRoleAlreadyAssigned" xml:space="preserve">
+    <value>Ðî loma jau ir pieðíirta lietotâjiem: </value>
+  </data>
+  <data name="GlobalSearchEntityType" xml:space="preserve">
+    <value>Uzòçmuma tips </value>
+  </data>
+  <data name="GlobalSearchGoToUser" xml:space="preserve">
+    <value>Pâriet pie lietotâja </value>
+  </data>
+  <data name="CardsNotSuitableCardMessage" xml:space="preserve">
+    <value>Ievadîto karti nevar pârvietot uz izvçlçto çku! </value>
+  </data>
+  <data name="CardsCardsNotMovedError" xml:space="preserve">
+    <value>Kartes nevar pârvietot. Atlasîtajâ uzòçmumâ nav karðu veidoðanas </value>
+  </data>
+  <data name="CardsMoved" xml:space="preserve">
+    <value>Kartes pârvietotas </value>
+  </data>
+  <data name="UserLanguageEnglish" xml:space="preserve">
+    <value>Angïu </value>
+  </data>
+  <data name="UserLanguageEstonian" xml:space="preserve">
+    <value>Igauòu </value>
+  </data>
+  <data name="UserLanguageLatvian" xml:space="preserve">
+    <value>Latvieðu </value>
+  </data>
+  <data name="UserLanguageLithuanian" xml:space="preserve">
+    <value>Lietuvieðu </value>
+  </data>
+  <data name="UserLanguageRussian" xml:space="preserve">
+    <value>Krievu </value>
+  </data>
+  <data name="CompaniesEmptyBuildingSelected" xml:space="preserve">
+    <value>Jûs nevarat atlasît tukðu çku </value>
+  </data>
+  <data name="Buildings" xml:space="preserve">
+    <value>Çkas </value>
+  </data>
+  <data name="Cards" xml:space="preserve">
+    <value>Kartes </value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Kartes tips </value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Kontaktpersona </value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>nodaïa </value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Nodaïas </value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Vadîtâjs </value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Cits </value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personîga </value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Personas dati </value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Loma </value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Statusu</value>
+  </data>
+  <data name="UserRights" xml:space="preserve">
+    <value>Lietotâju tiesîbas </value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>Validâcija </value>
+  </data>
+  <data name="Work" xml:space="preserve">
+    <value>Darbs </value>
+  </data>
+  <data name="CommonDateFormat" xml:space="preserve">
+    <value>Datumam jâbût formâtâ "dd.MM.gggg" </value>
+  </data>
+  <data name="CommonBtnView" xml:space="preserve">
+    <value>Skats </value>
+  </data>
+  <data name="TitlesTitleSaving" xml:space="preserve">
+    <value>Nosaukums "{0}" saglabâjâs... </value>
+  </data>
+  <data name="AccountNoActiveRole" xml:space="preserve">
+    <value>Ienâkoðajam lietotâjam nav aktîvas lomas. </value>
+  </data>
+  <data name="UsersRoleValidationPeriodError" xml:space="preserve">
+    <value>sâkuma datumam jâbût mazâkam vai vienâdam ar beigu datumu. </value>
+  </data>
+  <data name="UserRolesDateIntersectionError" xml:space="preserve">
+    <value>Lomu apstiprinâðanas datumi nevar krustoties! </value>
+  </data>
+  <data name="PermissionsCanNotSetTimeZoneToRoom" xml:space="preserve">
+    <value>Numuriem nevar bût sava laika josla </value>
+  </data>
+  <data name="PermissionsChangeNameTitle" xml:space="preserve">
+    <value>Atïauju grupas nosaukuma maiòa </value>
+  </data>
+  <data name="PrintDate" xml:space="preserve">
+    <value>Drukâðanas datums</value>
+  </data>
+  <data name="LogMessageBuildingObjectChange" xml:space="preserve">
+    <value>Bûvobjekts '{0} {1}' mainîts. </value>
+  </data>
+  <data name="LogMessageClassificatorChanged" xml:space="preserve">
+    <value>Klasifikators '{0}' mainîts. </value>
+  </data>
+  <data name="LogMessageClassificatorCreated" xml:space="preserve">
+    <value>Klasifikators '{0}' izveidots. </value>
+  </data>
+  <data name="LogMessageClassificatorDeleted" xml:space="preserve">
+    <value>Klasifikators '{0}' dzçsts. </value>
+  </data>
+  <data name="LogMessageClassificatorValueChanged" xml:space="preserve">
+    <value>Klasifikatorsr Value '{0}' tiek mainîts uz '{1}'. </value>
+  </data>
+  <data name="LogMessageClassificatorValueClassificator" xml:space="preserve">
+    <value>Klasifikâcija ir '{0}'. </value>
+  </data>
+  <data name="LogMessageClassificatorValueCreated" xml:space="preserve">
+    <value>Klasifikatora vçrtîba'{0}' izveidots.  </value>
+  </data>
+  <data name="LogMessageClassificatorValueDeleted" xml:space="preserve">
+    <value>Klasifikatora vçrtîba '{0}' dzçsts. </value>
+  </data>
+  <data name="LogMessageComment" xml:space="preserve">
+    <value>Komentârs ir '{0}'. </value>
+  </data>
+  <data name="LogMessageCommentChange" xml:space="preserve">
+    <value>Komentârs ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageDescriptionChanged" xml:space="preserve">
+    <value>Apraksts tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageSetCompanyManager" xml:space="preserve">
+    <value>Lietotâjs '{0}' ir uzòçmuma vadîtâjs uzòçmumâ '{1}'. </value>
+  </data>
+  <data name="LogMessageUserLogOff" xml:space="preserve">
+    <value>Lietotâjs '{0}' izlogoties. </value>
+  </data>
+  <data name="LogMessageUserLogon" xml:space="preserve">
+    <value>Lietotâjs '{0}' ielogoties. </value>
+  </data>
+  <data name="LogMessageDepartmentForUserChanged" xml:space="preserve">
+    <value>Mainîts lietotâja '{0}' lietotâju departaments. </value>
+  </data>
+  <data name="LogMessageDepartmentForUserChangedFromTo" xml:space="preserve">
+    <value>Lietotâja '{0}' nodaïa tiek mainîta no '{1}' uz '{2}'. </value>
+  </data>
+  <data name="LogMessageUDDepartmentRemoved" xml:space="preserve">
+    <value>Nodaïa '{0}' noòemta. </value>
+  </data>
+  <data name="LogMessageActive" xml:space="preserve">
+    <value>Aktîvs ir'{0}'. </value>
+  </data>
+  <data name="LogMessageActivity" xml:space="preserve">
+    <value>Darbîba ir '{0}'. </value>
+  </data>
+  <data name="LogMessageActivityChanged" xml:space="preserve">
+    <value>Aktivitâte tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageAllowedIsChanged" xml:space="preserve">
+    <value>atïauts tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageBuilding" xml:space="preserve">
+    <value>Çka ir '{0}'. </value>
+  </data>
+  <data name="LogMessageBuildingChanged" xml:space="preserve">
+    <value>Çka tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageBuildingObject" xml:space="preserve">
+    <value>Çkas objekts ir '{0}'. </value>
+  </data>
+  <data name="LogMessageBuildingObjectAdded" xml:space="preserve">
+    <value>Pievienots stâvs '{0}' çkâ '{1}'. </value>
+  </data>
+  <data name="LogMessageBuildingObjectRemoved" xml:space="preserve">
+    <value>Noòemts stâvs '{0}' çkâ '{1}'. </value>
+  </data>
+  <data name="LogMessageCanUseOwnCardsFalse" xml:space="preserve">
+    <value>Uzòçmums nevar izmantot savas kartes. </value>
+  </data>
+  <data name="LogMessageCanUseOwnCardsTrue" xml:space="preserve">
+    <value>Uzòçmums var izmantot savas kartes. </value>
+  </data>
+  <data name="LogMessageCardCode" xml:space="preserve">
+    <value>Kartes kods ir '{0}'. </value>
+  </data>
+  <data name="LogMessageCardCodeChanged" xml:space="preserve">
+    <value>Kartes kods tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageCardTypeChanged" xml:space="preserve">
+    <value>Kartes tips '{0}' mainîts. </value>
+  </data>
+  <data name="LogMessageCardTypeCreated" xml:space="preserve">
+    <value>Kartes tips '{0}' izveidots. </value>
+  </data>
+  <data name="LogMessageCardTypeDeleted" xml:space="preserve">
+    <value>Kartes tips '{0}' dzçsts. </value>
+  </data>
+  <data name="LogMessageCommonIsChanged" xml:space="preserve">
+    <value>mainîts no '{0}' uz '{0}'. </value>
+  </data>
+  <data name="LogMessageCompanyActivated" xml:space="preserve">
+    <value>Uzòçmums '{0}' aktivizçts ar iemeslu '{1}'. </value>
+  </data>
+  <data name="LogMessageCompanyChanged" xml:space="preserve">
+    <value>Uzòçmums '{0}' tiek mainîts. </value>
+  </data>
+  <data name="LogMessageCompanyCreated" xml:space="preserve">
+    <value>Uzòçmums '{0}' izveidots ar '{1}'. </value>
+  </data>
+  <data name="LogMessageCompanyDeActivated" xml:space="preserve">
+    <value>Uzòçmums '{0}' deaktivizçts ar iemeslu '{1}'. </value>
+  </data>
+  <data name="LogMessageCompanyDeleted" xml:space="preserve">
+    <value>Uzòçmums '{0}' izdzçsts. </value>
+  </data>
+  <data name="LogMessageCompanyName" xml:space="preserve">
+    <value>Uzòçmums ir '{0}'. </value>
+  </data>
+  <data name="LogMessageCompanyNameChanged" xml:space="preserve">
+    <value>Uzòçmums tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageCompanyParent" xml:space="preserve">
+    <value>Mâtes uzòçmums ir '{0}'. </value>
+  </data>
+  <data name="LogMessageDefaultTimeZoneName" xml:space="preserve">
+    <value>Noklusçjuma laika josla ir'{0}'. </value>
+  </data>
+  <data name="LogMessageDepartmentChanged" xml:space="preserve">
+    <value>Nodaïa '{0}' mainîts. </value>
+  </data>
+  <data name="LogMessageDepartmentCreated" xml:space="preserve">
+    <value>Nodaïa '{0}' izveidots. </value>
+  </data>
+  <data name="LogMessageDepartmentDeleted" xml:space="preserve">
+    <value>Nodaïâ '{0}' dzçst. </value>
+  </data>
+  <data name="LogMessageDepartmentNameChanged" xml:space="preserve">
+    <value>Nodaïa tiek mainîta no  '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageDepartmentsWithRoleRemoved" xml:space="preserve">
+    <value>Nodaïas lietotâjam ar lomu '{0}' noòemts. </value>
+  </data>
+  <data name="LogMessageDescription" xml:space="preserve">
+    <value>Apraksts ir '{0}'. </value>
+  </data>
+  <data name="LogMessageEndDate" xml:space="preserve">
+    <value>Beigu datums ir '{0}'. </value>
+  </data>
+  <data name="LogMessageEventEndChanged" xml:space="preserve">
+    <value>Pasâkuma beigas tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageEventStartChanged" xml:space="preserve">
+    <value>Pasâkuma sâkums ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageFriday" xml:space="preserve">
+    <value>Piektdiena </value>
+  </data>
+  <data name="LogMessageFromDate" xml:space="preserve">
+    <value>No datuma ir '{0}'. </value>
+  </data>
+  <data name="LogMessageFromDateChanged" xml:space="preserve">
+    <value>No datuma tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageHolidayChanged" xml:space="preserve">
+    <value>Brîvdiena '{0}' mainîts.  </value>
+  </data>
+  <data name="LogMessageHolidayCreated" xml:space="preserve">
+    <value>Brîvdiena '{0}' izveidots.  </value>
+  </data>
+  <data name="LogMessageHolidayDeleted" xml:space="preserve">
+    <value>Brîvdiena '{0}' dzçsts.  </value>
+  </data>
+  <data name="LogMessageIsAllowed" xml:space="preserve">
+    <value>atïauts </value>
+  </data>
+  <data name="LogMessageIsArming" xml:space="preserve">
+    <value>Bruòojums ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsDefaultArming" xml:space="preserve">
+    <value>Is Noklusçjuma aktivizçðana ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsDefaultDisarming" xml:space="preserve">
+    <value>Is Noklusçjuma deaktivizçðana ir'{0}'. </value>
+  </data>
+  <data name="LogMessageIsDisarming" xml:space="preserve">
+    <value>Is deaktivizçðana ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsFriday" xml:space="preserve">
+    <value>Piektdiena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsMonday" xml:space="preserve">
+    <value>Pirmdiena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsRestricted" xml:space="preserve">
+    <value>ierobeþots </value>
+  </data>
+  <data name="LogMessageIsSaturday" xml:space="preserve">
+    <value>Sestdiena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsSunday" xml:space="preserve">
+    <value>Svçtdiena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsThursday" xml:space="preserve">
+    <value>Ceturtdiena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsTuesday" xml:space="preserve">
+    <value>Otrdiena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageIsWednesday" xml:space="preserve">
+    <value>Treðdiena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageLogFilterChanged" xml:space="preserve">
+    <value>Þurnâla filtrs '{0}' mainîts. </value>
+  </data>
+  <data name="LogMessageLogFilterCreated" xml:space="preserve">
+    <value>Þurnâla filtrs '{0}' izveidots. </value>
+  </data>
+  <data name="LogMessageLogFilterDeleted" xml:space="preserve">
+    <value>Þurnâla filtrs '{0}' dzçsts. </value>
+  </data>
+  <data name="LogMessageMonday" xml:space="preserve">
+    <value>Pirmdiena </value>
+  </data>
+  <data name="LogMessageMoving" xml:space="preserve">
+    <value>Kustîba ir '{0}'. </value>
+  </data>
+  <data name="LogMessageMovingChanged" xml:space="preserve">
+    <value>Kustîba tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageNameChanged" xml:space="preserve">
+    <value>Vârds tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageNode" xml:space="preserve">
+    <value>Mezgls ir '{0}'. </value>
+  </data>
+  <data name="LogMessageNodeChanged" xml:space="preserve">
+    <value>Mezgls ir manîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageNumberChanged" xml:space="preserve">
+    <value>Numurs tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageNumberField" xml:space="preserve">
+    <value>numurs ir '{0}'. </value>
+  </data>
+  <data name="LogMessageOrderIGroup" xml:space="preserve">
+    <value>kârtîba grupâ ir '{0}'. </value>
+  </data>
+  <data name="LogMessageOrderInGroup" xml:space="preserve">
+    <value>kârtîba grupâ ir '{0}'. </value>
+  </data>
+  <data name="LogMessagePermissionGroupChanged" xml:space="preserve">
+    <value>Mainîta atïauju grupa '{0}'. Vârds mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessagePermissionGroupCreated" xml:space="preserve">
+    <value>Atïauju grupa'{0}' izveidots. </value>
+  </data>
+  <data name="LogMessageRoleChanged" xml:space="preserve">
+    <value>Loma '{0}' mainîta. </value>
+  </data>
+  <data name="LogMessageRoleCreated" xml:space="preserve">
+    <value>Loma '{0}' izveidota. </value>
+  </data>
+  <data name="LogMessageRoleDeleted" xml:space="preserve">
+    <value>Loma '{0}' dzçsta. </value>
+  </data>
+  <data name="LogMessageRoleType" xml:space="preserve">
+    <value>Lomas tips ir '{0}'. </value>
+  </data>
+  <data name="LogMessageRoleTypeChanged" xml:space="preserve">
+    <value>Lomas tips ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageSaturday" xml:space="preserve">
+    <value>Sestdiena </value>
+  </data>
+  <data name="LogMessageSerial" xml:space="preserve">
+    <value>Sçrija ir '{0}'. </value>
+  </data>
+  <data name="LogMessageSerialChanged" xml:space="preserve">
+    <value>Sçrija ir mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageShowDefaultLog" xml:space="preserve">
+    <value>Râdît noklusçjuma þurnâlu ir '{0}'. </value>
+  </data>
+  <data name="LogMessageShowDefaultLogChanged" xml:space="preserve">
+    <value>Râdît noklusçjuma þurnâlu tiek mainîts no'{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageShowFullLog" xml:space="preserve">
+    <value>Râdît pilnu þurnâlu ir '{0}'. </value>
+  </data>
+  <data name="LogMessageShowFullLogChanged" xml:space="preserve">
+    <value>Râdît pilnu þurnâlu tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageSingleWord" xml:space="preserve">
+    <value>'{0}'</value>
+  </data>
+  <data name="LogMessageStartDate" xml:space="preserve">
+    <value>Sâkuma datums ir '{0}'. </value>
+  </data>
+  <data name="LogMessageSunday" xml:space="preserve">
+    <value>Svçtdiena </value>
+  </data>
+  <data name="LogMessageThursday" xml:space="preserve">
+    <value>Ceturtdiena </value>
+  </data>
+  <data name="LogMessageTimeZoneChangedActivated" xml:space="preserve">
+    <value>Laika josla '{0}' ir mainîta. Laika josla aktivizçta.</value>
+  </data>
+  <data name="LogMessageTimeZoneChangedDeActivated" xml:space="preserve">
+    <value>Laika josla '{0}' ir mainîta. Laika josla deaktivizçta. </value>
+  </data>
+  <data name="LogMessageTimeZoneCreated" xml:space="preserve">
+    <value>Laika josla '{0}' ir izveidota. </value>
+  </data>
+  <data name="LogMessageTimeZoneDeleted" xml:space="preserve">
+    <value>Laika josla '{0}' ir izdzçsta. </value>
+  </data>
+  <data name="LogMessageTimeZoneId" xml:space="preserve">
+    <value>Laika joslas ID ir '{0}'. </value>
+  </data>
+  <data name="LogMessageTimeZoneNameChanged" xml:space="preserve">
+    <value>Laika josla '{0}' ir mainîta. Vârds mainîts no'{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageTimeZonePropertyChanged" xml:space="preserve">
+    <value>Laika joslas îpaðums '{0}' mainîts. </value>
+  </data>
+  <data name="LogMessageTimeZonePropertyCreated" xml:space="preserve">
+    <value>Laika joslas îpaðums '{0}' ir izveidots. </value>
+  </data>
+  <data name="LogMessageTitleChanged" xml:space="preserve">
+    <value>Virsraksts '{0}' mainîts. </value>
+  </data>
+  <data name="LogMessageTitleCreated" xml:space="preserve">
+    <value>Nosaukums '{0}' izveidots. </value>
+  </data>
+  <data name="LogMessageTitleDeleted" xml:space="preserve">
+    <value>Nosaukums'{0}' izdzçsts. </value>
+  </data>
+  <data name="LogMessageToDate" xml:space="preserve">
+    <value>Lîdz ðim ir '{0}'. </value>
+  </data>
+  <data name="LogMessageToDateChanged" xml:space="preserve">
+    <value>Lîdz ðim datums ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageTuesday" xml:space="preserve">
+    <value>Otrdiena </value>
+  </data>
+  <data name="LogMessageUDCurrentDepartment" xml:space="preserve">
+    <value>Paðreizçjâ nodaïa ir '{0}'. </value>
+  </data>
+  <data name="LogMessageUDCurrentDepartmentChanged" xml:space="preserve">
+    <value>Paðreizçjâ nodaïa tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageUDDepartmentManager" xml:space="preserve">
+    <value>Departamenta vadîtâjs ir '{0}'. </value>
+  </data>
+  <data name="LogMessageUDDepartmentManagerChanged" xml:space="preserve">
+    <value>Nodaïas vadîtâjs tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageUDDepartmentsForUserRemoved" xml:space="preserve">
+    <value>Lietotâja '{0}' nodaïas ir noòemtas. </value>
+  </data>
+  <data name="LogMessageUPGForUserCreated" xml:space="preserve">
+    <value>Izveidota lietotâja '{1}' lietotâju atïauju grupa '{0}'. </value>
+  </data>
+  <data name="LogMessageUser" xml:space="preserve">
+    <value>Lietotâjs ir '{0}'. </value>
+  </data>
+  <data name="LogMessageUserBuildingAdded" xml:space="preserve">
+    <value>Çka '{0}' telpa '{1}' pievienots. </value>
+  </data>
+  <data name="LogMessageUserBuildingRemoved" xml:space="preserve">
+    <value>Çka '{0}' telpa '{1}' noòemts. </value>
+  </data>
+  <data name="LogMessageUserBuildingsChanged" xml:space="preserve">
+    <value>Çkas lietotâjam '{0}' mainîts. </value>
+  </data>
+  <data name="LogMessageUserDeleted" xml:space="preserve">
+    <value>Lietotajs '{0}' izdzçsts. </value>
+  </data>
+  <data name="LogMessageUserDepartmentAssigned" xml:space="preserve">
+    <value>Nodaïa '{0}' lietotâjam '{1}' pieðíirts. </value>
+  </data>
+  <data name="LogMessageUserDepartmentChanged" xml:space="preserve">
+    <value>Mainîts lietotâja departaments '{0}' lietotâjam '{1}'. </value>
+  </data>
+  <data name="LogMessageUserNameChanged" xml:space="preserve">
+    <value>lietotâjs tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageUserPermissionGroupDeleted" xml:space="preserve">
+    <value>Lietotâju atïauju grupa '{0}' izdzçsts. </value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneDeleted" xml:space="preserve">
+    <value>Lietotâju atïauju grupas laika josla lietotâja {0} grupai ir izdzçsta. </value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFPGChanged" xml:space="preserve">
+    <value>Mainîta lietotâju atïauju grupas laika josla atïauju grupai '{0}' un lietotâjam '{1}'. </value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFPGCreated" xml:space="preserve">
+    <value>Izveidota lietotâju atïauju grupas laika josla atïauju grupai '{0}' un lietotâjam '{1}'. </value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFUPGChanged" xml:space="preserve">
+    <value>Lietotâju atïauju grupas laika josla mainîta lietotâju atïauju grupai '{0}' un lietotâjam '{1}'. </value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFUPGCreated" xml:space="preserve">
+    <value>Lietotâju atïauju grupas laika josla izveidota lietotâju atïauju grupai '{0}' un lietotâjam '{1}'. </value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFUPGDeleted" xml:space="preserve">
+    <value>Lietotâju atïauju grupas laika josla lietotâju atïauju grupai “{0}” un “{1}” ir izdzçsta. </value>
+  </data>
+  <data name="LogMessageUserRemovedFromDepartment" xml:space="preserve">
+    <value>Lietptâjs '{0}' tiek noòemts no nodaïas '{1}'. </value>
+  </data>
+  <data name="LogMessageUserTimeZoneCreated" xml:space="preserve">
+    <value>Izveidota jauna lietotâja laika josla '{0}' lietotâjam '{1}'.</value>
+  </data>
+  <data name="LogMessageUserTimeZoneForUserDeleted" xml:space="preserve">
+    <value>Lietotâja laika josla '{0}' lietotâjam '{1}' ir izdzçsta. </value>
+  </data>
+  <data name="LogMessageUserTimeZoneName" xml:space="preserve">
+    <value>Lietotâja laika josla ir '{0}'. </value>
+  </data>
+  <data name="LogMessageUserTimeZoneNameChanged" xml:space="preserve">
+    <value>Lietotâja laika josla tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageUserValueChanged" xml:space="preserve">
+    <value>Lietotâjs tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageUTZPropertyforUTZCreated" xml:space="preserve">
+    <value>Izveidots lietotâja laika joslas îpaðums lietotâja laika joslai '{0}' lietotâjam '{1}'. </value>
+  </data>
+  <data name="LogMessageValidFrom" xml:space="preserve">
+    <value>Derîgs no ir '{0}'. </value>
+  </data>
+  <data name="LogMessageValidFromChanged" xml:space="preserve">
+    <value>Derîgs no tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageValidTo" xml:space="preserve">
+    <value>Derîgs lîdz ir '{0}'. </value>
+  </data>
+  <data name="LogMessageValidToChanged" xml:space="preserve">
+    <value>Derîgs lîdz tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageWednesday" xml:space="preserve">
+    <value>Treðdiena </value>
+  </data>
+  <data name="LogMessageActiveChanged" xml:space="preserve">
+    <value>Aktîvs tiek mainîts no '{0}' uz '{1}'.  </value>
+  </data>
+  <data name="LogMessageBirthday" xml:space="preserve">
+    <value>Dzimðanas diena ir '{0}'. </value>
+  </data>
+  <data name="LogMessageBirthdayChanged" xml:space="preserve">
+    <value>Dzimðanas diena ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageCardActivated" xml:space="preserve">
+    <value>Karte aktivizçta, norâdot iemeslu '{0}'.  </value>
+  </data>
+  <data name="LogMessageCardCreated" xml:space="preserve">
+    <value>Karte '{0}' ir izveidota.  </value>
+  </data>
+  <data name="LogMessageCardDeactivated" xml:space="preserve">
+    <value>Karte tiek deaktivizçta, norâdot iemeslu '{0}'.  </value>
+  </data>
+  <data name="LogMessageCardDeleted" xml:space="preserve">
+    <value>Karte '{0}' ir izdzçsta.  </value>
+  </data>
+  <data name="LogMessageCardChanged" xml:space="preserve">
+    <value>Kartîte '{0}' mainîta.  </value>
+  </data>
+  <data name="LogMessageCardSetToFree" xml:space="preserve">
+    <value>Karte bez iemesla ir bez maksas '{0}'.  </value>
+  </data>
+  <data name="LogMessageCardTypeName" xml:space="preserve">
+    <value>Kartes tips ir '{0}'.  </value>
+  </data>
+  <data name="LogMessageCardTypeNameChanged" xml:space="preserve">
+    <value>Kartes tips mainîts no '{0}' uz '{1}'.  </value>
+  </data>
+  <data name="LogMessageContractEndDateChanged" xml:space="preserve">
+    <value>Lîguma beigu datums tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageContractNumberChanged" xml:space="preserve">
+    <value>Lîguma numurs tiek mainîts no'{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageContractStartDateChanged" xml:space="preserve">
+    <value>Lîguma sâkuma datums tiek mainîts no'{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageDk" xml:space="preserve">
+    <value>DK ir '{0}'.  </value>
+  </data>
+  <data name="LogMessageDkChanged" xml:space="preserve">
+    <value>DK ir mainîts no '{0}' uz '{0}'.  </value>
+  </data>
+  <data name="LogMessageEmail" xml:space="preserve">
+    <value>Ç-pasts ir '{0}'. </value>
+  </data>
+  <data name="LogMessageEmailChanged" xml:space="preserve">
+    <value>Ç-pasts ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageEServiceAllowedChanged" xml:space="preserve">
+    <value>Atïauts e-pakalpojums tiek mainîts no  '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageExternalPersonalCode" xml:space="preserve">
+    <value>Ârçjais personas kods ir '{0}'. </value>
+  </data>
+  <data name="LogMessageExternalPersonalCodeChanged" xml:space="preserve">
+    <value>Ârçjais personas kods tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageFirstName" xml:space="preserve">
+    <value>Vârds ir '{0}'.  </value>
+  </data>
+  <data name="LogMessageFirstNameChanged" xml:space="preserve">
+    <value>Vârds ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageFree" xml:space="preserve">
+    <value>Bezmaksas ir '{0}'.  </value>
+  </data>
+  <data name="LogMessageFreeChanged" xml:space="preserve">
+    <value>Bezmaksas tiek mainîts no '{0}' uz '{1}'.  </value>
+  </data>
+  <data name="LogMessageLastName" xml:space="preserve">
+    <value>Uzvârds ir '{0}'.  </value>
+  </data>
+  <data name="LogMessageLastNameChanged" xml:space="preserve">
+    <value>Uzvârds ir manîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageLoginChanged" xml:space="preserve">
+    <value>Pieteikðanâs tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessagePermitOfWorkChanged" xml:space="preserve">
+    <value>Darba atïauja tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessagePersonalCode" xml:space="preserve">
+    <value>Personas kods ir '{0}'. </value>
+  </data>
+  <data name="LogMessagePersonalCodeChanged" xml:space="preserve">
+    <value>Personas kods ir manîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessagePhoneNumberChanged" xml:space="preserve">
+    <value>Tâlruòa numurs tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessagePIN1" xml:space="preserve">
+    <value>PIN1 ir '{0}'.  </value>
+  </data>
+  <data name="LogMessagePIN1Changed" xml:space="preserve">
+    <value>PIN1 ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessagePIN2" xml:space="preserve">
+    <value>PIN2 ir '{0}'.  </value>
+  </data>
+  <data name="LogMessagePIN2Changed" xml:space="preserve">
+    <value>PIN2 ir mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageRegisteredDate" xml:space="preserve">
+    <value>Reìistrçtais datums ir '{0}'. </value>
+  </data>
+  <data name="LogMessageRegisteredDateChanged" xml:space="preserve">
+    <value>Reìistrçtais datums mainîts no  '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageResidenceChanged" xml:space="preserve">
+    <value>Dzîvesvieta tiek mainîta no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageRoleAdded" xml:space="preserve">
+    <value>Loma '{0}' pievienots. </value>
+  </data>
+  <data name="LogMessageRoleRemoved" xml:space="preserve">
+    <value>Loma '{0}' izdzçta. </value>
+  </data>
+  <data name="LogMessageTableNumberChanged" xml:space="preserve">
+    <value>Tabulas numurs tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageTitleNameChanged" xml:space="preserve">
+    <value>Virsraksts tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageUserActivated" xml:space="preserve">
+    <value>Lietotâjs '{0}' aktivizçts ar iemeslu '{1}' . </value>
+  </data>
+  <data name="LogMessageUserChanged" xml:space="preserve">
+    <value>User '{0}' changed. </value>
+  </data>
+  <data name="LogMessageUserCreated" xml:space="preserve">
+    <value>Lietotâjs '{0}' izveidots.  </value>
+  </data>
+  <data name="LogMessageUserDeactivated" xml:space="preserve">
+    <value>Lietotâjs '{0}' ir deaktivizçts, norâdot iemeslu '{1}' . </value>
+  </data>
+  <data name="LogMessageUserId" xml:space="preserve">
+    <value>Lietotâja ID ir '{0}'.  </value>
+  </data>
+  <data name="LogMessageUserIdChanged" xml:space="preserve">
+    <value>Lietotâja ID tiek mainîts no '{0}' uz '{1}'. </value>
+  </data>
+  <data name="LogMessageUserRolesChanged" xml:space="preserve">
+    <value>Mainîtas lietotâja '{0}' lomas. </value>
+  </data>
+  <data name="LogMessageUserTimeZoneCommonCreated" xml:space="preserve">
+    <value>Lietotâja laika josla '{0}' lietotâjam '{1}', kas izveidota no kopçjâm laika zonâm. </value>
+  </data>
+  <data name="LogMessageUserTimeZoneDeleted" xml:space="preserve">
+    <value>Lietotâja laika josla '{0}' ir izdzçsta. </value>
+  </data>
+  <data name="LogMessageUserTimeZonePropertyChanged" xml:space="preserve">
+    <value>Mainîts lietotâja laika joslas îpaðums lietotâja laika joslai '{0}' lietotâjam '{1}'. </value>
+  </data>
+  <data name="LogMessageUserTimeZoneRestored" xml:space="preserve">
+    <value>Lietotâja laika josla '{0}' lietotâjam '{1}' atjaunota no kopçjâs laika joslas '{2}'. </value>
+  </data>
+  <data name="LogMessageWorkTimeChanged" xml:space="preserve">
+    <value>Darba laiks tiek mainîts no'{0}' uz '{1}'. </value>
+  </data>
+  <data name="RolesNoBuildingSelectedErrorMessage" xml:space="preserve">
+    <value>Çka nav izvçlçta! </value>
+  </data>
+  <data name="CardsErrorMessageCardUsed" xml:space="preserve">
+    <value>Karte jau ir pieðíirta citam lietotâjam! </value>
+  </data>
+  <data name="UsersErrorEditingUserBuildings" xml:space="preserve">
+    <value>Error editing buildings for  User Id=</value>
+  </data>
+  <data name="UsersErrorEditingUserBuildingsNotUnique" xml:space="preserve">
+    <value>Only unique building-floor pairs can be selected! </value>
+  </data>
+  <data name="UsersErrorEditingUserDepartments" xml:space="preserve">
+    <value>Error editing departments for  User Id= </value>
+  </data>
+  <data name="UsersErrorEditingUserWorkData" xml:space="preserve">
+    <value>Kïûda, rediìçjot lietotâja ID darba datus =</value>
+  </data>
+  <data name="CompaniesCompaniesContainsUsersError" xml:space="preserve">
+    <value>Uzòçmumos “{0}” ir lietotâji! Vispirms noòemiet lietotâjus no ðiem uzòçmumiem. </value>
+  </data>
+  <data name="DepartmentsDepartmentsContainsUsersError" xml:space="preserve">
+    <value>Nodaïâs '{0}' ir lietotâji! Vispirms, lûdzu, noòemiet lietotâjus no ðîm nodaïâm. </value>
+  </data>
+  <data name="DepartmentsUserDepartmentSavingMessage" xml:space="preserve">
+    <value>Lietotâju nodaïas saglabâðana... </value>
+  </data>
+  <data name="RolesRoleStatus" xml:space="preserve">
+    <value>Lomas statuss </value>
+  </data>
+  <data name="RolesRoleTypesBA" xml:space="preserve">
+    <value>Çkas administrators </value>
+  </data>
+  <data name="RolesRoleTypesCM" xml:space="preserve">
+    <value>Uzòçmuma vadîtâjs </value>
+  </data>
+  <data name="RolesRoleTypesDM" xml:space="preserve">
+    <value>Nodaïas vadîtâjs </value>
+  </data>
+  <data name="RolesRoleTypesSA" xml:space="preserve">
+    <value>Sistçmas administrators </value>
+  </data>
+  <data name="RolesRoleTypesUser" xml:space="preserve">
+    <value>Lietotâjs </value>
+  </data>
+  <data name="PermissionsDeletingPermission" xml:space="preserve">
+    <value>Notiek atïauju grupas dzçðana ... </value>
+  </data>
+  <data name="CommonMax50symbols" xml:space="preserve">
+    <value>Maksimâli atïauti simboli 50! </value>
+  </data>
+  <data name="BuildingsAddress" xml:space="preserve">
+    <value>Adrese </value>
+  </data>
+  <data name="BuildingsAdministrator" xml:space="preserve">
+    <value>Çkas admin </value>
+  </data>
+  <data name="BuildingsName" xml:space="preserve">
+    <value>Çkas nosaukums </value>
+  </data>
+  <data name="CommonDeleted" xml:space="preserve">
+    <value>Dzçsts </value>
+  </data>
+  <data name="UsersNotAllUserRoleFieldsEntered" xml:space="preserve">
+    <value>Lai pieðíirtu lomu, jâievada validâcijas perioda datumi, jâpârbauda lauks Vai ir pieðíirts! </value>
+  </data>
+  <data name="UsersDeletingPhoto" xml:space="preserve">
+    <value>Notiek lietotâja fotoattçla dzçðana ... </value>
+  </data>
+  <data name="PermissionsNoBuildingObjectsSelected" xml:space="preserve">
+    <value>Jâizvçlas vismaz viens celtniecîbas objekts! </value>
+  </data>
+  <data name="PermissionsNoTimeZoneSelected" xml:space="preserve">
+    <value>Jâizvçlas laika josla!</value>
+  </data>
+  <data name="CardsValidFrom" xml:space="preserve">
+    <value>Derîgs no</value>
+  </data>
+  <data name="CardsValidTo" xml:space="preserve">
+    <value>Derîgs lîdz</value>
+  </data>
+  <data name="CardsDateValidationMessage" xml:space="preserve">
+    <value>Sâkot no un lîdz datumam jâievada formâtâ “DD.MM.GGGG” </value>
+  </data>
+  <data name="String1" xml:space="preserve">
+   
+  </data>
+  <data name="BtnTzToDoor" xml:space="preserve">
+    <value>Laika josla lîdz durvîm </value>
+  </data>
+  <data name="ViewMyLocationMenu" xml:space="preserve">
+    <value>Atraðanâs vieta </value>
+  </data>
+  <data name="ViewMyBOInfoMenu" xml:space="preserve">
+    <value>Bo informâcija </value>
+  </data>
+  <data name="ViewMyBOSceduleMenu" xml:space="preserve">
+    <value>Bo Grafiks </value>
+  </data>
+  <data name="ViewMyReportsMenu" xml:space="preserve">
+    <value>Ziòojumi </value>
+  </data>
+  <data name="ViewTAConfMenu" xml:space="preserve">
+    <value>T&amp;A -&gt; Konfigurâcija </value>
+  </data>
+  <data name="ViewTAMenu" xml:space="preserve">
+    <value>T&amp;A </value>
+  </data>
+  <data name="ViewTAReportMenu" xml:space="preserve">
+    <value>T&amp;A -&gt; Ziòojums </value>
+  </data>
+  <data name="ViewVisitorsMenu" xml:space="preserve">
+    <value>Apmeklçtâji </value>
+  </data>
+  <data name="LocationTabName" xml:space="preserve">
+    <value>Atraðanâs vieta </value>
+  </data>
+  <data name="TAbulding" xml:space="preserve">
+    <value>T &amp; çka objekti</value>
+  </data>
+  <data name="TADetailReport" xml:space="preserve">
+    <value>Detail pârskats</value>
+  </data>
+  <data name="TAdetails" xml:space="preserve">
+    <value>Details about TA reports</value>
+  </data>
+  <data name="TAExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="TAExportTo" xml:space="preserve">
+    <value>Export to .pdf and .xsl fail.</value>
+  </data>
+  <data name="TAlist" xml:space="preserve">
+    <value>Nâk un iet no darba</value>
+  </data>
+  <data name="TAMonthreport" xml:space="preserve">
+    <value>Month report</value>
+  </data>
+  <data name="TAMyReport" xml:space="preserve">
+    <value>My report</value>
+  </data>
+  <data name="TAreportViewe" xml:space="preserve">
+    <value>View report</value>
+  </data>
+  <data name="WorkWeekReportDescription" xml:space="preserve">
+    <value>View,edit,print</value>
+  </data>
+  <data name="TAlistDetail" xml:space="preserve">
+    <value>Sâkums un beigas darbu</value>
+  </data>
+  <data name="TAHours" xml:space="preserve">
+    <value>Valandos</value>
+  </data>
+  <data name="TAEdit" xml:space="preserve">
+    <value>Rediìçt</value>
+  </data>
+  <data name="TAUsername" xml:space="preserve">
+    <value>Vartotojø</value>
+  </data>
+  <data name="TAReport" xml:space="preserve">
+    <value>ziòojums</value>
+  </data>
+  <data name="WorkBuildingObjectsDescription" xml:space="preserve">
+    <value>Sàraðas pastatas objektai (duris ..), kurie naudojami darbo laiko apskaitos</value>
+  </data>
+  <data name="currentmonth" xml:space="preserve">
+    <value>Tekoðâ mçneða pârskats</value>
+  </data>
+  <data name="previousmonth" xml:space="preserve">
+    <value>Iepriekðçjais mçnesis pârskats</value>
+  </data>
+  <data name="buildingCustomer_Lv" xml:space="preserve">
+    <value>Bûvniecîbas ierosinâtâjs</value>
+  </data>
+  <data name="chngetxt" xml:space="preserve">
+    <value>mainît manu valodu</value>
+  </data>
+  <data name="TaBuildingAmount" xml:space="preserve">
+    <value>Lîguma summa, EUR.</value>
+  </data>
+  <data name="TABuildingConstruction" xml:space="preserve">
+    <value>Galvenais Bûvdarbu veicçjs</value>
+  </data>
+  <data name="TaBuildingcustomer" xml:space="preserve">
+    <value>Bûvniecîbas ierosinâtâjs</value>
+  </data>
+  <data name="TaBuilingDate" xml:space="preserve">
+    <value>Lîguma Nr. Datums</value>
+  </data>
+  <data name="TABuildingAddress" xml:space="preserve">
+    <value>Adrese</value>
+  </data>
+  <data name="TaBuildingCadsnrNo" xml:space="preserve">
+    <value>Kadastra Nr</value>
+  </data>
+  <data name="TaBuildingLicense" xml:space="preserve">
+    <value>Celtniecîbas licence</value>
+  </data>
+  <data name="TaBuildingValidFrom" xml:space="preserve">
+    <value>Derîgs no</value>
+  </data>
+  <data name="TabuilidngValidTo" xml:space="preserve">
+    <value>Derîgs lîdz</value>
+  </data>
+  <data name="TaHardwareBuildingName" xml:space="preserve">
+    <value>Aparatûras nosaukums</value>
+  </data>
+  <data name="TaNewRealBuildingname" xml:space="preserve">
+    <value>Nekustamâ çkas nosaukums</value>
+  </data>
+  <data name="UsersAddNewVisitor" xml:space="preserve">
+    <value>Pievienot jaunu apmeklçtâju</value>
+  </data>
+
+  <data name="PhoneNrAccessUnit" xml:space="preserve">
+    <value>Vai tâlruòa numura piekïuves vienîba ir?	</value>
+  </data>
+  <data name="CarNr" xml:space="preserve">
+    <value>Automaðînas numurs	</value>
+  </data>
+  <data name="CarNrAccessUnit" xml:space="preserve">
+    <value>Vai ir automaðînas numuru piekïuves vienîba?	</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Automaðînas tips </value>
+  </data>
+  <data name="VisitorFromdate" xml:space="preserve">
+    <value>No datuma 	</value>
+  </data>
+  <data name="VisitorTodate" xml:space="preserve">
+    <value>Lîdz ðim 	</value>
+  </data>
+  <data name="PermissionName" xml:space="preserve">
+    <value>Atïaujas nosaukums </value>
+  </data>
+  <data name="CardNeedReturn" xml:space="preserve">
+    <value>Kartes vajag atgriest? 	</value>
+  </data>
+  <data name="ReturnDate" xml:space="preserve">
+    <value>Atgrieðanas datums </value>
+  </data>
+  <data name="CardCode" xml:space="preserve">
+    <value>Kartes kods </value>
+  </data>
+
+  <data name="LiveVideo" xml:space="preserve">
+    <value>Tieðraides video </value>
+  </data>
+  <data name="ViewMyTerminalMenu" xml:space="preserve">
+    <value>WebApps</value>
+  </data>
+  <data name="LastChange" xml:space="preserve">
+    <value>Pçdçjâs izmaiòas  </value>
+  </data>
+
+  <data name="QrCodeError" xml:space="preserve">
+    <value>Ìenerçjot QR kodu, radâs kïûda. Lûdzu, pamçìiniet vçlreiz vçlâk. </value>
+  </data>
+  <data name="VisitorAlreadyExist" xml:space="preserve">
+    <value>Apmeklçtâjs jau pastâv datu bâzç. </value>
+  </data>
+  <data name="SendingQRCode" xml:space="preserve">
+    <value> Tiek nosûtîts QR kods ... </value>
+  </data>
+  <data name="VisitorDelete" xml:space="preserve">
+    <value> Apmeklçtâjs veiksmîgi izdzçsts ...</value>
+  </data>
+
+  <data name="HexCardCodeError" xml:space="preserve">
+    <value>Kartes kods nav heksadecimâls </value>
+  </data>
+  <data name="VisitorFirstNameMessage" xml:space="preserve">
+    <value>Lûdzu, ievadiet vârdu! </value>
+  </data>
+  <data name="VisitorLastNameMessage" xml:space="preserve">
+    <value>Lûdzu, ievadiet uzvârdu! </value>
+  </data>
+  <data name="VisitorPhoneNrMessage" xml:space="preserve">
+    <value>Lûdzu, ievadiet derîgu tâlruòa numuru! v</value>
+  </data>
+  <data name="VisitorEmailMessage" xml:space="preserve">
+    <value>Lûdzu, ievadiet derîgu e-pastu! </value>
+  </data>
+  <data name="VisitorDateErrorMessage" xml:space="preserve">
+    <value>Lîdz ðim datumam nevajadzçtu bût agrâkam no datuma! </value>
+  </data>
+  <data name="VisitorDateMessage" xml:space="preserve">
+    <value>Lûdzu, ievadiet no datuma un datuma! </value>
+  </data>
+  <data name="NoActiveCard" xml:space="preserve">
+    <value>Pievienotajam lietotâjam nav aktîvas kartes .</value>
+  </data>
+  <data name="Visitor" xml:space="preserve">
+    <value>Apmeklçtâjs</value>
+  </data>
+  <data name="FirstSaveVisitorDetails" xml:space="preserve">
+    <value>Lûdzu, vispirms saglabâjiet apmeklçtâja datus!</value>
+  </data>
+  <data name="VisitorCapturePhoto" xml:space="preserve">
+    <value>Uztaisît fotobildi </value>
+  </data>
+  <data name="VisitorsUsers" xml:space="preserve">
+    <value>Lietotâji </value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Izlogoties! Vai tu esi pârliecinâts? </value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Labi  </value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Atcelt </value>
+  </data>
+  <data name="LiveVideo" xml:space="preserve">
+    <value>Tieðraides video </value>
+  </data>
+  <data name="CapturedPhoto" xml:space="preserve">
+    <value>Notverts foto </value>
+  </data>
+  <data name="TAMonthreportWorkingDays" xml:space="preserve">
+    <value>Mçneða pârskats: darba dienas mçnesî </value>
+  </data>
+  <data name="TAMonthreportWorkingDaysDesc" xml:space="preserve">
+    <value>Skatît un drukât </value>
+  </data>
+  <data name="CommonConfirmMessageClassifierValue" xml:space="preserve">
+    <value>Vai tu esi pârliecinâts? Jûs vçlaties izdzçst atlasîto iestatîjuma vçrtîbu. </value>
+  </data>
+  <data name="CommonConfirmMessageClassifier" xml:space="preserve">
+    <value>Vai tu esi pârliecinâts? Jûs vçlaties izdzçst atlasîto iestatîjumu. </value>
+  </data>
+  <data name="CommonRemainigCountErrorMsg" xml:space="preserve">
+    <value>Piedodiet Jûs nevarat pievienot jaunu ierakstu, jo jûsu licences termiòð ir beidzies vai ir pârsniegts ierobeþojums. </value>
+  </data>
+
+  <data name="VisitorCreatedMessage" xml:space="preserve">
+    <value>Apmeklçtâjs izveidots </value>
+  </data>
+  <data name="MaxCompanyCountLicence" xml:space="preserve">
+    <value> Maksimâlais aktîvais uzòçmums licencç ir</value>
+  </data>
+  <data name="MaxUserCountLicence" xml:space="preserve">
+    <value> Maksimâlais aktîvo lietotâju skaits licencç ir</value>
+  </data>
+  <data name="MaxVisitorCountLicence" xml:space="preserve">
+    <value> Maksimâlais aktîvo apmeklçtâju skaits licencç ir</value>
+  </data>
+
+  <data name="LicenceInsert" xml:space="preserve">
+    <value>Licence ir veiksmîgi ievietota ..</value>
+  </data>
+  <data name="InvalidLicence" xml:space="preserve">
+    <value>Nederîga licence!!</value>
+  </data>
+  <data name="InvalidLicencePath" xml:space="preserve">
+    <value> Ievadîtais licences ceïð neeksistç! </value>
+  </data>
+  <data name="LicenceError" xml:space="preserve">
+    <value>Ievietojot licenci, radâs kïûda. Lûdzu, pamçìiniet vçlreiz vçlâk.</value>
+  </data>
+  <data name="TerminalDeletionAlert" xml:space="preserve">
+    <value>Vai tu esi pârliecinâts? Jûs vçlaties izdzçst ðo WebApp.</value>
+  </data>
+  <data name="TerminalDeletedAlert" xml:space="preserve">
+    <value>WebApp ir veiksmîgi izdzçsts.</value>
+  </data>
+  <data name="TerminalUpdatedAlert" xml:space="preserve">
+    <value>Sîkâka informâcija ir veiksmîgi atjauninâta.</value>
+  </data>
+  <data name="TerminalDeletingAlert" xml:space="preserve">
+    <value>WebApp dzçðana </value>
+  </data>
+  <data name="TerminalID" xml:space="preserve">
+    <value>WebApp ID </value>
+  </data>
+  <data name="MaxUser" xml:space="preserve">
+    <value>Maksimâlais lietotâjs </value>
+  </data>
+  <data name="LastLogin" xml:space="preserve">
+    <value>Pçdçjâ pieteikðanâs </value>
+  </data>
+  <data name="btnInsertLicence" xml:space="preserve">
+    <value>Ievietojiet jaunu licenci no diska (pârlûkojiet tikai serverî) </value>
+  </data>
+  
+  
+  <data name="NotCompanyUser" xml:space="preserve">
+    <value>Piedod !! atlasīto lietotāja informāciju nevar rediģēt, jo šis lietotājs nepieder jūsu uzņēmumam.</value>
+  </data>
+  <data name="TaxReportExport" xml:space="preserve">
+    <value>Eksportēt uz Excel</value>
+  </data>
+  <data name="TADailyWorkingReport" xml:space="preserve">
+    <value>Ikdienas darba ziņojums</value>
+  </data>
+
+  <data name="ContractorDetails" xml:space="preserve">
+    <value>Informācija par galvenā būvdarbu veicēja noslēgto būvdarbu līgumu ar būvniecības ierosinātāju</value>
+  </data>
+  <data name="ConstructionInitiator" xml:space="preserve">
+    <value>Būvniecības ierosinātāja nosaukums</value>
+  </data>
+  <data name="ConstructionInitiatorTaxNo" xml:space="preserve">
+    <value>Būvniecības ierosinātāja nodokļu maksātāja reģistrācijas kods</value>
+  </data>
+  <data name="ContractNr" xml:space="preserve">
+    <value>Līguma datums</value>
+  </data>
+  <data name="ConstructionAmount" xml:space="preserve">
+    <value>Līguma summa bez PVN (EUR)</value>
+  </data>
+  <data name="Num" xml:space="preserve">
+    <value>Nr.p.k.</value>
+  </data>
+  <data name="InfoSentDate" xml:space="preserve">
+    <value>Informācijas iesniegšanas datums VID</value>
+  </data>
+  <data name="PersonInformation" xml:space="preserve">
+    <value> Informācija par būvlaukumā nodarbinātu personu </value>
+  </data>
+  <data name="TaxYear" xml:space="preserve">
+    <value>Taksācijas gads</value>
+  </data>
+  <data name="TaxMonth" xml:space="preserve">
+    <value>Taksācijas mēnesis</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Vārds</value>
+  </data>
+  <data name="SurName" xml:space="preserve">
+    <value>Uzvārds</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Nodarbinātā</value>
+  </data>
+  <data name="PersonalIdentificationNumber" xml:space="preserve">
+    <value>Personas kods</value>
+  </data>
+  <data name="NoPersonalIdentificationNumber" xml:space="preserve">
+    <value>Ja personai nav personas koda</value>
+  </data>
+  <data name="BirthdayDateMonYear" xml:space="preserve">
+    <value>Dzimšanas datums, mēnesis, gads, vai vīzas vai uzturēšanās atļaujas numurs</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Amats</value>
+  </data>
+  <data name="Employer" xml:space="preserve">
+    <value>Darba devēja</value>
+  </data>
+  <data name="EmployerName" xml:space="preserve">
+    <value>Nosaukums</value>
+  </data>
+  <data name="IndiEmployer" xml:space="preserve">
+    <value>Vārds, uzvārds, ja darba devējs ir fiziskā persona</value>
+  </data>
+  <data name="RegNo" xml:space="preserve">
+    <value>Reģistrācijas kods vai personas kods </value>
+  </data>
+  <data name="BuildingPermission" xml:space="preserve">
+    <value>Būvatļaujas numurs vai nekustamā īpašuma objekta kadastra apzīmējums</value>
+  </data>
+  <data name="ActualWorkingHour" xml:space="preserve">
+    <value>Faktiski nostrādātais darba laiks (stundās)</value>
+  </data>
+  <data name="ElectronicWorking" xml:space="preserve">
+    <value>Informācija no Elektroniskās darba laika uzskaites sistēmas ({0}) par būvobjektā nodarbinātajām personām un nostrādātajām stundām par periodu</value>
+  </data>
+  <data name="YearMonth" xml:space="preserve">
+    <value>(taksācijas gads, mēnesis)</value>
+  </data>
+
+
+  <data name="InfoFromElectronic" xml:space="preserve">
+    <value>Informācija no Elektroniskās darba laika uzskaites sistēmas ({0}) reģistrētajiem auditācijas pierakstiem  par periodu</value>
+  </data>
+  <data name="InfoDateSent" xml:space="preserve">
+    <value>Informācijas iesniegšanas datums (dd.mm.gggg.) </value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datums </value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mēnesis</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Gads</value>
+  </data>
+  <data name="Entry" xml:space="preserve">
+    <value>Ienākšanas (hh:mm:ss)</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Iziešanas (hh:mm:ss)</value>
+  </data>
+  <data name="EntryCorrected" xml:space="preserve">
+    <value>Ienākšanas (hh:mm:ss)</value>
+  </data>
+  <data name="ExitCorrected" xml:space="preserve">
+    <value>Iziešanas (hh:mm:ss)</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Paskaidrojums</value>
+  </data>
+  <data name="Initialdates" xml:space="preserve">
+    <value>Sākotnējie dati</value>
+  </data>
+  <data name="Correcteddates" xml:space="preserve">
+    <value>Labotie dati</value>
+  </data>
+  <data name="CorrecteddatesAudit" xml:space="preserve">
+    <value>Labotie dati jeb auditācijas pieraksti </value>
+  </data>
+  <data name="TaxationPeriod" xml:space="preserve">
+    <value>Taksācijas periods</value>
+  </data>
+
+
+  <data name="FullName" xml:space="preserve">
+    <value>Pilnais vārds</value>
+  </data>
+  <data name="CompanyDetails" xml:space="preserve">
+    <value>Informācija par uzņēmumu</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Sākās</value>
+  </data>
+  <data name="checkin" xml:space="preserve">
+    <value>Reģistrēties</value>
+  </data>
+  <data name="checkout" xml:space="preserve">
+    <value>Izbraukšana</value>
+  </data>
+  <data name="TotalTime" xml:space="preserve">
+    <value>Kopējais laiks</value>
+  </data>
+  <data name="TotalHours" xml:space="preserve">
+    <value>Kopējais stundu skaits</value>
+  </data>
+  <data name="ReportCreated" xml:space="preserve">
+    <value>Ziņojums ir izveidots:</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Periods:</value>
+  </data>
+  <data name="Finished" xml:space="preserve">
+    <value>Gatavs</value>
+  </data>
+  <data name="ReportCreatedOn" xml:space="preserve">
+    <value>Pārskats izveidots:</value>
+  </data>
+  <data name="TotalWorkingDays" xml:space="preserve">
+    <value>Kopējais darba dienu skaits</value>
+  </data>
+  <data name="LogonRoleError" xml:space="preserve">
+    <value>Lietotājam nav nekādas lomas !!</value>
+  </data>
+  <data name="LicenseLessCountAlert" xml:space="preserve">
+    <value>Viena vai vairāku licences vērtība ir mazāka nekā vecā licence jaunajā licencē !!</value>
+  </data>
+  <data name="ChooseLicense" xml:space="preserve">
+    <value>Lūdzu, augšupielādējiet licences failu!</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Platums</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Garums</value>
+  </data>
+  <data name="CardDetailsExist" xml:space="preserve">
+    <value>Šī kartes informācija jau pastāv citam uzņēmumam !!</value>
+  </data>
+  <data name="SelectPhoto" xml:space="preserve">
+    <value>Lūdzu, atlasiet Foto !!</value>
+  </data>
+  <data name="PhotoUploaded" xml:space="preserve">
+    <value>Fotoattēls veiksmīgi augšupielādēts ..</value>
+  </data>
+  <data name="TotalUsersCount" xml:space="preserve">
+    <value>Kopējais lietotāju skaits</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Ziņojums</value>
+  </data>
+  <data name="MainCard" xml:space="preserve">
+    <value>Galvenā karte</value>
+  </data>
+  <data name="GiveCardBack" xml:space="preserve">
+    <value>Dodiet karti atpakaļ</value>
+  </data>
+  <data name="ManageOtherCompany" xml:space="preserve">
+    <value>Lietotāji, kartes, žurnālu cilnes uzņēmumi</value>
+  </data>
+  <data name="CleanerOwnBuilding" xml:space="preserve">
+    <value>Tīrākas pašas ēkas</value>
+  </data>
+  <data name="CleanerAllBuildings" xml:space="preserve">
+    <value>Notīriet visas ēkas</value>
+  </data>
+  <data name="GlobalUser" xml:space="preserve">
+    <value>Globālais lietotājs</value>
+  </data>
+
+  <data name="ServerNr" xml:space="preserve">
+    <value>Servera numurs</value>
+  </data>
+  <data name="CompanyNr" xml:space="preserve">
+    <value>Uzņēmuma Nr</value>
+  </data>
+  <data name="CameraName" xml:space="preserve">
+    <value>Vārds</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Osta</value>
+  </data>
+  <data name="ResX" xml:space="preserve">
+    <value>ResX</value>
+  </data>
+  <data name="ResY" xml:space="preserve">
+    <value>ResY</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Izlaist</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Kavēšanās</value>
+  </data>
+  <data name="EnableLiveControls" xml:space="preserve">
+    <value>Iespējot tiešsaistes vadību</value>
+  </data>
+  <data name="QuickPreviewSeconds" xml:space="preserve">
+    <value>Ātrās priekšskatījuma sekundes</value>
+  </data>
+  <data name="EnterServerNr" xml:space="preserve">
+    <value>Lūdzu, atlasiet serveri Nr.</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Lūdzu, ievadiet vārdu !!</value>
+  </data>
+  <data name="AddNewCamera" xml:space="preserve">
+    <value>Pievienojiet jaunu kameru</value>
+  </data>
+  <data name="CameraName" xml:space="preserve">
+    <value>Kameras nosaukums</value>
+  </data>
+
+  <data name="ManageVideoServer" xml:space="preserve">
+    <value>Pārvaldīt video serveri</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Projekta nosaukums</value>
+  </data>
+  <data name="ServerName" xml:space="preserve">
+    <value>Vārds</value>
+  </data>
+  <data name="ServerIP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="ServerUID" xml:space="preserve">
+    <value>UID</value>
+  </data>
+  <data name="ServerPWD" xml:space="preserve">
+    <value>PWD</value>
+  </data>
+
+  <data name="ViewVisitorsReadOnly" xml:space="preserve">
+    <value>Skatīt apmeklētājus (tikai lasāms)</value>
+  </data>
+  <data name="CardFirstName" xml:space="preserve">
+    <value>Kartes vārds</value>
+  </data>
+  <data name="CardLastName" xml:space="preserve">
+    <value>Kartes uzvārds</value>
+  </data>
+  <data name="Atwork" xml:space="preserve">
+    <value>Darbā</value>
+  </data>
+  <data name="Leaving" xml:space="preserve">
+    <value>Aiziešana</value>
+  </data>
+  <data name="Buildingobject" xml:space="preserve">
+    <value>Ēkas objekts</value>
+  </data>
+  <data name="SystemConfiguration" xml:space="preserve">
+    <value>Sistēmas konfigurācija</value>
+  </data>
+  <data name="RemoteRegistration" xml:space="preserve">
+    <value>Attālā reģistrācija</value>
+  </data>
+  <data name="SelectCompany" xml:space="preserve">
+    <value>Lūdzu, atlasiet uzņēmumu!!</value>
+  </data>
+  <data name="SelectWorkers" xml:space="preserve">
+    <value>Lūdzu, atlasiet Darbinieki!!</value>
+  </data>
+  <data name="SelectBuildingObject" xml:space="preserve">
+    <value>Lūdzu, atlasiet Ēkas objekts!!</value>
+  </data>
+  <data name="VisitorFirstandLastNameMessage" xml:space="preserve">
+    <value>Vārdam un uzvārdam vajadzētu būt atšķirīgiem !!</value>
+  </data>
+
+  <data name="VisitorFirstLastMessage" xml:space="preserve">
+    <value>Lūdzu, ievadiet citu vārdu un uzvārdu !!</value>
+  </data>
+  <data name="BuildingMessage" xml:space="preserve">
+    <value>Lūdzu, izvēlieties ēku</value>
+  </data>
+  <data name="CardBuildingMessage" xml:space="preserve">
+    <value>Piešķiriet ēku lietotāja uzņēmuma vadītājam no cilnes T&amp;A</value>
+  </data>
+
+  <data name="DateErrorMessage" xml:space="preserve">
+    <value>Pasirinkite galiojančią datą</value>
+  </data>
+  <data name="RoleListInCompanyTab" xml:space="preserve">
+    <value>Vaidmenų sąrašas</value>
+  </data>
+  <data name="BuildingNameScheduleTA" xml:space="preserve">
+    <value>Pastato pavadinimo grafikas</value>
+  </data>
+  <data name="BuildingNameScheduleTADescription" xml:space="preserve">
+    <value>Registracijos įrenginių perkėlimas, kuriant pavadinimus</value>
+  </data>
+  <data name="CommentedCardsName" xml:space="preserve">
+    <value>Pakomentuotos kortelės</value>
+  </data>
+  <data name="TaReportLabel" xml:space="preserve">
+    <value>Etiketė</value>
+  </data>
+  <data name="TaReportLabelJobNotMove" xml:space="preserve">
+    <value>Darbas nejuda</value>
+  </data>
+  <data name="TaReportLabelFixed" xml:space="preserve">
+    <value>Fiksuotas</value>
+  </data>
+  <data name="TaReportLabelValidFrom" xml:space="preserve">
+    <value>Derîgs no</value>
+  </data>
+  <data name="TaReportLabelValidTo" xml:space="preserve">
+    <value>Derîgs lîdz</value>
+  </data>
+  <data name="TaReportLabelInBuilding" xml:space="preserve">
+    <value>Pastate</value>
+  </data>
+  <data name="TaReportLabelAllowJobs" xml:space="preserve">
+    <value>Leisti darbą</value>
+  </data>
+  <data name="TaReportLabelDaysNotHours" xml:space="preserve">
+    <value>Leisti darbą</value>
+  </data>
+  <data name="TaReportLabelAdminonly" xml:space="preserve">
+    <value>Tik administratorius</value>
+  </data>
+  <data name="TaShiftStartFrom" xml:space="preserve">
+    <value>Pradėti nuo</value>
+  </data>
+  <data name="TaShiftFinishAt" xml:space="preserve">
+    <value>Baigti</value>
+  </data>
+  <data name="TaShiftWorkBeforeBreak" xml:space="preserve">
+    <value>Darbas prieš pertrauką</value>
+  </data>
+  <data name="TaShiftBreaks" xml:space="preserve">
+    <value>Pertraukos</value>
+  </data>
+  <data name="TaShiftWorkBeforeLunch" xml:space="preserve">
+    <value>Darbas prieš pietus</value>
+  </data>
+  <data name="TaShiftLunch" xml:space="preserve">
+    <value>Pietūs</value>
+  </data>
+    <data name="TaReportLabelDeleteConfirmMessage" xml:space="preserve">
+    <value>Ar tikrai norite ištrinti šį įrašą?</value>
+  </data>
+  <data name="TaReportLabelCompanyId" xml:space="preserve">
+    <value>Įmonės ID</value>
+  </data>
+  <data name="TaShiftsOvertimeMinutes" xml:space="preserve">
+    <value>Viršvalandžių protokolai</value>
+  </data>
+</root>

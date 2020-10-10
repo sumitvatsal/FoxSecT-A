@@ -1,0 +1,2689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutPageContentPlaceholder" xml:space="preserve">
+    <value>Put content here. (lt)</value>
+  </data>
+  <data name="AboutPageTitle" xml:space="preserve">
+    <value>About Us (lt)</value>
+  </data>
+  <data name="AboutTabName" xml:space="preserve">
+    <value>About (lt)</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>TERIS Web Application (lt)</value>
+  </data>
+  <data name="HomeTabName" xml:space="preserve">
+    <value>Home (lt)</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log Off (lt)</value>
+  </data>
+  <data name="WelcomeScreenMessage" xml:space="preserve">
+    <value>Welcome to TERIS! (lt)</value>
+  </data>
+  <data name="RoleManagementTabName" xml:space="preserve">
+    <value>Role Management (lt)</value>
+  </data>
+  <data name="UserManagementTabName" xml:space="preserve">
+    <value>User Management (lt)</value>
+  </data>
+  <data name="AdminTabName" xml:space="preserve">
+    <value>Admin (lt)</value>
+  </data>
+  <data name="AuditLogTabName" xml:space="preserve">
+    <value>Audit Log (lt)</value>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Delete (lt)</value>
+  </data>
+  <data name="BtnDeleteFilter" xml:space="preserve">
+    <value>Delete filter (lt)</value>
+  </data>
+  <data name="BtnEdit" xml:space="preserve">
+    <value>Edit (lt)</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Save (lt)</value>
+  </data>
+  <data name="BtnSaveFilter" xml:space="preserve">
+    <value>Save filter (lt)</value>
+  </data>
+  <data name="ReportToCompany" xml:space="preserve">
+    <value>Report to company (lt)</value>
+  </data>
+  <data name="BtnNo" xml:space="preserve">
+    <value>No (lt)</value>
+  </data>
+  <data name="BtnYes" xml:space="preserve">
+    <value>Yes (lt)</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm (lt)</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error! (lt)</value>
+  </data>
+  <data name="TitleManagementTabName" xml:space="preserve">
+    <value>Titles (lt)</value>
+  </data>
+  <data name="CompaniesManagementTabName" xml:space="preserve">
+    <value>Companies (lt)</value>
+  </data>
+  <data name="DepartmentsManagementTabName" xml:space="preserve">
+    <value>Departments (lt)</value>
+  </data>
+  <data name="HolidaysManagementTabName" xml:space="preserve">
+    <value>Holidays (lt)</value>
+  </data>
+  <data name="CardsManagementTabName" xml:space="preserve">
+    <value>Card types (lt)</value>
+  </data>
+  <data name="TimeZoneTabName" xml:space="preserve">
+    <value>Time zones (lt)</value>
+  </data>
+  <data name="PermissionTabName" xml:space="preserve">
+    <value>Permissions (lt)</value>
+  </data>
+  <data name="BuildingsTabName" xml:space="preserve">
+    <value>Buildings (lt)</value>
+  </data>
+  <data name="FieldLengthErrorComment" xml:space="preserve">
+    <value>Comment field can not be more than 250 symbols length (lt)</value>
+  </data>
+  <data name="FieldLengthError250" xml:space="preserve">
+    <value>This field can not be more than 250 symbols length! (lt)</value>
+  </data>
+  <data name="FieldLengthError50" xml:space="preserve">
+    <value>This field can not be more than 50 symbols length! (lt)</value>
+  </data>
+  <data name="FieldsRequiredValidationMessage" xml:space="preserve">
+    <value>This field is required! (lt)</value>
+  </data>
+  <data name="DataSavingMessage" xml:space="preserve">
+    <value>Saving data... (lt)</value>
+  </data>
+  <data name="NumericValidationMessage" xml:space="preserve">
+    <value>This Field should be numeric (lt)</value>
+  </data>
+  <data name="FieldLengthErrorPersonalCode" xml:space="preserve">
+    <value>Field can not contain more than 20 symbols! (lt)</value>
+  </data>
+  <data name="DefaultDropDownValue" xml:space="preserve">
+    <value>- select(lt) -          </value>
+  </data>
+  <data name="AdministrationTabName" xml:space="preserve">
+    <value>Administration (lt)</value>
+  </data>
+  <data name="BtnAddNewCard" xml:space="preserve">
+    <value>Add new card (lt)</value>
+  </data>
+  <data name="BtnAddNewDepartments" xml:space="preserve">
+    <value>Add new departments (lt)</value>
+  </data>
+  <data name="BtnBack" xml:space="preserve">
+    <value>Back (lt)</value>
+  </data>
+  <data name="BtnClose" xml:space="preserve">
+    <value>Close (lt)</value>
+  </data>
+  <data name="BtnDeactivate" xml:space="preserve">
+    <value>Deactivate (lt)</value>
+  </data>
+  <data name="BtnGeneratePassword" xml:space="preserve">
+    <value>Generate Password (lt)</value>
+  </data>
+  <data name="BuildingsActiveCommentsCount" xml:space="preserve">
+    <value>Active comments count is (lt) </value>
+  </data>
+  <data name="BuildingsCommentedBuildings" xml:space="preserve">
+    <value>commented buildings (lt)</value>
+  </data>
+  <data name="BuildingsLegend" xml:space="preserve">
+    <value>Legend (lt)</value>
+  </data>
+  <data name="CardsCardCode" xml:space="preserve">
+    <value>Card code (lt)</value>
+  </data>
+  <data name="CardsCardType" xml:space="preserve">
+    <value>Card Type (lt)</value>
+  </data>
+  <data name="CardsTabName" xml:space="preserve">
+    <value>Cards (lt)</value>
+  </data>
+  <data name="CommomStatus" xml:space="preserve">
+    <value>Status (lt)</value>
+  </data>
+  <data name="CommonBuilding" xml:space="preserve">
+    <value>Building (lt)</value>
+  </data>
+  <data name="CommonFloor" xml:space="preserve">
+    <value>Floor (lt)</value>
+  </data>
+  <data name="CommonId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="CommonIsAllowed" xml:space="preserve">
+    <value>Is allowed (lt)</value>
+  </data>
+  <data name="CommonValidationPeriod" xml:space="preserve">
+    <value>Validation period (lt)</value>
+  </data>
+  <data name="ContactTabName" xml:space="preserve">
+    <value>Contact (lt)</value>
+  </data>
+  <data name="DefaultDropDownValueShort" xml:space="preserve">
+    <value>-     </value>
+  </data>
+  <data name="DepartmentsManager" xml:space="preserve">
+    <value>Manager (lt)</value>
+  </data>
+  <data name="DepartmentsMessageAddUserDepartment" xml:space="preserve">
+    <value>Add user department..(lt)</value>
+  </data>
+  <data name="DialogTitleNewUser" xml:space="preserve">
+    <value>New User (lt)</value>
+  </data>
+  <data name="DialogTitleUserDepartments" xml:space="preserve">
+    <value>User departments (lt)</value>
+  </data>
+  <data name="FilterActive" xml:space="preserve">
+    <value>Active (lt)</value>
+  </data>
+  <data name="FilterDeactivated" xml:space="preserve">
+    <value>Deactivated (lt)</value>
+  </data>
+  <data name="FilterShowAll" xml:space="preserve">
+    <value>Show all (lt)</value>
+  </data>
+  <data name="LogTabName" xml:space="preserve">
+    <value>Log (lt)</value>
+  </data>
+  <data name="MyAccountTabName" xml:space="preserve">
+    <value>My Account (lt)</value>
+  </data>
+  <data name="OtherTabName" xml:space="preserve">
+    <value>Other (lt)</value>
+  </data>
+  <data name="PersonalDataTabName" xml:space="preserve">
+    <value>Personal data (lt)</value>
+  </data>
+  <data name="PersonalTabName" xml:space="preserve">
+    <value>Personal (lt)</value>
+  </data>
+  <data name="UserRightsTabName" xml:space="preserve">
+    <value>User rights (lt)</value>
+  </data>
+  <data name="VisitorRightsTabName" xml:space="preserve">
+    <value>Visitor rights (lt)</value>
+  </data>
+  <data name="UserRolesTabName" xml:space="preserve">
+    <value>User roles (lt)</value>
+  </data>
+  <data name="UsersActivateUser" xml:space="preserve">
+    <value>Activate user (lt)</value>
+  </data>
+  <data name="UsersAddNewUser" xml:space="preserve">
+    <value>Add new user (lt)</value>
+  </data>
+  <data name="UsersBirthday" xml:space="preserve">
+    <value>Birthday (lt)</value>
+  </data>
+  <data name="UsersCardCode" xml:space="preserve">
+    <value>Card code (lt)</value>
+  </data>
+  <data name="UsersCardNo" xml:space="preserve">
+    <value>Card No (lt)</value>
+  </data>
+  <data name="UsersCoffeCups" xml:space="preserve">
+    <value>Coffee cups (lt)</value>
+  </data>
+  <data name="UsersCompany" xml:space="preserve">
+    <value>Company (lt)</value>
+  </data>
+  <data name="UsersContractNr" xml:space="preserve">
+    <value>Contract nr (lt)</value>
+  </data>
+  <data name="UsersDeactivateUser" xml:space="preserve">
+    <value>Deactivate user (lt)</value>
+  </data>
+  <data name="UsersDeleteUser" xml:space="preserve">
+    <value>Delete user (lt)</value>
+  </data>
+  <data name="UsersDepartment" xml:space="preserve">
+    <value>Department (lt)</value>
+  </data>
+  <data name="UsersDepartments" xml:space="preserve">
+    <value>Departments (lt)</value>
+  </data>
+  <data name="UsersEmail" xml:space="preserve">
+    <value>Email (lt)</value>
+  </data>
+  <data name="UsersESeriviceAllowed" xml:space="preserve">
+    <value>E-service allowed (lt)</value>
+  </data>
+  <data name="UsersExtPersonalCode" xml:space="preserve">
+    <value>Ext. Personal code (lt)</value>
+  </data>
+  <data name="UsersFirstName" xml:space="preserve">
+    <value>First name (lt)</value>
+  </data>
+  <data name="UsersLanguage" xml:space="preserve">
+    <value>Language (lt)</value>
+  </data>
+  <data name="UsersLastName" xml:space="preserve">
+    <value>Last name (lt)</value>
+  </data>
+  <data name="UsersMessageLoginIsInUse" xml:space="preserve">
+    <value>LoginName is in use - please try other! (lt)</value>
+  </data>
+  <data name="VisitorMessageQRCodenotsent" xml:space="preserve">
+    <value>QR code not sent! Please try again later! (lt)</value>
+  </data>
+  <data name="VisitorMessageQRCodesent" xml:space="preserve">
+    <value>QR code sent successfully. (lt)</value>
+  </data>
+  <data name="UsersValidator" xml:space="preserve">
+    <value>Form has one or more incorrect values! (lt)</value>
+  </data>
+  <data name="UsersMessageUserCreated" xml:space="preserve">
+    <value>User created (lt)</value>
+  </data>
+  <data name="UsersMoveUser" xml:space="preserve">
+    <value>Move user (lt)</value>
+  </data>
+  <data name="UsersName" xml:space="preserve">
+    <value>Name (lt)</value>
+  </data>
+  <data name="JoinPermission" xml:space="preserve">
+    <value>Join Permission (lt)</value>
+  </data>
+  <data name="CardBack" xml:space="preserve">
+    <value>Card Back (lt)</value>
+  </data>
+  <data name="SendQRCode" xml:space="preserve">
+    <value>Send QR Code (lt)</value>
+  </data>
+  <data name="PrintVisitorCard" xml:space="preserve">
+    <value>Print Visitor Card (lt)</value>
+  </data>
+  <data name="UsersAddNewVisitor" xml:space="preserve">
+    <value>Add New Visitor (lt)</value>
+  </data>
+  <data name="RoleType" xml:space="preserve">
+    <value>Role Type (lt)</value>
+  </data>
+  <data name="UsersPassword" xml:space="preserve">
+    <value>Password (lt)</value>
+  </data>
+  <data name="UsersPermisionCallQuests" xml:space="preserve">
+    <value>Permission call guests (lt)</value>
+  </data>
+  <data name="UsersPermitOfWork" xml:space="preserve">
+    <value>Permit of work (end) (lt)</value>
+  </data>
+  <data name="UsersPersonalCode" xml:space="preserve">
+    <value>Personal code (lt)</value>
+  </data>
+  <data name="UsersPhone" xml:space="preserve">
+    <value>Phone(s) (lt)</value>
+  </data>
+  <data name="UsersRegistered" xml:space="preserve">
+    <value>Registered (lt)</value>
+  </data>
+  <data name="UsersResidence" xml:space="preserve">
+    <value>Residence (lt)</value>
+  </data>
+  <data name="UsersRole" xml:space="preserve">
+    <value>Role (lt)</value>
+  </data>
+  <data name="UsersRoleTitle" xml:space="preserve">
+    <value>Role title (lt)</value>
+  </data>
+  <data name="UsersSearchPeople" xml:space="preserve">
+    <value>Search people! (lt)</value>
+  </data>
+  <data name="UsersSerial" xml:space="preserve">
+    <value>SER + DK (lt)</value>
+  </data>
+  <data name="UsersTableNr" xml:space="preserve">
+    <value>Table nr (lt)</value>
+  </data>
+  <data name="UsersTabName" xml:space="preserve">
+    <value>Users (lt)</value>
+  </data>
+  <data name="UsersTitle" xml:space="preserve">
+    <value>Title (lt)</value>
+  </data>
+  <data name="UsersUploadFoto" xml:space="preserve">
+    <value>Upload foto (lt)</value>
+  </data>
+  <data name="UsersUserCards" xml:space="preserve">
+    <value>User cards (lt)</value>
+  </data>
+  <data name="VisitorCards" xml:space="preserve">
+    <value>Visitor card (lt)</value>
+  </data>
+  <data name="UsersUserId" xml:space="preserve">
+    <value>User ID (lt)</value>
+  </data>
+  <data name="UsersUserName" xml:space="preserve">
+    <value>User name (lt)</value>
+  </data>
+  <data name="UsersValidation" xml:space="preserve">
+    <value>Validation (lt)</value>
+  </data>
+  <data name="UsersDeactivationDate" xml:space="preserve">
+    <value>Deactivation Date (lt)</value>
+  </data>
+  <data name="UsersWorkTime" xml:space="preserve">
+    <value>Work time (lt)</value>
+  </data>
+  <data name="WorkTabName" xml:space="preserve">
+    <value>Work (lt)</value>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>Add (lt)</value>
+  </data>
+  <data name="CardsMessageAddNewCardToUser" xml:space="preserve">
+    <value>Adding new card to user... (lt)</value>
+  </data>
+  <data name="CardsMessageCardNotFree" xml:space="preserve">
+    <value>Card not in Free cards! Pleasse add to free cards first! (lt)</value>
+  </data>
+  <data name="CardsSerDk" xml:space="preserve">
+    <value>SER+DK(lt)</value>
+  </data>
+  <data name="DialogTitleNewUserCard" xml:space="preserve">
+    <value>New user card (lt)</value>
+  </data>
+  <data name="BtnAddNewRole" xml:space="preserve">
+    <value>Add new role (lt)</value>
+  </data>
+  <data name="BtnOk" xml:space="preserve">
+    <value>OK (lt)</value>
+  </data>
+  <data name="CommonApplyChanges" xml:space="preserve">
+    <value>Apply changes (lt)</value>
+  </data>
+  <data name="CommonDefault" xml:space="preserve">
+    <value>Default (lt)</value>
+  </data>
+  <data name="CommonDescription" xml:space="preserve">
+    <value>Description (lt)</value>
+  </data>
+  <data name="CommonStartTime" xml:space="preserve">
+    <value>Start time (lt)</value>
+  </data>
+  <data name="CommonTimeZoneName" xml:space="preserve">
+    <value>Time zone name (lt)</value>
+  </data>
+  <data name="UsersCurUserPermGroupName" xml:space="preserve">
+    <value>Current user permission group name (lt)</value>
+  </data>
+  <data name="JoinedUserName" xml:space="preserve">
+    <value>Joined User Name (lt)</value>
+  </data>
+  <data name="UsersMessageAddUserPermGroup" xml:space="preserve">
+    <value>Adding user permission group... (lt)</value>
+  </data>
+  <data name="UsersMessageChangeUserPermGroup" xml:space="preserve">
+    <value>Changing user permission group... (lt)</value>
+  </data>
+  <data name="UsersMessageCreateUserPermGroup" xml:space="preserve">
+    <value>Creating user permission group... (lt)</value>
+  </data>
+  <data name="UsersMessageSaveUserPermGroup" xml:space="preserve">
+    <value>Saving user permission group... (lt)</value>
+  </data>
+  <data name="AccountEnterPasswordPrompt" xml:space="preserve">
+    <value>Please enter your username and password. (lt)</value>
+  </data>
+  <data name="AccountIncorrectPasword" xml:space="preserve">
+    <value>The user name or password provided is incorrect. (lt)</value>
+  </data>
+  <data name="AccountInformation" xml:space="preserve">
+    <value>Account Information (lt)</value>
+  </data>
+  <data name="AccountLoginFailedMessage" xml:space="preserve">
+    <value>Login was unsuccessful. Please correct the errors and try again. (lt)</value>
+  </data>
+  <data name="AccountLogOn" xml:space="preserve">
+    <value>Log On (lt)</value>
+  </data>
+  <data name="AccountLogOnWelcome" xml:space="preserve">
+    <value>Welcome (lt)</value>
+  </data>
+  <data name="AccountPassword" xml:space="preserve">
+    <value>Password (lt)</value>
+  </data>
+  <data name="AccountRememberMe" xml:space="preserve">
+    <value>Remember me? (lt)</value>
+  </data>
+  <data name="AccountUserName" xml:space="preserve">
+    <value>User name (lt)</value>
+  </data>
+  <data name="BtnActivate" xml:space="preserve">
+    <value>Activate (lt)</value>
+  </data>
+  <data name="BtnAddNewCompany" xml:space="preserve">
+    <value>Add new company (lt)</value>
+  </data>
+  <data name="BtnAddNewTitle" xml:space="preserve">
+    <value>Add new title (lt)</value>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>Cancel (lt)</value>
+  </data>
+  <data name="BtnCreateNew" xml:space="preserve">
+    <value>Create new (lt)</value>
+  </data>
+  <data name="BtnDeleteGroup" xml:space="preserve">
+    <value>Delete group (lt)</value>
+  </data>
+  <data name="BtnMove" xml:space="preserve">
+    <value>Move (lt)</value>
+  </data>
+  <data name="BtnNewDefaultTZ" xml:space="preserve">
+    <value>New default TZ (lt)</value>
+  </data>
+  <data name="BtnSaveChanges" xml:space="preserve">
+    <value>Save changes (lt)</value>
+  </data>
+  <data name="CardsActivateCardBtn" xml:space="preserve">
+    <value>Activate card (lt)</value>
+  </data>
+  <data name="CardsActivating" xml:space="preserve">
+    <value>Activating cards (lt)</value>
+  </data>
+  <data name="CardsAddCardToNewUser" xml:space="preserve">
+    <value>Add card to new user (lt)</value>
+  </data>
+  <data name="CardsBackToFree" xml:space="preserve">
+    <value>Back to free cards? (lt)</value>
+  </data>
+  <data name="CardsBtnAddToFreeCards" xml:space="preserve">
+    <value>Add to free cards (lt)</value>
+  </data>
+  <data name="CardsBtnAddToNewUser" xml:space="preserve">
+    <value>Add to new user (lt)</value>
+  </data>
+  <data name="CardsCardFoundWithAnotherStatus" xml:space="preserve">
+    <value>Card has been found in the database, but it's not suitable to the selected criteria. (lt)</value>
+  </data>
+  <data name="CardsCardNotFoundErrorMesage" xml:space="preserve">
+    <value>Card not found! Contact your building administrator. (lt)</value>
+  </data>
+  <data name="CardsCardNotFoundTitle" xml:space="preserve">
+    <value>Card not found in the system! (lt)</value>
+  </data>
+  <data name="CardsCardNotFree" xml:space="preserve">
+    <value>Card is not free (lt)</value>
+  </data>
+  <data name="CardsCardStatus" xml:space="preserve">
+    <value>Card status (lt)</value>
+  </data>
+  <data name="CardsCardReason" xml:space="preserve">
+    <value>Reason (lt)</value>
+  </data>
+  <data name="CardsClearSerDk" xml:space="preserve">
+    <value>Clear SER+DK (lt)</value>
+  </data>
+  <data name="CardsCode" xml:space="preserve">
+    <value>Code(lt)</value>
+  </data>
+  <data name="CardsDeactivateCardBtn" xml:space="preserve">
+    <value>Deactivate card (lt)</value>
+  </data>
+  <data name="CardsDeactivating" xml:space="preserve">
+    <value>Deactivating cards (lt)</value>
+  </data>
+  <data name="CardsDeleteCardBtn" xml:space="preserve">
+    <value>Delete card (lt)</value>
+  </data>
+  <data name="CardsDeletingCards" xml:space="preserve">
+    <value>Deleting cards (lt)</value>
+  </data>
+  <data name="CardsEditCard" xml:space="preserve">
+    <value>Edit card (lt)</value>
+  </data>
+  <data name="CardsMoveCardBtn" xml:space="preserve">
+    <value>Move card (lt)</value>
+  </data>
+  <data name="CardsMoving" xml:space="preserve">
+    <value>Moving cards (lt)</value>
+  </data>
+  <data name="CardsNewUserCreating" xml:space="preserve">
+    <value>Creating new user... (lt)</value>
+  </data>
+  <data name="CardsSearch" xml:space="preserve">
+    <value>Search card! (lt)</value>
+  </data>
+  <data name="CardsSelectCompany" xml:space="preserve">
+    <value>Select company (lt)</value>
+  </data>
+  <data name="CardTypesAddNew" xml:space="preserve">
+    <value>Add new card type (lt)</value>
+  </data>
+  <data name="CardTypeSaving" xml:space="preserve">
+    <value>Saving Card type (lt) </value>
+  </data>
+  <data name="ClassifiersAddNew" xml:space="preserve">
+    <value>Add new setting (lt)</value>
+  </data>
+  <data name="ClassifiersAddNewClassifierValue" xml:space="preserve">
+    <value>Add new setting value (lt)</value>
+  </data>
+  <data name="ClassifiersBackToClassificatorValues" xml:space="preserve">
+    <value>Back to setting values (lt)</value>
+  </data>
+  <data name="ClassifiersBackToClassifier" xml:space="preserve">
+    <value>Back to setting (lt)</value>
+  </data>
+  <data name="ClassifiersBackToList" xml:space="preserve">
+    <value>Back to setting list (lt)</value>
+  </data>
+  <data name="ClassifiersClassificatorValueDeleting" xml:space="preserve">
+    <value>Deleting setting value (lt) </value>
+  </data>
+  <data name="ClassifiersClassifierValues" xml:space="preserve">
+    <value>Setting values (lt)</value>
+  </data>
+  <data name="ClassifiersDelClassErrorMessage" xml:space="preserve">
+    <value>Can't delete settings with values. Delete all values first. (lt)</value>
+  </data>
+  <data name="ClassifiersDeleting" xml:space="preserve">
+    <value>Deleting setting (lt) </value>
+  </data>
+  <data name="ClassifiersManagementTabName" xml:space="preserve">
+    <value>Settings (lt)</value>
+  </data>
+  <data name="ClassifiersSaving" xml:space="preserve">
+    <value>Setting saving (lt) </value>
+  </data>
+  <data name="ClassifiersSavingClassificatorValue" xml:space="preserve">
+    <value>Setting value saving...(lt)</value>
+  </data>
+  <data name="CommonComment" xml:space="preserve">
+    <value>Comment (lt)</value>
+  </data>
+  <data name="CommonComments" xml:space="preserve">
+    <value>Comments (lt)</value>
+  </data>
+  <data name="CommonConfirmMessage" xml:space="preserve">
+    <value>Are you sure? (lt)</value>
+  </data>
+  <data name="CommonDate" xml:space="preserve">
+    <value>Date (lt)</value>
+  </data>
+  <data name="CommonDeleting" xml:space="preserve">
+    <value>Deleting (lt)</value>
+  </data>
+  <data name="CommonDontShowDialog" xml:space="preserve">
+    <value>Don't show this dialog (lt)</value>
+  </data>
+  <data name="CommonFridayShort" xml:space="preserve">
+    <value>Fr</value>
+  </data>
+  <data name="CommonFrom" xml:space="preserve">
+    <value>From (lt)</value>
+  </data>
+  <data name="CommonMondayShort" xml:space="preserve">
+    <value>Mo</value>
+  </data>
+  <data name="CommonNumber" xml:space="preserve">
+    <value>Number (lt)</value>
+  </data>
+  <data name="CommonReason" xml:space="preserve">
+    <value>Reason (lt)</value>
+  </data>
+  <data name="CommonSaturdayShort" xml:space="preserve">
+    <value>Sa</value>
+  </data>
+  <data name="CommonSaving" xml:space="preserve">
+    <value>Saving  (lt)</value>
+  </data>
+  <data name="CommonSearch" xml:space="preserve">
+    <value>Search (lt)</value>
+  </data>
+  <data name="CommonSelectAll" xml:space="preserve">
+    <value>Select all! (lt)</value>
+  </data>
+  <data name="CommonSundayShort" xml:space="preserve">
+    <value>Su</value>
+  </data>
+  <data name="CommonThursdayShort" xml:space="preserve">
+    <value>Th</value>
+  </data>
+  <data name="CommonTo" xml:space="preserve">
+    <value>To (lt)</value>
+  </data>
+  <data name="CommonTuesdayShort" xml:space="preserve">
+    <value>Tu</value>
+  </data>
+  <data name="CommonUpdate" xml:space="preserve">
+    <value>Update (lt)</value>
+  </data>
+  <data name="CommonValue" xml:space="preserve">
+    <value>Value (lt)</value>
+  </data>
+  <data name="CommonWednesdayShort" xml:space="preserve">
+    <value>We</value>
+  </data>
+  <data name="CompaniesActivatingMessage" xml:space="preserve">
+    <value>Activating company...(lt)</value>
+  </data>
+  <data name="CompaniesActivatingTitle" xml:space="preserve">
+    <value>Activating companies (lt)</value>
+  </data>
+  <data name="CompaniesAdditionalInfo" xml:space="preserve">
+    <value>Additional info (lt)</value>
+  </data>
+  <data name="CompaniesAddPartner" xml:space="preserve">
+    <value>AddedPartner... (lt)</value>
+  </data>
+  <data name="CompaniesBtnActivateCompany" xml:space="preserve">
+    <value>Activate company (lt)</value>
+  </data>
+  <data name="CompaniesBtnDeactivateCompany" xml:space="preserve">
+    <value>Deactivate company (lt)</value>
+  </data>
+  <data name="CompaniesBtnDeleteCompany" xml:space="preserve">
+    <value>Delete company (lt)</value>
+  </data>
+  <data name="CompaniesCanUseOwnCards" xml:space="preserve">
+    <value>Can use own cards (lt)</value>
+  </data>
+  <data name="CompaniesCompanyStatus" xml:space="preserve">
+    <value>Company status (lt)</value>
+  </data>
+  <data name="CompaniesCompanyTitle" xml:space="preserve">
+    <value>Company title (lt)</value>
+  </data>
+  <data name="CompaniesDeactivateConfirmation" xml:space="preserve">
+    <value>All company users rights will be removed!  Are you sure? (lt)</value>
+  </data>
+  <data name="CompaniesDeactivatingCompaniesMessage" xml:space="preserve">
+    <value>Deactivating companies... (lt)</value>
+  </data>
+  <data name="CompaniesDeactivatingTitle" xml:space="preserve">
+    <value>Deactivating companies (lt)</value>
+  </data>
+  <data name="CompaniesDeletingMessage" xml:space="preserve">
+    <value>Deleting companies... (lt)</value>
+  </data>
+  <data name="CompaniesDeletingPartnerMessage" xml:space="preserve">
+    <value>Deleting partner (lt)</value>
+  </data>
+  <data name="CompaniesDeletingTitle" xml:space="preserve">
+    <value>Deleting companies (lt)</value>
+  </data>
+  <data name="CompaniesNoBuildingSelectedMessage" xml:space="preserve">
+    <value>At least one building-floor pair should be selected! (lt)</value>
+  </data>
+  <data name="CompaniesSavingCompanyInfo" xml:space="preserve">
+    <value>Saving company info... (lt)</value>
+  </data>
+  <data name="CompaniesSearch" xml:space="preserve">
+    <value>Search company! (lt)</value>
+  </data>
+  <data name="DepartmentsBtnAddNew" xml:space="preserve">
+    <value>Add new department (lt)</value>
+  </data>
+  <data name="DepartmentsBtnDelete" xml:space="preserve">
+    <value>Delete department (lt)</value>
+  </data>
+  <data name="DepartmentsDeletingMessage" xml:space="preserve">
+    <value>Deleting departments... (lt)</value>
+  </data>
+  <data name="DepartmentsDepartmentManagers" xml:space="preserve">
+    <value>Department managers (lt)</value>
+  </data>
+  <data name="DepartmentsSavingMessage" xml:space="preserve">
+    <value>Saving department (lt) </value>
+  </data>
+  <data name="DepartmentsUserDepartmentDeletingMessage" xml:space="preserve">
+    <value>User department deleting... (lt)</value>
+  </data>
+  <data name="HolidaysBtnAddNew" xml:space="preserve">
+    <value>Add new holiday (lt)</value>
+  </data>
+  <data name="HolidaysDeletingMessage" xml:space="preserve">
+    <value>Deleting holiday (lt) </value>
+  </data>
+  <data name="HolidaysHolidayDate" xml:space="preserve">
+    <value>Holiday date (lt)</value>
+  </data>
+  <data name="HolidaysHolidaySaving" xml:space="preserve">
+    <value>Saving holiday (lt)</value>
+  </data>
+  <data name="HolidaysHolidayTitle" xml:space="preserve">
+    <value>Holiday title (lt)</value>
+  </data>
+  <data name="HolidaysMovingHoliday" xml:space="preserve">
+    <value>Moving holiday (lt)</value>
+  </data>
+  <data name="LogsActivity" xml:space="preserve">
+    <value>Activity (lt)</value>
+  </data>
+  <data name="LogsFilter" xml:space="preserve">
+    <value>Filter (lt)</value>
+  </data>
+  <data name="LogsFullShortAction" xml:space="preserve">
+    <value>Display full/short log action (lt)</value>
+  </data>
+  <data name="LogsNode" xml:space="preserve">
+    <value>Node (lt)</value>
+  </data>
+  <data name="LogsSearchLog" xml:space="preserve">
+    <value>Search log! (lt)</value>
+  </data>
+  <data name="LogsShowDefault" xml:space="preserve">
+    <value>Show DEFAULT log (lt)</value>
+  </data>
+  <data name="LogsShowFull" xml:space="preserve">
+    <value>Show FULL log (lt)</value>
+  </data>
+  <data name="LogsUser" xml:space="preserve">
+    <value>User (lt)</value>
+  </data>
+  <data name="PermissionsChangingDefaultTimeZone" xml:space="preserve">
+    <value>Changing default time zone...(lt)</value>
+  </data>
+  <data name="PermissionsCopyDataFrom" xml:space="preserve">
+    <value>Copy data from (lt)</value>
+  </data>
+  <data name="PermissionsNameExistsError" xml:space="preserve">
+    <value>Name already exists, please specify another name! (lt)</value>
+  </data>
+  <data name="PermissionsNewPermissionGroupCreatingMessage" xml:space="preserve">
+    <value>Creating new permission group... (lt)</value>
+  </data>
+  <data name="PermissionsNoBuildingObjectsTimeZonesSelected" xml:space="preserve">
+    <value>Please select Building Objects and default Time Zone! (lt)</value>
+  </data>
+  <data name="PermissionsNoGroupSelected" xml:space="preserve">
+    <value>No group selected...(lt)</value>
+  </data>
+  <data name="PermissionsNoNameError" xml:space="preserve">
+    <value>Pease specify name... (lt)</value>
+  </data>
+  <data name="PermissionsPermGroupInUse" xml:space="preserve">
+    <value>user(s) use it! Be sure before change! (lt)</value>
+  </data>
+  <data name="PermissionsPermissionGroupDeletingMessage" xml:space="preserve">
+    <value>Deleting permission group...(lt)</value>
+  </data>
+  <data name="PermissionsPermissionGroupNoSelected" xml:space="preserve">
+    <value>Please select permission group! (lt)</value>
+  </data>
+  <data name="RolesCreateRoleErrorMessage" xml:space="preserve">
+    <value>Error creating role! (lt)</value>
+  </data>
+  <data name="RolesDeleteRoleErrorMessage" xml:space="preserve">
+    <value>Error deleting role! (lt)</value>
+  </data>
+  <data name="RolesEditRoleErrorMessage" xml:space="preserve">
+    <value>Error editing role! (lt)</value>
+  </data>
+  <data name="RolesFoxsecAccess" xml:space="preserve">
+    <value>Foxsec access (lt)</value>
+  </data>
+  <data name="RolesMenuAccess" xml:space="preserve">
+    <value>Menu access (lt)</value>
+  </data>
+  <data name="RolesMenuTitle" xml:space="preserve">
+    <value>Menu title (lt)</value>
+  </data>
+  <data name="RolesRoleAlreadyExists" xml:space="preserve">
+    <value>Role with such name already exists! (lt)</value>
+  </data>
+  <data name="RolesServiceTitle" xml:space="preserve">
+    <value>Service title (lt)</value>
+  </data>
+  <data name="TimeZinesDeleteTitle" xml:space="preserve">
+    <value>Delete time zone (lt)</value>
+  </data>
+  <data name="TimeZonesAddNewTimeZone" xml:space="preserve">
+    <value>Add new time zone (lt)</value>
+  </data>
+  <data name="TimeZonesChangeNameTitle" xml:space="preserve">
+    <value>Change time zone name (lt)</value>
+  </data>
+  <data name="TimeZonesEditMessage" xml:space="preserve">
+    <value>Edit time zone... (lt)</value>
+  </data>
+  <data name="TimeZonesNewTimeZone" xml:space="preserve">
+    <value>New time zone (lt)</value>
+  </data>
+  <data name="TimeZonesNoCheckedError" xml:space="preserve">
+    <value>At least one day in group should be checked (lt)!</value>
+  </data>
+  <data name="TimeZonesRemovingMessage" xml:space="preserve">
+    <value>Removing time zone... (lt)</value>
+  </data>
+  <data name="TimeZonesSavingNewMessage" xml:space="preserve">
+    <value>Saving new time zone... (lt)</value>
+  </data>
+  <data name="TimeZonesSearch" xml:space="preserve">
+    <value>Search time zone! (lt)</value>
+  </data>
+  <data name="TitlesCompany" xml:space="preserve">
+    <value>Title company (lt)</value>
+  </data>
+  <data name="TitlesDeletingMessage" xml:space="preserve">
+    <value>Deleting title (lt) </value>
+  </data>
+  <data name="TitlesName" xml:space="preserve">
+    <value>Title name (lt)</value>
+  </data>
+  <data name="UsersActivatingUsersMessage" xml:space="preserve">
+    <value>Activating users... (lt)</value>
+  </data>
+  <data name="UsersBtnGeneratePin" xml:space="preserve">
+    <value>Generate PIN (lt)</value>
+  </data>
+  <data name="UsersDeactivatingUsersMessage" xml:space="preserve">
+    <value>Deactivating users... (lt)</value>
+  </data>
+  <data name="UsersDeletingUsersMessage" xml:space="preserve">
+    <value>Deleting users... (lt)</value>
+  </data>
+  <data name="UsersUserStatus" xml:space="preserve">
+    <value>User status (lt)</value>
+  </data>
+  <data name="AcceptAllAlarmsAllBuildings" xml:space="preserve">
+    <value>Accept all alarms all buildings (lt)</value>
+  </data>
+  <data name="AcceptAllAlarmsOwnBuilding" xml:space="preserve">
+    <value>Accept all alarms own building (lt)</value>
+  </data>
+  <data name="AcceptOwnAlarms" xml:space="preserve">
+    <value>Accept own alarms (lt)</value>
+  </data>
+  <data name="CommonAll" xml:space="preserve">
+    <value>All (lt)</value>
+  </data>
+  <data name="CommonPerPage" xml:space="preserve">
+    <value>per page (lt)</value>
+  </data>
+  <data name="FullArmingAllBuildings" xml:space="preserve">
+    <value>Full arming all buildings (lt)</value>
+  </data>
+  <data name="FullArmingOwnBuilding" xml:space="preserve">
+    <value>Full arming own building (lt)</value>
+  </data>
+  <data name="FullDisarmingAllBuldings" xml:space="preserve">
+    <value>Full disarming all buildings (lt)</value>
+  </data>
+  <data name="FullDisarmingOwnBuilding" xml:space="preserve">
+    <value>Full disarming own building (lt)</value>
+  </data>
+  <data name="GuardMinmalAllBuildings" xml:space="preserve">
+    <value>Guard minmal all buildings (lt)</value>
+  </data>
+  <data name="GuardMinmalOwnBuilding" xml:space="preserve">
+    <value>Guard minmal own building (lt)</value>
+  </data>
+  <data name="InstallerAllBuildings" xml:space="preserve">
+    <value>Installer all buildings (lt)</value>
+  </data>
+  <data name="InstallerOwnBuilding" xml:space="preserve">
+    <value>Installer own building (lt)</value>
+  </data>
+  <data name="UnlockKeypadsAllBuildings" xml:space="preserve">
+    <value>Unlock keypads all buildings (lt)</value>
+  </data>
+  <data name="UnlockKeypadsOwnBuilding" xml:space="preserve">
+    <value>Unlock keypads own building (lt)</value>
+  </data>
+  <data name="ViewAdministrationMenu" xml:space="preserve">
+    <value>Administration menu (lt)</value>
+  </data>
+  <data name="ViewBuildingsMenu" xml:space="preserve">
+    <value>Administration -&gt; Buildings menu (lt)</value>
+  </data>
+  <data name="ViewCardsMenu" xml:space="preserve">
+    <value>Cards menu (lt)</value>
+  </data>
+  <data name="ViewCardTypeMenu" xml:space="preserve">
+    <value>Administration -&gt; Card Types menu (lt)</value>
+  </data>
+  <data name="ViewClassifierMenu" xml:space="preserve">
+    <value>Administration -&gt; Settings menu (lt)</value>
+  </data>
+  <data name="ViewCompanyMenu" xml:space="preserve">
+    <value>Administration -&gt; Companies menu (lt)</value>
+  </data>
+  <data name="ViewDepartmentMenu" xml:space="preserve">
+    <value>Administration -&gt; Departments menu (lt)</value>
+  </data>
+  <data name="ViewHolidayMenu" xml:space="preserve">
+    <value>Administration -&gt; Holidays menu (lt)</value>
+  </data>
+  <data name="ViewLogMenu" xml:space="preserve">
+    <value>Log menu (lt)</value>
+  </data>
+  <data name="ViewMyLiveVideo" xml:space="preserve">
+    <value>Live Video (lt)</value>
+  </data>
+  <data name="ViewMyAccountMenu" xml:space="preserve">
+    <value>My account menu (lt)</value>
+  </data>
+  <data name="ViewMyCompanyMenu" xml:space="preserve">
+    <value>Administration -&gt; My Company menu (lt)</value>
+  </data>
+  <data name="ViewPeopleMenu" xml:space="preserve">
+    <value>Users menu (lt)</value>
+  </data>
+  <data name="ViewPermissionMenu" xml:space="preserve">
+    <value>Permissions menu (lt)</value>
+  </data>
+  <data name="ViewRoleManadgmentMenu" xml:space="preserve">
+    <value>Administration -&gt; Role Management menu (lt)</value>
+  </data>
+  <data name="ViewTimeZoneMenu" xml:space="preserve">
+    <value>Time Zones menu (lt)</value>
+  </data>
+  <data name="ViewTitleMenu" xml:space="preserve">
+    <value>Administration -&gt; Titles menu (lt)</value>
+  </data>
+  <data name="BtnExport" xml:space="preserve">
+    <value>Export (lt)</value>
+  </data>
+  <data name="CardsFreeCards" xml:space="preserve">
+    <value>Free cards</value>
+  </data>
+  <data name="CommonAllow" xml:space="preserve">
+    <value>Allow (lt)</value>
+  </data>
+  <data name="CommonNoRecordsFound" xml:space="preserve">
+    <value>No records found (lt)</value>
+  </data>
+  <data name="CommonRecordsFound" xml:space="preserve">
+    <value>records found (lt)</value>
+  </data>
+  <data name="PermissionGropupsAddNew" xml:space="preserve">
+    <value>Add new permission group (lt)</value>
+  </data>
+  <data name="PermissionsSelectPermissionGroupOption" xml:space="preserve">
+    <value>- Select permission group - (lt)</value>
+  </data>
+  <data name="CardsActivatingMessage" xml:space="preserve">
+    <value>Activating cards... (lt)</value>
+  </data>
+  <data name="CardsDeactivatingMessage" xml:space="preserve">
+    <value>Deactivate cards...(lt)</value>
+  </data>
+  <data name="CommonNoReasonSelectedMessage" xml:space="preserve">
+    <value>Reason should be selected! (lt)</value>
+  </data>
+  <data name="DeleteVisitor" xml:space="preserve">
+    <value>Are you sure? You want to delete this Visitor. (lt)</value>
+  </data>
+  <data name="UsersCardsDeactivating" xml:space="preserve">
+    <value>Cards deactivating (lt)</value>
+  </data>
+  <data name="UsersActivatingUsersTitle" xml:space="preserve">
+    <value>Activating users (lt)</value>
+  </data>
+  <data name="UsersDeactivatingUsersTitle" xml:space="preserve">
+    <value>Deactivating users(lt)</value>
+  </data>
+  <data name="FilterActiveShort" xml:space="preserve">
+    <value>A (lt)</value>
+  </data>
+  <data name="FilterDeactivatedShort" xml:space="preserve">
+    <value>D (lt)</value>
+  </data>
+  <data name="FilterFreeShort" xml:space="preserve">
+    <value>F (lt)</value>
+  </data>
+  <data name="UsersIncorrectPinErrorMessage" xml:space="preserve">
+    <value>PIN should be 4-digit numeric or empty. Spaces are not allowed! (lt)</value>
+  </data>
+  <data name="CommonDataSavedMessage" xml:space="preserve">
+    <value>Saved (lt)</value>
+  </data>
+  <data name="UsersPasswordErrorMessage" xml:space="preserve">
+    <value>Password should contain at least 6 symbols with lower-case and upper-case letters and one digit! (lt)</value>
+  </data>
+  <data name="UsersDirectManager" xml:space="preserve">
+    <value>Direct manager (lt)</value>
+  </data>
+  <data name="PermissionDefaultDisarmingShort" xml:space="preserve">
+    <value>DD(lt)</value>
+  </data>
+  <data name="PermissionGetDefaultTimeZone" xml:space="preserve">
+    <value>Get default Time Zone for current permission group (lt)</value>
+  </data>
+  <data name="PermissionsArmingShort" xml:space="preserve">
+    <value>A(lt)</value>
+  </data>
+  <data name="PermissionsDefaultArmingShort" xml:space="preserve">
+    <value>DA(lt)</value>
+  </data>
+  <data name="PermissionsDisarmingShort" xml:space="preserve">
+    <value>D(lt)</value>
+  </data>
+  <data name="CompaniesEqualBildingsErrorMessage" xml:space="preserve">
+    <value>You can not select two or more equal buildings! (lt)</value>
+  </data>
+  <data name="RolesAlreadyExists" xml:space="preserve">
+    <value>Role with the same name already exists! (lt)</value>
+  </data>
+  <data name="RolesRoleType" xml:space="preserve">
+    <value>Role type (lt)</value>
+  </data>
+  <data name="RolesDeletingMessage" xml:space="preserve">
+    <value>Delete role (lt)</value>
+  </data>
+  <data name="RolesRoleAlreadyAssigned" xml:space="preserve">
+    <value>This role is already assigned for users : (lt)</value>
+  </data>
+  <data name="GlobalSearchEntityType" xml:space="preserve">
+    <value>Entity type (lt)</value>
+  </data>
+  <data name="GlobalSearchGoToUser" xml:space="preserve">
+    <value>Go to user (lt)</value>
+  </data>
+  <data name="CardsNotSuitableCardMessage" xml:space="preserve">
+    <value>Entered card can not be moved to selected building! (lt)</value>
+  </data>
+  <data name="CardsCardsNotMovedError" xml:space="preserve">
+    <value>Cards can not be moved. Selected company doesn't contain cards building (lt)</value>
+  </data>
+  <data name="CardsMoved" xml:space="preserve">
+    <value>Cards moved (lt)</value>
+  </data>
+  <data name="UserLanguageEnglish" xml:space="preserve">
+    <value>English (lt)</value>
+  </data>
+  <data name="UserLanguageEstonian" xml:space="preserve">
+    <value>Estonian (lt)</value>
+  </data>
+  <data name="UserLanguageLatvian" xml:space="preserve">
+    <value>Latvian (lt)</value>
+  </data>
+  <data name="UserLanguageLithuanian" xml:space="preserve">
+    <value>Lithuanian (lt)</value>
+  </data>
+  <data name="UserLanguageRussian" xml:space="preserve">
+    <value>Russian (lt)</value>
+  </data>
+  <data name="CompaniesEmptyBuildingSelected" xml:space="preserve">
+    <value>You can not select empty building (lt)</value>
+  </data>
+  <data name="Buildings" xml:space="preserve">
+    <value>Buildings (lt)</value>
+  </data>
+  <data name="CardCode" xml:space="preserve">
+    <value>Card code (lt)</value>
+  </data>
+  <data name="Cards" xml:space="preserve">
+    <value>Cards (lt)</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Card type (lt)</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact (lt)</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Department (lt)</value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Departments (lt)</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Manager (lt)</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other (lt)</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personal (lt)</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Personal data (lt)</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles (lt)</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Statusas</value>
+  </data>
+  <data name="UserRights" xml:space="preserve">
+    <value>User rights (lt)</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>Validation (lt)</value>
+  </data>
+  <data name="Work" xml:space="preserve">
+    <value>Work (lt)</value>
+  </data>
+  <data name="CommonDateFormat" xml:space="preserve">
+    <value>Date should be in "dd.MM.yyyy" format (lt)</value>
+  </data>
+  <data name="CommonBtnView" xml:space="preserve">
+    <value>View (lt)</value>
+  </data>
+  <data name="TitlesTitleSaving" xml:space="preserve">
+    <value>Title "{0}" saving... (lt)</value>
+  </data>
+  <data name="AccountNoActiveRole" xml:space="preserve">
+    <value>Entered user doesn't have any active role! (lt)</value>
+  </data>
+  <data name="UsersRoleValidationPeriodError" xml:space="preserve">
+    <value>Start date should be less or equal End date. (lt)</value>
+  </data>
+  <data name="UserRolesDateIntersectionError" xml:space="preserve">
+    <value>Roles Validation dates can not intersect! (lt)</value>
+  </data>
+  <data name="PermissionsCanNotSetTimeZoneToRoom" xml:space="preserve">
+    <value>Rooms can not have own Time Zone (lt)</value>
+  </data>
+  <data name="PermissionsChangeNameTitle" xml:space="preserve">
+    <value>Permission group name change (lt)</value>
+  </data>
+  <data name="PrintDate" xml:space="preserve">
+    <value>Print date (lt)</value>
+  </data>
+  <data name="LogMessageBuildingObjectChange" xml:space="preserve">
+    <value>Building object '{0} {1}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageClassificatorChanged" xml:space="preserve">
+    <value>Classificator '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageClassificatorCreated" xml:space="preserve">
+    <value>Classificator '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageClassificatorDeleted" xml:space="preserve">
+    <value>Classificator '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageClassificatorValueChanged" xml:space="preserve">
+    <value>Classificator Value '{0}' is changed to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageClassificatorValueClassificator" xml:space="preserve">
+    <value>Classificator is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageClassificatorValueCreated" xml:space="preserve">
+    <value>Classificator Value '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageClassificatorValueDeleted" xml:space="preserve">
+    <value>Classificator Value '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageComment" xml:space="preserve">
+    <value>Comment is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageCommentChange" xml:space="preserve">
+    <value>Comment is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageDescriptionChanged" xml:space="preserve">
+    <value>Description is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageSetCompanyManager" xml:space="preserve">
+    <value>User '{0}' is Company Manager in Company '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserLogOff" xml:space="preserve">
+    <value>User '{0}' has logged off. (lt)</value>
+  </data>
+  <data name="LogMessageUserLogon" xml:space="preserve">
+    <value>User '{0}' has logged on. (lt)</value>
+  </data>
+  <data name="LogMessageDepartmentForUserChanged" xml:space="preserve">
+    <value>User Department for user '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageDepartmentForUserChangedFromTo" xml:space="preserve">
+    <value>Department for user '{0}' is changed from '{1}' to '{2}'. (lt)</value>
+  </data>
+  <data name="LogMessageUDDepartmentRemoved" xml:space="preserve">
+    <value>Department '{0}' removed. (lt)</value>
+  </data>
+  <data name="LogMessageActive" xml:space="preserve">
+    <value>Active is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageActivity" xml:space="preserve">
+    <value>Activity is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageActivityChanged" xml:space="preserve">
+    <value>Activity is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageAllowedIsChanged" xml:space="preserve">
+    <value>allowed is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageBuilding" xml:space="preserve">
+    <value>Building is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageBuildingChanged" xml:space="preserve">
+    <value>Building is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageBuildingObject" xml:space="preserve">
+    <value>Building object is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageBuildingObjectAdded" xml:space="preserve">
+    <value>Added floor '{0}' in building '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageBuildingObjectRemoved" xml:space="preserve">
+    <value>Removed floor '{0}' in building '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageCanUseOwnCardsFalse" xml:space="preserve">
+    <value>Company can not use own cards. (lt)</value>
+  </data>
+  <data name="LogMessageCanUseOwnCardsTrue" xml:space="preserve">
+    <value>Company can use own cards. (lt)</value>
+  </data>
+  <data name="LogMessageCardCode" xml:space="preserve">
+    <value>Card Code is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageCardCodeChanged" xml:space="preserve">
+    <value>Card Code is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageCardTypeChanged" xml:space="preserve">
+    <value>Card Type '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageCardTypeCreated" xml:space="preserve">
+    <value>Card Type '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageCardTypeDeleted" xml:space="preserve">
+    <value>Card Type '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageCommonIsChanged" xml:space="preserve">
+    <value>is changed from '{0}' to '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyActivated" xml:space="preserve">
+    <value>Company '{0}' activated with the reason '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyChanged" xml:space="preserve">
+    <value>Company '{0}' is changed. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyCreated" xml:space="preserve">
+    <value>Company '{0}' created by '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyDeActivated" xml:space="preserve">
+    <value>Company '{0}' deactivated with the reason '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyDeleted" xml:space="preserve">
+    <value>Company '{0}' deleted'. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyName" xml:space="preserve">
+    <value>Company is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyNameChanged" xml:space="preserve">
+    <value>Company is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageCompanyParent" xml:space="preserve">
+    <value>Parent Company is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageDefaultTimeZoneName" xml:space="preserve">
+    <value>Default Time Zone is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageDepartmentChanged" xml:space="preserve">
+    <value>Department '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageDepartmentCreated" xml:space="preserve">
+    <value>Department '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageDepartmentDeleted" xml:space="preserve">
+    <value>Department '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageDepartmentNameChanged" xml:space="preserve">
+    <value>Department is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageDepartmentsWithRoleRemoved" xml:space="preserve">
+    <value>Departments for user with role '{0}' removed. (lt)</value>
+  </data>
+  <data name="LogMessageDescription" xml:space="preserve">
+    <value>Description is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageEndDate" xml:space="preserve">
+    <value>End date is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageEventEndChanged" xml:space="preserve">
+    <value>Event end is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageEventStartChanged" xml:space="preserve">
+    <value>Event start is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageFriday" xml:space="preserve">
+    <value>Friday (lt)</value>
+  </data>
+  <data name="LogMessageFromDate" xml:space="preserve">
+    <value>From date is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageFromDateChanged" xml:space="preserve">
+    <value>From date is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageHolidayChanged" xml:space="preserve">
+    <value>Holiday '{0}' changed.  (lt)</value>
+  </data>
+  <data name="LogMessageHolidayCreated" xml:space="preserve">
+    <value>Holiday '{0}' created.  (lt)</value>
+  </data>
+  <data name="LogMessageHolidayDeleted" xml:space="preserve">
+    <value>Holiday '{0}' deleted.  (lt)</value>
+  </data>
+  <data name="LogMessageIsAllowed" xml:space="preserve">
+    <value>allowed (lt)</value>
+  </data>
+  <data name="LogMessageIsArming" xml:space="preserve">
+    <value>Is Arming is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsDefaultArming" xml:space="preserve">
+    <value>Is Default Arming is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsDefaultDisarming" xml:space="preserve">
+    <value>Is Default Disarming is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsDisarming" xml:space="preserve">
+    <value>Is Disarming is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsFriday" xml:space="preserve">
+    <value>Friday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsMonday" xml:space="preserve">
+    <value>Monday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsRestricted" xml:space="preserve">
+    <value>restricted (lt)</value>
+  </data>
+  <data name="LogMessageIsSaturday" xml:space="preserve">
+    <value>Saturday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsSunday" xml:space="preserve">
+    <value>Sunday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsThursday" xml:space="preserve">
+    <value>Thursday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsTuesday" xml:space="preserve">
+    <value>Tuesday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageIsWednesday" xml:space="preserve">
+    <value>Wednesday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageLogFilterChanged" xml:space="preserve">
+    <value>Log Filter '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageLogFilterCreated" xml:space="preserve">
+    <value>Log Filter '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageLogFilterDeleted" xml:space="preserve">
+    <value>Log Filter '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageMonday" xml:space="preserve">
+    <value>Monday (lt)</value>
+  </data>
+  <data name="LogMessageMoving" xml:space="preserve">
+    <value>Moving is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageMovingChanged" xml:space="preserve">
+    <value>Moving is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageNameChanged" xml:space="preserve">
+    <value>Name is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageNode" xml:space="preserve">
+    <value>Node is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageNodeChanged" xml:space="preserve">
+    <value>Node is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageNumberChanged" xml:space="preserve">
+    <value>Number is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageNumberField" xml:space="preserve">
+    <value>Number is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageOrderIGroup" xml:space="preserve">
+    <value>Order in group is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageOrderInGroup" xml:space="preserve">
+    <value>Order in group is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessagePermissionGroupChanged" xml:space="preserve">
+    <value>Permission Group '{0}' changed. Name changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessagePermissionGroupCreated" xml:space="preserve">
+    <value>Permission group '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageRoleChanged" xml:space="preserve">
+    <value>Role '{0}' is changed. (lt)</value>
+  </data>
+  <data name="LogMessageRoleCreated" xml:space="preserve">
+    <value>Role '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageRoleDeleted" xml:space="preserve">
+    <value>Role '{0}' is deleted. (lt)</value>
+  </data>
+  <data name="LogMessageRoleType" xml:space="preserve">
+    <value>Role Type is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageRoleTypeChanged" xml:space="preserve">
+    <value>Role Type is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageSaturday" xml:space="preserve">
+    <value>Saturday (lt)</value>
+  </data>
+  <data name="LogMessageSerial" xml:space="preserve">
+    <value>Serial is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageSerialChanged" xml:space="preserve">
+    <value>Serial is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageShowDefaultLog" xml:space="preserve">
+    <value>Show default log is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageShowDefaultLogChanged" xml:space="preserve">
+    <value>Show default log is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageShowFullLog" xml:space="preserve">
+    <value>Show full log is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageShowFullLogChanged" xml:space="preserve">
+    <value>Show full log is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageSingleWord" xml:space="preserve">
+    <value>'{0}'</value>
+  </data>
+  <data name="LogMessageStartDate" xml:space="preserve">
+    <value>Start date is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageSunday" xml:space="preserve">
+    <value>Sunday (lt)</value>
+  </data>
+  <data name="LogMessageThursday" xml:space="preserve">
+    <value>Thursday (lt)</value>
+  </data>
+  <data name="LogMessageTimeZoneChangedActivated" xml:space="preserve">
+    <value>Time Zone '{0}' changed. Time zone activated. (lt)</value>
+  </data>
+  <data name="LogMessageTimeZoneChangedDeActivated" xml:space="preserve">
+    <value>Time Zone '{0}' changed. Time zone deactivated. (lt)</value>
+  </data>
+  <data name="LogMessageTimeZoneCreated" xml:space="preserve">
+    <value>Time zone '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageTimeZoneDeleted" xml:space="preserve">
+    <value>Time zone '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageTimeZoneId" xml:space="preserve">
+    <value>TimeZoneID is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageTimeZoneNameChanged" xml:space="preserve">
+    <value>Time Zone '{0}' changed. Name changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageTimeZonePropertyChanged" xml:space="preserve">
+    <value>Time Zone Property '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageTimeZonePropertyCreated" xml:space="preserve">
+    <value>Time Zone Property '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageTitleChanged" xml:space="preserve">
+    <value>Title '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageTitleCreated" xml:space="preserve">
+    <value>Title '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageTitleDeleted" xml:space="preserve">
+    <value>Title '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageToDate" xml:space="preserve">
+    <value>To date is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageToDateChanged" xml:space="preserve">
+    <value>To date is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageTuesday" xml:space="preserve">
+    <value>Tuesday (lt)</value>
+  </data>
+  <data name="LogMessageUDCurrentDepartment" xml:space="preserve">
+    <value>Current department is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageUDCurrentDepartmentChanged" xml:space="preserve">
+    <value>Current department is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUDDepartmentManager" xml:space="preserve">
+    <value>Department Manager is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageUDDepartmentManagerChanged" xml:space="preserve">
+    <value>Department Manager is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUDDepartmentsForUserRemoved" xml:space="preserve">
+    <value>Departments for user '{0}' removed. (lt)</value>
+  </data>
+  <data name="LogMessageUPGForUserCreated" xml:space="preserve">
+    <value>User Permission Group '{0}' for User '{1}' created. (lt)</value>
+  </data>
+  <data name="LogMessageUser" xml:space="preserve">
+    <value>User is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserBuildingAdded" xml:space="preserve">
+    <value>Building '{0}' room '{1}' added. (lt)</value>
+  </data>
+  <data name="LogMessageUserBuildingRemoved" xml:space="preserve">
+    <value>Building '{0}' room '{1}' removed. (lt)</value>
+  </data>
+  <data name="LogMessageUserBuildingsChanged" xml:space="preserve">
+    <value>Buildings for user '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageUserDeleted" xml:space="preserve">
+    <value>User '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageUserDepartmentAssigned" xml:space="preserve">
+    <value>Department '{0}' for User '{1}' assigned. (lt)</value>
+  </data>
+  <data name="LogMessageUserDepartmentChanged" xml:space="preserve">
+    <value>User Department '{0}' for user '{1}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageUserNameChanged" xml:space="preserve">
+    <value>User is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserPermissionGroupDeleted" xml:space="preserve">
+    <value>User Permission Group '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneDeleted" xml:space="preserve">
+    <value>User Permission group time zone for User permission group '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFPGChanged" xml:space="preserve">
+    <value>User Permission Group Time Zone for Permission group '{0}' and user '{1}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFPGCreated" xml:space="preserve">
+    <value>User Permission Group Time Zone for Permission group '{0}' and user '{1}' created. (lt)</value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFUPGChanged" xml:space="preserve">
+    <value>User Permission Group Time Zone for User Permission group '{0}' and user '{1}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFUPGCreated" xml:space="preserve">
+    <value>User Permission Group Time Zone for User Permission group '{0}' and user '{1}' created. (lt)</value>
+  </data>
+  <data name="LogMessageUserPermissionGroupTimeZoneFUPGDeleted" xml:space="preserve">
+    <value>User Permission Group time zone for User Permission Group '{0}' and User '{1}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageUserRemovedFromDepartment" xml:space="preserve">
+    <value>User '{0}' is removed from department '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZoneCreated" xml:space="preserve">
+    <value>New User Time Zone '{0}' for user '{1}' created. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZoneForUserDeleted" xml:space="preserve">
+    <value>User Time zone '{0}' for User '{1}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZoneName" xml:space="preserve">
+    <value>User Time Zone is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZoneNameChanged" xml:space="preserve">
+    <value>User Time Zone is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserValueChanged" xml:space="preserve">
+    <value>User is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUTZPropertyforUTZCreated" xml:space="preserve">
+    <value>User Time Zone Property for User Time Zone '{0}' for User '{1}' created. (lt)</value>
+  </data>
+  <data name="LogMessageValidFrom" xml:space="preserve">
+    <value>Valid from is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageValidFromChanged" xml:space="preserve">
+    <value>Valid from is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageValidTo" xml:space="preserve">
+    <value>Valid to is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageValidToChanged" xml:space="preserve">
+    <value>Valid to is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageWednesday" xml:space="preserve">
+    <value>Wednesday (lt)</value>
+  </data>
+  <data name="LogMessageActiveChanged" xml:space="preserve">
+    <value>Active is changed from '{0}' to '{1}'.  (lt)</value>
+  </data>
+  <data name="LogMessageBirthday" xml:space="preserve">
+    <value>Birthday is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageBirthdayChanged" xml:space="preserve">
+    <value>Birthday is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageCardActivated" xml:space="preserve">
+    <value>Card activated with the reason '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessageCardCreated" xml:space="preserve">
+    <value>Card '{0}' created.  (lt)</value>
+  </data>
+  <data name="LogMessageCardDeactivated" xml:space="preserve">
+    <value>Card deactivated with the reason '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessageCardDeleted" xml:space="preserve">
+    <value>Card '{0}' deleted.  (lt)</value>
+  </data>
+  <data name="LogMessageCardChanged" xml:space="preserve">
+    <value>Card '{0}' changed.  (lt)</value>
+  </data>
+  <data name="LogMessageCardSetToFree" xml:space="preserve">
+    <value>Card is free with the reason '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessageCardTypeName" xml:space="preserve">
+    <value>Card type is '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessageCardTypeNameChanged" xml:space="preserve">
+    <value>Card type is changed from '{0}' to '{1}'.  (lt)</value>
+  </data>
+  <data name="LogMessageContractEndDateChanged" xml:space="preserve">
+    <value>Contract end date is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageContractNumberChanged" xml:space="preserve">
+    <value>Contract number is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageContractStartDateChanged" xml:space="preserve">
+    <value>Contract start date is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageDk" xml:space="preserve">
+    <value>DK is '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessageDkChanged" xml:space="preserve">
+    <value>DK is changed from '{0}' to '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessageEmail" xml:space="preserve">
+    <value>Email is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageEmailChanged" xml:space="preserve">
+    <value>Email is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageEServiceAllowedChanged" xml:space="preserve">
+    <value>E-service allowed is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageExternalPersonalCode" xml:space="preserve">
+    <value>External Personal code is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageExternalPersonalCodeChanged" xml:space="preserve">
+    <value>External Personal code is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageFirstName" xml:space="preserve">
+    <value>First name is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageFirstNameChanged" xml:space="preserve">
+    <value>First name is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageFree" xml:space="preserve">
+    <value>Free is '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessageFreeChanged" xml:space="preserve">
+    <value>Free is changed from '{0}' to '{1}'.  (lt)</value>
+  </data>
+  <data name="LogMessageLastName" xml:space="preserve">
+    <value>Last name is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageLastNameChanged" xml:space="preserve">
+    <value>Last name is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageLoginChanged" xml:space="preserve">
+    <value>Login is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessagePermitOfWorkChanged" xml:space="preserve">
+    <value>Permit of work is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessagePersonalCode" xml:space="preserve">
+    <value>Personal code is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessagePersonalCodeChanged" xml:space="preserve">
+    <value>Personal code is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessagePhoneNumberChanged" xml:space="preserve">
+    <value>Phone number is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessagePIN1" xml:space="preserve">
+    <value>PIN1 is '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessagePIN1Changed" xml:space="preserve">
+    <value>PIN1 is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessagePIN2" xml:space="preserve">
+    <value>PIN2 is '{0}'.  (lt)</value>
+  </data>
+  <data name="LogMessagePIN2Changed" xml:space="preserve">
+    <value>PIN2 is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageRegisteredDate" xml:space="preserve">
+    <value>Registered date is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageRegisteredDateChanged" xml:space="preserve">
+    <value>Registered date is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageResidenceChanged" xml:space="preserve">
+    <value>Residence is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageRoleAdded" xml:space="preserve">
+    <value>Role '{0}' added. (lt)</value>
+  </data>
+  <data name="LogMessageRoleRemoved" xml:space="preserve">
+    <value>Role '{0}' removed. (lt)</value>
+  </data>
+  <data name="LogMessageTableNumberChanged" xml:space="preserve">
+    <value>Table Number is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageTitleNameChanged" xml:space="preserve">
+    <value>Title is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserActivated" xml:space="preserve">
+    <value>User '{0}' activated with the reason '{1}' . (lt)</value>
+  </data>
+  <data name="LogMessageUserChanged" xml:space="preserve">
+    <value>User '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageUserCreated" xml:space="preserve">
+    <value>User '{0}' created. (lt)</value>
+  </data>
+  <data name="LogMessageUserDeactivated" xml:space="preserve">
+    <value>User '{0}' deactivated with the reason '{1}' . (lt)</value>
+  </data>
+  <data name="LogMessageUserId" xml:space="preserve">
+    <value>UserID  is '{0}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserIdChanged" xml:space="preserve">
+    <value>UserID  is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="LogMessageUserRolesChanged" xml:space="preserve">
+    <value>Roles for user '{0}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZoneCommonCreated" xml:space="preserve">
+    <value>User Time Zone '{0}' for User '{1}' created from common Time Zones. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZoneDeleted" xml:space="preserve">
+    <value>User Time Zone '{0}' deleted. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZonePropertyChanged" xml:space="preserve">
+    <value>User Time Zone Property for User Time Zone '{0}' for User '{1}' changed. (lt)</value>
+  </data>
+  <data name="LogMessageUserTimeZoneRestored" xml:space="preserve">
+    <value>User Time Zone '{0}' for User '{1}' restored from common Time Zone '{2}'. (lt)</value>
+  </data>
+  <data name="LogMessageWorkTimeChanged" xml:space="preserve">
+    <value>Work time is changed from '{0}' to '{1}'. (lt)</value>
+  </data>
+  <data name="RolesNoBuildingSelectedErrorMessage" xml:space="preserve">
+    <value>Building has not been chosen! (lt)</value>
+  </data>
+  <data name="CardsErrorMessageCardUsed" xml:space="preserve">
+    <value>Card is already given to another user! (lt)</value>
+  </data>
+  <data name="UsersErrorEditingUserBuildings" xml:space="preserve">
+    <value>Error editing buildings for  User Id=(lt)</value>
+  </data>
+  <data name="UsersErrorEditingUserBuildingsNotUnique" xml:space="preserve">
+    <value>Only unique building-floor pairs can be selected! (lt)</value>
+  </data>
+  <data name="UsersErrorEditingUserDepartments" xml:space="preserve">
+    <value>Error editing departments for  User Id= (lt)</value>
+  </data>
+  <data name="UsersErrorEditingUserWorkData" xml:space="preserve">
+    <value>Error editing work data for  User Id=(lt)</value>
+  </data>
+  <data name="CompaniesCompaniesContainsUsersError" xml:space="preserve">
+    <value>Companies '{0}' contains users! Please remove users from these companies first. (lt)</value>
+  </data>
+  <data name="DepartmentsDepartmentsContainsUsersError" xml:space="preserve">
+    <value>Departments '{0}' contains users! Please remove users from these departments first. (lt)</value>
+  </data>
+  <data name="DepartmentsUserDepartmentSavingMessage" xml:space="preserve">
+    <value>Vartotojo skyriaus išsaugojimas</value>
+  </data>
+  <data name="RolesRoleStatus" xml:space="preserve">
+    <value>Vaidmens statusas</value>
+  </data>
+  <data name="RolesRoleTypesBA" xml:space="preserve">
+    <value>Pastato administratorius</value>
+  </data>
+  <data name="RolesRoleTypesCM" xml:space="preserve">
+    <value>Įmonės vadovas</value>
+  </data>
+  <data name="RolesRoleTypesDM" xml:space="preserve">
+    <value>Skyriaus vedėjas</value>
+  </data>
+  <data name="RolesRoleTypesSA" xml:space="preserve">
+    <value>Sistemos administratorius</value>
+  </data>
+  <data name="RolesRoleTypesUser" xml:space="preserve">
+    <value>Vartotojas</value>
+  </data>
+  <data name="PermissionsDeletingPermission" xml:space="preserve">
+    <value>Ištrinama leidimų grupė ...</value>
+  </data>
+  <data name="CommonMax50symbols" xml:space="preserve">
+    <value>Maksimalus simbolių skaičius 50!</value>
+  </data>
+  <data name="BuildingsAddress" xml:space="preserve">
+    <value>Adresas</value>
+  </data>
+  <data name="BuildingsAdministrator" xml:space="preserve">
+    <value>Pastato administratorius</value>
+  </data>
+  <data name="BuildingsName" xml:space="preserve">
+    <value>Pastato pavadinimas</value>
+  </data>
+  <data name="CommonDeleted" xml:space="preserve">
+    <value>Ištrinta</value>
+  </data>
+  <data name="UsersNotAllUserRoleFieldsEntered" xml:space="preserve">
+    <value>Norint priskirti vaidmenį, reikia įvesti patvirtinimo laikotarpio datas, Ar reikia paskirstyti lauką!</value>
+  </data>
+  <data name="UsersDeletingPhoto" xml:space="preserve">
+    <value>Trinama vartotojo nuotrauka ...</value>
+  </data>
+  <data name="PermissionsNoBuildingObjectsSelected" xml:space="preserve">
+    <value>Reikėtų pasirinkti bent vieną statybinį objektą!</value>
+  </data>
+  <data name="PermissionsNoTimeZoneSelected" xml:space="preserve">
+    <value>Laiko juosta turėtų būti pasirinkta!</value>
+  </data>
+  <data name="CardsValidFrom" xml:space="preserve">
+    <value>galioja nuo</value>
+  </data>
+  <data name="CardsValidTo" xml:space="preserve">
+    <value>galioja</value>
+  </data>
+  <data name="CardsDateValidationMessage" xml:space="preserve">
+    <value>Nuo ir iki šiol turėtų būti pateikta „DD.MM.YYYY“ formatu</value>
+  </data>
+  <data name="BtnTzToDoor" xml:space="preserve">
+    <value>TimeZone to door</value>
+  </data>
+  <data name="ViewMyLocationMenu" xml:space="preserve">
+    <value>Vieta</value>
+  </data>
+  <data name="ViewMyBOInfoMenu" xml:space="preserve">
+    <value>Bo Informacija</value>
+  </data>
+  <data name="ViewMyBOSceduleMenu" xml:space="preserve">
+    <value>Bo scenarijus</value>
+  </data>
+  <data name="ViewMyReportsMenu" xml:space="preserve">
+    <value>Ataskaitos</value>
+  </data>
+  <data name="ViewTAConfMenu" xml:space="preserve">
+    <value>T&amp;A -&gt; Konfigūracija</value>
+  </data>
+  <data name="ViewTAMenu" xml:space="preserve">
+    <value>T&amp;A</value>
+  </data>
+  <data name="ViewTAReportMenu" xml:space="preserve">
+    <value>T&amp;A -&gt; Pranešimas</value>
+  </data>
+  <data name="ViewVisitorsMenu" xml:space="preserve">
+    <value>Visitors (lt)</value>
+  </data>
+  <data name="LocationTabName" xml:space="preserve">
+    <value>Vieta</value>
+  </data>
+  <data name="TAbulding" xml:space="preserve">
+    <value>T &amp; A statyba objektai</value>
+  </data>
+  <data name="TADetailReport" xml:space="preserve">
+    <value>išsami ataskaita</value>
+  </data>
+  <data name="TAdetails" xml:space="preserve">
+    <value>Išsami informacija apie TA ataskaitas</value>
+  </data>
+  <data name="TAExport" xml:space="preserve">
+    <value>Eksportuoti</value>
+  </data>
+  <data name="TAExportTo" xml:space="preserve">
+    <value>Nepavyko eksportuoti į .pdf ir .xsl failus.</value>
+  </data>
+  <data name="TAlist" xml:space="preserve">
+    <value>Ateidavo ir išeidavo iš darbo</value>
+  </data>
+  <data name="TAMonthreport" xml:space="preserve">
+    <value>Mėnesio ataskaita</value>
+  </data>
+  <data name="TAMyReport" xml:space="preserve">
+    <value>Mano ataskaita</value>
+  </data>
+  <data name="TAreportViewe" xml:space="preserve">
+    <value>Peržiūrėti ataskaitą</value>
+  </data>
+  <data name="WorkWeekReportDescription" xml:space="preserve">
+    <value>Peržiūrėkite, redaguokite, atsispausdinkite</value>
+  </data>
+  <data name="TAlistDetail" xml:space="preserve">
+    <value>Pradžia ir pabaiga darbą</value>
+  </data>
+  <data name="TAHours" xml:space="preserve">
+    <value>Stundas</value>
+  </data>
+  <data name="TAEdit" xml:space="preserve">
+    <value>Redaguoti</value>
+  </data>
+  <data name="TAUsername" xml:space="preserve">
+    <value>lietotājiem</value>
+  </data>
+  <data name="TAReport" xml:space="preserve">
+    <value>ataskaita</value>
+  </data>
+  <data name="WorkBuildingObjectsDescription" xml:space="preserve">
+    <value>Saraksts building objektiem (durvis ..), kas tiek izmantoti, lai darba laika uzskaiti</value>
+  </data>
+  <data name="currentmonth" xml:space="preserve">
+    <value>Dabartinis mėnesį ataskaitą</value>
+  </data>
+  <data name="previousmonth" xml:space="preserve">
+    <value>Ankstesnis mėnuo ataskaitą</value>
+  </data>
+  <data name="TABuildingAddress" xml:space="preserve">
+    <value>Adresas</value>
+  </data>
+  <data name="TaBuildingAmount" xml:space="preserve">
+    <value>Sutarties suma, EUR</value>
+  </data>
+  <data name="TaBuildingCadsnrNo" xml:space="preserve">
+    <value>KadastroNr</value>
+  </data>
+  <data name="TABuildingConstruction" xml:space="preserve">
+    <value>Pagrindinis statybų atlikėjas</value>
+  </data>
+  <data name="TaBuildingcustomer" xml:space="preserve">
+    <value>Kurti klientą</value>
+  </data>
+  <data name="TaBuildingLicense" xml:space="preserve">
+    <value>Statybos licencija</value>
+  </data>
+  <data name="TaBuildingValidFrom" xml:space="preserve">
+    <value>Galioja nuo</value>
+  </data>
+  <data name="TabuilidngValidTo" xml:space="preserve">
+    <value>Galioja iki</value>
+  </data>
+  <data name="TaBuilingDate" xml:space="preserve">
+    <value>Sutarties Nr., Sutarties data</value>
+  </data>
+  <data name="TaHardwareBuildingName" xml:space="preserve">
+    <value>Aparatinio pastato pavadinimas</value>
+  </data>
+  <data name="TaNewRealBuildingname" xml:space="preserve">
+    <value>Nekilnojamasis pastato pavadinimas</value>
+  </data>
+  <data name="UsersAddNewVisitor" xml:space="preserve">
+    <value>Pridėti naują lankytoją</value>
+  </data>
+
+  <data name="PhoneNrAccessUnit" xml:space="preserve">
+    <value>Vai ir tālruņa numuru piekļuves vienība?	</value>
+  </data>
+  <data name="CarNr" xml:space="preserve">
+    <value>Automobilio numeris</value>
+  </data>
+  <data name="CarNrAccessUnit" xml:space="preserve">
+    <value>Vai automašīnas numuru piekļuves vienība?	</value>
+  </data>
+  <data name="CardType" xml:space="preserve">
+    <value>Automobilio tipas</value>
+  </data>
+  <data name="VisitorFromdate" xml:space="preserve">
+    <value>No datuma	</value>
+  </data>
+  <data name="VisitorTodate" xml:space="preserve">
+    <value>Līdz datumam	</value>
+  </data>
+  <data name="PermissionName" xml:space="preserve">
+    <value>Leidimo Pavadinimas</value>
+  </data>
+  <data name="CardNeedReturn" xml:space="preserve">
+    <value>kortelę reikia grąžinti?	</value>
+  </data>
+  <data name="ReturnDate" xml:space="preserve">
+    <value>Atgriešanās datums</value>
+  </data>
+  <data name="CardCode" xml:space="preserve">
+    <value>Kartes kods</value>
+  </data>
+  <data name="LiveVideo" xml:space="preserve">
+    <value>Live Video (lt)</value>
+  </data>
+  <data name="ViewMyTerminalMenu" xml:space="preserve">
+    <value>WebApps</value>
+  </data>
+  <data name="LastChange" xml:space="preserve">
+    <value>Paskutinis pakeitimas </value>
+  </data>
+
+  <data name="QrCodeError" xml:space="preserve">
+    <value>Kuriant QR kodą įvyko klaida. Pabandykite dar kartą vėliau.</value>
+  </data>
+  <data name="VisitorAlreadyExist" xml:space="preserve">
+    <value>Lankytojas jau yra duomenų bazėje.</value>
+  </data>
+  <data name="SendingQRCode" xml:space="preserve">
+    <value>Siunčiamas QR kodas ...</value>
+  </data>
+  <data name="VisitorDelete" xml:space="preserve">
+    <value> Lankytojas sėkmingai ištrintas ...(lt)</value>
+  </data>
+  <data name="HexCardCodeError" xml:space="preserve">
+    <value>Kortelės kodas nėra šešioliktainis</value>
+  </data>
+  <data name="VisitorFirstNameMessage" xml:space="preserve">
+    <value>Įveskite vardą!</value>
+  </data>
+  <data name="VisitorLastNameMessage" xml:space="preserve">
+    <value>Įveskite pavardę!</value>
+  </data>
+  <data name="VisitorPhoneNrMessage" xml:space="preserve">
+    <value>Įveskite galiojantį telefono numerį!</value>
+  </data>
+  <data name="VisitorEmailMessage" xml:space="preserve">
+    <value>Įveskite galiojantį el. Pašto adresą!</value>
+  </data>
+  <data name="VisitorDateErrorMessage" xml:space="preserve">
+    <value>Iki datos neturėtų būti ankstesnės nei Nuo datos!</value>
+  </data>
+  <data name="VisitorDateMessage" xml:space="preserve">
+    <value>Įveskite nuo datos ir iki datos!</value>
+  </data>
+  <data name="NoActiveCard" xml:space="preserve">
+    <value>Prisijungusiam vartotojui nėra aktyvios kortelės</value>
+  </data>
+  <data name="Visitor" xml:space="preserve">
+    <value>Lankytojas</value>
+  </data>
+
+  <data name="FirstSaveVisitorDetails" xml:space="preserve">
+    <value>Pirmiausia išsaugokite lankytojų duomenis!</value>
+  </data>
+  <data name="VisitorCapturePhoto" xml:space="preserve">
+    <value>Fotografuoti</value>
+  </data>
+  <data name="VisitorsUsers" xml:space="preserve">
+    <value>Vartotojai</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Atsijungti! Ar tu tuo tikras?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Gerai</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Atšaukti</value>
+  </data>
+  <data name="LiveVideo" xml:space="preserve">
+    <value>Tiesioginis vaizdo įrašas</value>
+  </data>
+  <data name="CapturedPhoto" xml:space="preserve">
+    <value>Užfiksuota nuotrauka</value>
+  </data>
+  <data name="TAMonthreportWorkingDays" xml:space="preserve">
+    <value>Mėnesio ataskaita: darbo dienos per mėnesį</value>
+  </data>
+  <data name="TAMonthreportWorkingDaysDesc" xml:space="preserve">
+    <value>Peržiūrėkite ir atsispausdinkite</value>
+  </data>
+  <data name="CommonConfirmMessageClassifierValue" xml:space="preserve">
+    <value>Ar tu tuo tikras? Norite ištrinti pasirinktą nustatymo vertę.</value>
+  </data>
+  <data name="CommonConfirmMessageClassifier" xml:space="preserve">
+    <value>Ar tu tuo tikras? Norite ištrinti pasirinktą nustatymą.</value>
+  </data>
+  <data name="CommonRemainigCountErrorMsg" xml:space="preserve">
+    <value>Atsiprašau! Negalite pridėti naujo įrašo, nes jūsų licencijos galiojimo laikas pasibaigė arba limitas viršytas.</value>
+  </data>
+  <data name="VisitorCreatedMessage" xml:space="preserve">
+    <value>Lankytojas sukūrė</value>
+  </data>
+  <data name="MaxCompanyCountLicence" xml:space="preserve">
+    <value>Maksimali aktyvi įmonės licencija yra</value>
+  </data>
+  <data name="MaxUserCountLicence" xml:space="preserve">
+    <value>Maksimalus aktyvių vartotojų skaičius licencijoje yra</value>
+  </data>
+  <data name="MaxVisitorCountLicence" xml:space="preserve">
+    <value>Maksimalus aktyvus lankytojo pažymėjimas yra</value>
+  </data>
+  <data name="LicenceInsert" xml:space="preserve">
+    <value>Licencija sėkmingai įvesta ..</value>
+  </data>
+  <data name="InvalidLicence" xml:space="preserve">
+    <value>Netinkama licencija !!</value>
+  </data>
+
+  <data name="InvalidLicencePath" xml:space="preserve">
+    <value> Įvestas licencijos kelias neegzistuoja!</value>
+  </data>
+  <data name="LicenceError" xml:space="preserve">
+    <value>Įdedant licenciją įvyko klaida. Pabandykite dar kartą vėliau.</value>
+  </data>
+  <data name="TerminalDeletionAlert" xml:space="preserve">
+    <value>Ar tu tuo tikras? Norite ištrinti šią WebApp.</value>
+  </data>
+  <data name="TerminalDeletedAlert" xml:space="preserve">
+    <value>WebApp sėkmingai ištrinta.</value>
+  </data>
+  <data name="TerminalUpdatedAlert" xml:space="preserve">
+    <value>Informacija sėkmingai atnaujinta.</value>
+  </data>
+  <data name="TerminalDeletingAlert" xml:space="preserve">
+    <value>Ištrinama  WebApp</value>
+  </data>
+  <data name="TerminalID" xml:space="preserve">
+    <value>WebApp ID</value>
+  </data>
+  <data name="MaxUser" xml:space="preserve">
+    <value>Maksimalus vartotojas</value>
+  </data>
+  <data name="LastLogin" xml:space="preserve">
+    <value>Paskutinis prisijungimas</value>
+  </data>
+  <data name="btnInsertLicence" xml:space="preserve">
+    <value>Įdėkite naują licenciją iš disko (naršykite tik serveryje)</value>
+  </data>
+  <data name="NotCompanyUser" xml:space="preserve">
+    <value>Atsiprašau!! negalite redaguoti pasirinktos vartotojo informacijos, nes šis vartotojas nepriklauso jūsų įmonei.</value>
+  </data>
+
+  <data name="TaxReportExport" xml:space="preserve">
+    <value>Eksportuoti į Excel</value>
+  </data>
+  <data name="TADailyWorkingReport" xml:space="preserve">
+    <value>Dienos darbo ataskaita</value>
+  </data>
+
+
+  <data name="ContractorDetails" xml:space="preserve">
+    <value>Informacija apie pagrindinio rangovo statybos sutartį su statybos iniciatoriu</value>
+  </data>
+  <data name="ConstructionInitiator" xml:space="preserve">
+    <value>Statybos iniciatoriaus pavadinimas</value>
+  </data>
+  <data name="ConstructionInitiatorTaxNo" xml:space="preserve">
+    <value>Statybos iniciatoriaus TAX numeris</value>
+  </data>
+  <data name="ContractNr" xml:space="preserve">
+    <value>Sutarties data</value>
+  </data>
+  <data name="ConstructionAmount" xml:space="preserve">
+    <value>Sutarties suma be mokesčių (EUR)</value>
+  </data>
+  <data name="Num" xml:space="preserve">
+    <value>Sr No.</value>
+  </data>
+  <data name="InfoSentDate" xml:space="preserve">
+    <value>Informacija siunčiama į VID datą</value>
+  </data>
+  <data name="PersonInformation" xml:space="preserve">
+    <value>Statybos vietoje dirbančio asmens informacija</value>
+  </data>
+  <data name="TaxYear" xml:space="preserve">
+    <value>Mokesčių metai</value>
+  </data>
+  <data name="TaxMonth" xml:space="preserve">
+    <value>Mokesčių mėnuo</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>vardas</value>
+  </data>
+  <data name="SurName" xml:space="preserve">
+    <value>SurName</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Darbuotojas</value>
+  </data>
+  <data name="PersonalIdentificationNumber" xml:space="preserve">
+    <value>Asmens kodas</value>
+  </data>
+  <data name="NoPersonalIdentificationNumber" xml:space="preserve">
+    <value>Jei nėra asmens kodo</value>
+  </data>
+  <data name="BirthdayDateMonYear" xml:space="preserve">
+    <value>Gimimo data, mėnuo, metai arba vizos numeris</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Padėtis</value>
+  </data>
+  <data name="Employer" xml:space="preserve">
+    <value>Darbdavys</value>
+  </data>
+  <data name="EmployerName" xml:space="preserve">
+    <value>vardas</value>
+  </data>
+  <data name="IndiEmployer" xml:space="preserve">
+    <value>Vardas, pavardė, jei darbdavys Individualus</value>
+  </data>
+  <data name="RegNo" xml:space="preserve">
+    <value>Registracijos numeris arba asmens tapatybės numeris</value>
+  </data>
+  <data name="BuildingPermission" xml:space="preserve">
+    <value>Statybos leidimo numeris arba nekilnojamojo turto kadastro numeris</value>
+  </data>
+  <data name="ActualWorkingHour" xml:space="preserve">
+    <value>Faktinis darbo laikas (valandos)</value>
+  </data>
+  <data name="ElectronicWorking" xml:space="preserve">
+    <value>Statybos aikštelėje dirbančių asmenų ir dirbtų valandų informacija iš elektroninės darbo laiko apskaitos sistemos ({0})</value>
+  </data>
+  <data name="YearMonth" xml:space="preserve">
+    <value>(Metai, mėnuo)</value>
+  </data>
+
+
+
+  <data name="InfoFromElectronic" xml:space="preserve">
+    <value>Informacija iš elektroninės darbo laiko stebėjimo sistemos ({0}) apie auditą registruotų įrašų per ateinantį laikotarpį </value>
+  </data>
+  <data name="InfoDateSent" xml:space="preserve">
+    <value>Informacijos siuntimo data (d./m./y.)</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mėnuo</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Metai</value>
+  </data>
+  <data name="Entry" xml:space="preserve">
+    <value>Įėjimas (hh:mm:ss)</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Išeik (hh:mm:ss)</value>
+  </data>
+  <data name="EntryCorrected" xml:space="preserve">
+    <value>Įėjimas (hh:mm:ss)</value>
+  </data>
+  <data name="ExitCorrected" xml:space="preserve">
+    <value>Išeik (hh:mm:ss)</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Paaiškinimas</value>
+  </data>
+  <data name="Initialdates" xml:space="preserve">
+    <value>Pradinės datos</value>
+  </data>
+  <data name="Correcteddates" xml:space="preserve">
+    <value>Ištaisytos datos</value>
+  </data>
+  <data name="CorrecteddatesAudit" xml:space="preserve">
+    <value>Pataisytos datos arba audito įrašai</value>
+  </data>
+  <data name="TaxationPeriod" xml:space="preserve">
+    <value>Mokesčių laikotarpis</value>
+  </data>
+
+  <data name="FullName" xml:space="preserve">
+    <value>Pilnas vardas</value>
+  </data>
+  <data name="CompanyDetails" xml:space="preserve">
+    <value>Įmonės informacija</value>
+  </data>
+  <data name="Started" xml:space="preserve">
+    <value>Pradėjo</value>
+  </data>
+  <data name="checkin" xml:space="preserve">
+    <value>Įsiregistruoti</value>
+  </data>
+  <data name="checkout" xml:space="preserve">
+    <value>Išsiregistravimas</value>
+  </data>
+  <data name="TotalTime" xml:space="preserve">
+    <value>Bendras laikas</value>
+  </data>
+  <data name="TotalHours" xml:space="preserve">
+    <value>Iš viso valandų</value>
+  </data>
+  <data name="ReportCreated" xml:space="preserve">
+    <value>Ataskaita sukurta:</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Laikotarpis:</value>
+  </data>
+  <data name="Finished" xml:space="preserve">
+    <value>Baigta</value>
+  </data>
+  <data name="ReportCreatedOn" xml:space="preserve">
+    <value>Ataskaita sukurta:</value>
+  </data>
+  <data name="TotalWorkingDays" xml:space="preserve">
+    <value>Iš viso darbo dienų</value>
+  </data>
+  <data name="LogonRoleError" xml:space="preserve">
+    <value>Vartotojas neturi jokio vaidmens!!</value>
+  </data>
+  <data name="LicenseLessCountAlert" xml:space="preserve">
+    <value>Viena ar daugiau licencijos verčių yra mažesnės nei sena licencija naujoje licencijoje !!</value>
+  </data>
+  <data name="ChooseLicense" xml:space="preserve">
+    <value>Pasirinkite norimą įkelti licencijos failą !!</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Platuma</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Ilguma</value>
+  </data>
+  <data name="CardDetailsExist" xml:space="preserve">
+    <value>Ši kortelės informacija jau yra kitoje įmonėje !!</value>
+  </data>
+  <data name="SelectPhoto" xml:space="preserve">
+    <value>Pasirinkite nuotrauką !!</value>
+  </data>
+  <data name="PhotoUploaded" xml:space="preserve">
+    <value>Nuotrauka sėkmingai įkelta ..</value>
+  </data>
+  <data name="TotalUsersCount" xml:space="preserve">
+    <value>Iš viso vartotojų</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Pranešimas</value>
+  </data>
+  <data name="MainCard" xml:space="preserve">
+    <value>Pagrindinė kortelė</value>
+  </data>
+  <data name="GiveCardBack" xml:space="preserve">
+    <value>Duok kortelę atgal</value>
+  </data>
+  <data name="ManageOtherCompany" xml:space="preserve">
+    <value>Vartotojai, kortelės, „Log Tab“ įmonės</value>
+  </data>
+  <data name="CleanerOwnBuilding" xml:space="preserve">
+    <value>Nuosavesni pastatai</value>
+  </data>
+  <data name="CleanerAllBuildings" xml:space="preserve">
+    <value>Valykite visus pastatus</value>
+  </data>
+  <data name="GlobalUser" xml:space="preserve">
+    <value>Visuotinis vartotojas</value>
+  </data>
+  <data name="ServerNr" xml:space="preserve">
+    <value>Serverio numeris</value>
+  </data>
+  <data name="CompanyNr" xml:space="preserve">
+    <value>Įmonės Nr</value>
+  </data>
+  <data name="CameraName" xml:space="preserve">
+    <value>vardas</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Uostas</value>
+  </data>
+  <data name="ResX" xml:space="preserve">
+    <value>ResX</value>
+  </data>
+  <data name="ResY" xml:space="preserve">
+    <value>ResY</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Praleisti</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Delsimas</value>
+  </data>
+  <data name="EnableLiveControls" xml:space="preserve">
+    <value>Įgalinti tiesioginį valdymą</value>
+  </data>
+  <data name="QuickPreviewSeconds" xml:space="preserve">
+    <value>Greita peržiūros sekundė</value>
+  </data>
+  <data name="EnterServerNr" xml:space="preserve">
+    <value>Pasirinkite Serverio Nr!!</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Įveskite vardą !!</value>
+  </data>
+  <data name="AddNewCamera" xml:space="preserve">
+    <value>Pridėti naują fotoaparatą</value>
+  </data>
+  <data name="CameraName" xml:space="preserve">
+    <value>Kameros pavadinimas</value>
+  </data>
+
+  <data name="ManageVideoServer" xml:space="preserve">
+    <value>Valdykite vaizdo įrašų serverį</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>projekto pavadinimas</value>
+  </data>
+  <data name="ServerName" xml:space="preserve">
+    <value>vardas</value>
+  </data>
+  <data name="ServerIP" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="ServerUID" xml:space="preserve">
+    <value>UID</value>
+  </data>
+  <data name="ServerPWD" xml:space="preserve">
+    <value>PWD</value>
+  </data>
+
+  <data name="ViewVisitorsReadOnly" xml:space="preserve">
+    <value>Peržiūrėti lankytojus (tik skaityti)</value>
+  </data>
+  <data name="CardFirstName" xml:space="preserve">
+    <value>Kortelės vardas</value>
+  </data>
+  <data name="CardLastName" xml:space="preserve">
+    <value>Kortelės pavardė</value>
+  </data>
+  <data name="Atwork" xml:space="preserve">
+    <value>Darbe</value>
+  </data>
+  <data name="Leaving" xml:space="preserve">
+    <value>Palieka</value>
+  </data>
+  <data name="Buildingobject" xml:space="preserve">
+    <value>Pastato objektas</value>
+  </data>
+  <data name="SystemConfiguration" xml:space="preserve">
+    <value>Sistemos konfigūracija</value>
+  </data>
+  <data name="RemoteRegistration" xml:space="preserve">
+    <value>Nuotolinė registracija</value>
+  </data>
+  <data name="SelectCompany" xml:space="preserve">
+    <value>Pasirinkite įmonę!!</value>
+  </data>
+  <data name="SelectWorkers" xml:space="preserve">
+    <value>Pasirinkite Darbuotojai!!</value>
+  </data>
+  <data name="SelectBuildingObject" xml:space="preserve">
+    <value>Pasirinkite Statybos objektas!!</value>
+  </data>
+
+  <data name="VisitorFirstandLastNameMessage" xml:space="preserve">
+    <value>Vardas ir pavardė turėtų skirtis !!</value>
+  </data>
+
+  <data name="VisitorFirstLastMessage" xml:space="preserve">
+    <value>Įveskite skirtingą vardą ir pavardę !!</value>
+  </data>
+  <data name="BuildingMessage" xml:space="preserve">
+    <value>Pasirinkite Pastatas</value>
+  </data>
+  <data name="CardBuildingMessage" xml:space="preserve">
+    <value>Paskyrą T&amp;A skirtuke paskirkite įmonės vadovui </value>
+  </data>
+
+  <data name="DateErrorMessage" xml:space="preserve">
+    <value>Lūdzu, atlasiet derīgu datumu</value>
+  </data>
+  <data name="RoleListInCompanyTab" xml:space="preserve">
+    <value>Lomu saraksts</value>
+  </data>
+  <data name="BuildingNameScheduleTA" xml:space="preserve">
+    <value>Ēkas nosaukuma grafiks</value>
+  </data>
+  <data name="BuildingNameScheduleTADescription" xml:space="preserve">
+    <value>Reģistrācijas ierīču pārvietošana, veidojot nosaukumus</value>
+  </data>
+  <data name="CommentedCardsName" xml:space="preserve">
+    <value>Komentētās kartītes</value>
+  </data>
+  <data name="TaReportLabel" xml:space="preserve">
+    <value>Etiķete</value>
+  </data>
+  <data name="TaReportLabelJobNotMove" xml:space="preserve">
+    <value>Darbs nekustās</value>
+  </data>
+  <data name="TaReportLabelFixed" xml:space="preserve">
+    <value>Fiksēts</value>
+  </data>
+  <data name="TaReportLabelValidFrom" xml:space="preserve">
+    <value>galioja nuo</value>
+  </data>
+  <data name="TaReportLabelValidTo" xml:space="preserve">
+    <value>galioja</value>
+  </data>
+  <data name="TaReportLabelInBuilding" xml:space="preserve">
+    <value>Ēkā</value>
+  </data>
+  <data name="TaReportLabelAllowJobs" xml:space="preserve">
+    <value>Atļaut darbu</value>
+  </data>
+  <data name="TaReportLabelDaysNotHours" xml:space="preserve">
+    <value>Atļaut darbu</value>
+  </data>
+  <data name="TaReportLabelAdminonly" xml:space="preserve">
+    <value>Tikai administrators</value>
+  </data>
+  <data name="TaShiftStartFrom" xml:space="preserve">
+    <value>Sāc no</value>
+  </data>
+  <data name="TaShiftFinishAt" xml:space="preserve">
+    <value>Pabeigt plkst</value>
+  </data>
+  <data name="TaShiftWorkBeforeBreak" xml:space="preserve">
+    <value>Darbs pirms pārtraukuma</value>
+  </data>
+  <data name="TaShiftBreaks" xml:space="preserve">
+    <value>Pārtraukumi</value>
+  </data>
+  <data name="TaShiftWorkBeforeLunch" xml:space="preserve">
+    <value>Darbs pirms pusdienām</value>
+  </data>
+  <data name="TaShiftLunch" xml:space="preserve">
+    <value>Pusdienas</value>
+  </data>
+  <data name="TaReportLabelDeleteConfirmMessage" xml:space="preserve">
+    <value>Vai tiešām vēlaties izdzēst šo ierakstu?</value>
+  </data>
+  <data name="TaReportLabelCompanyId" xml:space="preserve">
+    <value>Uzņēmuma ID</value>
+  </data>
+  <data name="TaShiftsOvertimeMinutes" xml:space="preserve">
+    <value>Virsstundu protokoli</value>
+  </data>
+</root>

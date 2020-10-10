@@ -1,0 +1,1399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B8CFA25-9735-44AA-BDBC-F2C3C7188E33}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FoxSec.Web</RootNamespace>
+    <AssemblyName>FoxSec.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsPlatformPath />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile>..\..\baseline.xml</CodeContractsBaseLineFile>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsAssertsToContractsCheckBox>True</CodeContractsAssertsToContractsCheckBox>
+    <CodeContractsRedundantTests>True</CodeContractsRedundantTests>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsMissingPublicEnsuresAsWarnings>False</CodeContractsMissingPublicEnsuresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferEnsuresAutoProperties>True</CodeContractsInferEnsuresAutoProperties>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestAssumptionsForCallees>False</CodeContractsSuggestAssumptionsForCallees>
+    <CodeContractsSuggestRequires>False</CodeContractsSuggestRequires>
+    <CodeContractsNecessaryEnsures>True</CodeContractsNecessaryEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsSuggestReadonly>True</CodeContractsSuggestReadonly>
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsSkipAnalysisIfCannotConnectToCache>True</CodeContractsSkipAnalysisIfCannotConnectToCache>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsBeingOptimisticOnExternal>True</CodeContractsBeingOptimisticOnExternal>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>True</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsPlatformPath />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsAssertsToContractsCheckBox>True</CodeContractsAssertsToContractsCheckBox>
+    <CodeContractsRedundantTests>True</CodeContractsRedundantTests>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsMissingPublicEnsuresAsWarnings>False</CodeContractsMissingPublicEnsuresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferEnsuresAutoProperties>True</CodeContractsInferEnsuresAutoProperties>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestAssumptionsForCallees>False</CodeContractsSuggestAssumptionsForCallees>
+    <CodeContractsSuggestRequires>False</CodeContractsSuggestRequires>
+    <CodeContractsNecessaryEnsures>True</CodeContractsNecessaryEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsSuggestReadonly>True</CodeContractsSuggestReadonly>
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsSkipAnalysisIfCannotConnectToCache>False</CodeContractsSkipAnalysisIfCannotConnectToCache>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsBeingOptimisticOnExternal>True</CodeContractsBeingOptimisticOnExternal>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="FoxSecDBEntities-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=.%3bInitial Catalog=FoxSecDBtest%3bIntegrated Security=True" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\FoxSecDBEntities-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.91.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.91.0\lib\net452\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v15.2.Web, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v15.2.Web.Mvc5, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxGauges.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc5.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.2.Web, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.2.Presets, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2.Web, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.0.0.9, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.1.0\lib\net40\FastMember.Signed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMaps.LocationServices, Version=0.1.6329.16944, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoogleMaps.LocationServices.1.2.0.1\lib\net40\GoogleMaps.LocationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="GuigleAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Easyforce.GuigleAPI.1.0.6\lib\GuigleAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Dependency\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.WebApi.Versioning, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Versioning.3.0.0\lib\net45\Microsoft.AspNet.WebApi.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.0.2\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.2.0.2\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.2.0.2\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependency\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.4.0.1\lib\net45\Nito.AsyncEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Concurrent, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.4.0.1\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Enlightenment, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.4.0.1\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.3.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.5\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.ExcelToPdf, Version=4.2.7.24, Culture=neutral, PublicKeyToken=239046b8a1e8c07b, processorArchitecture=MSIL">
+      <HintPath>..\packages\sautinsoft.exceltopdf.4.2.7.24\lib\net45\SautinSoft.ExcelToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TimeZoneConverter, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TimeZoneConverter.2.3.2\lib\net45\TimeZoneConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="wnvhtmlconvert">
+      <HintPath>..\Dependency\wnvhtmlconvert.dll</HintPath>
+    </Reference>
+    <Reference Include="Yeppp.CLR.Bundle, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Yeppp.CLR.Bundle.1.0.1-prerelease\lib\net20\Yeppp.CLR.Bundle.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BatchCController.cs" />
+    <Compile Include="Controllers\CheckLicense\CheckLicense.cs" />
+    <Compile Include="Controllers\CheckLicense\ClassTA.cs" />
+    <Compile Include="Controllers\CheckLicense\Encryption.cs" />
+    <Compile Include="Controllers\CheckLicense\FileReader.cs" />
+    <Compile Include="Controllers\CheckLicense\FileWriter.cs" />
+    <Compile Include="Controllers\CheckLicense\License.cs" />
+    <Compile Include="Controllers\CheckLicense\Searcher.cs" />
+    <Compile Include="Controllers\CheckLicense\UsbDisk.cs" />
+    <Compile Include="Controllers\csvController.cs" />
+    <Compile Include="Controllers\CsvData.cs" />
+    <Compile Include="Controllers\LiveVideoController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\NewUserController.cs" />
+    <Compile Include="Controllers\RemoteRegistrationController.cs" />
+    <Compile Include="Controllers\TAReportController.cs" />
+    <Compile Include="Controllers\TerminalController.cs" />
+    <Compile Include="Controllers\testvideoController.cs" />
+    <Compile Include="Controllers\VideoCameraController.cs" />
+    <Compile Include="Controllers\VisitorsController.cs" />
+    <Compile Include="DynamicData\FieldTemplates\DynamicDataField1_Edit.ascx.cs">
+      <DependentUpon>DynamicDataField1_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DynamicDataField1_Edit.ascx.designer.cs">
+      <DependentUpon>DynamicDataField1_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\GridViewPartialView.ascx.cs">
+      <DependentUpon>GridViewPartialView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\GridViewPartialView.ascx.designer.cs">
+      <DependentUpon>GridViewPartialView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\GridViewPartialView_Edit.ascx.cs">
+      <DependentUpon>GridViewPartialView_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\GridViewPartialView_Edit.ascx.designer.cs">
+      <DependentUpon>GridViewPartialView_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListModel\abcmodel.cs" />
+    <Compile Include="ListModel\ModelList.cs" />
+    <Compile Include="Migrations\201811190639226_Initial.cs" />
+    <Compile Include="Migrations\201811190639226_Initial.Designer.cs">
+      <DependentUpon>201811190639226_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\AccountController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\AuthorizeControllerBase.cs" />
+    <Compile Include="Controllers\BusinessCaseController.cs" />
+    <Compile Include="Controllers\CardController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\ClassifiersController.cs" />
+    <Compile Include="Controllers\BuildingController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\GlobalSearchController.cs" />
+    <Compile Include="Controllers\HR.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\PrintController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\HolidayController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\PaginatorControllerBase.cs" />
+    <Compile Include="Controllers\PermissionController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\TimeZoneController.cs" />
+    <Compile Include="Controllers\TitleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="DynamicData\FieldTemplates\TABoGridViewPartialView1_Edit.ascx.cs">
+      <DependentUpon>TABoGridViewPartialView1_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\TABoGridViewPartialView1_Edit.ascx.designer.cs">
+      <DependentUpon>TABoGridViewPartialView1_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\PermissionFilterAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AuditHelper.cs" />
+    <Compile Include="Helpers\ControllerExtenstions.cs" />
+    <Compile Include="Helpers\ExcelResult.cs" />
+    <Compile Include="Helpers\Literals.cs" />
+    <Compile Include="Helpers\LogTypeMessage.cs" />
+    <Compile Include="Helpers\PdfResult.cs" />
+    <Compile Include="Helpers\ViewHelper.cs" />
+    <Compile Include="Infrastructure\BootstrapperTasks\RegisterAreas.cs" />
+    <Compile Include="Infrastructure\BootstrapperTasks\RegisterControllerFactory.cs" />
+    <Compile Include="Infrastructure\BootstrapperTasks\RegisterDtoMaps.cs" />
+    <Compile Include="Infrastructure\BootstrapperTasks\RegisterRoutes.cs" />
+    <Compile Include="Infrastructure\Configuration\ConfigurationSettings.cs" />
+    <Compile Include="Infrastructure\ControllerFactory.cs" />
+    <Compile Include="Infrastructure\Localization\CurrentLanguage.cs" />
+    <Compile Include="Infrastructure\Localization\Language.cs" />
+    <Compile Include="Infrastructure\Localization\LanguageSource.cs" />
+    <Compile Include="obj\Debug\AspnetCompileMerge\Source\Resources\Views\Shared\SharedStrings.et.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.et.resx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\AspnetCompileMerge\Source\Resources\Views\Shared\SharedStrings.lt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.lt.resx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\AspnetCompileMerge\Source\Resources\Views\Shared\SharedStrings.lv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.lv.resx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\AspnetCompileMerge\Source\Resources\Views\Shared\SharedStrings.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Shared\SharedStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Shared\SharedStrings.fi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.fi.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Shared\SharedStrings.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Shared\SharedStrings.sv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedStrings.sv.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AccountViewModel.cs" />
+    <Compile Include="ViewModels\AuditLogViewModel.cs" />
+    <Compile Include="ViewModels\BuildingNameViewModel.cs" />
+    <Compile Include="ViewModels\CardNotFoundViewModel.cs" />
+    <Compile Include="ViewModels\BuildingObjectEditViewModel.cs" />
+    <Compile Include="ViewModels\CardsTabContentViewModel.cs" />
+    <Compile Include="ViewModels\BuildingViewModel.cs" />
+    <Compile Include="ViewModels\ComentedCardListModel.cs" />
+    <Compile Include="ViewModels\Companies.cs" />
+    <Compile Include="ViewModels\csv.cs" />
+    <Compile Include="ViewModels\EmailViewModel.cs" />
+    <Compile Include="ViewModels\FSINISettingsViewModel.cs" />
+    <Compile Include="ViewModels\GlobalSearchViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\HRListViewModel.cs" />
+    <Compile Include="ViewModels\cameralistviewmodel.cs" />
+    <Compile Include="ViewModels\HRmodel.cs" />
+    <Compile Include="ViewModels\LiveVideoEditViewModel.cs" />
+    <Compile Include="ViewModels\LiveVideoListViewModel.cs" />
+    <Compile Include="ViewModels\ModalA.cs" />
+    <Compile Include="ViewModels\NModel.cs" />
+    <Compile Include="ViewModels\NotMovedAfterToDateModel.cs" />
+    <Compile Include="ViewModels\PermissionEditViewModel.cs" />
+    <Compile Include="ViewModels\PermissionListViewModel.cs" />
+    <Compile Include="ViewModels\MoveToCompanyViewModel.cs" />
+    <Compile Include="ViewModels\PermissionTreeViewModel.cs" />
+    <Compile Include="ViewModels\TAGlobalBuildingObjectsViewModel.cs" />
+    <Compile Include="ViewModels\TAMoveViewModel.cs" />
+    <Compile Include="ViewModels\TAMsUserViewModel.cs" />
+    <Compile Include="ViewModels\TAReportMounthViewModel.cs" />
+    <Compile Include="ViewModels\TAReportEditViewModel.cs" />
+    <Compile Include="ViewModels\TAReportListViewModel.cs" />
+    <Compile Include="ViewModels\TaReportViewNewCustomoseUser.cs" />
+    <Compile Include="ViewModels\TerminalViewModel.cs" />
+    <Compile Include="ViewModels\TimeZoneEditViewModel.cs" />
+    <Compile Include="ViewModels\PartnerListViewModel.cs" />
+    <Compile Include="ViewModels\PartnerEditViewModel.cs" />
+    <Compile Include="ViewModels\MyCompanyViewModel.cs" />
+    <Compile Include="ViewModels\DeactivateCardViewModel.cs" />
+    <Compile Include="ViewModels\TimeZoneListViewModel.cs" />
+    <Compile Include="ViewModels\TimeZoneModel.cs" />
+    <Compile Include="ViewModels\TimeZonePropertiesViewModel.cs" />
+    <Compile Include="ViewModels\UserAccessUnitEditViewModel.cs" />
+    <Compile Include="ViewModels\UserAccessUnitListViewModel.cs" />
+    <Compile Include="ViewModels\MoveToDepartmentViewModel.cs" />
+    <Compile Include="ViewModels\UserAccessUnitTypeEditViewModel.cs" />
+    <Compile Include="ViewModels\UserAccessUnitTypeListViewModel.cs" />
+    <Compile Include="ViewModels\CompanyBuildingViewModel.cs" />
+    <Compile Include="ViewModels\CompanyFloorViewModel.cs" />
+    <Compile Include="ViewModels\CompanyListViewModel.cs" />
+    <Compile Include="ViewModels\CompanyTreeViewModel.cs" />
+    <Compile Include="ViewModels\ClassificatorListViewModel.cs" />
+    <Compile Include="ViewModels\ClassificatorEditViewModel.cs" />
+    <Compile Include="ViewModels\ClassificatorValueListViewModel.cs" />
+    <Compile Include="ViewModels\ClassificatorValueEditViewModel.cs" />
+    <Compile Include="ViewModels\UserDepartmentListViewModel.cs" />
+    <Compile Include="ViewModels\HolidayEditViewModel.cs" />
+    <Compile Include="ViewModels\DepartmentEditViewModel.cs" />
+    <Compile Include="ViewModels\DepartmentListViewModel.cs" />
+    <Compile Include="ViewModels\CompanyEditViewModel.cs" />
+    <Compile Include="ViewModels\TitleEditViewModel.cs" />
+    <Compile Include="ViewModels\TitleListViewModel.cs" />
+    <Compile Include="ViewModels\HolidayListViewModel.cs" />
+    <Compile Include="ViewModels\LogListViewModel.cs" />
+    <Compile Include="ViewModels\LanguageBarViewModel.cs" />
+    <Compile Include="ViewModels\PaginatorViewModel.cs" />
+    <Compile Include="ViewModels\PaginatorViewModelBase.cs" />
+    <Compile Include="ViewModels\RoleEditViewModel.cs" />
+    <Compile Include="ViewModels\RoleListViewModel.cs" />
+    <Compile Include="ViewModels\UserEditViewModel.cs" />
+    <Compile Include="ViewModels\UserListViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\VisitorEditViewModel.cs" />
+    <Compile Include="ViewModels\VisitorListViewModel.cs" />
+    <Compile Include="ViewModels\VisitorUsersDetail.cs" />
+    <Compile Include="Views\Card\CommentedCardList.ascx.cs">
+      <DependentUpon>CommentedCardList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Card\CommentedCardList.ascx.designer.cs">
+      <DependentUpon>CommentedCardList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\csv\Index.ascx.cs">
+      <DependentUpon>Index.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\csv\Index.ascx.designer.cs">
+      <DependentUpon>Index.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LiveVideo\Tree.ascx.cs">
+      <DependentUpon>Tree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LiveVideo\Tree.ascx.designer.cs">
+      <DependentUpon>Tree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewUser\NewUserTree.ascx.cs">
+      <DependentUpon>NewUserTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewUser\NewUserTree.ascx.designer.cs">
+      <DependentUpon>NewUserTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewUser\TabContentNew.ascx.cs">
+      <DependentUpon>TabContentNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewUser\TabContentNew.ascx.designer.cs">
+      <DependentUpon>TabContentNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Paginator2.ascx.cs">
+      <DependentUpon>Paginator2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Paginator2.ascx.designer.cs">
+      <DependentUpon>Paginator2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Paginator3.ascx.cs">
+      <DependentUpon>Paginator3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Paginator3.ascx.designer.cs">
+      <DependentUpon>Paginator3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\BindTaBuildName.ascx.cs">
+      <DependentUpon>BindTaBuildName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\BindTaBuildName.ascx.designer.cs">
+      <DependentUpon>BindTaBuildName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\BuildingExportUser.ascx.cs">
+      <DependentUpon>BuildingExportUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\BuildingExportUser.ascx.designer.cs">
+      <DependentUpon>BuildingExportUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\CreateBuildingsName.ascx.cs">
+      <DependentUpon>CreateBuildingsName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\CreateBuildingsName.ascx.designer.cs">
+      <DependentUpon>CreateBuildingsName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\TABuildingNameReportExport.ascx.cs">
+      <DependentUpon>TABuildingNameReportExport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\TABuildingNameReportExport.ascx.designer.cs">
+      <DependentUpon>TABuildingNameReportExport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Terminal\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Terminal\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Terminal\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Terminal\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Terminal\TabContent.ascx.cs">
+      <DependentUpon>TabContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Terminal\TabContent.ascx.designer.cs">
+      <DependentUpon>TabContent.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AutoMapper.dll" />
+    <Content Include="bin\ClosedXML.dll" />
+    <Content Include="bin\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.CodeParser.v15.2.dll" />
+    <Content Include="bin\DevExpress.Dashboard.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.Dashboard.v15.2.Web.dll" />
+    <Content Include="bin\DevExpress.Dashboard.v15.2.Web.Mvc5.dll" />
+    <Content Include="bin\DevExpress.Data.v15.2.dll" />
+    <Content Include="bin\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="bin\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.SpellChecker.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.Spreadsheet.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.Utils.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxGauges.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxHtmlEditor.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxPivotGrid.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxRichEdit.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxScheduler.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxSpellChecker.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxSpreadsheet.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxThemes.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxTreeList.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.Mvc5.v15.2.dll" />
+    <Content Include="bin\DevExpress.Web.v15.2.dll" />
+    <Content Include="bin\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="bin\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="bin\DevExpress.XtraCharts.v15.2.Web.dll" />
+    <Content Include="bin\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="bin\DevExpress.XtraGauges.v15.2.Presets.dll" />
+    <Content Include="bin\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="bin\DevExpress.XtraPivotGrid.v15.2.dll" />
+    <Content Include="bin\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="bin\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="bin\DevExpress.XtraReports.v15.2.Extensions.dll" />
+    <Content Include="bin\DevExpress.XtraReports.v15.2.Web.dll" />
+    <Content Include="bin\DevExpress.XtraScheduler.v15.2.Core.dll" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\et\FoxSec.Web.resources.dll" />
+    <Content Include="bin\ExcelNumberFormat.dll" />
+    <Content Include="bin\FastMember.Signed.dll" />
+    <Content Include="bin\fi\FoxSec.Web.resources.dll" />
+    <Content Include="bin\FoxSec.Accounts.dll" />
+    <Content Include="bin\FoxSec.Accounts.pdb" />
+    <Content Include="bin\FoxSec.Audit.dll" />
+    <Content Include="bin\FoxSec.Audit.pdb" />
+    <Content Include="bin\FoxSec.Authentication.dll" />
+    <Content Include="bin\FoxSec.Authentication.pdb" />
+    <Content Include="bin\FoxSec.Common.dll" />
+    <Content Include="bin\FoxSec.Common.pdb" />
+    <Content Include="bin\FoxSec.Core.dll" />
+    <Content Include="bin\FoxSec.Core.pdb" />
+    <Content Include="bin\FoxSec.DomainModel.dll" />
+    <Content Include="bin\FoxSec.DomainModel.pdb" />
+    <Content Include="bin\FoxSec.Infrastructure.EF.dll" />
+    <Content Include="bin\FoxSec.Infrastructure.EF.pdb" />
+    <Content Include="bin\FoxSec.Infrastructure.EntLib.dll" />
+    <Content Include="bin\FoxSec.Infrastructure.EntLib.pdb" />
+    <Content Include="bin\FoxSec.ServiceLayer.dll" />
+    <Content Include="bin\FoxSec.ServiceLayer.pdb" />
+    <Content Include="bin\FoxSec.Web.dll" />
+    <Content Include="bin\FoxSec.Web.pdb" />
+    <Content Include="bin\Gma.QrCodeNet.Encoding.dll" />
+    <Content Include="bin\GoogleMaps.LocationServices.dll" />
+    <Content Include="bin\GuigleAPI.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\itextsharp.xmlworker.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\lt\FoxSec.Web.resources.dll" />
+    <Content Include="bin\lv\FoxSec.Web.resources.dll" />
+    <Content Include="bin\Microsoft.AspNet.WebApi.Versioning.dll" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.HttpListener.dll" />
+    <Content Include="bin\Microsoft.Owin.Hosting.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Common.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Logging.pdb" />
+    <Content Include="bin\Microsoft.Practices.EnterpriseLibrary.Logging.xml" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.pdb" />
+    <Content Include="bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Configuration.pdb" />
+    <Content Include="bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Interception.pdb" />
+    <Content Include="bin\Microsoft.Threading.Tasks.dll" />
+    <Content Include="bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll" />
+    <Content Include="bin\Microsoft.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Nito.AsyncEx.Concurrent.dll" />
+    <Content Include="bin\Nito.AsyncEx.dll" />
+    <Content Include="bin\Nito.AsyncEx.Enlightenment.dll" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\Programs\foto.exe" />
+    <Content Include="bin\QRCoder.dll" />
+    <Content Include="bin\ru\FoxSec.Web.resources.dll" />
+    <Content Include="bin\SautinSoft.ExcelToPdf.dll" />
+    <Content Include="bin\sv\FoxSec.Web.resources.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\System.Web.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.Owin.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\TimeZoneConverter.dll" />
+    <Content Include="bin\wnvhtmlconvert.dll" />
+    <Content Include="bin\Yeppp.CLR.Bundle.dll" />
+    <Content Include="Content\AccessDenied.htm" />
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\css\select2.min.css" />
+    <Content Include="Content\foto.exe" />
+    <Content Include="Content\GenericError.htm" />
+    <Content Include="Content\InternalError.htm" />
+    <Content Include="css\default.css" />
+    <Content Include="css\Images\AquaHeader.jpg" />
+    <Content Include="css\Images\BlackGlassHeader.jpg" />
+    <Content Include="css\Images\GlassHeader.jpg" />
+    <Content Include="css\Images\PlasticBlueHeader.jpg" />
+    <Content Include="css\Images\RedWineHeader.jpg" />
+    <Content Include="css\jquery.treeview.css" />
+    <Content Include="css\jquery.treeview.js" />
+    <Content Include="css\select2.min.js" />
+    <Content Include="css\Site.css" />
+    <Content Include="css\sweetalert.css" />
+    <Content Include="css\treeview\ajax-loader.gif" />
+    <Content Include="css\treeview\file.gif" />
+    <Content Include="css\treeview\folder-closed.gif" />
+    <Content Include="css\treeview\folder.gif" />
+    <Content Include="css\treeview\minus.gif" />
+    <Content Include="css\treeview\plus.gif" />
+    <Content Include="css\treeview\treeview-black-line.gif" />
+    <Content Include="css\treeview\treeview-black.gif" />
+    <Content Include="css\treeview\treeview-default-line.gif" />
+    <Content Include="css\treeview\treeview-default.gif" />
+    <Content Include="css\treeview\treeview-famfamfam-line.gif" />
+    <Content Include="css\treeview\treeview-famfamfam.gif" />
+    <Content Include="css\treeview\treeview-gray-line.gif" />
+    <Content Include="css\treeview\treeview-gray.gif" />
+    <Content Include="css\treeview\treeview-red-line.gif" />
+    <Content Include="css\treeview\treeview-red.gif" />
+    <Content Include="DynamicData\FieldTemplates\DynamicDataField1_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\GridViewPartialView.ascx" />
+    <Content Include="DynamicData\FieldTemplates\GridViewPartialView_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\TABoGridViewPartialView1_Edit.ascx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\ajax-refresh-icon.gif" />
+    <Content Include="img\bloader.gif" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\find.png" />
+    <Content Include="img\flags.png" />
+    <Content Include="img\flags1.png" />
+    <Content Include="img\foxsec_240.png" />
+    <Content Include="img\help.png" />
+    <Content Include="img\hourglass.gif" />
+    <Content Include="img\icons.png" />
+    <Content Include="img\input.gif" />
+    <Content Include="img\loader.gif" />
+    <Content Include="img\loader7.gif" />
+    <Content Include="img\Redo.png" />
+    <Content Include="img\status\1.ico" />
+    <Content Include="img\status\14 - Copy.ico" />
+    <Content Include="img\status\14.ico" />
+    <Content Include="img\status\14OLD.ico" />
+    <Content Include="img\status\16.ico" />
+    <Content Include="img\status\2.ico" />
+    <Content Include="img\status\23.ico" />
+    <Content Include="img\status\23OLD.ico" />
+    <Content Include="img\status\25.ico" />
+    <Content Include="img\status\28.ico" />
+    <Content Include="img\status\28OLD.ico" />
+    <Content Include="img\status\28olduks.ico" />
+    <Content Include="img\status\3.ico" />
+    <Content Include="img\status\35.ico" />
+    <Content Include="img\status\38.ico" />
+    <Content Include="img\status\39.ico" />
+    <Content Include="img\status\4.ico" />
+    <Content Include="img\status\40.ico" />
+    <Content Include="img\status\5.ico" />
+    <Content Include="img\status\AreaAlarm.png" />
+    <Content Include="img\status\AreaArmed.png" />
+    <Content Include="img\status\AreaReady.png" />
+    <Content Include="img\status\doorarmed_f6A_icon.ico" />
+    <Content Include="img\status\doorclosed_sLr_icon.ico" />
+    <Content Include="img\status\doordisconnectedredwifi_VGL_icon.ico" />
+    <Content Include="img\tipsy.gif" />
+    <Content Include="my.css" />
+    <Content Include="my.js" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Administration\TabContent.ascx" />
+    <Content Include="Views\Building\BuildingInfo.ascx" />
+    <Content Include="Views\Building\Edit.ascx" />
+    <Content Include="Views\Building\Index.ascx" />
+    <Content Include="Views\Building\Tree.ascx" />
+    <Content Include="Views\Card\ActivateDeactivate.ascx" />
+    <Content Include="Views\Card\CardNotFound.ascx" />
+    <Content Include="Views\Card\CommentedCardList.ascx" />
+    <Content Include="Views\Card\Create.ascx" />
+    <Content Include="Views\Card\Edit.ascx" />
+    <Content Include="Views\Card\EditType.ascx" />
+    <Content Include="Views\Card\List.ascx" />
+    <Content Include="Views\Card\MoveToCompany.ascx" />
+    <Content Include="Views\Card\NewType.ascx" />
+    <Content Include="Views\Card\NewUserCard.ascx" />
+    <Content Include="Views\Card\TabContent.ascx" />
+    <Content Include="Views\Card\TypeList.ascx" />
+    <Content Include="Views\Card\TypeTabContent.ascx" />
+    <Content Include="Views\Card\UserCardsList.ascx" />
+    <Content Include="Views\Classifiers\Create.ascx" />
+    <Content Include="Views\Classifiers\CreateValue.ascx" />
+    <Content Include="Views\Classifiers\Edit.ascx" />
+    <Content Include="Views\Classifiers\EditValue.ascx" />
+    <Content Include="Views\Classifiers\List.ascx" />
+    <Content Include="Views\Classifiers\ListValues.ascx" />
+    <Content Include="Views\Classifiers\TabContent.ascx" />
+    <Content Include="Views\Classifiers\UploadImage.ascx" />
+    <Content Include="Views\Company\ActivateDeactivate.ascx" />
+    <Content Include="Views\Company\Companies.ascx" />
+    <Content Include="Views\Company\Building.ascx" />
+    <Content Include="Views\Company\CompanyList.ascx" />
+    <Content Include="Views\Company\BuildingList.ascx" />
+    <Content Include="Views\Company\CompanyTree.ascx" />
+    <Content Include="Views\Company\Create.ascx" />
+    <Content Include="Views\Company\CreatePartner.ascx" />
+    <Content Include="Views\Company\Edit.ascx" />
+    <Content Include="Views\Company\EditPartner.ascx" />
+    <Content Include="Views\Company\Floors.ascx" />
+    <Content Include="Views\Company\List.ascx" />
+    <Content Include="Views\Company\MyCompany.ascx" />
+    <Content Include="Views\Company\PartnerList.ascx" />
+    <Content Include="Views\Company\TabContent.ascx" />
+    <Content Include="Views\csv\GridViewPartialView.ascx" />
+    <Content Include="Views\csv\Index.ascx" />
+    <Content Include="Views\Department\Create.ascx" />
+    <Content Include="Views\Department\Edit.ascx" />
+    <Content Include="Views\Department\List.ascx" />
+    <Content Include="Views\Department\Manager.ascx" />
+    <Content Include="Views\Department\ManagerList.ascx" />
+    <Content Include="Views\Department\MoveToDepartment.ascx" />
+    <Content Include="Views\Department\TabContent.ascx" />
+    <Content Include="Views\Department\UserDepartmentList.ascx" />
+    <Content Include="Views\GlobalSearch\Index.ascx" />
+    <Content Include="Views\GlobalSearch\List.ascx" />
+    <Content Include="Views\Holiday\Create.ascx" />
+    <Content Include="Views\Holiday\Edit.ascx" />
+    <Content Include="Views\Holiday\List.ascx" />
+    <Content Include="Views\Holiday\TabContent.ascx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Language\LanguageBar.ascx" />
+    <Content Include="Views\LiveVideo\VideoServer.ascx" />
+    <Content Include="Views\LiveVideo\Create.ascx" />
+    <Content Include="Views\LiveVideo\Edit.ascx" />
+    <Content Include="Views\LiveVideo\List.ascx" />
+    <Content Include="Views\LiveVideo\LiveCamera.ascx" />
+    <Content Include="Views\LiveVideo\TabContent.ascx" />
+    <Content Include="Views\LiveVideo\Tree.ascx" />
+    <Content Include="Views\Log\List.ascx" />
+    <Content Include="Views\Log\Location.ascx" />
+    <Content Include="Views\Log\Location118Time.ascx" />
+    <Content Include="Views\Log\Location64.ascx" />
+    <Content Include="Views\Log\LocationShort.ascx" />
+    <Content Include="Views\Log\TabContent.ascx" />
+    <Content Include="Views\NewUser\NewUserTree.ascx" />
+    <Content Include="Views\NewUser\TabContentNew.ascx" />
+    <Content Include="Views\Permission\Create.ascx" />
+    <Content Include="Views\Permission\Edit.ascx" />
+    <Content Include="Views\Permission\Index - Copy.ascx" />
+    <Content Include="Views\Permission\Index.ascx" />
+    <Content Include="Views\Permission\Index1.ascx" />
+    <Content Include="Views\Permission\List.ascx" />
+    <Content Include="Views\Permission\ListUsr.ascx" />
+    <Content Include="Views\Permission\Message.aspx" />
+    <Content Include="Views\Permission\Tree - Original.ascx" />
+    <Content Include="Views\Permission\Tree.ascx" />
+    <Content Include="Views\Permission\Zone.ascx" />
+    <Content Include="Views\Print\CardListExport.aspx" />
+    <Content Include="Views\Print\LogListExport.aspx" />
+    <Content Include="Views\Print\UserDataExport.aspx" />
+    <Content Include="Views\Print\UserDataExportVisitor.aspx" />
+    <Content Include="Views\Print\UserListExport.aspx" />
+    <Content Include="Views\Print\UserPermTree.ascx" />
+    <Content Include="Views\Print\VisitorListExport.aspx" />
+    <Content Include="Views\RemoteRegistration\Index.ascx" />
+    <Content Include="Views\RemoteRegistration\Tree.ascx" />
+    <Content Include="Views\Role\Create.ascx" />
+    <Content Include="Views\Role\Edit.ascx" />
+    <Content Include="Views\Role\List.ascx" />
+    <Content Include="Views\Role\MenuAccess.ascx" />
+    <Content Include="Views\Role\TabContent.ascx" />
+    <Content Include="Views\Shared\ConfirmationControl.ascx" />
+    <Content Include="Views\Shared\DemoError.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnControl.ascx" />
+    <Content Include="Views\Shared\Paginator.ascx" />
+    <Content Include="Views\Shared\Paginator2.ascx" />
+    <Content Include="Views\Shared\Paginator3.ascx" />
+    <Content Include="Views\TAReport\DailyWorkingReport.ascx" />
+    <Content Include="Views\TAReport\BindTaBuildName.ascx" />
+    <Content Include="Views\TAReport\BuildingExportUser.ascx" />
+    <Content Include="Views\TAReport\CreateBuildingsName.ascx" />
+    <Content Include="Views\TAReport\DrillDownGridViewPartial.ascx" />
+    <Content Include="Views\TAReport\MounthReport.ascx" />
+    <Content Include="Views\TAReport\OpenMounthReportUser.ascx" />
+    <Content Include="Views\TAReport\StartEndReport.ascx" />
+    <Content Include="Views\TAReport\TabContent.ascx" />
+    <Content Include="Views\TAReport\TABoGridViewPartialView.ascx" />
+    <Content Include="Views\TAReport\TABuildingNameReportExport.ascx" />
+    <Content Include="Views\TAReport\TABuildingObjects.ascx" />
+    <Content Include="Views\TAReport\TAMonthReportWorkingDaysGridViewPartialView.ascx" />
+    <Content Include="Views\TAReport\TAMounthReportGridViewPartialView.ascx" />
+    <Content Include="Views\TAReport\TAMounthReportGridViewPartialView1.ascx" />
+    <Content Include="Views\TAReport\TAMounthReportGridViewPartialViewLast.ascx" />
+    <Content Include="Views\TAReport\TAMounthReportWorkingDaysGridViewPartialViewLast.ascx" />
+    <Content Include="Views\TAReport\TAMsUserReport.ascx" />
+    <Content Include="Views\TAReport\TAReportDetailed.ascx" />
+    <Content Include="Views\TAReport\TAReportDetailedGridViewPartialView.ascx" />
+    <Content Include="Views\TAReport\TAReportDetailView.ascx" />
+    <Content Include="Views\TAReport\TAReportExport.ascx" />
+    <Content Include="Views\TAReport\Bands.ascx" />
+    <Content Include="Views\TAReport\TAReportExportUsers.ascx" />
+    <Content Include="Views\TAReport\TATaxMonthReportGridViewPartialView.ascx" />
+    <Content Include="Views\TAReport\TATaxMonthReportGridViewPartialViewDetails.ascx" />
+    <Content Include="Views\TAReport\TATaxReportExportN.ascx" />
+    <Content Include="Views\TAReport\TATaxReportExport.ascx" />
+    <Content Include="Views\TAReport\TATaxReportExportUsersN.ascx" />
+    <Content Include="Views\TAReport\TATaxReportExportUsers.ascx" />
+    <Content Include="Views\TAReport\WebUserControl1.ascx" />
+    <Content Include="Views\Terminal\Edit.ascx" />
+    <Content Include="Views\Terminal\List.ascx" />
+    <Content Include="Views\Terminal\TabContent.ascx" />
+    <Content Include="Views\TimeZone\Create.ascx" />
+    <Content Include="Views\TimeZone\Edit.ascx" />
+    <Content Include="Views\TimeZone\Index.ascx" />
+    <Content Include="Views\TimeZone\List.ascx" />
+    <Content Include="Views\TimeZone\Zone.ascx" />
+    <Content Include="Views\Title\Create.ascx" />
+    <Content Include="Views\Title\Edit.ascx" />
+    <Content Include="Views\Title\List.ascx" />
+    <Content Include="Views\Title\TabContent.ascx" />
+    <Content Include="Views\UserTree.ascx" />
+    <Content Include="Views\User\ActivateDeactivate.ascx" />
+    <Content Include="Views\User\Create.ascx" />
+    <Content Include="Views\User\CsvHRList.ascx" />
+    <Content Include="Views\User\CsvHRTab.ascx" />
+    <Content Include="Views\User\Edit.ascx" />
+    <Content Include="Views\User\GridViewPartialView.ascx" />
+    <Content Include="Views\User\HRList.ascx" />
+    <Content Include="Views\User\HRTab.ascx" />
+    <Content Include="Views\User\List.ascx" />
+    <Content Include="Views\User\AtWork.ascx" />
+    <Content Include="Views\User\Leaving.ascx" />
+    <Content Include="Views\User\MoveCard.ascx" />
+    <Content Include="Views\User\PermList.ascx" />
+    <Content Include="Views\User\PermTree.ascx" />
+    <Content Include="Views\User\PermZone.ascx" />
+    <Content Include="Views\User\TabContent.ascx" />
+    <Content Include="Views\User\Tree - Original.ascx" />
+    <Content Include="Views\User\Tree.ascx" />
+    <Content Include="Views\User\UploadImage.ascx" />
+    <Content Include="Views\User\UploadImageReady.ascx" />
+    <Content Include="Views\User\UserCardsTabContent.ascx" />
+    <Content Include="Views\User\UserRightsTabContent.ascx" />
+    <Content Include="Views\User\UserRoles.ascx" />
+    <Content Include="Views\User\UserRoles321.ascx" />
+    <Content Include="Views\User\UserTree.ascx" />
+    <Content Include="Views\User\xmlHRlist.ascx" />
+    <Content Include="Views\User\xmlHRtab.ascx" />
+    <Content Include="Views\VideoCamera\Camera.ascx" />
+    <Content Include="Views\VideoCamera\Edit.ascx" />
+    <Content Include="Views\VideoCamera\List.ascx" />
+    <Content Include="Views\Visitors\CreateVisitor.ascx" />
+    <Content Include="Views\Visitors\VisitorReadOnly.ascx" />
+    <Content Include="Views\Visitors\Edit.ascx" />
+    <Content Include="Views\Visitors\EditCard.ascx" />
+    <Content Include="Views\Visitors\Index.ascx" />
+    <Content Include="Views\Visitors\ListUser.ascx" />
+    <Content Include="Views\Visitors\PermList.ascx" />
+    <Content Include="Views\Visitors\PermTree.ascx" />
+    <Content Include="Views\Visitors\PrintVisitorCard.ascx" />
+    <Content Include="Views\Visitors\TabContent.ascx" />
+    <Content Include="Views\Visitors\UploadVisitorImage.ascx" />
+    <Content Include="Views\Visitors\Users.ascx" />
+    <Content Include="Views\Visitors\VisitorCardsList.ascx" />
+    <Content Include="Views\Visitors\VisitorCardsTabContent.ascx" />
+    <Content Include="Views\Visitors\VisitorRightsTabContent.ascx" />
+    <Content Include="Views\Visitors\VisitorsExportUsersDetails.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\bin\fi\" />
+    <Folder Include="bin\bin\lv\" />
+    <Folder Include="bin\bin\sv\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\es\" />
+    <Folder Include="bin\ja\" />
+    <Folder Include="Manual\" />
+    <Folder Include="obj\Release\" />
+    <Folder Include="Uploads\VisitorsPhoto\" />
+    <Folder Include="Views\BatchC\" />
+    <Folder Include="Views\CSVdata\" />
+    <Folder Include="Views\CsvFile\" />
+    <Folder Include="Views\Error\" />
+    <Folder Include="Views\Location\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logging.config" />
+    <Content Include="unity.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="languages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811190639226_Initial.resx">
+      <DependentUpon>201811190639226_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Resources\Views\Shared\SharedStrings.fi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedStrings.fi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Shared\SharedStrings.lv.resx">
+      <CustomToolNamespace>ViewResources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Shared\SharedStrings.lt.resx">
+      <CustomToolNamespace>ViewResources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Shared\SharedStrings.et.resx">
+      <CustomToolNamespace>ViewResources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Shared\SharedStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>ViewResources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>SharedStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Shared\SharedStrings.ru.resx">
+      <CustomToolNamespace>ViewResources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedStrings.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Shared\SharedStrings.sv.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedStrings.sv.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FoxSec.Accounts\FoxSec.Accounts.csproj">
+      <Project>{5405BD61-1585-4D85-BF4C-7DEDB6D68875}</Project>
+      <Name>FoxSec.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.Audit\FoxSec.Audit.csproj">
+      <Project>{2EFEF793-5B21-44D0-B8F7-F4006DA83849}</Project>
+      <Name>FoxSec.Audit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.Authentication\FoxSec.Authentication.csproj">
+      <Project>{B99E1448-0809-4329-ADE6-45ED05B7DE46}</Project>
+      <Name>FoxSec.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.Common\FoxSec.Common.csproj">
+      <Project>{7C7C16AD-576F-4FC1-91A0-6FEA228116C3}</Project>
+      <Name>FoxSec.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.Core\FoxSec.Core.csproj">
+      <Project>{FB1E8919-267C-4411-AF80-32E54F3D5B1B}</Project>
+      <Name>FoxSec.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.DomainModel\FoxSec.DomainModel.csproj">
+      <Project>{959e1dbf-b0ae-4aa3-9821-83b4dcd33187}</Project>
+      <Name>FoxSec.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.Infrastructure.EF\FoxSec.Infrastructure.EF.csproj">
+      <Project>{5f19c643-bdc3-49d5-9431-9553e1dd935b}</Project>
+      <Name>FoxSec.Infrastructure.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.Infrastructure.EntLib\FoxSec.Infrastructure.EntLib.csproj">
+      <Project>{F7150363-5141-4026-A9D4-A3ADD7FF9B99}</Project>
+      <Name>FoxSec.Infrastructure.EntLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoxSec.ServiceLayer\FoxSec.ServiceLayer.csproj">
+      <Project>{8D035689-0DC9-4558-8E57-887836338875}</Project>
+      <Name>FoxSec.ServiceLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bin\CodeContracts\FoxSec.Web.noReferenceAssembly" />
+    <None Include="bin\FoxSec.Web.dll.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile10.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile11.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile12.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile13.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile14.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile15.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile16.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile17.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile18.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile19.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile20.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile21.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile22.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile23.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile24.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile25.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile26.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile27.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile28.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile29.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile4.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile5.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile6.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile7.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile8.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile9.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\_GridViewPartialView.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\TAReport\TAReportDetailedGridViewPartialView.ascx.bak" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64563</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64594/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://test.easyghaat.com/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>

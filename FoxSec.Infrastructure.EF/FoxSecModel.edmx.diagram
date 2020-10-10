@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <edmx:Designer>
+    <edmx:Diagrams>
+      <edmx:Diagram Name="FoxSecModel" ZoomLevel="52">
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.AuditLog" Width="1.5" PointX="0.75" PointY="0.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.BuildingObject" Width="1.5" PointX="5.25" PointY="35.625" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.BuildingObjectType" Width="1.5" PointX="3" PointY="34.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Building" Width="1.5" PointX="3" PointY="38" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Classificator" Width="1.5" PointX="0.75" PointY="30.25" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.ClassificatorValue" Width="1.5" PointX="3" PointY="29.625" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Company" Width="1.5" PointX="5.25" PointY="28.625" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.CompanyBuildingObject" Width="1.5" PointX="7.5" PointY="29.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.CompanyManager" Width="1.5" PointX="7.5" PointY="34" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.ControllerUpdate" Width="1.5" PointX="2.75" PointY="0.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Country" Width="1.5" PointX="1.5" PointY="42.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Department" Width="1.5" PointX="7.5" PointY="46.25" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.FSINISetting" Width="1.5" PointX="4.75" PointY="0.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.FSSublocationObject" Width="1.5" PointX="0.75" PointY="4.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.FSSublocation" Width="1.5" PointX="2.75" PointY="4.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.HolidayBuilding" Width="1.5" PointX="4.75" PointY="4.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Holiday" Width="1.5" PointX="6.75" PointY="0.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Location" Width="1.5" PointX="0.75" PointY="38.625" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Log" Width="1.5" PointX="7.5" PointY="25.375" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.LogFilter" Width="1.5" PointX="10.5" PointY="29.25" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.LogType" Width="1.5" PointX="5.25" PointY="25" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.RoleBuilding" Width="1.5" PointX="23.25" PointY="38" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Role" Width="1.5" PointX="21" PointY="33.875" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.RoleType" Width="1.5" PointX="18.75" PointY="26.125" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.TAMove" Width="1.5" PointX="18" PointY="39.125" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.TAReport" Width="1.5" PointX="18" PointY="33.5" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Title" Width="1.5" PointX="7.5" PointY="43" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserAccessUnitType" Width="1.5" PointX="12.75" PointY="26.25" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserBuilding" Width="1.5" PointX="18" PointY="29.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserDepartment" Width="1.5" PointX="15" PointY="38.125" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserPermissionGroup" Width="1.5" PointX="20.25" PointY="43.875" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserPermissionGroupTimeZone" Width="1.5" PointX="22.5" PointY="48.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserRole" Width="1.5" PointX="23.25" PointY="34" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.User" Width="1.5" PointX="12.75" PointY="29.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UsersAccessUnit" Width="1.5" PointX="15" PointY="30.625" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserTimeZoneProperty" Width="1.5" PointX="17.125" PointY="53.5" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.UserTimeZone" Width="1.5" PointX="15" PointY="53.5" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_BuildingObjects_BuildingObjectTypes" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_BuildingObjects_Buildings" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_CompanyBuildingObjects_BuildingObjects" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserBuildings_BuildingObjects" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserPermissionGroupTimeZones_BuildingObjects" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Buildings_Locations" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_RoleBuildings_Buildings" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserBuildings_Buildings" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UsersAccessUnit_Buildings" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_ClassificatorValues_Classificators" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Companies_ClassificatorValues" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Users_ClassificatorValues" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UsersAccessUnit_ClassificatorValues" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_CompanyBuildings_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_CompanyManagers_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Departments_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Log_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_LogFilter_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Titles_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserRoles_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Users_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UsersAccessUnit_Companies" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_CompanyManagers_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Locations_Countries" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Moves_Departments" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_TAReports_Departments" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserDepartments_Departments" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Log_LogTypes" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Log_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_LogFilter_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_RoleBuildings_Roles" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Roles_RoleTypes" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Roles_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserRoles_Roles" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Moves_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_TAReports_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Users_Titles" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UsersAccessUnit_UserAccessUnitType" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserBuildings_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserDepartments_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserPermissionGroups_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserPermissionGroups_UserTimeZones" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserPermissionGroupTimeZones_UserPermissionGroups" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserPermissionGroupTimeZones_UserTimeZones" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserRoles_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UsersAccessUnit_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserTimeZones_Users" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_UserTimeZoneProperties_UserTimeZones" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.VideoAccess" Width="1.5" PointX="5.375" PointY="7.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.CameraPermissions" Width="2" PointX="7.375" PointY="4.75" />
+        <edmx:EntityTypeShape EntityType="FoxSecDBModel.Visitor" Width="1.5" PointX="15" PointY="42" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_TAReports_Buildings" />
+        <edmx:AssociationConnector Association="FoxSecDBModel.FK_Visitors_Users" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,43 @@
+﻿@*@Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<dynamic>
+    
+   
+
+    @{
+        var grid = Html.DevExpress().GridView(settings =>
+        {
+            settings.Name = "GridView";
+            settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+            settings.SettingsEditing.BatchUpdateRouteValues = new { Controller = "Home", Action = "BatchUpdatePartial" };
+            settings.SettingsEditing.Mode = GridViewEditingMode.Batch;
+
+            settings.CommandColumn.Visible = true;
+            settings.CommandColumn.ShowDeleteButton = true;
+            settings.CommandColumn.ShowNewButtonInHeader = true;
+
+            settings.KeyFieldName = "ID";
+
+            settings.Columns.Add("C1");
+            settings.Columns.Add(column =>
+            {
+                column.FieldName = "C2";
+                column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+            });
+            settings.Columns.Add("C3");
+            settings.Columns.Add(column =>
+            {
+                column.FieldName = "C4";
+                column.ColumnType = MVCxGridViewColumnType.CheckBox;
+            });
+            settings.Columns.Add(column =>
+            {
+                column.FieldName = "C5";
+                column.ColumnType = MVCxGridViewColumnType.DateEdit;
+            });
+            settings.CellEditorInitialize = (s, e) =>
+            {
+                ASPxEdit editor = (ASPxEdit)e.Editor;
+                editor.ValidationSettings.Display = Display.Dynamic;
+            };
+        });
+    }
+    @grid.Bind(Model).GetHtml()*@

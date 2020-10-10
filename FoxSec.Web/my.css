@@ -1,0 +1,32 @@
+﻿.context :not(p) {
+  background: #f1c40f;
+  padding: 0;
+}
+
+
+/**
+ * The following is not related to the plugin
+ */
+body {
+  background: #fbfcfc;
+}
+
+.container {
+  max-width: 700px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group label.noTransform {
+  text-transform: none;
+}
