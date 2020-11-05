@@ -16,11 +16,12 @@
 
         //settings.OptionsView.ShowColumnHeaders = false;
         //settings.OptionsView.ShowDataHeaders = false;
-
-        // settings.OptionsView.VerticalScrollingMode = PivotScrollingMode.Virtual;
-        settings.OptionsView.HorizontalScrollingMode = PivotScrollingMode.Virtual;
+         settings.Width = Unit.Percentage(100);
         // settings.OptionsView.VerticalScrollBarMode = ScrollBarMode.Auto;
-        settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Auto;
+        settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Visible;
+        // settings.OptionsView.VerticalScrollingMode = PivotScrollingMode.Virtual;
+        settings.OptionsView.HorizontalScrollingMode = PivotScrollingMode.Standard;
+  
 
 
         settings.ControlStyle.Border.BorderWidth = System.Web.UI.WebControls.Unit.Pixel(1);
@@ -28,6 +29,7 @@
         settings.StylesPager.Pager.Border.BorderWidth = System.Web.UI.WebControls.Unit.Pixel(1);
         settings.ControlStyle.BorderBottom.BorderWidth = System.Web.UI.WebControls.Unit.Pixel(2);
 
+       
         settings.Height = Unit.Pixel(600);
         //settings.Width = System.Web.UI.WebControls.Unit.Percentage(90);
 

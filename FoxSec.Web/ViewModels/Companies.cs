@@ -208,6 +208,8 @@ namespace FoxSec.Web.ViewModels
 
         public bool? DisableAddUsers { get; set; }
 
+        //relations
+        public virtual ICollection<TaUsersShifts> TaUsersShifts { get; set; }
     }
 
     [Table("CameraIP")]
@@ -653,6 +655,7 @@ namespace FoxSec.Web.ViewModels
 
     }
 
+    [Table("TaReportLabels")]
     public class TAReportLabels
     {
         public int Id { get; set; }
@@ -693,25 +696,34 @@ namespace FoxSec.Web.ViewModels
        
     }
     
+    [Table("TAShifts")]
     public class TAShifts
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime? StartFrom { get; set; }
         public DateTime? FinishAt { get; set; }
-        public int? WorkBeforeBreak { get; set; }
-        public int? Breaks { get; set; }
-        public int? WorkBeforeLunch { get; set; }
-        public int? Lunch { get; set; }
-        public int? OvertimeMin { get; set; }
         [ForeignKey("Company")]
         public int? CompanyId { get; set; }
         public bool IsDeleted { get; set; }
         public bool Changed { get; set; }
-
+        public int? DuratOfBreak { get; set; }
+        public int? LateAllowed { get; set; }
+        public int? BreakMinInterval { get; set; }
+        public int? DuratOfBreakOvertime { get; set; }
+        public int? BreakMinIntervalOvertime { get; set; }
+        public int? Presence { get; set; }
+        public bool? FirstEntryLastExit { get; set; }
+        public int? OvertimeStartLater { get; set; }
+        public int? OvertimeStartsEarlier { get; set; }
+        //relations
         public virtual Companies Company { get; set; }
+        public virtual ICollection<TaShiftTimeIntervals> TaShiftTimeIntervals { get; set; }
+       
+
     }
 
+    [Table("TaWeekShift")]
     public class TaWeekShift
     {
         public int Id { get; set; }
@@ -719,15 +731,79 @@ namespace FoxSec.Web.ViewModels
         public int? CompanyId { get; set; }
         public int? TaUserGroupeShiftsId { get; set; }
         public int? InTaUserGroupeShiftsOrder { get; set; }
+        [ForeignKey("TAShifts1")]
         public int? TaShiftIdMonday { get; set; }
+        [ForeignKey("TAShifts2")]
         public int? TaShiftIdTuesday { get; set; }
+        [ForeignKey("TAShifts3")]
         public int? TaShiftIdWednesday { get; set; }
+        [ForeignKey("TAShifts4")]
         public int? TaShiftIdThursday { get; set; }
+        [ForeignKey("TAShifts5")]
         public int? TaShiftIdFriday { get; set; }
+        [ForeignKey("TAShifts6")]
         public int? TaShiftIdSaturday { get; set; }
+        [ForeignKey("TAShifts7")]
         public int? TaShiftIdSunday { get; set; }
         public bool IsDeleted { get; set; }
         public byte[] Timestamp { get; set; }
+
+        public virtual TAShifts TAShifts1 { get; set; }
+        public virtual TAShifts TAShifts2 { get; set; }
+        public virtual TAShifts TAShifts3 { get; set; }
+        public virtual TAShifts TAShifts4 { get; set; }
+        public virtual TAShifts TAShifts5 { get; set; }
+        public virtual TAShifts TAShifts6 { get; set; }
+        public virtual TAShifts TAShifts7 { get; set; }
+        public virtual TaUserGroupeShifts TaUserGroupeShifts { get; set; }
+
+    }
+
+    [Table("TaUserGroupeShifts")]
+    public class TaUserGroupeShifts
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int RepeatAfterWeeks { get; set; }
+        public DateTime StartFromDate { get; set; }
+        public int? CompanyId { get; set; }
+        public bool IsDeleted { get; set; }
+        public virtual ICollection<TaWeekShift> TaWeekShifts  { get; set; }
+    }
+
+    [Table("TaUsersShifts")]
+    public class TaUsersShifts
+    {
+        public int Id { get; set; }
+        [ForeignKey("User")]
+        public int UeserId { get; set; }
+        [ForeignKey("TaUserGroupShifts")]
+        public int TaUserGroupShiftId { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public bool IsDeleted { get; set; }
+
+        //relations
+        public virtual Users User { get; set; }
+        public virtual TaUserGroupeShifts TaUserGroupShifts { get; set; }
+    }
+
+    [Table("TaShiftTimeIntervals")]
+    public class TaShiftTimeIntervals
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
+        [ForeignKey("TAShifts")]
+        public int TaShiftId { get; set; }
+        [ForeignKey("TAReportLabels")]
+        public int TaReportLabelId { get; set; }
+       
+
+        //relations
+        public virtual TAShifts TAShifts { get; set; }
+        public virtual TAReportLabels TAReportLabels { get; set; }
     }
     //
     public class FoxSecDBContext : DbContext
@@ -804,5 +880,12 @@ namespace FoxSec.Web.ViewModels
         public DbSet<TAShifts> TAShifts { get; set; } //Added by Manoranjan Date:29September2020 Time: 15:38
 
         public DbSet<TaWeekShift> TaWeekShifts { get; set; } //Added by Manoranjan Date:06October2020 Time: 15:24
+
+        public DbSet<TaUserGroupeShifts> TaUserGroupeShifts { get; set; } //Added by Manoranjan Date:10October2020 Time: 16:28
+
+        public DbSet<TaUsersShifts> TaUsersShifts { get; set; } //Added by Manoranjan Date:20October2020 Time: 11:53
+
+        public DbSet<TaShiftTimeIntervals> TaShiftTimeIntervals { get; set; } //Added by Manoranjan Date:26October2020 Time: 13:57
+
     }
 }

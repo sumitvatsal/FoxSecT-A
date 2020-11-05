@@ -13,7 +13,9 @@
         //settings.OptionsView.VerticalScrollingMode = PivotScrollingMode.Virtual;
         ////settings.OptionsView.HorizontalScrollingMode = PivotScrollingMode.Virtual;
         //settings.OptionsView.VerticalScrollBarMode = ScrollBarMode.Auto;
-
+         settings.Width = Unit.Percentage(100);
+        settings.OptionsView.HorizontalScrollBarMode = ScrollBarMode.Visible;
+        settings.OptionsView.HorizontalScrollingMode = PivotScrollingMode.Standard;
 
         settings.ControlStyle.Border.BorderWidth = System.Web.UI.WebControls.Unit.Pixel(1);
         settings.Styles.CellStyle.Border.BorderWidth = System.Web.UI.WebControls.Unit.Pixel(1);

@@ -11,7 +11,8 @@ namespace FoxSec.Web.ViewModels
         public List<TAShifts> TAShifts { get; set; }
         public IEnumerable<Companies> CompaniesList { get; set; }
         public IEnumerable<TAReportLabels> TAReportLabels { get; set; }
-        public IEnumerable<SchedulerData> schedulerData { get; set; }
         public IEnumerable<SelectListItem> repeatWeeksList { get; set; }
+        public TAShifts TAShift { get; set; }
+        public List<SelectListItem> taReportItem { get; set; }
     }
 }

@@ -466,6 +466,9 @@
     <Reference Include="TimeZoneConverter, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TimeZoneConverter.2.3.2\lib\net45\TimeZoneConverter.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
@@ -477,6 +480,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\DevExtremeBundleConfig.cs" />
+    <Compile Include="App_Start\FontAwesomeBundleConfig.cs" />
     <Compile Include="Controllers\BatchCController.cs" />
     <Compile Include="Controllers\CheckLicense\CheckLicense.cs" />
     <Compile Include="Controllers\CheckLicense\ClassTA.cs" />
@@ -625,7 +630,12 @@
       <DependentUpon>SharedStrings.sv.resx</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AccountViewModel.cs" />
+    <Compile Include="ViewModels\AddNewTaShiftTimeInterval.cs" />
+    <Compile Include="ViewModels\AddNewTaWeekShiftModel.cs" />
+    <Compile Include="ViewModels\AssignShiftUserModel.cs" />
+    <Compile Include="ViewModels\AssignShiftUserSaveModel.cs" />
     <Compile Include="ViewModels\AuditLogViewModel.cs" />
+    <Compile Include="ViewModels\BreakSchedulerDisplays.cs" />
     <Compile Include="ViewModels\BuildingNameViewModel.cs" />
     <Compile Include="ViewModels\CardNotFoundViewModel.cs" />
     <Compile Include="ViewModels\BuildingObjectEditViewModel.cs" />
@@ -651,6 +661,7 @@
     <Compile Include="ViewModels\MoveToCompanyViewModel.cs" />
     <Compile Include="ViewModels\PermissionTreeViewModel.cs" />
     <Compile Include="ViewModels\SchedulerData.cs" />
+    <Compile Include="ViewModels\ShiftSchedulerDisplay.cs" />
     <Compile Include="ViewModels\TAGlobalBuildingObjectsViewModel.cs" />
     <Compile Include="ViewModels\TAMoveViewModel.cs" />
     <Compile Include="ViewModels\TAMsUserViewModel.cs" />
@@ -660,7 +671,11 @@
     <Compile Include="ViewModels\TAReportEditViewModel.cs" />
     <Compile Include="ViewModels\TAReportListViewModel.cs" />
     <Compile Include="ViewModels\TaReportViewNewCustomoseUser.cs" />
+    <Compile Include="ViewModels\TaShiftEditSaveModel.cs" />
+    <Compile Include="ViewModels\TaShiftSaveModel.cs" />
     <Compile Include="ViewModels\TaShiftsModel.cs" />
+    <Compile Include="ViewModels\TaUserGroupShifts.cs" />
+    <Compile Include="ViewModels\TaUserGroupShiftSaveModel.cs" />
     <Compile Include="ViewModels\TaWeekShiftsModel.cs" />
     <Compile Include="ViewModels\TerminalViewModel.cs" />
     <Compile Include="ViewModels\TimeZoneEditViewModel.cs" />
@@ -760,6 +775,27 @@
     <Compile Include="Views\Shared\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\TAReport\AddNewtaShiftTimeIntervals.ascx.cs">
+      <DependentUpon>AddNewtaShiftTimeIntervals.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\AddNewtaShiftTimeIntervals.ascx.designer.cs">
+      <DependentUpon>AddNewtaShiftTimeIntervals.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\AddTaUserGroupShifts.ascx.cs">
+      <DependentUpon>AddTaUserGroupShifts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\AddTaUserGroupShifts.ascx.designer.cs">
+      <DependentUpon>AddTaUserGroupShifts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\AssignTaUserGroupShiftToUsers.ascx.cs">
+      <DependentUpon>AssignTaUserGroupShiftToUsers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\AssignTaUserGroupShiftToUsers.ascx.designer.cs">
+      <DependentUpon>AssignTaUserGroupShiftToUsers.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Views\TAReport\BindTaBuildName.ascx.cs">
       <DependentUpon>BindTaBuildName.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -781,6 +817,20 @@
     <Compile Include="Views\TAReport\CreateBuildingsName.ascx.designer.cs">
       <DependentUpon>CreateBuildingsName.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\TAReport\EditTaShift.ascx.cs">
+      <DependentUpon>EditTaShift.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\EditTaShift.ascx.designer.cs">
+      <DependentUpon>EditTaShift.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\EditTaUserGroupShift.ascx.cs">
+      <DependentUpon>EditTaUserGroupShift.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\EditTaUserGroupShift.ascx.designer.cs">
+      <DependentUpon>EditTaUserGroupShift.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Views\TAReport\TABuildingNameReportExport.ascx.cs">
       <DependentUpon>TABuildingNameReportExport.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -795,6 +845,13 @@
     <Compile Include="Views\TAReport\TaGroupShifts.ascx.designer.cs">
       <DependentUpon>TaGroupShifts.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\TAReport\TaGroupShiftsList.ascx.cs">
+      <DependentUpon>TaGroupShiftsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\TaGroupShiftsList.ascx.designer.cs">
+      <DependentUpon>TaGroupShiftsList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Views\TAReport\TaReportLabels.ascx.cs">
       <DependentUpon>TaReportLabels.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -808,6 +865,13 @@
     </Compile>
     <Compile Include="Views\TAReport\TaShift.ascx.designer.cs">
       <DependentUpon>TaShift.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TAReport\TaShiftsList.ascx.cs">
+      <DependentUpon>TaShiftsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TAReport\TaShiftsList.ascx.designer.cs">
+      <DependentUpon>TaShiftsList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Views\TAReport\TaWeekShifts.ascx.cs">
       <DependentUpon>TaWeekShifts.ascx</DependentUpon>
@@ -972,8 +1036,54 @@
     <Content Include="bin\wnvhtmlconvert.dll" />
     <Content Include="bin\Yeppp.CLR.Bundle.dll" />
     <Content Include="Content\AccessDenied.htm" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\select2.css" />
     <Content Include="Content\css\select2.min.css" />
+    <Content Include="Content\dx-diagram.css" />
+    <Content Include="Content\dx-diagram.min.css" />
+    <Content Include="Content\dx-gantt.css" />
+    <Content Include="Content\dx-gantt.min.css" />
+    <Content Include="Content\dx.carmine.compact.css" />
+    <Content Include="Content\dx.carmine.css" />
+    <Content Include="Content\dx.contrast.compact.css" />
+    <Content Include="Content\dx.contrast.css" />
+    <Content Include="Content\dx.dark.compact.css" />
+    <Content Include="Content\dx.darkmoon.compact.css" />
+    <Content Include="Content\dx.darkmoon.css" />
+    <Content Include="Content\dx.darkviolet.compact.css" />
+    <Content Include="Content\dx.darkviolet.css" />
+    <Content Include="Content\dx.greenmist.compact.css" />
+    <Content Include="Content\dx.greenmist.css" />
+    <Content Include="Content\dx.ios7.default.css" />
+    <Content Include="Content\dx.light.compact.css" />
+    <Content Include="Content\dx.light.css" />
+    <Content Include="Content\dx.material.blue.dark.compact.css" />
+    <Content Include="Content\dx.material.blue.dark.css" />
+    <Content Include="Content\dx.material.blue.light.compact.css" />
+    <Content Include="Content\dx.material.blue.light.css" />
+    <Content Include="Content\dx.material.lime.dark.compact.css" />
+    <Content Include="Content\dx.material.lime.dark.css" />
+    <Content Include="Content\dx.material.lime.light.compact.css" />
+    <Content Include="Content\dx.material.lime.light.css" />
+    <Content Include="Content\dx.material.orange.dark.compact.css" />
+    <Content Include="Content\dx.material.orange.dark.css" />
+    <Content Include="Content\dx.material.orange.light.compact.css" />
+    <Content Include="Content\dx.material.orange.light.css" />
+    <Content Include="Content\dx.material.purple.dark.compact.css" />
+    <Content Include="Content\dx.material.purple.dark.css" />
+    <Content Include="Content\dx.material.purple.light.compact.css" />
+    <Content Include="Content\dx.material.purple.light.css" />
+    <Content Include="Content\dx.material.teal.dark.compact.css" />
+    <Content Include="Content\dx.material.teal.dark.css" />
+    <Content Include="Content\dx.material.teal.light.compact.css" />
+    <Content Include="Content\dx.material.teal.light.css" />
+    <Content Include="Content\dx.softblue.compact.css" />
+    <Content Include="Content\dx.softblue.css" />
+    <Content Include="Content\fontawesome\font-awesome.css" />
+    <Content Include="Content\fontawesome\font-awesome.min.css" />
+    <Content Include="Content\fontawesome\fontawesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\foto.exe" />
     <Content Include="Content\GenericError.htm" />
     <Content Include="Content\InternalError.htm" />
@@ -1054,8 +1164,18 @@
     <Content Include="img\tipsy.gif" />
     <Content Include="my.css" />
     <Content Include="my.js" />
+    <Content Include="Scripts\aspnet\dx.aspnet.data.js" />
+    <Content Include="Scripts\aspnet\dx.aspnet.mvc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\CascadingComboBoxesBatchEdit.js" />
+    <Content Include="Scripts\cldr.js" />
+    <Content Include="Scripts\cldr.min.js" />
+    <Content Include="Scripts\cldr\event.js" />
+    <Content Include="Scripts\cldr\event.min.js" />
+    <Content Include="Scripts\cldr\supplemental.js" />
+    <Content Include="Scripts\cldr\supplemental.min.js" />
+    <Content Include="Scripts\cldr\unresolved.js" />
+    <Content Include="Scripts\cldr\unresolved.min.js" />
     <Content Include="Scripts\DevExp\bootstrap.js" />
     <Content Include="Scripts\DevExp\bootstrap.min.js" />
     <Content Include="Scripts\DevExp\globalize.cultures.js" />
@@ -1066,6 +1186,31 @@
     <Content Include="Scripts\DevExp\jquery-ui-1.10.3.min.js" />
     <Content Include="Scripts\DevExp\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\DevExp\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Content\fonts\Roboto-300.ttf" />
+    <Content Include="Content\fonts\Roboto-300.woff" />
+    <Content Include="Content\fonts\Roboto-300.woff2" />
+    <Content Include="Content\fonts\Roboto-400.ttf" />
+    <Content Include="Content\fonts\Roboto-400.woff" />
+    <Content Include="Content\fonts\Roboto-400.woff2" />
+    <Content Include="Content\fonts\Roboto-500.ttf" />
+    <Content Include="Content\fonts\Roboto-500.woff" />
+    <Content Include="Content\fonts\Roboto-500.woff2" />
+    <Content Include="Content\fonts\Roboto-700.ttf" />
+    <Content Include="Content\fonts\Roboto-700.woff" />
+    <Content Include="Content\fonts\Roboto-700.woff2" />
+    <Content Include="Content\icons\dxicons.ttf" />
+    <Content Include="Content\icons\dxicons.woff" />
+    <Content Include="Content\icons\dxicons.woff2" />
+    <Content Include="Content\icons\dxiconsios.ttf" />
+    <Content Include="Content\icons\dxiconsios.woff" />
+    <Content Include="Content\icons\dxiconsios.woff2" />
+    <Content Include="Content\icons\dxiconsmaterial.ttf" />
+    <Content Include="Content\icons\dxiconsmaterial.woff" />
+    <Content Include="Content\icons\dxiconsmaterial.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\DevExp\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\DevExp\jquery.validate.js" />
     <Content Include="Scripts\DevExp\jquery.validate.min.js" />
@@ -1286,10 +1431,30 @@
     <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_ro.html" />
     <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_ru.html" />
     <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_sk.html" />
+    <Content Include="Scripts\dx-diagram.js" />
+    <Content Include="Scripts\dx-diagram.min.js" />
+    <Content Include="Scripts\dx-gantt.js" />
+    <Content Include="Scripts\dx-gantt.min.js" />
+    <Content Include="Scripts\dx.all.debug.js" />
     <Content Include="Scripts\dx.all.js" />
     <Content Include="Scripts\dx.aspnet.data.js" />
     <Content Include="Scripts\dx.aspnet.mvc.js" />
+    <Content Include="Scripts\dx.viz-web.debug.js" />
+    <Content Include="Scripts\dx.viz-web.js" />
+    <Content Include="Scripts\dx.viz.debug.js" />
+    <Content Include="Scripts\dx.viz.js" />
+    <Content Include="Scripts\dx.web.debug.js" />
+    <Content Include="Scripts\dx.web.js" />
     <Content Include="Scripts\generator.js" />
+    <Content Include="Scripts\globalize.min.js" />
+    <Content Include="Scripts\globalize\currency.js" />
+    <Content Include="Scripts\globalize\currency.min.js" />
+    <Content Include="Scripts\globalize\date.js" />
+    <Content Include="Scripts\globalize\date.min.js" />
+    <Content Include="Scripts\globalize\message.js" />
+    <Content Include="Scripts\globalize\message.min.js" />
+    <Content Include="Scripts\globalize\number.js" />
+    <Content Include="Scripts\globalize\number.min.js" />
     <Content Include="Scripts\i18n\af.js" />
     <Content Include="Scripts\i18n\ar.js" />
     <Content Include="Scripts\i18n\az.js" />
@@ -1409,6 +1574,26 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jszip.js" />
+    <Content Include="Scripts\jszip.min.js" />
+    <Content Include="Scripts\localization\dx.messages.cs.js" />
+    <Content Include="Scripts\localization\dx.messages.de.js" />
+    <Content Include="Scripts\localization\dx.messages.el.js" />
+    <Content Include="Scripts\localization\dx.messages.en.js" />
+    <Content Include="Scripts\localization\dx.messages.es.js" />
+    <Content Include="Scripts\localization\dx.messages.fi.js" />
+    <Content Include="Scripts\localization\dx.messages.fr.js" />
+    <Content Include="Scripts\localization\dx.messages.hu.js" />
+    <Content Include="Scripts\localization\dx.messages.it.js" />
+    <Content Include="Scripts\localization\dx.messages.ja.js" />
+    <Content Include="Scripts\localization\dx.messages.nl.js" />
+    <Content Include="Scripts\localization\dx.messages.pt.js" />
+    <Content Include="Scripts\localization\dx.messages.ru.js" />
+    <Content Include="Scripts\localization\dx.messages.sl.js" />
+    <Content Include="Scripts\localization\dx.messages.sv.js" />
+    <Content Include="Scripts\localization\dx.messages.tr.js" />
+    <Content Include="Scripts\localization\dx.messages.vi.js" />
+    <Content Include="Scripts\localization\dx.messages.zh.js" />
     <Content Include="Scripts\MicrosoftAjax.debug.js" />
     <Content Include="Scripts\MicrosoftAjax.js" />
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
@@ -1420,6 +1605,15 @@
     <Content Include="Scripts\select2.js" />
     <Content Include="Scripts\select2.min.js" />
     <Content Include="Scripts\sweetalert.min.js" />
+    <Content Include="Scripts\vectormap-data\africa.js" />
+    <Content Include="Scripts\vectormap-data\canada.js" />
+    <Content Include="Scripts\vectormap-data\eurasia.js" />
+    <Content Include="Scripts\vectormap-data\europe.js" />
+    <Content Include="Scripts\vectormap-data\usa.js" />
+    <Content Include="Scripts\vectormap-data\world.js" />
+    <Content Include="Scripts\vectormap-utils\dx.vectormaputils.debug.js" />
+    <Content Include="Scripts\vectormap-utils\dx.vectormaputils.js" />
+    <Content Include="Scripts\vectormap-utils\dx.vectormaputils.node.js" />
     <Content Include="Views\Account\LogOn.aspx" />
     <Content Include="Views\Administration\TabContent.ascx" />
     <Content Include="Views\Building\BuildingInfo.ascx" />
@@ -1529,11 +1723,16 @@
     <Content Include="Views\Shared\Paginator.ascx" />
     <Content Include="Views\Shared\Paginator2.ascx" />
     <Content Include="Views\Shared\Paginator3.ascx" />
+    <Content Include="Views\TAReport\AddNewtaShiftTimeIntervals.ascx" />
+    <Content Include="Views\TAReport\AddTaUserGroupShifts.ascx" />
+    <Content Include="Views\TAReport\AssignTaUserGroupShiftToUsers.ascx" />
     <Content Include="Views\TAReport\DailyWorkingReport.ascx" />
     <Content Include="Views\TAReport\BindTaBuildName.ascx" />
     <Content Include="Views\TAReport\BuildingExportUser.ascx" />
     <Content Include="Views\TAReport\CreateBuildingsName.ascx" />
     <Content Include="Views\TAReport\DrillDownGridViewPartial.ascx" />
+    <Content Include="Views\TAReport\EditTaShift.ascx" />
+    <Content Include="Views\TAReport\EditTaUserGroupShift.ascx" />
     <Content Include="Views\TAReport\MounthReport.ascx" />
     <Content Include="Views\TAReport\OpenMounthReportUser.ascx" />
     <Content Include="Views\TAReport\StartEndReport.ascx" />
@@ -1542,6 +1741,7 @@
     <Content Include="Views\TAReport\TABuildingNameReportExport.ascx" />
     <Content Include="Views\TAReport\TABuildingObjects.ascx" />
     <Content Include="Views\TAReport\TaGroupShifts.ascx" />
+    <Content Include="Views\TAReport\TaGroupShiftsList.ascx" />
     <Content Include="Views\TAReport\TAMonthReportWorkingDaysGridViewPartialView.ascx" />
     <Content Include="Views\TAReport\TAMounthReportGridViewPartialView.ascx" />
     <Content Include="Views\TAReport\TAMounthReportGridViewPartialView1.ascx" />
@@ -1556,6 +1756,7 @@
     <Content Include="Views\TAReport\TAReportExportUsers.ascx" />
     <Content Include="Views\TAReport\TaReportLabels.ascx" />
     <Content Include="Views\TAReport\TaShift.ascx" />
+    <Content Include="Views\TAReport\TaShiftsList.ascx" />
     <Content Include="Views\TAReport\TATaxMonthReportGridViewPartialView.ascx" />
     <Content Include="Views\TAReport\TATaxMonthReportGridViewPartialViewDetails.ascx" />
     <Content Include="Views\TAReport\TATaxReportExportN.ascx" />
@@ -1632,11 +1833,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\TAReport\_SchedulerPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_Start\" />
     <Folder Include="bin\bin\fi\" />
     <Folder Include="bin\bin\lv\" />
     <Folder Include="bin\bin\sv\" />

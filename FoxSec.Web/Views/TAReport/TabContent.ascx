@@ -271,13 +271,13 @@
                     <td style='padding: 2px; text-align: right'><span id='button_TA_Bo' class='icon icon_green_go tipsy_we' title='<%= Html.Encode("TAShift Details") %>' onclick="TaShift();"></span></td>
                 </tr>
 
-                <tr id="ta_Schedule" style="background-color: #CCC" <%= bg %>>
+               <%-- <tr id="ta_Schedule" style="background-color: #CCC" <%= bg %>>
                     <td style='padding: 2px; text-align: left'>TAWeekShifts</td>
                     <td style='padding: 2px; text-align: left'>Add,Edit and Details of Week shifts</td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_Bo' class='icon icon_green_go tipsy_we' title='<%= Html.Encode("TAWeekShifts Details") %>' onclick="TaWeekShifts();"></span></td>
-                </tr>
+                </tr>--%>
 
-                <tr id="ta_Schedule" style="background-color: #fff" <%= bg %>>
+                <tr id="ta_Schedule" style="background-color: #CCC" <%= bg %>>
                     <td style='padding: 2px; text-align: left'>TAUserGroupShifts</td>
                     <td style='padding: 2px; text-align: left'>Add,Edit and Details of group shifts</td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_Bo' class='icon icon_green_go tipsy_we' title='<%= Html.Encode("TAGroupShifts Details") %>' onclick="TaGroupShifts();"></span></td>
@@ -287,14 +287,14 @@
               { 
                         %>
                 
-                <tr id="ta_boconf" style="background-color: #CCC" <%= bg %>>
+                <tr id="ta_boconf" style="background-color: #fff" <%= bg %>>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.BuildingNameScheduleTA %>   </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.BuildingNameScheduleTADescription %> </td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_Bo' class='icon icon_green_go tipsy_we' title='<%= Html.Encode("TABuilding Name Details") %>' onclick="showBuildingNameList();"></span></td>
                 </tr>
                 <%}
                     else { %>
-                 <tr  id="ta_boconf" style="background-color: #CCC;display:none"<%= bg %>>
+                 <tr  id="ta_boconf" style="background-color: #fff;display:none"<%= bg %>>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.BuildingNameScheduleTA %></td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.BuildingNameScheduleTADescription %> </td>
                     <td style='padding: 2px;  text-align: right'><span id='button_TA_Bo' class='icon icon_green_go' onclick='return false;'"></span></td>
@@ -304,7 +304,7 @@
                                <%if (Model.User.Menues.IsAvailabe((int)FoxSec.DomainModel.DomainObjects.Menu.ViewTAConfMenu))
               {%>
                 
-                <tr id="ta_boconf" style="background-color: #fff">
+                <tr id="ta_boconf" style="background-color: #CCC">
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAbulding %> </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAlist %> </td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_Bo' class='icon icon_green_go tipsy_we' title='<%= Html.Encode(ViewResources.SharedStrings.TAlist) %>' onclick='<%=string.Format("javascript:allBuildingObjects(\"submit_edit_user\", {0}, \"{1} {2}\")", 500, Html.Encode("eesn"), Html.Encode("peren")) %>'></span></td>
@@ -313,7 +313,7 @@
                 <%}
                    else
                { %>
-                   <tr  id="ta_boconf" style="background-color: #fff;display:none">
+                   <tr  id="ta_boconf" style="background-color: #CCC;display:none">
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAbulding %> </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAlist %> </td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_Bo' class='icon icon_green_go' onclick='return false;'"></span></td>
@@ -344,7 +344,7 @@
                 <%if (issuperadmin == false && !iscompanymanager == false && !isdepartmentmanager == false)
                     { %>
 
-                <tr id="ta_detailed_report" style="background-color: #CCC" <%= bg %>>
+                <tr id="ta_detailed_report" style="background-color: #fff" <%= bg %>>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAMyReport %> </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAMyReport  %> </td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_detailed_report' class='icon icon_green_go tipsy_we' title='<%= Html.Encode(ViewResources.SharedStrings.TAreportViewe) %>' onclick='<%=string.Format("javascript:MyTAReport(\"submit_edit_user\", {0}, \"{1} {2}\")", 3, Html.Encode("eesn"), Html.Encode("peren")) %>'></span></td>
@@ -352,26 +352,26 @@
                 <%} %>
                 <%if (issuperadmin || iscompanymanager || isdepartmentmanager)
                     {
-                        bg = (i++ % 2 == 1) ? "style='background-color:#CCC;'" : "";%>
-                <tr id="ta_mounth_report" style="background-color: #CCC" <%--<%= bg %>--%>>
+                        bg = (i++ % 2 == 1) ? "style='background-color:#fff;'" : "";%>
+                <tr id="ta_mounth_report" style="background-color: #fff" <%--<%= bg %>--%>>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAMonthreport %> </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.WorkMontReportDescription %> </td>
                     <td style='padding: 2px; text-align: right'><span class='icon icon_green_go tipsy_we' title='<%= Html.Encode(ViewResources.SharedStrings.WorkMontReportDescription) %>' onclick='<%=string.Format("javascript:OpenMonthReport(\"submit_edit_user\", {0}, \"{1} {2}\")", 500, Html.Encode("eesn"), Html.Encode("peren")) %>'></span></td>
                 </tr>
                 <%     bg = (i++ % 2 == 1) ? "style='background-color:#CCC;'" : "";%>
-                <tr id="ta_mounth_report" style="background-color: #FFF">
+                <tr id="ta_mounth_report" style="background-color: #CCC">
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAlist %> </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAlistDetail %> </td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_mounthreport' class='icon icon_green_go tipsy_we' title='<%= Html.Encode(ViewResources.SharedStrings.WorkMontReportDescription) %>' onclick='<%=string.Format("javascript:StartEndReport(\"submit_edit_user\", {0}, \"{1} {2}\")", 500, Html.Encode("eesn"), Html.Encode("peren")) %>'></span></td>
                 </tr>
                 <%bg = (i++ % 2 == 1) ? "style='background-color:#CCC;'" : "";%>
-                <tr id="ta_detailed_report" style="background-color: #CCC" <%--<%= bg %>--%>>
+                <tr id="ta_detailed_report" style="background-color: #fff" <%--<%= bg %>--%>>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TADetailReport %> </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAdetails %> </td>
                     <td style='padding: 2px; text-align: right'><span id='button_TA_detailed_report' class='icon icon_green_go tipsy_we' title='<%= Html.Encode(ViewResources.SharedStrings.TAdetails) %>' onclick='<%=string.Format("javascript:TAReportDetailed(\"submit_edit_user\", {0}, \"{1} {2}\")", 3, Html.Encode("eesn"), Html.Encode("peren")) %>'></span></td>
                 </tr>
                 <%bg = (i++ % 2 == 1) ? "style='background-color:#CCC;'" : "";%>
-                <tr id="ta_detailed_report" style="background-color: #FFF" <%--<%= bg %>--%>>
+                <tr id="ta_detailed_report" style="background-color: #CCC" <%--<%= bg %>--%>>
 
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAExport %> </td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TAExportTo %> </td>
@@ -380,14 +380,14 @@
                 <%} %>
                 <%//if (issuperadmin)
                     {%>
-                <tr id="daily_work_report" style="background-color: #CCC">
+                <tr id="daily_work_report" style="background-color: #fff">
 
                     <td style='padding: 2px; text-align: left'><%:ViewBag.TACompnay%>_1:<%:ViewResources.SharedStrings.TAMonthreport %></td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TaxReportExport %></td>
                     <td style='padding: 2px; text-align: right'><span class='icon icon_green_go tipsy_we' onclick='<%=string.Format("javascript:TaxMonthReport(\"submit_edit_user\", {0}, \"{1} {2}\")", 500, Html.Encode("eesn"), Html.Encode("peren")) %>'></span></td>
                 </tr>
                 <%bg = (i++ % 2 == 1) ? "style='background-color:#CCC;'" : "";%>
-                <tr id="ta_tax_report" style="background-color: #FFF" <%--<%= bg %>--%>>
+                <tr id="ta_tax_report" style="background-color: #CCC" <%--<%= bg %>--%>>
                     <td style='padding: 2px; text-align: left'><%:ViewBag.TACompnay%>_2: <%:ViewResources.SharedStrings.TADailyWorkingReport %></td>
                     <td style='padding: 2px; text-align: left'><%:ViewResources.SharedStrings.TaxReportExport %></td>
                     <td style='padding: 2px; text-align: right'><span class='icon icon_green_go tipsy_we' onclick='<%=string.Format("javascript:Taxreport(\"submit_edit_user\", {0}, \"{1} {2}\")", 3, Html.Encode("eesn"), Html.Encode("peren")) %>'></span></td>
@@ -544,20 +544,478 @@
                 },
                 resizable: false,
                 //width: windowWidth * 0.9,
-                width :  700,
-                height: 300,
+                width :  1000,
+                height: 700,
                 modal: true,
                 title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span> TAShifts",
-                button: {
-                    'close': function () {
+                buttons: {
+                    'Close': function () {
                         $(this).dialog("close");
                         
+                    },
+                    //"Save": function () {
+                    //    var shiftName = $("#shiftName").val();
+                    //    var shiftStartTime = $("#shiftStartTime").val();
+                    //    var shiftFinishTime = $("#shiftFinishTime").val();
+                    //    var shiftModel = {
+                    //        ShiftName: shiftName,
+                    //        ShiftStartTime: shiftStartTime,
+                    //        ShiftFinishTime: shiftFinishTime
+                    //    };
+
+                    //    $.ajax({
+                    //        type: "Post",
+                    //        url: "/TaReport/TaShiftSave",
+                    //        data: { ShiftSaveModel: shiftModel },
+                    //        dataType: "json",
+                    //        success: function () {
+
+                    //        }
+                    //    });
+                    //}
+                }
+            });
+        }
+
+        function AddNewTaShifts() {
+             $("div#AddNewtaShiftsModal").dialog({               
+                open: function () {
+                    $("div#user-modal-dialog").html();
+                    $("div#AddNewtaShiftsModal").html("<div id='TaShiftWait' style='width: 100%; height:580px; text-align:center'><span style='position:relative; top:45%' class='icon loader'></span></div>");
+                    $.ajax({
+                        type: 'GET',
+                        url: '/TAReport/AddNewTaShift',
+                        cache: false,
+                        success: function (result) {
+                            $("div#AddNewtaShiftsModal").html(result);
+                        }
+                    });
+                },
+                resizable: false,
+                //width: windowWidth * 0.9,
+                width :  900,
+                height: 500,
+                modal: true,
+                title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span> TAShifts",
+                buttons: {
+                    'Close': function () {
+                        $(this).dialog("close");
+                        
+                    },
+                    "Save": function () {
+                        debugger;
+                        var shiftName = $("#shiftName").val();
+                        var shiftStartDate = $("#startFrom").val();
+                        var shiftFinishDate = $("#finishAt").val();
+                        var breakTime = $("#breakTime").val();
+                        var lateAllowed = $("#lateAllowed").val();
+                        var breakMinuteInterval = $("#breakMinuteInterval").val();
+                        var durationOfBreakOvertime = $("#durationOfBreakOvertime").val();
+                        var presence = $("#presence").val();
+                        var overtime = $("#overtime").val();
+                        var overtimeStartEarlier = $("#overtimeStartEarlier").val();
+                        var overtimeStartLater = $("#overtimeStartLater").val();
+                        var taShiftTimeIntervalName = $("#taShiftTimeIntervalName").val();
+                        var shiftIntervalStartTime = $("#shiftIntervalStartTime").val();
+                        var shiftIntervalEndTime = $("#shiftIntervalEndTime").val();
+                        var taReportlabel = $("#taReportlabel").val();
+                        var taShiftTimeIntervalNameArray = [];
+                        $(".taShiftTimeIntervalName").each(function () {
+                            taShiftTimeIntervalNameArray.push($(this).val());
+                        });
+                        var shiftIntervalStartTimeArray = [];
+                        $(".shiftIntervalStartTime").each(function () {
+                            shiftIntervalStartTimeArray.push($(this).val());
+                        });
+                        var shiftIntervalEndTimeArray = [];
+                        $(".shiftIntervalEndTime").each(function () {
+                            shiftIntervalEndTimeArray.push($(this).val());
+                        });
+                        var TaReportLabel = [];
+                        $(".taReportlabel").each(function () {
+                            TaReportLabel.push($(this).val());
+                        });
+                        var shiftModel = {
+                            ShiftName: shiftName,
+                            ShiftStartTime: shiftStartDate,
+                            ShiftFinishTime: shiftFinishDate,
+                            DuratOfBreak: breakTime,
+                            LateAllowed: lateAllowed,
+                            BreakMinInterval: breakMinuteInterval,
+                            DuratOfBreakOvertime: durationOfBreakOvertime,
+                            BreakMinIntervalOvertime: overtime,
+                            Presence: presence,
+                            OvertimeStartLater: overtimeStartLater,
+                            OvertimeStartsEarlier: overtimeStartEarlier,
+                            TaShiftIntervalNamesList: taShiftTimeIntervalNameArray,
+                            TaShiftIntervalStartTimeList: shiftIntervalStartTimeArray,
+                            TaShiftIntervalEndTimeList: shiftIntervalEndTimeArray,
+                            TaShiftIntervalTaReportLabelsIdList: TaReportLabel
+                        };
+
+                        $.ajax({
+                            type: "Post",
+                            url: "/TaReport/TaShiftSave",
+                            data: { ShiftSaveModel: shiftModel },
+                            dataType: "json",
+                            success: function (response) {
+                                ShowDialog(response.msg, 2000, response.IsSucceed);
+                                $("div#AddNewtaShiftsModal").dialog('close');
+                                $("div#modal-dialog").dialog('close');
+                                TaShift();
+                            }
+                        });
                     }
                 }
             });
         }
 
+        function EditTaShift(shiftId) {
+            debugger;
+            var shiftName = $('#' + shiftId.toString()).val();
+            $("div#EditTaShiftModal").dialog({
+                open: function () {
+                     $("div#EditTaShiftModal").html("<div id='TaShiftWait' style='width: 100%; height:580px; text-align:center'><span style='position:relative; top:45%' class='icon loader'></span></div>");
+                    $.ajax({
+                        type: "Get",
+                        url: "/TaReport/EditTaShift",
+                        data: { ShiftId: shiftId },
+                        success: function (result) {
+                            $("div#EditTaShiftModal").html(result);
+                        }
+                    });
+                },
+                resizable:false,
+                modal: true,
+                width: 900,
+                title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span>" + shiftName,
+                height: 500,
+                buttons: {
+                    "Close": function () {
+                        $(this).dialog('close');
+                    },
+                    "Save": function () {
+                        debugger;
+                        var taShiftId = $("#taShiftId").val();
+                        var name = $("#shiftName").val();
+                        var shiftStartDate = $("#startFrom").val();
+                        var shiftFinishDate = $("#finishAt").val();
+                        var breakTime = $("#breakTime").val();
+                        var lateAllowed = $("#lateAllowed").val();
+                        var breakMinuteInterval = $("#breakMinuteInterval").val();
+                        var durationOfBreakOvertime = $("#durationOfBreakOvertime").val();
+                        var presence = $("#presence").val();
+                        var overtime = $("#overtime").val();
+                        var overtimeStartEarlier = $("#overtimeStartEarlier").val();
+                        var overtimeStartLater = $("#overtimeStartLater").val();
+
+                        var taShiftIntervalIdsArray = [];
+                        $(".shiftIntervalIds").each(function () {
+                            taShiftIntervalIdsArray.push($(this).val());
+                        });
+
+                       var taShiftTimeIntervalNameArray = [];
+                        $(".taShiftTimeIntervalName").each(function () {
+                            taShiftTimeIntervalNameArray.push($(this).val());
+                        });
+
+                        var shiftIntervalStartTimeArray = [];
+                        $(".shiftIntervalStartTime").each(function () {
+                            shiftIntervalStartTimeArray.push($(this).val());
+                        });
+
+                        var shiftIntervalEndTimeArray = [];
+                        $(".shiftIntervalEndTime").each(function () {
+                            shiftIntervalEndTimeArray.push($(this).val());
+                        });
+
+                         var TaReportLabel = [];
+                        $(".taReportlabel").each(function () {
+                            TaReportLabel.push($(this).val());
+                        });
+
+                        var shiftEditObject = {
+                            Id: taShiftId,
+                            ShiftName: name,
+                            ShiftStartTime: shiftStartDate,
+                            ShiftFinishTime: shiftFinishDate,
+                            DuratOfBreak: breakTime,
+                            LateAllowed: lateAllowed,
+                            BreakMinInterval: breakMinuteInterval,
+                            DuratOfBreakOvertime: durationOfBreakOvertime,
+                            BreakMinIntervalOvertime: overtime,
+                            Presence: presence,
+                            OvertimeStartLater: overtimeStartLater,
+                            OvertimeStartsEarlier: overtimeStartEarlier,
+                            TaShiftIntervalIdList: taShiftIntervalIdsArray,
+                            TaShiftIntervalNamesList: taShiftTimeIntervalNameArray,
+                            TaShiftIntervalStartTimeList: shiftIntervalStartTimeArray,
+                            TaShiftIntervalEndTimeList: shiftIntervalEndTimeArray,
+                            TaShiftIntervalTaReportLabelsIdList: TaReportLabel
+                        };
+
+                        $.ajax({
+                            type: "Post",
+                            url: "/TaReport/EditTaShiftSave",
+                            data: { TaShiftEditSave: shiftEditObject },
+                            dataType: "json",
+                            success: function (response) {
+                                ShowDialog(response.msg, 2000, response.IsSucceed);
+                                $("div#EditTaShiftModal").dialog('close');
+                                $("div#modal-dialog").dialog('close');
+                                TaShift();
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        
+
+       function openTaWeekShiftsDialog() {
+            debugger;
+             $("div#TaWeekShiftDialog").dialog({               
+                open: function () {
+                    $("div#user-modal-dialog").html();
+                    $("div#TaWeekShiftDialog").html("<div id='TaWeekShiftWait' style='width: 100%; height:580px; text-align:center'><span style='position:relative; top:45%' class='icon loader'></span></div>");
+                    $.ajax({
+                        type: 'GET',
+                        url: '/TAReport/TaWeekShifts',
+                        cache: false,
+                        success: function (result) {
+                            $("div#TaWeekShiftDialog").html(result);
+                        }
+                    });
+                    
+
+                },
+                resizable: false,
+                //width: windowWidth * 0.9,
+                width :  700,
+                height: 300,
+                modal: true,
+                title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span> TAWeekShifts",
+                buttons: {
+                    'close': function () {
+                        $(this).dialog("close");
+                        
+                    },
+                    'Save': function () {
+                        debugger;
+                        var name = $("#weekShiftName").val();
+                        var mondayValue = $("#MondayDropdownId").val();
+                        var tuesdayValue = $("#TuesdayDropdownId").val();
+                        var wednesdayValue = $("#WednesdayDropdownId").val();
+                        var thursdayValue = $("#ThursdayDropdownId").val();
+                        var fridayValue = $("#FridayDropdownId").val();
+                        var saturdayValue = $("#SaturdayDropdownId").val();
+                        var sundayValue = $("#SundayDropdownId").val();
+                        var jsonWeekShift = {
+                            Name: name,
+                            MondayShift: mondayValue,
+                            TuesdayShift: tuesdayValue,
+                            WednesdayShift: wednesdayValue,
+                            ThursdayShift: thursdayValue,
+                            FridayShift: fridayValue,
+                            SaturdayShift: saturdayValue,
+                            SundayShift:sundayValue
+                        };
+                        $.ajax({
+                            type: "Post",
+                            url: "/TaReport/AddTaWeekShift",
+                            dataType: "json",
+                            data: { weekShiftModel: jsonWeekShift },
+                            success: function (result) {
+                                if (result.IsSaved) {
+                                    ShowDialog(result.msg, 2000, true);
+                                    $("div#TaWeekShiftDialog").dialog('close');
+                                    $("div#TaUserGroupShiftDialog").dialog('close');
+                                  
+                                }
+                                else {
+                                    ShowDialog(result.msg, 2000, false);
+                                   
+                                }
+                               
+                            }
+                        });
+                    }
+                }
+           });
+            
+    }
+
+        //To Test
+
+            function EditTaUserGroupShift(taUserGroupid) {
+        
+        debugger;
+         var taUserGroupShiftName = $('#' + taUserGroupid.toString()).val();
+        $("div#TaUserGroupShiftDialog").dialog({
+            modal: true,
+            open: function () {
+               // $("div#TaUserGroupShiftDialog").html("<div id='AreaUserEditWait' style='width: 100%; height:580px; text-align:center'><span style='position:relative; top:45%' class='icon loader'></span></div>");
+                $.ajax({
+                    type: "Get",
+                    data: { TaUserGroupId: taUserGroupid },
+                    url: "/TAReport/EditTaUserGroupShift",
+                    success: function (result) {
+                        $("div#TaUserGroupShiftDialog").html(result);
+                    }
+                });
+                    
+            },
+            resizable: true,
+            title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span>" +taUserGroupShiftName ,
+            width: 1230,
+            height: 900,
+            buttons: {
+                "Close": function () {
+
+                },
+                "Save": function () {
+
+                }
+            }
+            
+        });
+    }
+
+    function AddGroupShiftsToUsers(taGroupUserShiftsId) {
+        debugger;
+        var taUserGroupShiftName = $('#' + taGroupUserShiftsId.toString()).val();
+        $("#AddTaUserGroupShiftsToUserDialog").dialog({
+            open: function () {
+                $.ajax({
+                    type: "Get",
+                    url: "/TaReport/AssignTaUserGroupShiftToUsers",
+                    data: { GroupShiftId: taGroupUserShiftsId },
+                    success: function (result) {
+                        $("#AddTaUserGroupShiftsToUserDialog").html(result);
+                    }
+
+                });
+            },
+            modal: true,
+            resizable: false,
+            height: 800,
+            title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span>" +taUserGroupShiftName ,
+            width: 1230,
+            buttons: {
+                "Save": function () {
+                    debugger;
+                    $("#startDateErrorMessage").css("display", "none");
+                    $("#endDateErrorMessage").css("display", "none");
+                    var taUserGroupShiftId = $("#TaUsersGroupShiftId").val();
+                    var startDate = $("#startDate").val();
+                    var endDate = $("#endDate").val();
+                    var selectedUsersId = [];
+                    $(".users").each(function () {
+                        if ($(this).is(":checked")) {
+                            selectedUsersId.push($(this).val());
+                        }
+                    });
+                    var selectedUsersTA = [];
+                    $(".isTA").each(function () {
+                        if ($(this).is(":checked")) {
+                             selectedUsersTA.push($(this).val());
+                        } 
+                    });
+                    var model = {
+                        TaUserGroupShiftId: taUserGroupShiftId,
+                        StartDate: startDate,
+                        EndDate: endDate,
+                        SelectedUsersId: selectedUsersId,
+                        SelectedUsersIsTA: selectedUsersTA
+                    };
+                    if (startDate.length > 0 && endDate.length > 0) {
+                        $.ajax({
+                            type: "Post",
+                            url: "/TaReport/AssignTaUserGroupShiftToUsersSave",
+                            data: model,
+                            dataType: "json",
+                            success: function () {
+
+                            }
+                        });
+                    }
+                    else if (startDate.length > 0 && endDate.length == 0) {
+                        $("#endDateErrorMessage").css("display", "inline");
+                    }
+                    else if (startDate.length == 0  && endDate.length > 0) {
+                        $("#startDateErrorMessage").css("display", "inline");
+                    }
+                    else if (startDate.length == 0 && endDate.length == 0) {
+                        $("#startDateErrorMessage").css("display", "inline");
+                        $("#endDateErrorMessage").css("display", "inline");
+                    }
+                },
+                "Close": function () {
+                    $(this).dialog('close');
+                }
+            }
+
+        });
+    }
+
+    function AddNewTaUserGroupShifts() {
+        $("#AddTaUserGroupShiftsDialog").dialog({
+            modal:true,
+            open: function () {
+                $.ajax({
+                    type: "Get",
+                    url: "/TaReport/AddTaUserGroupShifts",
+                    success: function (result) {
+                        $("#AddTaUserGroupShiftsDialog").html(result);
+                    }
+                });
+            },
+            resizable: false,
+            width: 1100,
+            height: 700,
+            title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span> Add new TaUser group shift ",
+            buttons: {
+                "Save": function () {
+                    debugger;
+                    var taGroupShiftName = $("#taUserGroupShiftName").val();
+                    var repeatWeeks = $("#repeatCycle").val();
+                    var selectedTaWeeks = [];
+                    var toCheck = [];
+                    $(".dynamicSelectedValue").each(function () {
+                        selectedTaWeeks.push($(this).val());
+                    });
+                    var taUserGroupShiftStartDate = $("#taUserGroupShiftStartDate").val();
+                    var taNewUserGroupShiftsModel = {
+                        Name: taGroupShiftName,
+                        RepeatAfterWeeks: repeatWeeks,
+                        SelectedTaWeeks: selectedTaWeeks,
+                        StartFromDate: taUserGroupShiftStartDate
+                    };
+                    $.ajax({
+                        type: "Post",
+                        url: "/TaReport/SaveNewTaUserGroupShift",
+                        dataType: "json",
+                        data: { TaUserGroupShiftSaveModel: taNewUserGroupShiftsModel },
+                        success: function (response) {
+                            debugger;
+                            ShowDialog(response.msg, 2000, response.IsSucceed);
+                            $("div#AddTaUserGroupShiftsDialog").dialog('close');
+                            $("div#modal-dialog").dialog('close');
+                            TaGroupShifts();
+                            
+                        }
+                    });
+                },
+                "Cancel": function () {
+                    $(this).dialog('close');
+                }
+            }
+        });
+    }
+        //
         function TaWeekShifts() {
+            debugger;
             $("div#modal-dialog").dialog({               
                 open: function () {
                     $("div#user-modal-dialog").html();
@@ -570,6 +1028,8 @@
                             $("div#modal-dialog").html(result);
                         }
                     });
+                    
+
                 },
                 resizable: false,
                 //width: windowWidth * 0.9,
@@ -577,10 +1037,29 @@
                 height: 300,
                 modal: true,
                 title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span> TAWeekShifts",
-                button: {
+                buttons: {
                     'close': function () {
                         $(this).dialog("close");
                         
+                    },
+                    'Save': function () {
+                        debugger;
+                        var mondayValue = $("#MondayDropdownId").val();
+                        var tuesdayValue = $("#TuesdayDropdownId").val();
+                        var wednesdayValue = $("#WednesdayDropdownId").val();
+                        var thursdayValue = $("#ThursdayDropdownId").val();
+                        var fridayValue = $("#FridayDropdownId").val();
+                        var saturdayValue = $("#SaturdayDropdownId").val();
+                        var sundayValue = $("#SundayDropdownId").val();
+                        var jsonWeekShift = {
+                            mondayValue: mondayValue,
+                            tuesdayValue: tuesdayValue,
+                            wednesdayValue: wednesdayValue,
+                            thursdayValue: thursdayValue,
+                            fridayValue: fridayValue,
+                            saturdayValue: saturdayValue,
+                            sundayValue:sundayValue
+                        };
                     }
                 }
             });
@@ -595,7 +1074,7 @@
                     $("div#modal-dialog").html("<div id='TaGroupShiftWait' style='width: 100%; height:580px; text-align:center'><span style='position:relative; top:45%' class='icon loader'></span></div>");
                     $.ajax({
                         type: 'GET',
-                        url: '/TAReport/TaGroupShifts',
+                        url: '/TAReport/TaUserGroupShiftList',
                         cache: false,
                         success: function (result) {
                             $("div#modal-dialog").html(result);
@@ -605,11 +1084,11 @@
                 resizable: false,
                 width: windowWidth * 0.5,
                 //width :  700,
-                height: 800,
+                height: 500,
                 modal: true,
                 title: "<span class='ui-icon ui-icon-home' style='float:left; margin:1px 5px 0 0'></span> TAGroupShifts",
-                button: {
-                    'close': function () {
+                buttons: {
+                    'Close': function () {
                         $(this).dialog("close");
                         
                     }

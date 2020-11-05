@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace FoxSec.Web.ViewModels
 {
@@ -16,6 +17,7 @@ namespace FoxSec.Web.ViewModels
         public int? SaturdayShift { get; set; }
         public int? SundayShift { get; set; }
         public IEnumerable<TAShifts> TaShiftsModelsList { get; set; }
+        public IEnumerable<SelectListItem> DropDownItems { get; set; }
        
     }
 }

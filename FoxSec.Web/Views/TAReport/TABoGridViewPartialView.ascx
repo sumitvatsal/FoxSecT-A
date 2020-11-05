@@ -14,6 +14,7 @@
             settings.SettingsEditing.BatchEditSettings.StartEditAction = GridViewBatchStartEditAction.Click;
             settings.SettingsEditing.BatchEditSettings.ShowConfirmOnLosingChanges = true;
             settings.SettingsEditing.ShowModelErrorsForEditors = true;
+            
 
             //settings.CommandColumn.Visible = true;
             //settings.CommandColumn.ShowNewButtonInHeader = true;

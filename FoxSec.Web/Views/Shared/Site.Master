@@ -22,7 +22,11 @@
     <link rel="Stylesheet" href="../../Content/css/select2.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"/>
     <link rel="Stylesheet" href="../../css/dx.common.css" />
-    <link rel="Stylesheet" href="../../css/dx.dark.css" />
+    <%--<link rel="Stylesheet" href="../../css/dx.dark.css" />--%>
+    <link rel="Stylesheet" href="../../Content/dx.light.css" />
+   
+    <link rel="Stylesheet" href="../../Content/fontawesome/font-awesome.min.css" />
+    <link rel="Stylesheet" href="../../Content/fontawesome/fontawesome.min.css" />
     <style type="text/css">
         div {
             font-family: 'Trebuchet MS', Verdana, Arial, sans-serif;
@@ -71,7 +75,6 @@
           //new Script { ExtensionSuite = ExtensionSuite.SpellChecker }
           ); %>
 
-
     <script type="text/javascript" src="../../Scripts/jquery.tipsy.js"></script>
     <script type="text/javascript" src="../../Scripts/jquery.filestyle1.js"></script>
     <!--isiku pildi laadimisel error uute skriptidega ei sobi mujal ei kasutata -->
@@ -100,6 +103,12 @@
         <div id="user-modal-dialog" style="display: none; width: 1px;"></div>
         <div id="delete-modal-dialog" style="display: none; width: 1px;"></div>
         <div id="user-logon-modal-dialog" style="display: none; width: 1px;"></div>
+        <div id="TaUserGroupShiftDialog" style="display: none; width: 1px;"></div>
+        <div id="TaWeekShiftDialog" style="display: none; width: 1px;"></div>
+        <div id="AddTaUserGroupShiftsToUserDialog" style="display: none; width: 1px;"></div>
+        <div id="AddTaUserGroupShiftsDialog" style="display: none; width: 1px;"></div>
+        <div id="AddNewtaShiftsModal" style="display: none; width: 1px;"></div>
+        <div id="EditTaShiftModal" style="display: none; width: 1px;"></div>
 
         <table style="margin: 0; width: 100%; padding: 0; border-spacing: 0; border: none;">
             <tr>
@@ -149,7 +158,7 @@
             }
         }));
 
-        //$(function () { $(this).bind("contextmenu", function (e) { e.preventDefault(); }); });
+        $(function () { $(this).bind("contextmenu", function (e) { e.preventDefault(); }); });
 
         $(document).ready(function () {
 

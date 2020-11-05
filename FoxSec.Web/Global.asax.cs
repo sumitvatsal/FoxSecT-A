@@ -27,6 +27,7 @@ using System.Configuration;
 using System.Net;
 using FoxSec_Web;
 using System.Web.Optimization;
+using FoxSec.Web.App_Start;
 
 namespace FoxSec.Web
 {
@@ -146,6 +147,7 @@ namespace FoxSec.Web
         protected void Application_Start()
         {
             DevExtremeBundleConfig.RegisterBundles(BundleTable.Bundles);
+            FontAwesomeBundleConfig.RegisterBundles();
             OnStart();
             //illi 25.12.1012   Logger4SendingEMail.InitLogger();
             //IoC.Resolve<ICurrentLanguage>().Set("EN");

@@ -7928,29 +7928,296 @@ namespace FoxSec.Web.Controllers
 
             }
 
+        //[HttpGet]
+        //public ActionResult TaGroupShifts()
+        //{
+        //    var taUserGroupShifts = db.TaUserGroupeShifts.ToList();
+        //    TaShiftsModel taShiftsModelList = new TaShiftsModel();
+        //    var schedulerData = new List<SchedulerData>();
+        //    schedulerData.Add(new SchedulerData { text = "Ranjan", startDate = new DateTime(2020,10,04,9,30,00).ToString(), endDate = "2020-10-04T12:30:00.000" });
+        //    schedulerData.Add(new SchedulerData { text = "Ranjan2", startDate = "2020-10-05T08:30:00.000", endDate = "2020-10-05T10:30:00.000" });
+        //    schedulerData.Add(new SchedulerData { text = "Ranjan3", startDate = "2020-10-05T10:30:00.000", endDate = "2020-10-05T12:30:00.000" });
+        //    schedulerData.Add(new SchedulerData { text = "Ranjan4", startDate = "2020-10-05T05:30:00.000", endDate = "2020-10-05T06:30:00.000" });
+        //    List<SelectListItem> repeatWeeks = new List<SelectListItem>()
+        //    {
+        //       new SelectListItem {Text ="1" , Value ="1"},
+        //       new SelectListItem {Text ="2" , Value ="2"},
+        //       new SelectListItem {Text ="3" , Value ="3"},
+        //       new SelectListItem {Text ="4" , Value ="4"},
+        //       new SelectListItem {Text ="5" , Value ="5"},
+        //       new SelectListItem {Text ="6" , Value ="6"},
+        //       new SelectListItem {Text ="7" , Value ="7"}
+        //    };
+        //    taShiftsModelList.schedulerData = schedulerData;
+        //    taShiftsModelList.repeatWeeksList = repeatWeeks;
+        //    return PartialView(taShiftsModelList);
+        //}
+
         [HttpGet]
-        public ActionResult TaGroupShifts()
+        public ActionResult TaUserGroupShiftList()
         {
-            TaShiftsModel taShiftsModelList = new TaShiftsModel();
-            var schedulerData = new List<SchedulerData>();
-            schedulerData.Add(new SchedulerData { text = "Ranjan", startDate = "2020-10-05T06:30:00.000", endDate = "2020-10-05T08:30:00.000" });
-            schedulerData.Add(new SchedulerData { text = "Ranjan2", startDate = "2020-10-05T08:30:00.000", endDate = "2020-10-05T10:30:00.000" });
-            schedulerData.Add(new SchedulerData { text = "Ranjan3", startDate = "2020-10-05T10:30:00.000", endDate = "2020-10-05T12:30:00.000" });
-            schedulerData.Add(new SchedulerData { text = "Ranjan4", startDate = "2020-10-05T05:30:00.000", endDate = "2020-10-05T06:30:00.000" });
-            List<SelectListItem> repeatWeeks = new List<SelectListItem>()
+            var taUserGroupShifts = db.TaUserGroupeShifts.Include("TaWeekShifts").ToList();
+            List <TaUserGroupShifts> userGroupShifts = new List<TaUserGroupShifts>();
+
+            foreach(var userGroupShift in taUserGroupShifts)
             {
-               new SelectListItem {Text ="1" , Value ="1"},
-               new SelectListItem {Text ="2" , Value ="2"},
-               new SelectListItem {Text ="3" , Value ="3"},
-               new SelectListItem {Text ="4" , Value ="4"},
-               new SelectListItem {Text ="5" , Value ="5"},
-               new SelectListItem {Text ="6" , Value ="6"},
-               new SelectListItem {Text ="7" , Value ="7"}
-            };
-            taShiftsModelList.schedulerData = schedulerData;
-            taShiftsModelList.repeatWeeksList = repeatWeeks;
-            return PartialView(taShiftsModelList);
+                userGroupShifts.Add(new TaUserGroupShifts { Id = userGroupShift.Id, Name = userGroupShift.Name, RepeatAfterWeeks = userGroupShift.RepeatAfterWeeks });
+            }
+            return PartialView("TaGroupShiftsList", userGroupShifts.AsEnumerable());
         }
+
+        [HttpGet]
+        public ActionResult EditTaUserGroupShift(int TaUserGroupId)
+        {
+            var taUserGroupShift = db.TaUserGroupeShifts.Where(x => x.Id == TaUserGroupId).Include("TaWeekShifts").Include("TaWeekShifts.TAShifts1.TaShiftTimeIntervals").Include("TaWeekShifts.TAShifts2.TaShiftTimeIntervals").Include("TaWeekShifts.TAShifts3.TaShiftTimeIntervals").Include("TaWeekShifts.TAShifts4.TaShiftTimeIntervals").Include("TaWeekShifts.TAShifts5.TaShiftTimeIntervals").Include("TaWeekShifts.TAShifts6.TaShiftTimeIntervals").Include("TaWeekShifts.TAShifts7.TaShiftTimeIntervals").FirstOrDefault();
+            //var taWeekShifts = db.TaWeekShifts.Where(x => x.TaUserGroupeShiftsId == TaUserGroupId).Include("TaShifts1").ToList();
+            var taWeekShifts = db.TaWeekShifts.Where(x => x.TaUserGroupeShiftsId == TaUserGroupId).Include("TaShifts1").ToList();
+            var allTaWeekShifts = db.TaWeekShifts.Include("TaShifts1").ToList();
+            TaUserGroupShifts taUserGroup = new TaUserGroupShifts {Id = taUserGroupShift.Id,Name= taUserGroupShift.Name,RepeatAfterWeeks=taUserGroupShift.RepeatAfterWeeks,TaWeekShifts=taWeekShifts.ToList(),AllTaWeekShifts = allTaWeekShifts };
+            List<ShiftSchedulerDisplay> shiftSchedulerDisplay = new List<ShiftSchedulerDisplay>();
+            var dateNow = DateTime.Now.Date;
+            var dayOfWeek = dateNow.DayOfWeek;
+            var day = dateNow.Day;
+            var datetime = DateTime.Now.StartOfWeek(DayOfWeek.Monday);
+            var dateMonday = datetime.Date;
+            DateTime startTimeForDisplay;
+            DateTime endTimeForDisplay;
+
+            DateTime startTimeForDisplay1;
+            DateTime endTimeForDisplay1;
+            double addCount = 0;
+            
+            foreach (var item in taUserGroup.TaWeekShifts)
+            {
+                dateMonday = dateMonday.AddDays(addCount);
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.StartFrom.Value.Hour, item.TAShifts1.StartFrom.Value.Minute, item.TAShifts1.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.FinishAt.Value.Hour, item.TAShifts1.FinishAt.Value.Minute, item.TAShifts1.FinishAt.Value.Second);
+
+                //
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.StartFrom.Value.Hour, item.TAShifts1.StartFrom.Value.Minute, item.TAShifts1.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.FinishAt.Value.Hour, item.TAShifts1.FinishAt.Value.Minute, item.TAShifts1.FinishAt.Value.Second);
+                if(item.TAShifts1 != null)
+                {
+                    startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.TaShiftTimeIntervals.First().StartTime.Hours, item.TAShifts1.TaShiftTimeIntervals.First().StartTime.Minutes, item.TAShifts1.TaShiftTimeIntervals.First().StartTime.Seconds);
+                    endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.TaShiftTimeIntervals.Last().EndTime.Hours, item.TAShifts1.TaShiftTimeIntervals.Last().EndTime.Minutes, item.TAShifts1.TaShiftTimeIntervals.Last().EndTime.Seconds);
+
+                    ////For BreakTimes
+                    //startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.TaShiftTimeIntervals.ElementAt(1).StartTime.Hours, item.TAShifts1.TaShiftTimeIntervals.ElementAt(1).StartTime.Minutes, item.TAShifts1.TaShiftTimeIntervals.ElementAt(1).StartTime.Seconds);
+                    //endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.TaShiftTimeIntervals.ElementAt(1).EndTime.Hours, item.TAShifts1.TaShiftTimeIntervals.ElementAt(1).EndTime.Minutes, item.TAShifts1.TaShiftTimeIntervals.ElementAt(1).EndTime.Seconds);
+                    ////
+
+                    shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts1.Name, StartDate = startTimeForDisplay, EndDate = item.TAShifts1.StartFrom.Value.Hour > item.TAShifts1.FinishAt.Value.Hour ? endTimeForDisplay.AddDays(1) : endTimeForDisplay });
+                    for(int i =0;i < item.TAShifts1.TaShiftTimeIntervals.Count; i++)
+                    {
+                        if(i != 0 && i != item.TAShifts1.TaShiftTimeIntervals.Count - 1)
+                        {
+                            //For BreakTimes
+                            startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.TaShiftTimeIntervals.ElementAt(i).StartTime.Hours, item.TAShifts1.TaShiftTimeIntervals.ElementAt(i).StartTime.Minutes, item.TAShifts1.TaShiftTimeIntervals.ElementAt(i).StartTime.Seconds);
+                            endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts1.TaShiftTimeIntervals.ElementAt(i).EndTime.Hours, item.TAShifts1.TaShiftTimeIntervals.ElementAt(i).EndTime.Minutes, item.TAShifts1.TaShiftTimeIntervals.ElementAt(i).EndTime.Seconds);
+                            //
+                            shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts1.TaShiftTimeIntervals.ElementAt(i).Name, StartDate = item.TAShifts1.StartFrom.Value.Hour > item.TAShifts1.FinishAt.Value.Hour ? startTimeForDisplay1.AddDays(1) : startTimeForDisplay1, EndDate = item.TAShifts1.StartFrom.Value.Hour > item.TAShifts1.FinishAt.Value.Hour ? endTimeForDisplay1.AddDays(1) : endTimeForDisplay1 });
+                        }
+                        
+                    }
+                    
+                }
+                
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.StartFrom.Value.Hour, item.TAShifts2.StartFrom.Value.Minute, item.TAShifts2.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.FinishAt.Value.Hour, item.TAShifts2.FinishAt.Value.Minute, item.TAShifts2.FinishAt.Value.Second);
+                if(item.TAShifts2 != null)
+                {
+                    startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.TaShiftTimeIntervals.First().StartTime.Hours, item.TAShifts2.TaShiftTimeIntervals.First().StartTime.Minutes, item.TAShifts2.TaShiftTimeIntervals.First().StartTime.Seconds);
+                    endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.TaShiftTimeIntervals.Last().EndTime.Hours, item.TAShifts2.TaShiftTimeIntervals.Last().EndTime.Minutes, item.TAShifts2.TaShiftTimeIntervals.Last().EndTime.Seconds);
+
+                    ////For BreakTimes
+                    //startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.TaShiftTimeIntervals.ElementAt(1).StartTime.Hours, item.TAShifts2.TaShiftTimeIntervals.ElementAt(1).StartTime.Minutes, item.TAShifts2.TaShiftTimeIntervals.ElementAt(1).StartTime.Seconds);
+                    //endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.TaShiftTimeIntervals.ElementAt(1).EndTime.Hours, item.TAShifts2.TaShiftTimeIntervals.ElementAt(1).EndTime.Minutes, item.TAShifts2.TaShiftTimeIntervals.ElementAt(1).EndTime.Seconds);
+                    ////
+                    shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts2.Name, StartDate = startTimeForDisplay.AddDays(1), EndDate = item.TAShifts2.StartFrom.Value.Hour > item.TAShifts2.FinishAt.Value.Hour ? endTimeForDisplay.AddDays(2) : endTimeForDisplay.AddDays(1) });
+                    for (int i = 0; i < item.TAShifts2.TaShiftTimeIntervals.Count; i++)
+                    {
+                        if (i != 0 && i != item.TAShifts2.TaShiftTimeIntervals.Count - 1)
+                        {
+                            //For BreakTimes
+                            startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.TaShiftTimeIntervals.ElementAt(i).StartTime.Hours, item.TAShifts2.TaShiftTimeIntervals.ElementAt(i).StartTime.Minutes, item.TAShifts2.TaShiftTimeIntervals.ElementAt(i).StartTime.Seconds);
+                            endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts2.TaShiftTimeIntervals.ElementAt(i).EndTime.Hours, item.TAShifts2.TaShiftTimeIntervals.ElementAt(i).EndTime.Minutes, item.TAShifts2.TaShiftTimeIntervals.ElementAt(i).EndTime.Seconds);
+                            //
+                            shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts2.TaShiftTimeIntervals.ElementAt(i).Name, StartDate = item.TAShifts2.StartFrom.Value.Hour > item.TAShifts2.FinishAt.Value.Hour ? startTimeForDisplay1.AddDays(2) : startTimeForDisplay1.AddDays(1), EndDate = item.TAShifts2.StartFrom.Value.Hour > item.TAShifts2.FinishAt.Value.Hour ? endTimeForDisplay1.AddDays(2) : endTimeForDisplay1.AddDays(1) });
+                        }
+                    }
+                }
+                
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.StartFrom.Value.Hour, item.TAShifts3.StartFrom.Value.Minute, item.TAShifts3.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.FinishAt.Value.Hour, item.TAShifts3.FinishAt.Value.Minute, item.TAShifts3.FinishAt.Value.Second);
+                if(item.TAShifts3 != null)
+                {
+                    startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.TaShiftTimeIntervals.First().StartTime.Hours, item.TAShifts3.TaShiftTimeIntervals.First().StartTime.Minutes, item.TAShifts3.TaShiftTimeIntervals.First().StartTime.Seconds);
+                    endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.TaShiftTimeIntervals.Last().EndTime.Hours, item.TAShifts3.TaShiftTimeIntervals.Last().EndTime.Minutes, item.TAShifts3.TaShiftTimeIntervals.Last().EndTime.Seconds);
+
+                    ////For BreakTimes
+                    //startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.TaShiftTimeIntervals.ElementAt(1).StartTime.Hours, item.TAShifts3.TaShiftTimeIntervals.ElementAt(1).StartTime.Minutes, item.TAShifts3.TaShiftTimeIntervals.ElementAt(1).StartTime.Seconds);
+                    //endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.TaShiftTimeIntervals.ElementAt(1).EndTime.Hours, item.TAShifts3.TaShiftTimeIntervals.ElementAt(1).EndTime.Minutes, item.TAShifts3.TaShiftTimeIntervals.ElementAt(1).EndTime.Seconds);
+                    ////
+
+                    shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts3.Name, StartDate = startTimeForDisplay.AddDays(2), EndDate = item.TAShifts3.StartFrom.Value.Hour > item.TAShifts3.FinishAt.Value.Hour ? endTimeForDisplay.AddDays(3) : endTimeForDisplay.AddDays(2) });
+                    for (int i = 0; i < item.TAShifts3.TaShiftTimeIntervals.Count; i++)
+                    {
+                        if (i != 0 && i != item.TAShifts3.TaShiftTimeIntervals.Count - 1)
+                        {
+                            //For BreakTimes
+                            startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.TaShiftTimeIntervals.ElementAt(i).StartTime.Hours, item.TAShifts3.TaShiftTimeIntervals.ElementAt(i).StartTime.Minutes, item.TAShifts3.TaShiftTimeIntervals.ElementAt(i).StartTime.Seconds);
+                            endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts3.TaShiftTimeIntervals.ElementAt(i).EndTime.Hours, item.TAShifts3.TaShiftTimeIntervals.ElementAt(i).EndTime.Minutes, item.TAShifts3.TaShiftTimeIntervals.ElementAt(i).EndTime.Seconds);
+                            //
+                            shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts3.TaShiftTimeIntervals.ElementAt(i).Name, StartDate = item.TAShifts3.StartFrom.Value.Hour > item.TAShifts3.FinishAt.Value.Hour ? startTimeForDisplay1.AddDays(3) : startTimeForDisplay1.AddDays(2), EndDate = item.TAShifts3.StartFrom.Value.Hour > item.TAShifts3.FinishAt.Value.Hour ? endTimeForDisplay1.AddDays(3) : endTimeForDisplay1.AddDays(2) });
+                        }
+                    }
+                }
+                
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.StartFrom.Value.Hour, item.TAShifts4.StartFrom.Value.Minute, item.TAShifts4.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.FinishAt.Value.Hour, item.TAShifts4.FinishAt.Value.Minute, item.TAShifts4.FinishAt.Value.Second);
+                if(item.TAShifts4 != null)
+                {
+                    startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.TaShiftTimeIntervals.First().StartTime.Hours, item.TAShifts4.TaShiftTimeIntervals.First().StartTime.Minutes, item.TAShifts4.TaShiftTimeIntervals.First().StartTime.Seconds);
+                    endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.TaShiftTimeIntervals.Last().EndTime.Hours, item.TAShifts4.TaShiftTimeIntervals.Last().EndTime.Minutes, item.TAShifts4.TaShiftTimeIntervals.Last().EndTime.Seconds);
+
+                    ////For BreakTimes
+                    //startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.TaShiftTimeIntervals.ElementAt(1).StartTime.Hours, item.TAShifts4.TaShiftTimeIntervals.ElementAt(1).StartTime.Minutes, item.TAShifts4.TaShiftTimeIntervals.ElementAt(1).StartTime.Seconds);
+                    //endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.TaShiftTimeIntervals.ElementAt(1).EndTime.Hours, item.TAShifts4.TaShiftTimeIntervals.ElementAt(1).EndTime.Minutes, item.TAShifts4.TaShiftTimeIntervals.ElementAt(1).EndTime.Seconds);
+                    ////
+
+                    shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts4.Name, StartDate = startTimeForDisplay.AddDays(3), EndDate = item.TAShifts4.StartFrom.Value.Hour > item.TAShifts4.FinishAt.Value.Hour ? endTimeForDisplay.AddDays(4) : endTimeForDisplay.AddDays(3) });
+                    for (int i = 0; i < item.TAShifts4.TaShiftTimeIntervals.Count; i++)
+                    {
+                        if (i != 0 && i != item.TAShifts4.TaShiftTimeIntervals.Count - 1)
+                        {
+                            //For BreakTimes
+                            startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.TaShiftTimeIntervals.ElementAt(i).StartTime.Hours, item.TAShifts4.TaShiftTimeIntervals.ElementAt(i).StartTime.Minutes, item.TAShifts4.TaShiftTimeIntervals.ElementAt(i).StartTime.Seconds);
+                            endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts4.TaShiftTimeIntervals.ElementAt(i).EndTime.Hours, item.TAShifts4.TaShiftTimeIntervals.ElementAt(i).EndTime.Minutes, item.TAShifts4.TaShiftTimeIntervals.ElementAt(i).EndTime.Seconds);
+                            //
+                            shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts4.TaShiftTimeIntervals.ElementAt(i).Name, StartDate = item.TAShifts4.StartFrom.Value.Hour > item.TAShifts4.FinishAt.Value.Hour ? startTimeForDisplay1.AddDays(4) : startTimeForDisplay1.AddDays(3), EndDate = item.TAShifts4.StartFrom.Value.Hour > item.TAShifts4.FinishAt.Value.Hour ? endTimeForDisplay1.AddDays(4) : endTimeForDisplay1.AddDays(3) });
+                        }
+                    }
+                }
+                
+
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.StartFrom.Value.Hour, item.TAShifts5.StartFrom.Value.Minute, item.TAShifts5.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.FinishAt.Value.Hour, item.TAShifts5.FinishAt.Value.Minute, item.TAShifts5.FinishAt.Value.Second);
+                if(item.TAShifts5 != null)
+                {
+                    startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.TaShiftTimeIntervals.First().StartTime.Hours, item.TAShifts5.TaShiftTimeIntervals.First().StartTime.Minutes, item.TAShifts5.TaShiftTimeIntervals.First().StartTime.Seconds);
+                    endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.TaShiftTimeIntervals.Last().EndTime.Hours, item.TAShifts5.TaShiftTimeIntervals.Last().EndTime.Minutes, item.TAShifts5.TaShiftTimeIntervals.Last().EndTime.Seconds);
+
+                    ////For BreakTimes
+                    //startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.TaShiftTimeIntervals.ElementAt(1).StartTime.Hours, item.TAShifts5.TaShiftTimeIntervals.ElementAt(1).StartTime.Minutes, item.TAShifts5.TaShiftTimeIntervals.ElementAt(1).StartTime.Seconds);
+                    //endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.TaShiftTimeIntervals.ElementAt(1).EndTime.Hours, item.TAShifts5.TaShiftTimeIntervals.ElementAt(1).EndTime.Minutes, item.TAShifts5.TaShiftTimeIntervals.ElementAt(1).EndTime.Seconds);
+                    ////
+
+                    shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts5.Name, StartDate = startTimeForDisplay.AddDays(4), EndDate = item.TAShifts5.StartFrom.Value.Hour > item.TAShifts5.FinishAt.Value.Hour ? endTimeForDisplay.AddDays(5) : endTimeForDisplay.AddDays(4) });
+                    for (int i = 0; i < item.TAShifts5.TaShiftTimeIntervals.Count; i++)
+                    {
+                        if (i != 0 && i != item.TAShifts5.TaShiftTimeIntervals.Count - 1)
+                        {
+                            //For BreakTimes
+                            startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.TaShiftTimeIntervals.ElementAt(i).StartTime.Hours, item.TAShifts5.TaShiftTimeIntervals.ElementAt(i).StartTime.Minutes, item.TAShifts5.TaShiftTimeIntervals.ElementAt(i).StartTime.Seconds);
+                            endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts5.TaShiftTimeIntervals.ElementAt(i).EndTime.Hours, item.TAShifts5.TaShiftTimeIntervals.ElementAt(i).EndTime.Minutes, item.TAShifts5.TaShiftTimeIntervals.ElementAt(i).EndTime.Seconds);
+                            //
+                            shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts5.TaShiftTimeIntervals.ElementAt(i).Name, StartDate = item.TAShifts5.StartFrom.Value.Hour > item.TAShifts5.FinishAt.Value.Hour ? startTimeForDisplay1.AddDays(5) : startTimeForDisplay1.AddDays(4), EndDate = item.TAShifts5.StartFrom.Value.Hour > item.TAShifts5.FinishAt.Value.Hour ? endTimeForDisplay1.AddDays(5) : endTimeForDisplay1.AddDays(4) });
+                        }
+                    }
+                }
+                
+
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.StartFrom.Value.Hour, item.TAShifts6.StartFrom.Value.Minute, item.TAShifts6.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.FinishAt.Value.Hour, item.TAShifts6.FinishAt.Value.Minute, item.TAShifts6.FinishAt.Value.Second);
+                if(item.TAShifts6 != null)
+                {
+                    startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.TaShiftTimeIntervals.First().StartTime.Hours, item.TAShifts6.TaShiftTimeIntervals.First().StartTime.Minutes, item.TAShifts6.TaShiftTimeIntervals.First().StartTime.Seconds);
+                    endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.TaShiftTimeIntervals.Last().EndTime.Hours, item.TAShifts6.TaShiftTimeIntervals.Last().EndTime.Minutes, item.TAShifts6.TaShiftTimeIntervals.Last().EndTime.Seconds);
+
+                    ////For BreakTimes
+                    //startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.TaShiftTimeIntervals.ElementAt(1).StartTime.Hours, item.TAShifts6.TaShiftTimeIntervals.ElementAt(1).StartTime.Minutes, item.TAShifts6.TaShiftTimeIntervals.ElementAt(1).StartTime.Seconds);
+                    //endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.TaShiftTimeIntervals.ElementAt(1).EndTime.Hours, item.TAShifts6.TaShiftTimeIntervals.ElementAt(1).EndTime.Minutes, item.TAShifts6.TaShiftTimeIntervals.ElementAt(1).EndTime.Seconds);
+                    ////
+
+                    shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts6.Name, StartDate = startTimeForDisplay.AddDays(5), EndDate = item.TAShifts6.StartFrom.Value.Hour > item.TAShifts6.FinishAt.Value.Hour ? endTimeForDisplay.AddDays(6) : endTimeForDisplay.AddDays(5) });
+                    for (int i = 0; i < item.TAShifts6.TaShiftTimeIntervals.Count; i++)
+                    {
+                        if (i != 0 && i != item.TAShifts6.TaShiftTimeIntervals.Count - 1)
+                        {
+                            //For BreakTimes
+                            startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.TaShiftTimeIntervals.ElementAt(i).StartTime.Hours, item.TAShifts6.TaShiftTimeIntervals.ElementAt(i).StartTime.Minutes, item.TAShifts6.TaShiftTimeIntervals.ElementAt(i).StartTime.Seconds);
+                            endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts6.TaShiftTimeIntervals.ElementAt(i).EndTime.Hours, item.TAShifts6.TaShiftTimeIntervals.ElementAt(i).EndTime.Minutes, item.TAShifts6.TaShiftTimeIntervals.ElementAt(i).EndTime.Seconds);
+                            //
+                            shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts6.TaShiftTimeIntervals.ElementAt(i).Name, StartDate = item.TAShifts6.StartFrom.Value.Hour > item.TAShifts6.FinishAt.Value.Hour ? startTimeForDisplay1.AddDays(6) : startTimeForDisplay1.AddDays(5), EndDate = item.TAShifts6.StartFrom.Value.Hour > item.TAShifts6.FinishAt.Value.Hour ? endTimeForDisplay1.AddDays(6) : endTimeForDisplay1.AddDays(5) });
+                        }
+                    }
+                }
+                
+
+                //startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.StartFrom.Value.Hour, item.TAShifts7.StartFrom.Value.Minute, item.TAShifts7.StartFrom.Value.Second);
+                //endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.FinishAt.Value.Hour, item.TAShifts7.FinishAt.Value.Minute, item.TAShifts7.FinishAt.Value.Second);
+                if(item.TAShifts7 != null)
+                {
+                    startTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.TaShiftTimeIntervals.First().StartTime.Hours, item.TAShifts7.TaShiftTimeIntervals.First().StartTime.Minutes, item.TAShifts7.TaShiftTimeIntervals.First().StartTime.Seconds);
+                    endTimeForDisplay = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.TaShiftTimeIntervals.Last().EndTime.Hours, item.TAShifts7.TaShiftTimeIntervals.Last().EndTime.Minutes, item.TAShifts7.TaShiftTimeIntervals.Last().EndTime.Seconds);
+
+                    ////For BreakTimes
+                    //startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.TaShiftTimeIntervals.ElementAt(1).StartTime.Hours, item.TAShifts7.TaShiftTimeIntervals.ElementAt(1).StartTime.Minutes, item.TAShifts7.TaShiftTimeIntervals.ElementAt(1).StartTime.Seconds);
+                    //endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.TaShiftTimeIntervals.ElementAt(1).EndTime.Hours, item.TAShifts7.TaShiftTimeIntervals.ElementAt(1).EndTime.Minutes, item.TAShifts7.TaShiftTimeIntervals.ElementAt(1).EndTime.Seconds);
+                    ////
+
+                    shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts7.Name, StartDate = startTimeForDisplay.AddDays(6), EndDate = item.TAShifts7.StartFrom.Value.Hour > item.TAShifts7.FinishAt.Value.Hour ? endTimeForDisplay.AddDays(7) : endTimeForDisplay.AddDays(6) });
+                    for (int i = 0; i < item.TAShifts7.TaShiftTimeIntervals.Count; i++)
+                    {
+                        if (i != 0 && i != item.TAShifts7.TaShiftTimeIntervals.Count - 1)
+                        {
+                            //For BreakTimes
+                            startTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.TaShiftTimeIntervals.ElementAt(i).StartTime.Hours, item.TAShifts7.TaShiftTimeIntervals.ElementAt(i).StartTime.Minutes, item.TAShifts7.TaShiftTimeIntervals.ElementAt(i).StartTime.Seconds);
+                            endTimeForDisplay1 = new DateTime(dateMonday.Year, dateMonday.Month, dateMonday.Day, item.TAShifts7.TaShiftTimeIntervals.ElementAt(i).EndTime.Hours, item.TAShifts7.TaShiftTimeIntervals.ElementAt(i).EndTime.Minutes, item.TAShifts7.TaShiftTimeIntervals.ElementAt(i).EndTime.Seconds);
+                            //
+                            shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = item.TAShifts7.TaShiftTimeIntervals.ElementAt(i).Name, StartDate = item.TAShifts7.StartFrom.Value.Hour > item.TAShifts7.FinishAt.Value.Hour ? startTimeForDisplay1.AddDays(7) : startTimeForDisplay1.AddDays(6), EndDate = item.TAShifts7.StartFrom.Value.Hour > item.TAShifts7.FinishAt.Value.Hour ? endTimeForDisplay1.AddDays(7) : endTimeForDisplay1.AddDays(6) });
+                        }
+                    }
+                }
+
+
+                
+
+                //shiftSchedulerDisplay.Add(new ShiftSchedulerDisplay { Text = "Lunch", StartDate = new DateTime(2020, 10, 26, 10, 0, 0), EndDate = new DateTime(2020, 10, 26, 11, 0, 0) });
+                addCount =  7;
+            };
+            taUserGroup.ShiftSchedulerDisplays = shiftSchedulerDisplay;
+            return PartialView("TaGroupShifts",taUserGroup);
+        }
+
+        [HttpPost]
+        public ActionResult AddTaWeekShift(AddNewTaWeekShiftModel weekShiftModel)
+        {
+            var dbTaWeekShift = db.TaWeekShifts;
+            var added = db.TaWeekShifts.Add(new TaWeekShift
+            {
+                Name = weekShiftModel.Name,
+                TaShiftIdMonday = weekShiftModel.MondayShift,
+                TaShiftIdTuesday = weekShiftModel.TuesdayShift,
+                TaShiftIdWednesday = weekShiftModel.WednesdayShift,
+                TaShiftIdThursday = weekShiftModel.ThursdayShift,
+                TaShiftIdFriday = weekShiftModel.FridayShift,
+                TaShiftIdSaturday = weekShiftModel.SaturdayShift,
+                TaShiftIdSunday = weekShiftModel.SundayShift,
+                IsDeleted = false
+            });
+            int saveChanges = db.SaveChanges();
+            int newRecordId = added.Id;
+            if(saveChanges != 0)
+            {
+                return Json(new { IsSaved = true, msg = "TaWeek shift saved." });
+            }
+            else
+            {
+                return Json(new { IsSaved = false, msg = "TaWeek shift not saved." });
+            }
+        }
+
 
         [HttpGet]
         public ActionResult TaWeekShifts()
@@ -7958,32 +8225,291 @@ namespace FoxSec.Web.Controllers
             var taShifts = db.TAShifts.Include("Company").ToList();
             TaWeekShiftsModel taWeekShifts = new TaWeekShiftsModel();
             taWeekShifts.TaShiftsModelsList = taShifts.AsEnumerable();
+            List<SelectListItem> selectListItem = new List<SelectListItem>();
+            foreach(var item in taShifts)
+            {
+                selectListItem.Add(new SelectListItem { Text = item.Name, Value = item.Id.ToString() });
+            }
+            taWeekShifts.DropDownItems = selectListItem;
             return PartialView(taWeekShifts);
+        }
+
+        [HttpGet]
+        public ActionResult AssignTaUserGroupShiftToUsers(int GroupShiftId)
+        {
+            var currentUserName = System.Web.HttpContext.Current.User.Identity.Name;
+            //List<UserItem> userItems = new List<UserItem>();
+            //var uvm = CreateViewModel<UserListViewModel>();
+            //if (CurrentUser.Get().IsSuperAdmin)
+            //{
+            //    var users = _userRepository.FindAll();
+
+            //    Mapper.Map(users, userItems);
+            //    uvm.Users = userItems;
+            //}
+            //else if (CurrentUser.Get().IsCompanyManager)
+            //{
+            //    var users = _userRepository.FindAll(x => x.CompanyId != null && x.CompanyId == CurrentUser.Get().CompanyId);
+            //    Mapper.Map(users, userItems);
+            //    uvm.Users = userItems;
+            //}
+            AssignShiftUserModel assignShiftUserModel = new AssignShiftUserModel();
+            if (CurrentUser.Get().IsSuperAdmin)
+            {
+                var usersList = db.User.ToList();
+                Mapper.CreateMap<Users, AssignShiftUserModel>();
+                Mapper.Map(usersList, assignShiftUserModel.AssignShiftUserModelsList);
+                //var taUsersShifts = db.TaUsersShifts.Where(x => x.TaUserGroupShiftId == GroupShiftId).Include("TaUserGroupShifts").ToList();
+                var taUsersShifts = db.TaUsersShifts.Where(x => !x.IsDeleted).Include("TaUserGroupShifts").ToList();
+                assignShiftUserModel.AssignShiftUserModelsList.ForEach(x => {x.TaUsersShifts = taUsersShifts.Where(y => y.UeserId == x.Id).FirstOrDefault();x.TaUsersGroupShiftId = GroupShiftId;x.StartDate = taUsersShifts.Where(z => z.UeserId == x.Id).Select(date => date.StartDate).FirstOrDefault(); x.EndDate = taUsersShifts.Where(l => l.UeserId == x.Id).Select(endDate => endDate.EndDate).FirstOrDefault(); });
+                assignShiftUserModel.TaUsersGroupShiftId = GroupShiftId;
+                //assignShiftUserModel.TaUsersShifts = taUsersShifts;
+
+
+            }
+            else if (CurrentUser.Get().IsCompanyManager)
+            {
+                var usersList = db.User.Where(x => x.CompanyId != null && x.CompanyId == CurrentUser.Get().CompanyId).Include("TaUsersShifts").ToList();
+                Mapper.Map(usersList, assignShiftUserModel);
+                var taUsersShifts = db.TaUsersShifts.Where(x => x.TaUserGroupShiftId == GroupShiftId).Include("TaUserGroupeShifts").ToList();
+                assignShiftUserModel.AssignShiftUserModelsList.ForEach(x => { x.TaUsersShifts = taUsersShifts.Where(y => y.UeserId == x.Id).FirstOrDefault();x.IsSelected = taUsersShifts.Where(z => z.UeserId == x.Id).Any(); });
+
+            }
+
+            
+            return PartialView(assignShiftUserModel);
+        }
+
+        [HttpPost]
+        public ActionResult AssignTaUserGroupShiftToUsersSave(AssignShiftUserSaveModel shiftUserSaveModel)
+        {
+            var taUserShifts = db.TaUsersShifts;
+            var users = db.User;
+            var queryToUpdate = users.SqlQuery("Update Users set WorkTime = 0");
+            if (shiftUserSaveModel.SelectedUsersIsTA.Count > 0)
+            {
+                foreach(var user in shiftUserSaveModel.SelectedUsersIsTA)
+                {
+                    var userInLoop = users.Where(x => x.Id == user).FirstOrDefault();
+                    userInLoop.WorkTime = true;      
+                }
+               
+                
+
+                int responseResult = db.SaveChanges();
+            }
+            if(shiftUserSaveModel.SelectedUsersId.Count > 0)
+            {
+                foreach (var userId in shiftUserSaveModel.SelectedUsersId)
+                {
+                    if(taUserShifts.Any(x => x.UeserId == userId))
+                    {
+                        taUserShifts.Where(x => x.UeserId == userId).FirstOrDefault().IsDeleted = true;
+                    }
+                    taUserShifts.Add(new TaUsersShifts
+                    {
+                        UeserId = userId,
+                        TaUserGroupShiftId = shiftUserSaveModel.TaUserGroupShiftId,
+                        StartDate = shiftUserSaveModel.StartDate,
+                        EndDate = shiftUserSaveModel.EndDate,
+                        IsDeleted = false
+                    });
+                }
+                int saveResponse = db.SaveChanges();
+            }
+            
+            return null;
+        }
+
+        [HttpPost]
+        public ActionResult RemoveUsersGroupSchedule(List<int> UsersListToRemove)
+        {
+            if(UsersListToRemove != null)
+            {
+                var taUsersShift = db.TaUsersShifts;
+                foreach (var user in UsersListToRemove)
+                {
+                    var taUserShift = taUsersShift.Where(x => x.UeserId == user && !x.IsDeleted).FirstOrDefault();
+                    taUserShift.IsDeleted = true;
+                }
+                int response = db.SaveChanges();
+            }
+            
+            return null;
+        }
+
+        [HttpGet]
+        public ActionResult AddTaUserGroupShifts()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult SaveNewTaUserGroupShift(TaUserGroupShiftSaveModel taUserGroupShiftSaveModel)
+        {
+            taUserGroupShiftSaveModel.StartFromDate = taUserGroupShiftSaveModel.StartFromDate;
+            var tauserGroupeShifts = new TaUserGroupeShifts { Name = taUserGroupShiftSaveModel.Name, RepeatAfterWeeks = taUserGroupShiftSaveModel.RepeatAfterWeeks, IsDeleted = taUserGroupShiftSaveModel.IsDeleted, StartFromDate = taUserGroupShiftSaveModel.StartFromDate };
+            var newAddedTaUserGroupShifts = db.TaUserGroupeShifts.Add(tauserGroupeShifts);
+            int response = db.SaveChanges();
+            var newTaUserGroupShiftId = newAddedTaUserGroupShifts.Id;
+            int taUserGroupShiftIdOrder = 1;
+            foreach(int taUserGroupShiftId in taUserGroupShiftSaveModel.SelectedTaWeeks)
+            {
+               var taWeekShifts = db.TaWeekShifts.Where(x => x.Id == taUserGroupShiftId).FirstOrDefault();
+                taWeekShifts.InTaUserGroupeShiftsOrder = taUserGroupShiftIdOrder;
+                taWeekShifts.TaUserGroupeShiftsId = newTaUserGroupShiftId;
+                taUserGroupShiftIdOrder = taUserGroupShiftIdOrder + 1;
+            }
+            int taWeekResponse = db.SaveChanges();
+            return Json(new {msg="TaUserGroup shift saved.",IsSucceed = true });
+        }
+
+        [HttpPost]
+        public ActionResult TaShiftSave(TaShiftSaveModel ShiftSaveModel)
+        {
+            var dbTaShifts = db.TAShifts;
+            var taNewShift = new TAShifts { Name = ShiftSaveModel.ShiftName, StartFrom = ShiftSaveModel.ShiftStartTime, FinishAt = ShiftSaveModel.ShiftFinishTime,DuratOfBreak= ShiftSaveModel.DuratOfBreak.Value,DuratOfBreakOvertime= ShiftSaveModel.DuratOfBreakOvertime.Value,BreakMinInterval= ShiftSaveModel.BreakMinInterval.Value,BreakMinIntervalOvertime= ShiftSaveModel.BreakMinIntervalOvertime.Value,LateAllowed= ShiftSaveModel.LateAllowed.Value,OvertimeStartLater= ShiftSaveModel.OvertimeStartLater.Value,OvertimeStartsEarlier= ShiftSaveModel.OvertimeStartsEarlier.Value,Presence= ShiftSaveModel.Presence };
+            dbTaShifts.Add(taNewShift);
+            int response = db.SaveChanges();
+            int newlyAddedShiftId = taNewShift.Id;
+            var dbTaShiftTimeIntervals = db.TaShiftTimeIntervals;
+            for(int i =0; i < ShiftSaveModel.TaShiftIntervalNamesList.Count; i++)
+            {
+                var taNewTaShiftTimeIntervals = new TaShiftTimeIntervals { Name = ShiftSaveModel.TaShiftIntervalNamesList[i], StartTime = ShiftSaveModel.TaShiftIntervalStartTimeList[i], EndTime = ShiftSaveModel.TaShiftIntervalEndTimeList[i], TaShiftId = newlyAddedShiftId, TaReportLabelId = ShiftSaveModel.TaShiftIntervalTaReportLabelsIdList[i] };
+                dbTaShiftTimeIntervals.Add(taNewTaShiftTimeIntervals);
+            }
+            int shiftIntervalSaveResponse = db.SaveChanges();
+            
+            return Json(new { msg="TaShift saved successfully.",IsSucceed = true });
         }
 
         [HttpGet]
         public ActionResult TaShift()
         {
-            var taShifts = db.TAShifts.Include("Company").ToList();
+            var taShifts = db.TAShifts.Include("Company").Include("TaShiftTimeIntervals").ToList();
             var companies = db.Companies.ToList();
             var taReportLabels = db.TAReportLabels.ToList();
             TaShiftsModel taShiftsModelList = new TaShiftsModel();
             taShiftsModelList.TAShifts = taShifts;
             taShiftsModelList.CompaniesList = companies;
             taShiftsModelList.TAReportLabels = taReportLabels;
-            var schedulerData = new List<SchedulerData>();
-            schedulerData.Add(new SchedulerData { text = "Ranjan", startDate = "2020-10-05T06:30:00.000", endDate = "2020-10-05T08:30:00.000" });
-            schedulerData.Add(new SchedulerData { text = "Ranjan2", startDate = "2020-10-05T08:30:00.000", endDate = "2020-10-05T10:30:00.000" });
-            schedulerData.Add(new SchedulerData { text = "Ranjan3", startDate = "2020-10-05T10:30:00.000", endDate = "2020-10-05T12:30:00.000" });
-            schedulerData.Add(new SchedulerData { text = "Ranjan4", startDate = "2020-10-05T05:30:00.000", endDate = "2020-10-05T06:30:00.000" });
-            taShiftsModelList.schedulerData = schedulerData;
-            return PartialView("TaWeekShifts",taShiftsModelList);
-            //TaWeekShiftsModel taWeekShifts = new TaWeekShiftsModel();
-            //taWeekShifts.TaShiftsModelsList = taShifts.AsEnumerable();
-            //return PartialView("TaWeekShifts",taWeekShifts);
+            //return PartialView(taShiftsModelList);
+            return PartialView("TaShiftsList", taShiftsModelList);
         }
 
+        [HttpGet]
+        public ActionResult AddNewTaShift()
+        {
+            return PartialView("TaShift");
+        }
       
+        [HttpGet]
+        public ActionResult EditTaShift(int ShiftId)
+        {
+            var taShift = db.TAShifts.Where(x => x.Id == ShiftId).Include("TaShiftTimeIntervals").FirstOrDefault();
+            var taReportLabelList = db.TAReportLabels.ToList();
+            var taShifts = new TaShiftsModel();
+            List<SelectListItem> taReportLabelListItem = new List<SelectListItem>();
+            foreach (var taReportLabel in taReportLabelList)
+            {
+                SelectListItem taReportLabelItem = new SelectListItem { Text = taReportLabel.Name, Value = taReportLabel.Id.ToString(), Selected = false };
+                taReportLabelListItem.Add(taReportLabelItem);
+            }
+            
+            taShifts.TAShift = taShift;
+            taShifts.taReportItem = taReportLabelListItem;
+            return PartialView(taShifts);
+        }
+
+        [HttpPost]
+        public ActionResult EditTaShiftSave(TaShiftEditSaveModel TaShiftEditSave)
+        {
+            try
+            {
+                var taShiftEdit = db.TAShifts.Where(x => x.Id == TaShiftEditSave.Id).FirstOrDefault();
+                taShiftEdit.Name = TaShiftEditSave.ShiftName;
+                taShiftEdit.StartFrom = TaShiftEditSave.ShiftStartTime;
+                taShiftEdit.FinishAt = TaShiftEditSave.ShiftFinishTime;
+                if (TaShiftEditSave.BreakMinInterval.HasValue)
+                {
+                    taShiftEdit.BreakMinInterval = TaShiftEditSave.BreakMinInterval.Value;
+                }
+                if (TaShiftEditSave.BreakMinIntervalOvertime.HasValue)
+                {
+                    taShiftEdit.BreakMinIntervalOvertime = TaShiftEditSave.BreakMinIntervalOvertime.Value;
+                }
+                if (TaShiftEditSave.DuratOfBreak.HasValue)
+                {
+                    taShiftEdit.DuratOfBreak = TaShiftEditSave.DuratOfBreak.Value;
+                }
+                if (TaShiftEditSave.DuratOfBreakOvertime.HasValue)
+                {
+                    taShiftEdit.DuratOfBreakOvertime = TaShiftEditSave.DuratOfBreakOvertime.Value;
+                }
+
+                //taShiftEdit.FirstEntryLastExit =  TaShiftEditSave.FirstEntryLastExit.Value;
+                if (TaShiftEditSave.LateAllowed.HasValue)
+                {
+                    taShiftEdit.LateAllowed = TaShiftEditSave.LateAllowed.Value;
+                }
+                if (TaShiftEditSave.OvertimeStartLater.HasValue)
+                {
+                    taShiftEdit.OvertimeStartLater = TaShiftEditSave.OvertimeStartLater.Value;
+                }
+                if (TaShiftEditSave.OvertimeStartsEarlier.HasValue)
+                {
+                    taShiftEdit.OvertimeStartsEarlier = TaShiftEditSave.OvertimeStartsEarlier.Value;
+                }
+                if (TaShiftEditSave.Presence.HasValue)
+                {
+                    taShiftEdit.Presence = TaShiftEditSave.Presence.Value;
+                }
+                
+                for(int i= 0; i< TaShiftEditSave.TaShiftIntervalNamesList.Count; i++)
+                {
+                    if(i == TaShiftEditSave.TaShiftIntervalIdList.Count)
+                    {
+                        var dbTaShiftTimeIntervals = db.TaShiftTimeIntervals;
+                        var taTimeShiftIntervals = new TaShiftTimeIntervals { Name = TaShiftEditSave.TaShiftIntervalNamesList[i], StartTime = TaShiftEditSave.TaShiftIntervalStartTimeList[i], EndTime = TaShiftEditSave.TaShiftIntervalEndTimeList[i], TaReportLabelId = TaShiftEditSave.TaShiftIntervalTaReportLabelsIdList[i], TaShiftId = TaShiftEditSave.Id };
+                        dbTaShiftTimeIntervals.Add(taTimeShiftIntervals);
+                    }
+                    else
+                    {
+                        var taShiftIntervalId = TaShiftEditSave.TaShiftIntervalIdList[i];
+                        var dbTaShiftTimeInterval = db.TaShiftTimeIntervals.Where(x => x.Id == taShiftIntervalId).FirstOrDefault();
+                        dbTaShiftTimeInterval.Name = TaShiftEditSave.TaShiftIntervalNamesList[i];
+                        dbTaShiftTimeInterval.StartTime = TaShiftEditSave.TaShiftIntervalStartTimeList[i];
+                        dbTaShiftTimeInterval.EndTime = TaShiftEditSave.TaShiftIntervalEndTimeList[i];
+                        dbTaShiftTimeInterval.TaReportLabelId = TaShiftEditSave.TaShiftIntervalTaReportLabelsIdList[i];
+                    }
+                    
+                }
+                int response = db.SaveChanges();
+            }
+            catch 
+            {
+                return Json(new { msg = "TaShift not Edited successfully", IsSucceed = false });
+            }
+           
+            return Json(new { msg = "TaShift Edited successfully", IsSucceed = true });
+        }
+
+        [HttpGet]
+        public ActionResult AddNewtaShiftTimeIntervals()
+        {
+            var taReportLabelList = db.TAReportLabels.ToList();
+            AddNewTaShiftTimeInterval addNewTaShiftTimeInterval = new AddNewTaShiftTimeInterval();
+
+            List<SelectListItem> taReportLabelListItem = new List<SelectListItem>();
+            foreach (var taReportLabel in taReportLabelList)
+            {
+                SelectListItem taReportLabelItem = new SelectListItem { Text = taReportLabel.Name, Value = taReportLabel.Id.ToString(), Selected = false };
+                taReportLabelListItem.Add(taReportLabelItem);
+            }
+            addNewTaShiftTimeInterval.taReportItem = taReportLabelListItem;
+            return PartialView(addNewTaShiftTimeInterval);
+        }
+
         public ActionResult TAReportLabels()
         {
             var taReportLabelsList = db.TAReportLabels.Include("Companies").ToList();
@@ -7991,41 +8517,6 @@ namespace FoxSec.Web.Controllers
             var lsit = new TAReportLabelsModel();
             lsit.TAReportLabels = taReportLabelsList;
             lsit.CompaniesList = companiesList;
-            //var taReportLabelModelList = taReportLabelsList.Select(x => new TAReportLabelsModel
-            //{
-            //   Id = x.Id,
-            //   Active = x.Active,
-            //   Admin_only = x.Admin_only,
-            //   Allow_Jobs = x.Allow_Jobs,
-            //   AskStartStopCount = x.AskStartStopCount,
-            //   At_work = x.At_work,
-            //   CompanyId = x.CompanyId,
-            //   DaysNotHours = x.DaysNotHours,
-            //   DefaultStart = x.DefaultStart,
-            //   DefaultStop = x.DefaultStop,
-            //   EnteredEvent = x.EnteredEvent,
-            //   FinishPrevious = x.FinishPrevious,
-            //   Fixed = x.Fixed,
-            //   InBuilding = x.InBuilding,
-            //   IsDeleted = x.IsDeleted,
-            //   JobNotMove = x.JobNotMove,
-            //   Label = x.Label,
-            //   MenuImageNotSelectedPng = x.MenuImageNotSelectedPng,
-            //   MenuImageSelectedPng = x.MenuImageSelectedPng,
-            //   ModifiedLast = x.ModifiedLast,
-            //   Name = x.Name,
-            //   NotFixNextTASeconds = x.NotFixNextTASeconds,
-            //   PIN = x.PIN,
-            //   RegistratorId = x.RegistratorId,
-            //   RegistratorKey = x.RegistratorKey,
-            //   RegistratorMenuNr = x.RegistratorMenuNr,
-            //   Report = x.Report,
-            //   SaveStatus = x.SaveStatus,
-            //   ShiftId = x.ShiftId,
-            //   ValidFrom = x.ValidFrom,
-            //   ValidTo = x.ValidTo,
-            //   CompaniesList = companiesList
-            //}).ToList();
             return PartialView(lsit);
         }
 
@@ -8061,13 +8552,13 @@ namespace FoxSec.Web.Controllers
 
         public StringBuilder TaWeeksValues(string selectedWeek)
         {
-            var taWeeksList = db.TaWeekShifts.ToList();
+            var taWeeksList = db.TaWeekShifts.Where(x => x.TaUserGroupeShiftsId.HasValue == false).ToList();
             int selectedWeeks = Convert.ToInt32(selectedWeek);
 
             StringBuilder result = new StringBuilder();
             for(int i = 1; i<= selectedWeeks; i++)
             {
-                string valuesToAppend = "<tr class='dynamicValues'><td>Week" + i + "</td><td><select>" +
+                string valuesToAppend = "<tr class='dynamicValues'><td>Week" + i + "</td><td><select class='dynamicSelectedValue'>" +
                         "<option value='0'>--Select TaWeek--</option>";
                 result.Append(valuesToAppend);
 
@@ -8079,135 +8570,22 @@ namespace FoxSec.Web.Controllers
             }
             return result;
         }
-
-        FoxSec.Web.ViewModels.FoxSecDBContext appointmentContext = new FoxSec.Web.ViewModels.FoxSecDBContext();
-        object resourceContext = null;
-
-        public ActionResult SchedulerPartial()
-        {
-            var appointments = appointmentContext.TAShifts;
-            System.Collections.IEnumerable resources = null; // Get resources from the context
-
-            ViewData["Appointments"] = appointments.ToList();
-            ViewData["Resources"] = resources;
-
-            return PartialView("_SchedulerPartial");
-        }
-        public ActionResult SchedulerPartialEditAppointment()
-        {
-            var appointments = appointmentContext.TAShifts;
-            System.Collections.IEnumerable resources = null; // Get resources from the context
-
-            try
-            {
-                TAReportControllerSchedulerSettings.UpdateEditableDataObject(appointmentContext, resourceContext);
-            }
-            catch (Exception e)
-            {
-                ViewData["SchedulerErrorText"] = e.Message;
-            }
-
-            ViewData["Appointments"] = appointments.ToList();
-            ViewData["Resources"] = resources;
-
-            return PartialView("_SchedulerPartial");
-        }
     }
-    public class TAReportControllerSchedulerSettings
+    public static class DateTimeExtension
     {
-        static DevExpress.Web.Mvc.MVCxAppointmentStorage appointmentStorage;
-        public static DevExpress.Web.Mvc.MVCxAppointmentStorage AppointmentStorage
+        public static DateTime StartOfWeek(this DateTime dt, DayOfWeek startOfWeek)
         {
-            get
+            int diff = 0;
+            if (dt.DayOfWeek != 0)
             {
-                if (appointmentStorage == null)
-                {
-                    appointmentStorage = new DevExpress.Web.Mvc.MVCxAppointmentStorage();
-                    appointmentStorage.Mappings.AppointmentId = "Id";
-                    appointmentStorage.Mappings.Start = "StartFrom";
-                    appointmentStorage.Mappings.End = "FinishAt";
-                    appointmentStorage.Mappings.Subject = "Name";
-                    appointmentStorage.Mappings.Description = "Name";
-                    appointmentStorage.Mappings.Location = "Name";
-                    appointmentStorage.Mappings.AllDay = "Changed";
-                    appointmentStorage.Mappings.Type = "WorkBeforeBreak";
-                    appointmentStorage.Mappings.RecurrenceInfo = "Name";
-                    appointmentStorage.Mappings.ReminderInfo = "Name";
-                    appointmentStorage.Mappings.Label = "OvertimeMin";
-                    appointmentStorage.Mappings.Status = "Id";
-                    appointmentStorage.Mappings.ResourceId = "Id";
-                }
-                return appointmentStorage;
+                diff = dt.DayOfWeek - startOfWeek;
+                return DateTime.Now.AddDays(-diff);
             }
-        }
+            
+            return DateTime.Now.AddDays(diff + 1);
 
-        static DevExpress.Web.Mvc.MVCxResourceStorage resourceStorage;
-        public static DevExpress.Web.Mvc.MVCxResourceStorage ResourceStorage
-        {
-            get
-            {
-                if (resourceStorage == null)
-                {
-                    resourceStorage = new DevExpress.Web.Mvc.MVCxResourceStorage();
-                    resourceStorage.Mappings.ResourceId = "";
-                    resourceStorage.Mappings.Caption = "";
-                }
-                return resourceStorage;
-            }
-        }
-
-        public static void UpdateEditableDataObject(FoxSec.Web.ViewModels.FoxSecDBContext appointmentContext, object resourceContext)
-        {
-            InsertAppointments(appointmentContext, resourceContext);
-            UpdateAppointments(appointmentContext, resourceContext);
-            DeleteAppointments(appointmentContext, resourceContext);
-        }
-
-        static void InsertAppointments(FoxSec.Web.ViewModels.FoxSecDBContext appointmentContext, object resourceContext)
-        {
-            var appointments = appointmentContext.TAShifts.ToList();
-            System.Collections.IEnumerable resources = null;
-
-            var newAppointments = DevExpress.Web.Mvc.SchedulerExtension.GetAppointmentsToInsert<FoxSec.Web.ViewModels.TAShifts>("Scheduler", appointments, resources,
-                AppointmentStorage, ResourceStorage);
-            foreach (var appointment in newAppointments)
-            {
-                appointmentContext.TAShifts.Add(appointment);
-            }
-            appointmentContext.SaveChanges();
-        }
-        static void UpdateAppointments(FoxSec.Web.ViewModels.FoxSecDBContext appointmentContext, object resourceContext)
-        {
-            var appointments = appointmentContext.TAShifts.ToList();
-            System.Collections.IEnumerable resources = null;
-
-            var updAppointments = DevExpress.Web.Mvc.SchedulerExtension.GetAppointmentsToUpdate<FoxSec.Web.ViewModels.TAShifts>("Scheduler", appointments, resources,
-                AppointmentStorage, ResourceStorage);
-            foreach (var appointment in updAppointments)
-            {
-                var origAppointment = appointments.FirstOrDefault(a => a.Id == appointment.Id);
-                appointmentContext.Entry(origAppointment).CurrentValues.SetValues(appointment);
-            }
-            appointmentContext.SaveChanges();
-        }
-
-        static void DeleteAppointments(FoxSec.Web.ViewModels.FoxSecDBContext appointmentContext, object resourceContext)
-        {
-            var appointments = appointmentContext.TAShifts.ToList();
-            System.Collections.IEnumerable resources = null;
-
-            var delAppointments = DevExpress.Web.Mvc.SchedulerExtension.GetAppointmentsToRemove<FoxSec.Web.ViewModels.TAShifts>("Scheduler", appointments, resources,
-                AppointmentStorage, ResourceStorage);
-            foreach (var appointment in delAppointments)
-            {
-                var delAppointment = appointments.FirstOrDefault(a => a.Id == appointment.Id);
-                if (delAppointment != null)
-                    appointmentContext.TAShifts.Remove(delAppointment);
-            }
-            appointmentContext.SaveChanges();
         }
     }
-
 }
 
 
